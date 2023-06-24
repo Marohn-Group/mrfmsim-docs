@@ -1,0 +1,680 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Configuration &#8212; mrfmsim 0.1.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api_configuration';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Units" href="api_units.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">mrfmsim 0.1.1 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ref_cli.html">Command Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref_model.html">Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref_modifier.html">Modifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref_shortcut.html">Shortcut</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="api_plugin.html">Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_component.html">Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_units.html">Units</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Configuration</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/api_configuration.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Configuration</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#yaml-tags">YAML Tags</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#security">Security</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-mrfmsim.configuration"><code class="xref py py-mod docutils literal notranslate"><span class="pre">configuration</span></code> module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.configuration.execute_constructor"><code class="docutils literal notranslate"><span class="pre">execute_constructor()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.configuration.func_constructor"><code class="docutils literal notranslate"><span class="pre">func_constructor()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.configuration.graph_constructor"><code class="docutils literal notranslate"><span class="pre">graph_constructor()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.configuration.import_constructor"><code class="docutils literal notranslate"><span class="pre">import_constructor()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.configuration.import_multi_constructor"><code class="docutils literal notranslate"><span class="pre">import_multi_constructor()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.configuration.import_object"><code class="docutils literal notranslate"><span class="pre">import_object()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.configuration.job_representer"><code class="docutils literal notranslate"><span class="pre">job_representer()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.configuration.yaml_dumper"><code class="docutils literal notranslate"><span class="pre">yaml_dumper()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.configuration.yaml_loader"><code class="docutils literal notranslate"><span class="pre">yaml_loader()</span></code></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="configuration">
+<h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">#</a></h1>
+<p>To facilitate collaboration and better visual representation,
+<code class="docutils literal notranslate"><span class="pre">mrfmsim</span></code> allows using YAML configuration files to define
+experiments.</p>
+<p>Here we create
+For example, a simple model and graph can be defined:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># example.yaml
+!import:mrfmsim.model.Experiment
+name: example_experiment
+graph:
+    !graph
+    name: example_graph
+    grouped_edges:
+        - [add, [subtract, power, log]]
+        - [[subtract, power], multiply]
+    node_objects:
+        add:
+            func: !import numpy.add
+            output: c
+            inputs: [a, [constant, 2]]
+        subtract:
+            func: !import operator.sub
+            output: e
+            inputs: [c, d]
+        power:
+            func: !import math.pow
+            output: g
+            inputs: [c, f]
+        multiply:
+            func: !import numpy.multiply
+            output: k
+            inputs: [e, g]
+        log:
+            func: !import math.log
+            output: m
+            inputs: [c, b]
+replace_inputs: {component: [a, b]}
+description: Example experiment with components.
+modifiers: [!import:mmodel.modifier.loop_input {parameter: d}]
+</pre></div>
+</div>
+<p>The above experiment defines a model that calculates the following:</p>
+<div class="math notranslate nohighlight">
+\[k = (a + 2 - d)(a + 2)^f
+m = log(a + 2, b)\]</div>
+<p>To convert the file from YAML to a Python object:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">yaml</span>
+<span class="kn">from</span> <span class="nn">mrfmsim.configuration</span> <span class="kn">import</span> <span class="n">MrfmSimLoader</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;example.yaml&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">experiment</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">Loader</span><span class="o">=</span><span class="n">MrfmSimLoader</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">experiment</span></code> object is an instance of the <code class="docutils literal notranslate"><span class="pre">Experiment</span></code> class.
+The modifier creates a loop over the <code class="docutils literal notranslate"><span class="pre">d</span></code> parameter. We can print the
+experiment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">experiment</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test_experiment</span><span class="p">(</span><span class="n">component</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+<span class="go">    returns: (k, m)</span>
+<span class="go">    graph: test_graph</span>
+<span class="go">    handler: MemHandler</span>
+<span class="go">    modifiers:</span>
+<span class="go">    - loop_input(&#39;d&#39;)</span>
+<span class="go">    - replace_component({&#39;component&#39;: [&#39;a&#39;, &#39;b&#39;]})</span>
+
+<span class="go">    Example experiment with components.</span>
+</pre></div>
+</div>
+<section id="yaml-tags">
+<h2>YAML Tags<a class="headerlink" href="#yaml-tags" title="Permalink to this heading">#</a></h2>
+<p>YAML tags add additional functionality to the YAML parsing. For detailed usage
+see <a class="reference external" href="https://yaml.org/spec/1.2.2/#24-tags">yaml tags</a>. The following tags
+are available in <code class="docutils literal notranslate"><span class="pre">mrfmsim</span></code>:</p>
+<ul>
+<li><p>import a Python object</p>
+<blockquote>
+<div><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="kt">!import:object</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>import a Python class and instantiate</p>
+<blockquote>
+<div><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="kt">!import:types.SimpleNamespace</span>
+<span class="nt">a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="nt">b</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>create a <code class="docutils literal notranslate"><span class="pre">mmodel.ModelGraph</span></code> instance</p>
+<blockquote>
+<div><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="kt">!graph</span>
+<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example_graph</span>
+<span class="nt">grouped_edges</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">add</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">subtract</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">power</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">log</span><span class="p p-Indicator">]]</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">[[</span><span class="nv">subtract</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">power</span><span class="p p-Indicator">],</span><span class="w"> </span><span class="nv">multiply</span><span class="p p-Indicator">]</span>
+<span class="nt">node_objects</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">add</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">func</span><span class="p">:</span><span class="w"> </span><span class="kt">!import</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">numpy.add</span>
+<span class="w">        </span><span class="nt">output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c</span>
+<span class="w">        </span><span class="nt">inputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">a</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">constant</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2</span><span class="p p-Indicator">]]</span>
+<span class="w">    </span><span class="nt">subtract</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">func</span><span class="p">:</span><span class="w"> </span><span class="kt">!import</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">operator.sub</span>
+<span class="w">        </span><span class="nt">output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">e</span>
+<span class="w">        </span><span class="nt">inputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">c</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">d</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">power</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">func</span><span class="p">:</span><span class="w"> </span><span class="kt">!import</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">math.pow</span>
+<span class="w">        </span><span class="nt">output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">g</span>
+<span class="w">        </span><span class="nt">inputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">c</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">f</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">multiply</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">func</span><span class="p">:</span><span class="w"> </span><span class="kt">!import</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">numpy.multiply</span>
+<span class="w">        </span><span class="nt">output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k</span>
+<span class="w">        </span><span class="nt">inputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">e</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">g</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">log</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">func</span><span class="p">:</span><span class="w"> </span><span class="kt">!import</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">math.log</span>
+<span class="w">        </span><span class="nt">output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">m</span>
+<span class="w">        </span><span class="nt">inputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">c</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">b</span><span class="p p-Indicator">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>generate a Python function from an expression</p>
+<blockquote>
+<div><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="kt">!func</span><span class="w"> </span><span class="s">&quot;lambda</span><span class="nv"> </span><span class="s">x:</span><span class="nv"> </span><span class="s">x+1&quot;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>execute a function input parameter using lambda expression</p>
+<blockquote>
+<div><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="kt">!execute</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">func(arguments)</span>
+</pre></div>
+</div>
+<p>is equivalent to</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">outerfunc</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">arguments</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="n">arguments</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>and</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="kt">!execute</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">func(*arguments)</span>
+</pre></div>
+</div>
+<p>is equivalent to</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">outerfunc</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">arguments</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">arguments</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This is used to simplify the definition process.</p>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="security">
+<h2>Security<a class="headerlink" href="#security" title="Permalink to this heading">#</a></h2>
+<p>Since the configuration files allow direct Python function expression
+definition, there is always a risk of malicious code execution. Since
+the case of running directly Python code to define the experiment has
+the same issue, we do not consider this a major issue. We encourage
+users to always inspect the code or the experiment file before executing.</p>
+</section>
+<section id="module-mrfmsim.configuration">
+<span id="configuration-module"></span><h2><code class="xref py py-mod docutils literal notranslate"><span class="pre">configuration</span></code> module<a class="headerlink" href="#module-mrfmsim.configuration" title="Permalink to this heading">#</a></h2>
+<p>Load and dump configuration files for experiment and jobs.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="mrfmsim.configuration.execute_constructor">
+<span class="sig-prename descclassname"><span class="pre">mrfmsim.configuration.</span></span><span class="sig-name descname"><span class="pre">execute_constructor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loader</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BaseLoader</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mrfmsim/configuration.html#execute_constructor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.configuration.execute_constructor" title="Permalink to this definition">#</a></dt>
+<dd><p>Parse the “!execute” tag into a lambda function.</p>
+<p>The constructor is to simplify function types:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">outerfunc</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The argument is a string that details the function and the arguments.
+For example to use func on a and b, “!execute func(a, b)” is used.</p>
+<p>And the function type:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">outerfunc</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">arguments</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">arguments</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In node execution, the function is keyword argument only. To simplify
+the syntax, the above function is defined using <code class="docutils literal notranslate"><span class="pre">!execute</span> <span class="pre">func(*arguments)</span></code>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mrfmsim.configuration.func_constructor">
+<span class="sig-prename descclassname"><span class="pre">mrfmsim.configuration.</span></span><span class="sig-name descname"><span class="pre">func_constructor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loader</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BaseLoader</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mrfmsim/configuration.html#func_constructor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.configuration.func_constructor" title="Permalink to this definition">#</a></dt>
+<dd><p>Load function from yaml string.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mrfmsim.configuration.graph_constructor">
+<span class="sig-prename descclassname"><span class="pre">mrfmsim.configuration.</span></span><span class="sig-name descname"><span class="pre">graph_constructor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loader</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mrfmsim/configuration.html#graph_constructor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.configuration.graph_constructor" title="Permalink to this definition">#</a></dt>
+<dd><p>Parse the “!graph” tag into ModelGraph object.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mrfmsim.configuration.import_constructor">
+<span class="sig-prename descclassname"><span class="pre">mrfmsim.configuration.</span></span><span class="sig-name descname"><span class="pre">import_constructor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loader</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mrfmsim/configuration.html#import_constructor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.configuration.import_constructor" title="Permalink to this definition">#</a></dt>
+<dd><p>Parse the “!import” tag into object.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mrfmsim.configuration.import_multi_constructor">
+<span class="sig-prename descclassname"><span class="pre">mrfmsim.configuration.</span></span><span class="sig-name descname"><span class="pre">import_multi_constructor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loader</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag_suffix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mrfmsim/configuration.html#import_multi_constructor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.configuration.import_multi_constructor" title="Permalink to this definition">#</a></dt>
+<dd><p>Parse the “!import:” multi tag into an object with parameters.</p>
+<p>The node is parsed as a dictionary.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mrfmsim.configuration.import_object">
+<span class="sig-prename descclassname"><span class="pre">mrfmsim.configuration.</span></span><span class="sig-name descname"><span class="pre">import_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mrfmsim/configuration.html#import_object"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.configuration.import_object" title="Permalink to this definition">#</a></dt>
+<dd><p>Load object from the path.</p>
+<p>The path is split by the rightmost ‘.’ and the module is imported.
+If the module is not found, the path is split by the next rightmost dot
+and the module is imported. This is repeated until the module is found.
+Otherwise, a ModuleNotFoundError is raised.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – dotpath for importing</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mrfmsim.configuration.job_representer">
+<span class="sig-prename descclassname"><span class="pre">mrfmsim.configuration.</span></span><span class="sig-name descname"><span class="pre">job_representer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dumper</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SafeDumper</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">job</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Job</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mrfmsim/configuration.html#job_representer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.configuration.job_representer" title="Permalink to this definition">#</a></dt>
+<dd><p>Represent a Job instance.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mrfmsim.configuration.yaml_dumper">
+<span class="sig-prename descclassname"><span class="pre">mrfmsim.configuration.</span></span><span class="sig-name descname"><span class="pre">yaml_dumper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">representer_dict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mrfmsim/configuration.html#yaml_dumper"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.configuration.yaml_dumper" title="Permalink to this definition">#</a></dt>
+<dd><p>Create a yaml dumper with custom representers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>representer_dict</strong> (<em>dict</em>) – dictionary of representer</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>yaml dumper class</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mrfmsim.configuration.yaml_loader">
+<span class="sig-prename descclassname"><span class="pre">mrfmsim.configuration.</span></span><span class="sig-name descname"><span class="pre">yaml_loader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">constructor</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mrfmsim/configuration.html#yaml_loader"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.configuration.yaml_loader" title="Permalink to this definition">#</a></dt>
+<dd><p>Create a yaml loader with special constructors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>constructor_dict</strong> (<em>dict</em>) – dictionary of constructors</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>yaml loader class</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="api_units.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Units</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#yaml-tags">YAML Tags</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#security">Security</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-mrfmsim.configuration"><code class="xref py py-mod docutils literal notranslate"><span class="pre">configuration</span></code> module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.configuration.execute_constructor"><code class="docutils literal notranslate"><span class="pre">execute_constructor()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.configuration.func_constructor"><code class="docutils literal notranslate"><span class="pre">func_constructor()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.configuration.graph_constructor"><code class="docutils literal notranslate"><span class="pre">graph_constructor()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.configuration.import_constructor"><code class="docutils literal notranslate"><span class="pre">import_constructor()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.configuration.import_multi_constructor"><code class="docutils literal notranslate"><span class="pre">import_multi_constructor()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.configuration.import_object"><code class="docutils literal notranslate"><span class="pre">import_object()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.configuration.job_representer"><code class="docutils literal notranslate"><span class="pre">job_representer()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.configuration.yaml_dumper"><code class="docutils literal notranslate"><span class="pre">yaml_dumper()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.configuration.yaml_loader"><code class="docutils literal notranslate"><span class="pre">yaml_loader()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Peter Sun
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023, Peter Sun.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

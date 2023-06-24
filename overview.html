@@ -1,0 +1,624 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Overview &#8212; mrfmsim 0.1.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'overview';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Changelog" href="changelog.html" />
+    <link rel="prev" title="MrfmSim" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">mrfmsim 0.1.1 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ref_cli.html">Command Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref_model.html">Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref_modifier.html">Modifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref_shortcut.html">Shortcut</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="api_plugin.html">Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_component.html">Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_units.html">Units</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_configuration.html">Configuration</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/overview.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Overview</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graph-representation-and-metadata">Graph representation and metadata</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-modification-post-definition">Model Modification Post Definition</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#runtime-profiling">Runtime profiling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output-values-during-execution">Output values during execution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optimal-looping">Optimal looping</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">mrfmsim</span></code> package was originally designed as a simulation package
+for the MRFM experiment. For previous development, please see the
+archived package
+<a class="reference external" href="https://github.com/peterhs73/MrfmSim-archived">mrfmsim_archived</a>.
+The community’s interest in the author’s presentation at Nano-MRI:
+at Nano-MRI: The next generation prompted the development of a
+the package that includes more experiments from the MRFM community.
+The previous versions of MRFM uses an object-oriented design, which
+is restrictive and specific to the Marohn group. Since we developed
+<a class="reference external" href="https://github.com/Marohn-Group/mmodel">mmodel</a> package as a
+backend for <code class="docutils literal notranslate"><span class="pre">mrfmsim</span></code>, allowing us to use directed acyclic
+graphs (DAG) to define experiments. Here we highlight the benefits
+of using <code class="docutils literal notranslate"><span class="pre">mmdoel</span></code> as the backend. For a detailed explanation of
+the “graph”, “model”, “modifier”, and “shortcut” functionalities,
+see <a class="reference external" href="https://github.com/Marohn-Group/mmodel-docs">mmodel documentation</a>.</p>
+<p>Here we use a Cornell-style CERMIT-ESR experiment as an example
+(see <code class="docutils literal notranslate"><span class="pre">mrfmsim_marohn</span></code> for the explanation of the experiment). The
+notebook with all the codes of this page is available at
+<a class="reference download internal" download="" href="_downloads/b93a64dc66913c15f88b0c5ba8366bc8/mrfmsim_overview.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">mrfmsim_overview</span></code></a>.</p>
+<p>The following code assumes the <code class="docutils literal notranslate"><span class="pre">mrfmsim_marohn</span></code> package is loaded:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">mrfmsim</span>
+<span class="n">mrfmsim</span><span class="o">.</span><span class="n">load_plugins</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>We define the necessary inputs for the experiment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">mrfmsim.component</span> <span class="kn">import</span> <span class="n">SphereMagnet</span><span class="p">,</span> <span class="n">Grid</span><span class="p">,</span> <span class="n">Sample</span><span class="p">,</span> <span class="n">Cantilever</span>
+
+<span class="n">sample</span> <span class="o">=</span> <span class="n">Sample</span><span class="p">(</span>
+    <span class="n">spin_type</span><span class="o">=</span><span class="s2">&quot;electron&quot;</span><span class="p">,</span>
+    <span class="n">temperature</span><span class="o">=</span><span class="mf">11.0</span><span class="p">,</span>
+    <span class="n">T1</span><span class="o">=</span><span class="mf">1.3e-3</span><span class="p">,</span>
+    <span class="n">T2</span><span class="o">=</span><span class="mf">0.45e-6</span><span class="p">,</span>
+    <span class="n">spin_density</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">magnet</span> <span class="o">=</span> <span class="n">SphereMagnet</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mf">3300.0</span><span class="p">,</span> <span class="n">mu0_Ms</span><span class="o">=</span><span class="mf">440.0</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3300</span><span class="p">])</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">Grid</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">[</span><span class="mi">400</span><span class="p">,</span> <span class="mi">1200</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="n">step</span><span class="o">=</span><span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">25</span><span class="p">],</span> <span class="n">origin</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">])</span>
+<span class="n">cantilever</span> <span class="o">=</span> <span class="n">Cantilever</span><span class="p">(</span><span class="n">k_c</span><span class="o">=</span><span class="mf">7.8e5</span><span class="p">,</span> <span class="n">f_c</span><span class="o">=</span><span class="mf">4.975e6</span><span class="p">)</span>
+
+<span class="n">B1</span> <span class="o">=</span> <span class="mf">1.3e-3</span>  <span class="c1"># transverse magnetic field</span>
+<span class="n">mw_x_0p</span> <span class="o">=</span> <span class="mi">100</span>  <span class="c1"># zero to peak amplitude of the cantilever motion [nm]</span>
+<span class="n">B0</span> <span class="o">=</span> <span class="mi">500</span>  <span class="c1"># external field [mT]</span>
+<span class="n">f_rf</span> <span class="o">=</span> <span class="mf">19e9</span>  <span class="c1"># microwave frequency [Hz]</span>
+<span class="n">h</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1450</span><span class="p">]</span>  <span class="c1"># tip sample separation [nm]</span>
+</pre></div>
+</div>
+<section id="graph-representation-and-metadata">
+<h2>Graph representation and metadata<a class="headerlink" href="#graph-representation-and-metadata" title="Permalink to this heading">#</a></h2>
+<p>The graph representation of the experiment allows us to easily visualize the steps of the experiment. The metadata shows the signature, returns, description and more of the experiment.</p>
+<p>To printout the metadata of the model:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">mrfmsim.experiment</span> <span class="kn">import</span> <span class="n">cermitesr</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">cermitesr</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">CermitESR</span><span class="p">(</span><span class="n">B0</span><span class="p">,</span> <span class="n">B1</span><span class="p">,</span> <span class="n">cantilever</span><span class="p">,</span> <span class="n">f_rf</span><span class="p">,</span> <span class="n">grid</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">magnet</span><span class="p">,</span> <span class="n">mw_x_0p</span><span class="p">,</span> <span class="n">sample</span><span class="p">)</span>
+    <span class="n">returns</span><span class="p">:</span> <span class="n">df_spin</span>
+    <span class="n">graph</span><span class="p">:</span> <span class="n">cornell_esr_graph</span>
+    <span class="n">handler</span><span class="p">:</span> <span class="n">MemHandler</span>
+    <span class="n">modifiers</span><span class="p">:</span>
+      <span class="o">-</span> <span class="n">replace_component</span><span class="p">({</span><span class="s1">&#39;magnet&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Bz_method&#39;</span><span class="p">,</span> <span class="s1">&#39;Bzxx_method&#39;</span><span class="p">],</span> <span class="s1">&#39;sample&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;J&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;Gamma&#39;</span><span class="p">,</span> <span class="s1">&#39;spin_density&#39;</span><span class="p">,</span> <span class="s1">&#39;temperature&#39;</span><span class="p">,</span> <span class="s1">&#39;dB_sat&#39;</span><span class="p">,</span> <span class="s1">&#39;dB_hom&#39;</span><span class="p">],</span> <span class="s1">&#39;grid&#39;</span><span class="p">:</span>
+      <span class="p">[</span><span class="s1">&#39;grid_array&#39;</span><span class="p">,</span> <span class="s1">&#39;grid_shape&#39;</span><span class="p">,</span> <span class="s1">&#39;grid_step&#39;</span><span class="p">,</span> <span class="s1">&#39;grid_voxel&#39;</span><span class="p">,</span> <span class="s1">&#39;extend_grid_method&#39;</span><span class="p">],</span>
+      <span class="s1">&#39;cantilever&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;dk_to_df_ac_cermit&#39;</span><span class="p">]})</span>
+
+    <span class="n">Simulates</span> <span class="n">a</span> <span class="n">Cornell</span><span class="o">-</span><span class="n">style</span> <span class="n">frequency</span> <span class="n">shift</span> <span class="n">magnetic</span> <span class="n">resonance</span> <span class="n">force</span> <span class="n">microscope</span>
+      <span class="n">experiment</span> <span class="ow">in</span> <span class="n">which</span> <span class="n">microwaves</span> <span class="n">are</span> <span class="n">applied</span> <span class="k">for</span> <span class="n">half</span> <span class="n">a</span> <span class="n">cantilever</span> <span class="n">cyclic</span> <span class="n">to</span>
+      <span class="n">saturate</span> <span class="n">electron</span> <span class="n">spin</span> <span class="n">resonance</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">bowl</span><span class="o">-</span><span class="n">shaped</span> <span class="n">region</span> <span class="n">swept</span> <span class="n">out</span> <span class="n">by</span> <span class="n">the</span>
+      <span class="n">cantilever</span> <span class="n">motion</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>To draw the graph of the model:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">mrfmsim.experiment</span> <span class="kn">import</span> <span class="n">cermitesr</span>
+<span class="n">cermitesr</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/cermitesr.pdf"><img alt="_images/cermitesr.pdf" class="align-center" src="_images/cermitesr.pdf" style="width: 800px;" /></a>
+</section>
+<section id="model-modification-post-definition">
+<h2>Model Modification Post Definition<a class="headerlink" href="#model-modification-post-definition" title="Permalink to this heading">#</a></h2>
+<p>A key feature of mmodel is to allow quick modification to existing
+models directly. The result is a must faster development cycle for
+experiment simulation.</p>
+<section id="runtime-profiling">
+<h3>Runtime profiling<a class="headerlink" href="#runtime-profiling" title="Permalink to this heading">#</a></h3>
+<p>We can easily profile the performance of the target nodes using by
+applying modifiers to the desired nodes. We can modify individual
+graph nodes or we can use <code class="docutils literal notranslate"><span class="pre">modifier_shortcut</span></code> and the modifier
+<code class="docutils literal notranslate"><span class="pre">profile_time</span></code> to modify the experiment model directly.</p>
+<p>Using the <code class="docutils literal notranslate"><span class="pre">cermitesr</span></code> experiment model we can
+inspect the run time of “minimum absolute x offset” and
+“relative polarization change” performance:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">mrfmsim.shortcut</span> <span class="kn">import</span> <span class="n">modifier_shortcut</span>
+<span class="kn">from</span> <span class="nn">mrfmsim.modifier</span> <span class="kn">import</span> <span class="n">profile_time</span>
+
+<span class="n">mod_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;minimum absolute x offset&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">profile_time</span><span class="p">()],</span>
+    <span class="s2">&quot;relative polarization change&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">profile_time</span><span class="p">()],</span>
+<span class="p">}</span>
+
+<span class="n">cermitesr_profile</span> <span class="o">=</span> <span class="n">modifier_shortcut</span><span class="p">(</span><span class="n">cermitesr</span><span class="p">,</span> <span class="n">mod_dict</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;CermitESR_Profile&quot;</span><span class="p">)</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">cermitesr_profile</span><span class="p">(</span><span class="n">B0</span><span class="p">,</span> <span class="n">B1</span><span class="p">,</span> <span class="n">cantilever</span><span class="p">,</span> <span class="n">f_rf</span><span class="p">,</span> <span class="n">grid</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">magnet</span><span class="p">,</span> <span class="n">mw_x_0p</span><span class="p">,</span> <span class="n">sample</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">min_abs_offset</span> <span class="o">-</span> <span class="mi">1</span> <span class="n">loop</span><span class="p">,</span> <span class="n">best</span> <span class="n">of</span> <span class="mi">1</span><span class="p">:</span> <span class="mf">72.01</span> <span class="n">ms</span> <span class="n">per</span> <span class="n">loop</span>
+    <span class="n">rel_dpol_sat_steadystate</span> <span class="o">-</span> <span class="mi">10</span> <span class="n">loops</span><span class="p">,</span> <span class="n">best</span> <span class="n">of</span> <span class="mi">1</span><span class="p">:</span> <span class="mf">2.05</span> <span class="n">ms</span> <span class="n">per</span> <span class="n">loop</span>
+
+    <span class="o">-</span><span class="mf">0.003465699196776941</span>
+</pre></div>
+</div>
+</section>
+<section id="output-values-during-execution">
+<h3>Output values during execution<a class="headerlink" href="#output-values-during-execution" title="Permalink to this heading">#</a></h3>
+<p>We can return intermediate values by modifying the experiment
+returns, but sometimes we only want to inspect the value. We can
+quickly add parameter printing to the model with units. The feature
+is especially useful when we loop the experiment in the next
+section.
+For example, we want to show the value of “f_rf” (input), “dk_spin”
+(Intermediate) and “df_spin” (output). We use the <code class="docutils literal notranslate"><span class="pre">UNITS</span></code>
+dictionary in <code class="docutils literal notranslate"><span class="pre">mrfmsim_marohn</span></code> package:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">mrfmsim.shortcut</span> <span class="kn">import</span> <span class="n">print_shortcut</span>
+<span class="kn">from</span> <span class="nn">mrfmsim_marohn</span> <span class="kn">import</span> <span class="n">UNITS</span>
+
+<span class="n">cermitesr_stdout</span> <span class="o">=</span> <span class="n">print_shortcut</span><span class="p">(</span><span class="n">cermitesr</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;f_rf&quot;</span><span class="p">,</span> <span class="s2">&quot;dk_spin&quot;</span><span class="p">,</span> <span class="s2">&quot;df_spin&quot;</span><span class="p">],</span> <span class="n">units</span><span class="o">=</span><span class="n">UNITS</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;CermitESR_Stdout&quot;</span><span class="p">)</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">cermitesr_stdout</span><span class="p">(</span><span class="n">B0</span><span class="p">,</span> <span class="n">B1</span><span class="p">,</span> <span class="n">cantilever</span><span class="p">,</span> <span class="n">f_rf</span><span class="p">,</span> <span class="n">grid</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">magnet</span><span class="p">,</span> <span class="n">mw_x_0p</span><span class="p">,</span> <span class="n">sample</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">f_rf</span> <span class="mf">1.900e+10</span> <span class="p">[</span><span class="n">Hz</span><span class="p">]</span> <span class="o">|</span> <span class="n">dk_spin</span> <span class="o">-</span><span class="mf">0.002</span> <span class="p">[</span><span class="n">aN</span><span class="o">/</span><span class="n">nm</span><span class="p">]</span> <span class="o">|</span> <span class="n">df_spin</span> <span class="o">-</span><span class="mf">0.003</span> <span class="p">[</span><span class="n">mHz</span><span class="p">]</span>
+
+    <span class="o">-</span><span class="mf">0.003465699196776941</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Currently, an output parameter should always be added to the
+<code class="docutils literal notranslate"><span class="pre">print_shortcut</span></code> to ensure the linebreak. The behavior will
+be corrected in the future.</p>
+</div>
+</section>
+<section id="optimal-looping">
+<h3>Optimal looping<a class="headerlink" href="#optimal-looping" title="Permalink to this heading">#</a></h3>
+<p>In a lot of the MRFM experiments, we need to first calculate the
+field and field gradient generated by the tip of the magnet.
+The subsequent calculation involves a large three-dimensional matrix
+operations.
+Depending on the size of the simulation grid, the matrix operations
+can be very computationally intensive.</p>
+<p>If we want to simulate the change of the signal over a wide range of
+external field (<span class="math notranslate nohighlight">\(B_0\)</span>) and microwave frequency
+(<span class="math notranslate nohighlight">\(f_\mathrm{rf}`\)</span>), we would want to avoid repeat
+calculations of unnecessary components that are independent of the
+two parameters.</p>
+<p>The graph-based experiment model can automatically determine the
+optimal loop location and generate a new model with desired loops.</p>
+<p>To loop the “f_rf” parameter (use the cermitesr_stdout model
+to print out the intermediate values):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">mrfmsim.shortcut</span> <span class="kn">import</span> <span class="n">loop_shortcut</span>
+
+<span class="n">cermitesr_frf_loop</span> <span class="o">=</span> <span class="n">loop_shortcut</span><span class="p">(</span><span class="n">cermitesr_stdout</span><span class="p">,</span> <span class="s2">&quot;f_rf&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;CermitESR_frfLoop&quot;</span><span class="p">)</span>
+
+<span class="n">cermitesr_frf_loop</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">export</span><span class="o">=</span><span class="s2">&quot;cermitesr_frf_loop.pdf&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/cermitesr_frf_loop.pdf"><img alt="_images/cermitesr_frf_loop.pdf" class="align-center" src="_images/cermitesr_frf_loop.pdf" style="width: 800px;" /></a>
+<p>To loop the “B0” parameter on top of “f_rf”:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cermitesr_b0_frf_loop</span> <span class="o">=</span> <span class="n">loop_shortcut</span><span class="p">(</span>
+    <span class="n">cermitesr_frf_loop</span><span class="p">,</span> <span class="s2">&quot;B0&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;CermitESR_b0frfLoop&quot;</span>
+<span class="p">)</span>
+
+<span class="n">cermitesr_b0_frf_loop</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">export</span><span class="o">=</span><span class="s2">&quot;cermitesr_b0_frf_loop.pdf&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/cermitesr_b0_frf_loop.pdf"><img alt="_images/cermitesr_b0_frf_loop.pdf" class="align-center" src="_images/cermitesr_b0_frf_loop.pdf" style="width: 800px;" /></a>
+<p>The model can be executed by supplying lists for “B0” and “f_rf”:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">B0_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">900</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>  <span class="c1"># external field [mT]</span>
+<span class="n">f_rf_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">18.5e9</span><span class="p">,</span> <span class="mf">19.5e9</span><span class="p">,</span> <span class="mf">0.5e9</span><span class="p">)</span>  <span class="c1"># microwave frequency [Hz]</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">cermitesr_b0_frf_loop</span><span class="p">(</span>
+        <span class="n">B0</span><span class="o">=</span><span class="n">B0_list</span><span class="p">,</span>
+        <span class="n">B1</span><span class="o">=</span><span class="n">B1</span><span class="p">,</span>
+        <span class="n">cantilever</span><span class="o">=</span><span class="n">cantilever</span><span class="p">,</span>
+        <span class="n">f_rf</span><span class="o">=</span><span class="n">f_rf_list</span><span class="p">,</span>
+        <span class="n">grid</span><span class="o">=</span><span class="n">grid</span><span class="p">,</span>
+        <span class="n">h</span><span class="o">=</span><span class="n">h</span><span class="p">,</span>
+        <span class="n">magnet</span><span class="o">=</span><span class="n">magnet</span><span class="p">,</span>
+        <span class="n">mw_x_0p</span><span class="o">=</span><span class="n">mw_x_0p</span><span class="p">,</span>
+        <span class="n">sample</span><span class="o">=</span><span class="n">sample</span><span class="p">,</span>
+    <span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">f_rf</span> <span class="mf">1.850e+10</span> <span class="p">[</span><span class="n">Hz</span><span class="p">]</span> <span class="o">|</span> <span class="n">dk_spin</span> <span class="o">-</span><span class="mf">0.004</span> <span class="p">[</span><span class="n">aN</span><span class="o">/</span><span class="n">nm</span><span class="p">]</span> <span class="o">|</span> <span class="n">df_spin</span> <span class="o">-</span><span class="mf">0.005</span> <span class="p">[</span><span class="n">mHz</span><span class="p">]</span>
+    <span class="n">f_rf</span> <span class="mf">1.900e+10</span> <span class="p">[</span><span class="n">Hz</span><span class="p">]</span> <span class="o">|</span> <span class="n">dk_spin</span> <span class="o">-</span><span class="mf">0.002</span> <span class="p">[</span><span class="n">aN</span><span class="o">/</span><span class="n">nm</span><span class="p">]</span> <span class="o">|</span> <span class="n">df_spin</span> <span class="o">-</span><span class="mf">0.003</span> <span class="p">[</span><span class="n">mHz</span><span class="p">]</span>
+    <span class="n">f_rf</span> <span class="mf">1.850e+10</span> <span class="p">[</span><span class="n">Hz</span><span class="p">]</span> <span class="o">|</span> <span class="n">dk_spin</span> <span class="mf">0.005</span> <span class="p">[</span><span class="n">aN</span><span class="o">/</span><span class="n">nm</span><span class="p">]</span> <span class="o">|</span> <span class="n">df_spin</span> <span class="mf">0.007</span> <span class="p">[</span><span class="n">mHz</span><span class="p">]</span>
+    <span class="n">f_rf</span> <span class="mf">1.900e+10</span> <span class="p">[</span><span class="n">Hz</span><span class="p">]</span> <span class="o">|</span> <span class="n">dk_spin</span> <span class="mf">0.016</span> <span class="p">[</span><span class="n">aN</span><span class="o">/</span><span class="n">nm</span><span class="p">]</span> <span class="o">|</span> <span class="n">df_spin</span> <span class="mf">0.023</span> <span class="p">[</span><span class="n">mHz</span><span class="p">]</span>
+
+    <span class="p">[[</span><span class="o">-</span><span class="mf">0.005362279436110155</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.003465699196776941</span><span class="p">],</span>
+     <span class="p">[</span><span class="mf">0.0071300149234139135</span><span class="p">,</span> <span class="mf">0.02300114588870745</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>The result is a 2x2 matrix equivalent to the result from the
+following loops:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">B0</span> <span class="ow">in</span> <span class="n">B0_list</span><span class="p">:</span>
+    <span class="o">...</span>
+
+    <span class="k">for</span> <span class="n">f_rf</span> <span class="ow">in</span> <span class="n">f_rf_list</span><span class="p">:</span>
+        <span class="o">...</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">MrfmSim</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="changelog.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Changelog</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graph-representation-and-metadata">Graph representation and metadata</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-modification-post-definition">Model Modification Post Definition</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#runtime-profiling">Runtime profiling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output-values-during-execution">Output values during execution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optimal-looping">Optimal looping</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Peter Sun
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023, Peter Sun.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
