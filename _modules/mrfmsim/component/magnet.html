@@ -1,0 +1,826 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mrfmsim.component.magnet &#8212; mrfmsim 0.2.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/mrfmsim/component/magnet';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">mrfmsim 0.2.0 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../features.html">Plugin features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Changelog</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Experiment Setup</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../coordinates.html">Coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sample.html">Sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grid.html">Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../magnet.html">Magnet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cantilever.html">Cantilever</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Experiment</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment.html">Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../collection.html">Collection</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Experiment Modification</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../ref_modifier.html">Modifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref_shortcut.html">Shortcut</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../api_plugin.html">Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api_component.html">Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api_configuration.html">Configuration</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for mrfmsim.component.magnet</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">numba</span> <span class="k">as</span> <span class="nn">nb</span>
+<span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span><span class="p">,</span> <span class="n">field</span>
+<span class="kn">from</span> <span class="nn">mrfmsim.component</span> <span class="kn">import</span> <span class="n">ComponentBase</span>
+
+
+<div class="viewcode-block" id="SphereMagnet"><a class="viewcode-back" href="../../../magnet.html#mrfmsim.component.magnet.SphereMagnet">[docs]</a><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">SphereMagnet</span><span class="p">(</span><span class="n">ComponentBase</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Spherical magnet object with its Bz, Bzx, Bzxx calculations.</span>
+
+<span class="sd">    :param float radius: sphere magnet radius [nm]</span>
+<span class="sd">    :param list origin: the position of the magnet origin (x, y, z)</span>
+<span class="sd">    :param float mu0_Ms: saturation magnetization [mT]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">radius</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">metadata</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;nm&quot;</span><span class="p">,</span> <span class="s2">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;.1f&quot;</span><span class="p">})</span>
+    <span class="n">origin</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">metadata</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;nm&quot;</span><span class="p">})</span>
+    <span class="n">mu0_Ms</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">metadata</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;mT&quot;</span><span class="p">})</span>
+
+<div class="viewcode-block" id="SphereMagnet.Bz_method"><a class="viewcode-back" href="../../../magnet.html#mrfmsim.component.magnet.SphereMagnet.Bz_method">[docs]</a>    <span class="k">def</span> <span class="nf">Bz_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Calculate magnetic field :math:`B_z` [mT].</span>
+
+<span class="sd">        :param float x: x coordinate of sample grid [nm]</span>
+<span class="sd">        :param float y: y coordinate of sample grid [nm]</span>
+<span class="sd">        :param float z: z coordinate of sample grid [nm]</span>
+
+<span class="sd">        The magnetic field is calculated as</span>
+
+<span class="sd">        .. math::</span>
+<span class="sd">            B_z = \dfrac{\mu_0 M_s}{3}</span>
+<span class="sd">            \left( 3 \dfrac{Z^2}{R^5} - \dfrac{1}{R^3} \right)</span>
+<span class="sd">            R = \sqrt{X^2+Y^2+Z^2}</span>
+
+<span class="sd">        Here :math:`(x,y,z)` is the location at which we want to know the field;</span>
+<span class="sd">        :math:`(x_0, y_0, z_0)` is the location of the center of the magnet;</span>
+<span class="sd">        :math:`r` is the radius of the magnet; :math:`X = (x-x_0)/r`;</span>
+<span class="sd">        :math:`Y = (y-y_0)/r`, and :math:`Z = (z-z_0)/r` are normalized</span>
+<span class="sd">        distances to the center of the magnet;</span>
+<span class="sd">        :math:`\mu_0 M_s` is the magnetic sphere&#39;s saturation</span>
+<span class="sd">        magnetization in mT.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">dx</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">origin</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">radius</span>
+        <span class="n">dy</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">origin</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">radius</span>
+        <span class="n">dz</span> <span class="o">=</span> <span class="p">(</span><span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">origin</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">radius</span>
+
+        <span class="n">pre_term</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mu0_Ms</span> <span class="o">/</span> <span class="mf">3.0</span>
+
+        <span class="k">return</span> <span class="n">pre_term</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bz</span><span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="n">dy</span><span class="p">,</span> <span class="n">dz</span><span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="nd">@nb</span><span class="o">.</span><span class="n">vectorize</span><span class="p">(</span>
+        <span class="p">[</span><span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span><span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span> <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span> <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">)],</span>
+        <span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">target</span><span class="o">=</span><span class="s2">&quot;parallel&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">def</span> <span class="nf">_bz</span><span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="n">dy</span><span class="p">,</span> <span class="n">dz</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Internal calculation for bz, optimized with numba.</span>
+
+<span class="sd">        :param dx: normalized distances to the center of the magnet in x</span>
+<span class="sd">        :param dx: normalized distances to the center of the magnet in y</span>
+<span class="sd">        :param dx: normalized distances to the center of the magnet in z</span>
+<span class="sd">        :type: np.array</span>
+<span class="sd">        :return: bz without pre-term</span>
+<span class="sd">        :rtype: np.array</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="o">-</span><span class="mf">1.0</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">3</span>
+            <span class="o">+</span> <span class="mf">3.0</span> <span class="o">*</span> <span class="n">dz</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">5</span>
+        <span class="p">)</span>
+
+<div class="viewcode-block" id="SphereMagnet.Bzx_method"><a class="viewcode-back" href="../../../magnet.html#mrfmsim.component.magnet.SphereMagnet.Bzx_method">[docs]</a>    <span class="k">def</span> <span class="nf">Bzx_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Calcualte magnetic field gradient :math:`B_{zx}`.</span>
+
+<span class="sd">        :math:`B_{zx} \equiv \partial B_z / \partial x`</span>
+<span class="sd">        [ :math:`\mathrm{mT} \: \mathrm{nm}^{-1}` ].</span>
+<span class="sd">        With :math:`X`, :math:`Y`, :math:`Z`, :math:`R`, :math:`r`, and</span>
+<span class="sd">        :math:`\mu_0 M_s` defined in Bz(x, y, z), the magnetic field</span>
+<span class="sd">        gradient is calculated as</span>
+
+<span class="sd">        .. math::</span>
+<span class="sd">            B_{zx} = \dfrac{\partial B_z}{\partial z}</span>
+<span class="sd">            = \dfrac{\mu_0 M_s}{r} X \:</span>
+<span class="sd">            \left( \dfrac{1}{R^5} - 5 \dfrac{Z^2}{R^7} \right)</span>
+<span class="sd">            R = \sqrt{X^2+Y^2+Z^2}</span>
+
+<span class="sd">        :param float x: x coordinate of sample grid [nm]</span>
+<span class="sd">        :param float y: y coordinate of sample grid [nm]</span>
+<span class="sd">        :param float z: z coordinate of sample grid [nm]</span>
+<span class="sd">        :return: magnetic field gradient</span>
+<span class="sd">        :rtype: np.array</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">dx</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">origin</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">radius</span>
+        <span class="n">dy</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">origin</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">radius</span>
+        <span class="n">dz</span> <span class="o">=</span> <span class="p">(</span><span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">origin</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">radius</span>
+        <span class="n">pre_term</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mu0_Ms</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">radius</span>
+
+        <span class="k">return</span> <span class="n">pre_term</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bzx</span><span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="n">dy</span><span class="p">,</span> <span class="n">dz</span><span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="nd">@nb</span><span class="o">.</span><span class="n">vectorize</span><span class="p">(</span>
+        <span class="p">[</span><span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span><span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span> <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span> <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">)],</span>
+        <span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">target</span><span class="o">=</span><span class="s2">&quot;parallel&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">def</span> <span class="nf">_bzx</span><span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="n">dy</span><span class="p">,</span> <span class="n">dz</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Internal calculation for bzx, optimized with numba.</span>
+
+<span class="sd">        :param dx: normalized distances to the center of the magnet in x</span>
+<span class="sd">        :param dy: normalized distances to the center of the magnet in y</span>
+<span class="sd">        :param dz: normalized distances to the center of the magnet in z</span>
+<span class="sd">        :type: np.array</span>
+<span class="sd">        :return: bzx without pre-term</span>
+<span class="sd">        :rtype: np.array</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="n">dx</span> <span class="o">*</span> <span class="p">(</span>
+            <span class="mf">1.0</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">5</span>
+            <span class="o">-</span> <span class="mf">5.0</span> <span class="o">*</span> <span class="n">dz</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">7</span>
+        <span class="p">)</span>
+
+<div class="viewcode-block" id="SphereMagnet.Bzxx_method"><a class="viewcode-back" href="../../../magnet.html#mrfmsim.component.magnet.SphereMagnet.Bzxx_method">[docs]</a>    <span class="k">def</span> <span class="nf">Bzxx_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Calculate magnetic field second derivative :math:`B_{zxx}`.</span>
+
+<span class="sd">        :math:`B_{zxx} \equiv \partial^2 B_z / \partial x^2`</span>
+<span class="sd">        [:math:`\mathrm{mT} \: \mathrm{nm}^{-2}`]. The inputs are</span>
+<span class="sd">        With :math:`X`, :math:`Y`, :math:`Z`, :math:`R`, :math:`r`, and</span>
+<span class="sd">        :math:`\mu_0 M_s` defined as above, the magnetic field</span>
+<span class="sd">        second derivative is calculated as</span>
+
+<span class="sd">        .. math::</span>
+<span class="sd">            B_{zxx} = \dfrac{\partial B_z}{\partial z}</span>
+<span class="sd">            = \dfrac{\mu_0 M_s}{r^2} \:</span>
+<span class="sd">            \left( \dfrac{1}{R^5} - 5 \dfrac{X^2}{R^7}</span>
+<span class="sd">            - 5 \dfrac{Z^2}{R^7} + 35 \dfrac{X^2 Z^2}{R^9} \right)</span>
+<span class="sd">            R = \sqrt{X^2+Y^2+Z^2}</span>
+
+<span class="sd">        :param float x: x coordinate of sample grid [nm]</span>
+<span class="sd">        :param float y: y coordinate of sample grid [nm]</span>
+<span class="sd">        :param float z: z coordinate of sample grid [nm]</span>
+<span class="sd">        :return: magnetic field second derivative</span>
+<span class="sd">        :rtype: np.array</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">dx</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">origin</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">radius</span>
+        <span class="n">dy</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">origin</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">radius</span>
+        <span class="n">dz</span> <span class="o">=</span> <span class="p">(</span><span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">origin</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">radius</span>
+        <span class="n">pre_term</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mu0_Ms</span> <span class="o">/</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">radius</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">pre_term</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bzxx</span><span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="n">dy</span><span class="p">,</span> <span class="n">dz</span><span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="nd">@nb</span><span class="o">.</span><span class="n">vectorize</span><span class="p">(</span>
+        <span class="p">[</span><span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span><span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span> <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span> <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">)],</span>
+        <span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">target</span><span class="o">=</span><span class="s2">&quot;parallel&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">def</span> <span class="nf">_bzxx</span><span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="n">dy</span><span class="p">,</span> <span class="n">dz</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Internal calculation for bzxx, optimized with numba.</span>
+
+<span class="sd">        :param dx: normalized distances to the center of the magnet in x</span>
+<span class="sd">        :param dy: normalized distances to the center of the magnet in y</span>
+<span class="sd">        :param dz: normalized distances to the center of the magnet in z</span>
+<span class="sd">        :type: np.array</span>
+<span class="sd">        :return: bzxx without pre-term</span>
+<span class="sd">        :rtype: np.array</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="mf">1.0</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">5</span>
+            <span class="o">-</span> <span class="mf">5.0</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">7</span>
+            <span class="o">-</span> <span class="mf">5.0</span> <span class="o">*</span> <span class="p">(</span><span class="n">dz</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">7</span>
+            <span class="o">+</span> <span class="mf">35.0</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">dz</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">9</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="RectangularMagnet"><a class="viewcode-back" href="../../../magnet.html#mrfmsim.component.magnet.RectangularMagnet">[docs]</a><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">RectangularMagnet</span><span class="p">(</span><span class="n">ComponentBase</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Rectangular magnet object with the bz, bzx, bzxx calculations.</span>
+
+<span class="sd">    :param list length: length of rectangular magnet in (x, y, z) direction [nm]</span>
+<span class="sd">    :param list origin: the position of the magnet origin (x, y, z)</span>
+<span class="sd">    :param float mu0_Ms: saturation magnetization [mT]</span>
+<span class="sd">    :ivar np.array _range:</span>
+<span class="sd">        [-xrange, +xrange, -yrange, +yrange, -zrange, zrange]</span>
+<span class="sd">        range in the x, y and z direction after the center point to the origin.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">length</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">metadata</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;nm&quot;</span><span class="p">})</span>
+    <span class="n">origin</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">metadata</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;nm&quot;</span><span class="p">})</span>
+    <span class="n">mu0_Ms</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">metadata</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;mT&quot;</span><span class="p">})</span>
+
+    <span class="k">def</span> <span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_range</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">(</span>
+            <span class="p">(</span>
+                <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">origin</span><span class="p">,</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">origin</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_pre_term</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mu0_Ms</span> <span class="o">/</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+
+<div class="viewcode-block" id="RectangularMagnet.Bz_method"><a class="viewcode-back" href="../../../magnet.html#mrfmsim.component.magnet.RectangularMagnet.Bz_method">[docs]</a>    <span class="k">def</span> <span class="nf">Bz_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Calculate magnetic field :math:`B_z` [mT].</span>
+
+<span class="sd">        The magnetic field is calculated following Ravaud2009.</span>
+<span class="sd">        Using the Coulombian model, assuming a uniform magnetization throughout</span>
+<span class="sd">        the volume of the magnet and modeling each face of the magnet as a</span>
+<span class="sd">        layer of continuous current density. The total field is found by</span>
+<span class="sd">        summing over the faces.</span>
+<span class="sd">        The magnetic field is given by:</span>
+
+<span class="sd">        .. math::</span>
+<span class="sd">            B_z = \dfrac{\mu_0 M_s}{4\pi} \sum_{i=1}^{2}</span>
+<span class="sd">                \sum_{j=1}^2 \sum_{k=1}^2(-1)^{i+j+k}</span>
+<span class="sd">                arctan \left( \dfrac{(x - x_i)(y - y_i))}{(z - z_k)R} \right)</span>
+
+<span class="sd">        Here :math:`(x,y,z)` are the coordinates for the location at which we</span>
+<span class="sd">        want to know the field;</span>
+<span class="sd">        The magnet spans from x1 to x2 in the ``x``-direction,</span>
+<span class="sd">        y1 to y2 in the ``y``-direction, and z1 to z2 in</span>
+<span class="sd">        the ``z``-direction;</span>
+
+<span class="sd">        .. math::</span>
+<span class="sd">            R = \sqrt{(x - x_i)^2 + (y - y_j)^2 + (z - z_k)^2}</span>
+
+<span class="sd">        where :math:`\mu_0 M_s` is the magnet&#39;s saturation magnetization in mT.</span>
+
+<span class="sd">        **Reference**:</span>
+<span class="sd">        Ravaud, R. and Lemarquand, G. &quot;Magnetic field produced by a</span>
+<span class="sd">        parallelepipedic magnet of various and uniform polarization&quot; ,</span>
+<span class="sd">        *PIER*, **2009**, *98*, 207-219</span>
+<span class="sd">        [`10.2528/PIER09091704 &lt;http://dx.doi.org/10.2528/PIER09091704&gt;`__].</span>
+
+<span class="sd">        - set the magnet up so that the x and y dimensions are centered about</span>
+<span class="sd">          the zero point.</span>
+<span class="sd">        - The translation in z should shift the tip of the magnet in the</span>
+<span class="sd">          z-direction to be the given distance from the surface.</span>
+
+<span class="sd">        :param float x: x coordinate of sample grid [nm]</span>
+<span class="sd">        :param float y: y coordinate of sample grid [nm]</span>
+<span class="sd">        :param float z: z coordinate of sample grid [nm]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">dx1</span><span class="p">,</span> <span class="n">dx2</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy1</span><span class="p">,</span> <span class="n">dy2</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz1</span><span class="p">,</span> <span class="n">dz2</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pre_term</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bz</span><span class="p">(</span><span class="n">dx1</span><span class="p">,</span> <span class="n">dx2</span><span class="p">,</span> <span class="n">dy1</span><span class="p">,</span> <span class="n">dy2</span><span class="p">,</span> <span class="n">dz1</span><span class="p">,</span> <span class="n">dz2</span><span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="nd">@nb</span><span class="o">.</span><span class="n">vectorize</span><span class="p">(</span>
+        <span class="p">[</span>
+            <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="p">],</span>
+        <span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">target</span><span class="o">=</span><span class="s2">&quot;parallel&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">def</span> <span class="nf">_bz</span><span class="p">(</span><span class="n">dx1</span><span class="p">,</span> <span class="n">dx2</span><span class="p">,</span> <span class="n">dy1</span><span class="p">,</span> <span class="n">dy2</span><span class="p">,</span> <span class="n">dz1</span><span class="p">,</span> <span class="n">dz2</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Calculate the summation term for magnetic field optimized by numba.</span>
+
+<span class="sd">        See method bz for the explanation.</span>
+<span class="sd">        :param float dx1, dx2: distance between grid and the one end of magnet</span>
+<span class="sd">                        in x direction [nm]</span>
+<span class="sd">        :param float dy1, dy2: distance between grid and the one end of magnet</span>
+<span class="sd">                        in y direction [nm]</span>
+<span class="sd">        :param float dz1, dz2: distance between grid and the one end of magnet</span>
+<span class="sd">                        in z direction [nm]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">dx1</span> <span class="o">*</span> <span class="n">dy1</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">dz1</span><span class="p">))</span>
+            <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">dx2</span> <span class="o">*</span> <span class="n">dy1</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">dz1</span><span class="p">))</span>
+            <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">dx1</span> <span class="o">*</span> <span class="n">dy2</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">dz1</span><span class="p">))</span>
+            <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">dx2</span> <span class="o">*</span> <span class="n">dy2</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">dz1</span><span class="p">))</span>
+            <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">dx1</span> <span class="o">*</span> <span class="n">dy1</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">dz2</span><span class="p">))</span>
+            <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">dx2</span> <span class="o">*</span> <span class="n">dy1</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">dz2</span><span class="p">))</span>
+            <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">dx1</span> <span class="o">*</span> <span class="n">dy2</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">dz2</span><span class="p">))</span>
+            <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">dx2</span> <span class="o">*</span> <span class="n">dy2</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">dz2</span><span class="p">))</span>
+        <span class="p">)</span>
+
+<div class="viewcode-block" id="RectangularMagnet.Bzx_method"><a class="viewcode-back" href="../../../magnet.html#mrfmsim.component.magnet.RectangularMagnet.Bzx_method">[docs]</a>    <span class="k">def</span> <span class="nf">Bzx_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Calculate magnetic field gradient :math:`B_{zx}`.</span>
+
+<span class="sd">        :math:`B_{zx} \equiv \partial B_z / \partial x`</span>
+<span class="sd">        [:math:`\mathrm{mT} \: \mathrm{nm}^{-1}`].</span>
+<span class="sd">        The magnetic field gradient</span>
+<span class="sd">        :math:`B_{zx} = \dfrac{\partial{B_z}}{\partial x}` is</span>
+<span class="sd">        given by the following:</span>
+
+<span class="sd">        .. math::</span>
+<span class="sd">           B_{zx} = \dfrac{\mu_0 M_s}{4 \pi} \sum_{i=1}^2 \sum_{j=1}^2</span>
+<span class="sd">               \sum_{k=1}^2(-1)^{i+j+k}</span>
+<span class="sd">               \left( \dfrac{(y-y_j)(z-z_k)}{ R((x-x_i)^2 + (z-z_k)^2))}</span>
+<span class="sd">               \right)</span>
+
+<span class="sd">        As described above, :math:`(x,y,z)` are coordinates for the location</span>
+<span class="sd">        at which we want to know the field gradient; the magnet spans from</span>
+<span class="sd">        x1 to x2 in the ``x``-direction, y1 to y2 in the ``y``-direction, and</span>
+<span class="sd">        from z1 to z2 in the ``z``-direction;</span>
+
+<span class="sd">        .. math::</span>
+<span class="sd">            R = \sqrt{(x - x_i) + (y - y_j) + (z - z_k)}</span>
+
+<span class="sd">        :math:`\mu_0 M_s` is the magnet&#39;s saturation magnetization in mT.</span>
+
+<span class="sd">        :param float x: ``x`` coordinate [nm]</span>
+<span class="sd">        :param float y: ``y`` coordinate [nm]</span>
+<span class="sd">        :param float z: ``z`` coordinate [nm]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">dx1</span><span class="p">,</span> <span class="n">dx2</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy1</span><span class="p">,</span> <span class="n">dy2</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz1</span><span class="p">,</span> <span class="n">dz2</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pre_term</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bzx</span><span class="p">(</span><span class="n">dx1</span><span class="p">,</span> <span class="n">dx2</span><span class="p">,</span> <span class="n">dy1</span><span class="p">,</span> <span class="n">dy2</span><span class="p">,</span> <span class="n">dz1</span><span class="p">,</span> <span class="n">dz2</span><span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="nd">@nb</span><span class="o">.</span><span class="n">vectorize</span><span class="p">(</span>
+        <span class="p">[</span>
+            <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="p">],</span>
+        <span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">target</span><span class="o">=</span><span class="s2">&quot;parallel&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">def</span> <span class="nf">_bzx</span><span class="p">(</span><span class="n">dx1</span><span class="p">,</span> <span class="n">dx2</span><span class="p">,</span> <span class="n">dy1</span><span class="p">,</span> <span class="n">dy2</span><span class="p">,</span> <span class="n">dz1</span><span class="p">,</span> <span class="n">dz2</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Calculate the summation term for magnetic field gradient.</span>
+
+<span class="sd">        Optimized with numba. See method bzx for the explanation.</span>
+
+<span class="sd">        :param np.array dx1, dx2: distance between grid and the 2 ends of</span>
+<span class="sd">            magnet in x direction [nm]</span>
+<span class="sd">        :param np.array dy1, dy2: distance between grid and the 2 ends of</span>
+<span class="sd">            magnet in y direction [nm]</span>
+<span class="sd">        :param np.array dz1, dz2: distance between grid and the 2 ends of</span>
+<span class="sd">            magnet in z direction [nm]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="o">-</span><span class="n">dy1</span>
+            <span class="o">*</span> <span class="n">dz1</span>
+            <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+            <span class="o">+</span> <span class="n">dy1</span>
+            <span class="o">*</span> <span class="n">dz1</span>
+            <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+            <span class="o">+</span> <span class="n">dy2</span>
+            <span class="o">*</span> <span class="n">dz1</span>
+            <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+            <span class="o">-</span> <span class="n">dy2</span>
+            <span class="o">*</span> <span class="n">dz1</span>
+            <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+            <span class="o">+</span> <span class="n">dy1</span>
+            <span class="o">*</span> <span class="n">dz2</span>
+            <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+            <span class="o">-</span> <span class="n">dy1</span>
+            <span class="o">*</span> <span class="n">dz2</span>
+            <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+            <span class="o">-</span> <span class="n">dy2</span>
+            <span class="o">*</span> <span class="n">dz2</span>
+            <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+            <span class="o">+</span> <span class="n">dy2</span>
+            <span class="o">*</span> <span class="n">dz2</span>
+            <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+        <span class="p">)</span>
+
+<div class="viewcode-block" id="RectangularMagnet.Bzxx_method"><a class="viewcode-back" href="../../../magnet.html#mrfmsim.component.magnet.RectangularMagnet.Bzxx_method">[docs]</a>    <span class="k">def</span> <span class="nf">Bzxx_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Calculate magnetic field second derivative :math:`B_{zxx}`/</span>
+
+<span class="sd">        :math:`B_{zxx} \equiv \partial^2 B_z / \partial x^2`</span>
+<span class="sd">        [ :math:`\mathrm{mT} \; \mathrm{nm}^{-2}`]</span>
+<span class="sd">        The magnetic field&#39;s second derivative is given by the following:</span>
+
+<span class="sd">        .. math::</span>
+<span class="sd">           B_{zxx} = \dfrac{\partial B_z}{\partial z}</span>
+<span class="sd">               = \dfrac{\mu_0 M_s}{4 \pi} \sum_{i=1}^2</span>
+<span class="sd">                   \sum_{j=1}^2 \sum_{k=1}^2(-1)^{i+j+k}</span>
+<span class="sd">                   \left( \dfrac{-(x-x_i)(y-y_j)(z-z_k)</span>
+<span class="sd">                   (3(x-x_i)^2 +2(y-y_j)^2 + 3(z-z_k)^2)}</span>
+<span class="sd">                   {((x-x_i)^2 + (y-y_j)^2 + (z-z_k)^2)^{3/2}</span>
+<span class="sd">                   ((x-x_i)^2 + (z-z_k)^2)^2} \right)</span>
+
+<span class="sd">        with the variables defined above.</span>
+<span class="sd">        :param float x: ``x`` coordinate [nm]</span>
+<span class="sd">        :param float y: ``y`` coordinate [nm]</span>
+<span class="sd">        :param float z: ``z`` coordinate [nm]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">dx1</span><span class="p">,</span> <span class="n">dx2</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy1</span><span class="p">,</span> <span class="n">dy2</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz1</span><span class="p">,</span> <span class="n">dz2</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pre_term</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bzxx</span><span class="p">(</span><span class="n">dx1</span><span class="p">,</span> <span class="n">dx2</span><span class="p">,</span> <span class="n">dy1</span><span class="p">,</span> <span class="n">dy2</span><span class="p">,</span> <span class="n">dz1</span><span class="p">,</span> <span class="n">dz2</span><span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="nd">@nb</span><span class="o">.</span><span class="n">vectorize</span><span class="p">(</span>
+        <span class="p">[</span>
+            <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="p">],</span>
+        <span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">target</span><span class="o">=</span><span class="s2">&quot;parallel&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">def</span> <span class="nf">_bzxx</span><span class="p">(</span><span class="n">dx1</span><span class="p">,</span> <span class="n">dx2</span><span class="p">,</span> <span class="n">dy1</span><span class="p">,</span> <span class="n">dy2</span><span class="p">,</span> <span class="n">dz1</span><span class="p">,</span> <span class="n">dz2</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The summation term for the second derivative of magnetic field.</span>
+
+<span class="sd">        Optimized by numba. See bzxx method for the explanation.</span>
+<span class="sd">        :param float dx1, dx2: distance between grid and the one end of magnet</span>
+<span class="sd">                        in x direction [nm]</span>
+<span class="sd">        :param float dy1, dy2: distance between grid and the one end of magnet</span>
+<span class="sd">                        in y direction [nm]</span>
+<span class="sd">        :param float dz1, dz2: distance between grid and the one end of magnet</span>
+<span class="sd">                        in z direction [nm]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="o">+</span><span class="n">dx1</span>
+            <span class="o">*</span> <span class="n">dy1</span>
+            <span class="o">*</span> <span class="n">dz1</span>
+            <span class="o">*</span> <span class="p">(</span><span class="mf">3.0</span> <span class="o">*</span> <span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">3.0</span> <span class="o">*</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+            <span class="o">/</span> <span class="p">((</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="o">-</span> <span class="n">dx2</span>
+            <span class="o">*</span> <span class="n">dy1</span>
+            <span class="o">*</span> <span class="n">dz1</span>
+            <span class="o">*</span> <span class="p">(</span><span class="mf">3.0</span> <span class="o">*</span> <span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">3.0</span> <span class="o">*</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+            <span class="o">/</span> <span class="p">((</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="o">-</span> <span class="n">dx1</span>
+            <span class="o">*</span> <span class="n">dy2</span>
+            <span class="o">*</span> <span class="n">dz1</span>
+            <span class="o">*</span> <span class="p">(</span><span class="mf">3.0</span> <span class="o">*</span> <span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">3.0</span> <span class="o">*</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+            <span class="o">/</span> <span class="p">((</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="o">+</span> <span class="n">dx2</span>
+            <span class="o">*</span> <span class="n">dy2</span>
+            <span class="o">*</span> <span class="n">dz1</span>
+            <span class="o">*</span> <span class="p">(</span><span class="mf">3.0</span> <span class="o">*</span> <span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">3.0</span> <span class="o">*</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+            <span class="o">/</span> <span class="p">((</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="o">-</span> <span class="n">dx1</span>
+            <span class="o">*</span> <span class="n">dy1</span>
+            <span class="o">*</span> <span class="n">dz2</span>
+            <span class="o">*</span> <span class="p">(</span><span class="mf">3.0</span> <span class="o">*</span> <span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">3.0</span> <span class="o">*</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+            <span class="o">/</span> <span class="p">((</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="o">+</span> <span class="n">dx2</span>
+            <span class="o">*</span> <span class="n">dy1</span>
+            <span class="o">*</span> <span class="n">dz2</span>
+            <span class="o">*</span> <span class="p">(</span><span class="mf">3.0</span> <span class="o">*</span> <span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">3.0</span> <span class="o">*</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+            <span class="o">/</span> <span class="p">((</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="o">+</span> <span class="n">dx1</span>
+            <span class="o">*</span> <span class="n">dy2</span>
+            <span class="o">*</span> <span class="n">dz2</span>
+            <span class="o">*</span> <span class="p">(</span><span class="mf">3.0</span> <span class="o">*</span> <span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">3.0</span> <span class="o">*</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+            <span class="o">/</span> <span class="p">((</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="o">-</span> <span class="n">dx2</span>
+            <span class="o">*</span> <span class="n">dy2</span>
+            <span class="o">*</span> <span class="n">dz2</span>
+            <span class="o">*</span> <span class="p">(</span><span class="mf">3.0</span> <span class="o">*</span> <span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">3.0</span> <span class="o">*</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+            <span class="o">/</span> <span class="p">((</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="p">)</span></div>
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Peter Sun
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023 - 2024, Peter Sun.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,772 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Magnet &#8212; mrfmsim 0.2.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'magnet';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Cantilever" href="cantilever.html" />
+    <link rel="prev" title="Grid" href="grid.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">mrfmsim 0.2.0 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Plugin features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Experiment Setup</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="coordinates.html">Coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">Sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grid.html">Grid</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Magnet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cantilever.html">Cantilever</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Experiment</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="experiment.html">Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collection.html">Collection</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Experiment Modification</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ref_modifier.html">Modifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref_shortcut.html">Shortcut</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="api_plugin.html">Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_component.html">Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_configuration.html">Configuration</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/magnet.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Magnet</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-usage">Example Usage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-mrfmsim.component.magnet"><code class="xref py py-mod docutils literal notranslate"><span class="pre">magnet</span></code> module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.RectangularMagnet"><code class="docutils literal notranslate"><span class="pre">RectangularMagnet</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.RectangularMagnet.Bz_method"><code class="docutils literal notranslate"><span class="pre">RectangularMagnet.Bz_method()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.RectangularMagnet.Bzx_method"><code class="docutils literal notranslate"><span class="pre">RectangularMagnet.Bzx_method()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.RectangularMagnet.Bzxx_method"><code class="docutils literal notranslate"><span class="pre">RectangularMagnet.Bzxx_method()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.RectangularMagnet.length"><code class="docutils literal notranslate"><span class="pre">RectangularMagnet.length</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.RectangularMagnet.mu0_Ms"><code class="docutils literal notranslate"><span class="pre">RectangularMagnet.mu0_Ms</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.RectangularMagnet.origin"><code class="docutils literal notranslate"><span class="pre">RectangularMagnet.origin</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.SphereMagnet"><code class="docutils literal notranslate"><span class="pre">SphereMagnet</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.SphereMagnet.Bz_method"><code class="docutils literal notranslate"><span class="pre">SphereMagnet.Bz_method()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.SphereMagnet.Bzx_method"><code class="docutils literal notranslate"><span class="pre">SphereMagnet.Bzx_method()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.SphereMagnet.Bzxx_method"><code class="docutils literal notranslate"><span class="pre">SphereMagnet.Bzxx_method()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.SphereMagnet.mu0_Ms"><code class="docutils literal notranslate"><span class="pre">SphereMagnet.mu0_Ms</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.SphereMagnet.origin"><code class="docutils literal notranslate"><span class="pre">SphereMagnet.origin</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.SphereMagnet.radius"><code class="docutils literal notranslate"><span class="pre">SphereMagnet.radius</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="magnet">
+<h1>Magnet<a class="headerlink" href="#magnet" title="Permalink to this heading">#</a></h1>
+<p>In <em>mrfmsim</em>, we assume the magnets are:</p>
+<ul class="simple">
+<li><p>uniformly magnetized</p></li>
+<li><p>magnetized in the <span class="math notranslate nohighlight">\(z\)</span>-direction</p></li>
+</ul>
+<p>Currently, the two types of magnets supported are</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mrfmsim.component.magnet.SphereMagnet" title="mrfmsim.component.magnet.SphereMagnet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mrfmsim.component.magnet.SphereMagnet</span></code></a>(...)</p></td>
+<td><p>Spherical magnet object with its Bz, Bzx, Bzxx calculations.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mrfmsim.component.magnet.RectangularMagnet" title="mrfmsim.component.magnet.RectangularMagnet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mrfmsim.component.magnet.RectangularMagnet</span></code></a>(...)</p></td>
+<td><p>Rectangular magnet object with the bz, bzx, bzxx calculations.</p></td>
+</tr>
+</tbody>
+</table>
+<section id="example-usage">
+<h2>Example Usage<a class="headerlink" href="#example-usage" title="Permalink to this heading">#</a></h2>
+<p>To create a nickel spherical magnet (<span class="math notranslate nohighlight">\(\mu_0 M_s = 1800 \: \mathrm{mT}\)</span>)
+with a radius of <span class="math notranslate nohighlight">\(r = 50 \: \mathrm{nm}\)</span>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">mrfmsim.component</span> <span class="kn">import</span> <span class="n">SphereMagnet</span>
+<span class="n">magnet</span> <span class="o">=</span> <span class="n">SphereMagnet</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mf">50.0</span><span class="p">,</span> <span class="n">mu0_Ms</span><span class="o">=</span><span class="mf">800.0</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>To display the magnet information:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">magnet</span><span class="p">)</span>
+<span class="go">SphereMagnet(radius=50.0 nm</span>
+<span class="go">        origin=[0.0, 0.0, 0.0] nm</span>
+<span class="go">        mu0_Ms=800.000 mT)</span>
+</pre></div>
+</div>
+</section>
+<section id="module-mrfmsim.component.magnet">
+<span id="magnet-module"></span><h2><code class="xref py py-mod docutils literal notranslate"><span class="pre">magnet</span></code> module<a class="headerlink" href="#module-mrfmsim.component.magnet" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="mrfmsim.component.magnet.RectangularMagnet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mrfmsim.component.magnet.</span></span><span class="sig-name descname"><span class="pre">RectangularMagnet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">origin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu0_Ms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mrfmsim/component/magnet.html#RectangularMagnet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.component.magnet.RectangularMagnet" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ComponentBase</span></code></p>
+<p>Rectangular magnet object with the bz, bzx, bzxx calculations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>length</strong> (<em>list</em>) – length of rectangular magnet in (x, y, z) direction [nm]</p></li>
+<li><p><strong>origin</strong> (<em>list</em>) – the position of the magnet origin (x, y, z)</p></li>
+<li><p><strong>mu0_Ms</strong> (<em>float</em>) – saturation magnetization [mT]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>_range</strong> (<em>np.array</em>) – [-xrange, +xrange, -yrange, +yrange, -zrange, zrange]
+range in the x, y and z direction after the center point to the origin.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="mrfmsim.component.magnet.RectangularMagnet.Bz_method">
+<span class="sig-name descname"><span class="pre">Bz_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mrfmsim/component/magnet.html#RectangularMagnet.Bz_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.component.magnet.RectangularMagnet.Bz_method" title="Permalink to this definition">#</a></dt>
+<dd><p>Calculate magnetic field <span class="math notranslate nohighlight">\(B_z\)</span> [mT].</p>
+<p>The magnetic field is calculated following Ravaud2009.
+Using the Coulombian model, assuming a uniform magnetization throughout
+the volume of the magnet and modeling each face of the magnet as a
+layer of continuous current density. The total field is found by
+summing over the faces.
+The magnetic field is given by:</p>
+<div class="math notranslate nohighlight">
+\[B_z = \dfrac{\mu_0 M_s}{4\pi} \sum_{i=1}^{2}
+    \sum_{j=1}^2 \sum_{k=1}^2(-1)^{i+j+k}
+    arctan \left( \dfrac{(x - x_i)(y - y_i))}{(z - z_k)R} \right)\]</div>
+<p>Here <span class="math notranslate nohighlight">\((x,y,z)\)</span> are the coordinates for the location at which we
+want to know the field;
+The magnet spans from x1 to x2 in the <code class="docutils literal notranslate"><span class="pre">x</span></code>-direction,
+y1 to y2 in the <code class="docutils literal notranslate"><span class="pre">y</span></code>-direction, and z1 to z2 in
+the <code class="docutils literal notranslate"><span class="pre">z</span></code>-direction;</p>
+<div class="math notranslate nohighlight">
+\[R = \sqrt{(x - x_i)^2 + (y - y_j)^2 + (z - z_k)^2}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mu_0 M_s\)</span> is the magnet’s saturation magnetization in mT.</p>
+<p><strong>Reference</strong>:
+Ravaud, R. and Lemarquand, G. “Magnetic field produced by a
+parallelepipedic magnet of various and uniform polarization” ,
+<em>PIER</em>, <strong>2009</strong>, <em>98</em>, 207-219
+[<a class="reference external" href="http://dx.doi.org/10.2528/PIER09091704">10.2528/PIER09091704</a>].</p>
+<ul class="simple">
+<li><p>set the magnet up so that the x and y dimensions are centered about
+the zero point.</p></li>
+<li><p>The translation in z should shift the tip of the magnet in the
+z-direction to be the given distance from the surface.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>) – x coordinate of sample grid [nm]</p></li>
+<li><p><strong>y</strong> (<em>float</em>) – y coordinate of sample grid [nm]</p></li>
+<li><p><strong>z</strong> (<em>float</em>) – z coordinate of sample grid [nm]</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mrfmsim.component.magnet.RectangularMagnet.Bzx_method">
+<span class="sig-name descname"><span class="pre">Bzx_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mrfmsim/component/magnet.html#RectangularMagnet.Bzx_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.component.magnet.RectangularMagnet.Bzx_method" title="Permalink to this definition">#</a></dt>
+<dd><p>Calculate magnetic field gradient <span class="math notranslate nohighlight">\(B_{zx}\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(B_{zx} \equiv \partial B_z / \partial x\)</span>
+[<span class="math notranslate nohighlight">\(\mathrm{mT} \: \mathrm{nm}^{-1}\)</span>].
+The magnetic field gradient
+<span class="math notranslate nohighlight">\(B_{zx} = \dfrac{\partial{B_z}}{\partial x}\)</span> is
+given by the following:</p>
+<div class="math notranslate nohighlight">
+\[B_{zx} = \dfrac{\mu_0 M_s}{4 \pi} \sum_{i=1}^2 \sum_{j=1}^2
+    \sum_{k=1}^2(-1)^{i+j+k}
+    \left( \dfrac{(y-y_j)(z-z_k)}{ R((x-x_i)^2 + (z-z_k)^2))}
+    \right)\]</div>
+<p>As described above, <span class="math notranslate nohighlight">\((x,y,z)\)</span> are coordinates for the location
+at which we want to know the field gradient; the magnet spans from
+x1 to x2 in the <code class="docutils literal notranslate"><span class="pre">x</span></code>-direction, y1 to y2 in the <code class="docutils literal notranslate"><span class="pre">y</span></code>-direction, and
+from z1 to z2 in the <code class="docutils literal notranslate"><span class="pre">z</span></code>-direction;</p>
+<div class="math notranslate nohighlight">
+\[R = \sqrt{(x - x_i) + (y - y_j) + (z - z_k)}\]</div>
+<p><span class="math notranslate nohighlight">\(\mu_0 M_s\)</span> is the magnet’s saturation magnetization in mT.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>) – <code class="docutils literal notranslate"><span class="pre">x</span></code> coordinate [nm]</p></li>
+<li><p><strong>y</strong> (<em>float</em>) – <code class="docutils literal notranslate"><span class="pre">y</span></code> coordinate [nm]</p></li>
+<li><p><strong>z</strong> (<em>float</em>) – <code class="docutils literal notranslate"><span class="pre">z</span></code> coordinate [nm]</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mrfmsim.component.magnet.RectangularMagnet.Bzxx_method">
+<span class="sig-name descname"><span class="pre">Bzxx_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mrfmsim/component/magnet.html#RectangularMagnet.Bzxx_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.component.magnet.RectangularMagnet.Bzxx_method" title="Permalink to this definition">#</a></dt>
+<dd><p>Calculate magnetic field second derivative <span class="math notranslate nohighlight">\(B_{zxx}\)</span>/</p>
+<p><span class="math notranslate nohighlight">\(B_{zxx} \equiv \partial^2 B_z / \partial x^2\)</span>
+[ <span class="math notranslate nohighlight">\(\mathrm{mT} \; \mathrm{nm}^{-2}\)</span>]
+The magnetic field’s second derivative is given by the following:</p>
+<div class="math notranslate nohighlight">
+\[B_{zxx} = \dfrac{\partial B_z}{\partial z}
+    = \dfrac{\mu_0 M_s}{4 \pi} \sum_{i=1}^2
+        \sum_{j=1}^2 \sum_{k=1}^2(-1)^{i+j+k}
+        \left( \dfrac{-(x-x_i)(y-y_j)(z-z_k)
+        (3(x-x_i)^2 +2(y-y_j)^2 + 3(z-z_k)^2)}
+        {((x-x_i)^2 + (y-y_j)^2 + (z-z_k)^2)^{3/2}
+        ((x-x_i)^2 + (z-z_k)^2)^2} \right)\]</div>
+<p>with the variables defined above.
+:param float x: <code class="docutils literal notranslate"><span class="pre">x</span></code> coordinate [nm]
+:param float y: <code class="docutils literal notranslate"><span class="pre">y</span></code> coordinate [nm]
+:param float z: <code class="docutils literal notranslate"><span class="pre">z</span></code> coordinate [nm]</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mrfmsim.component.magnet.RectangularMagnet.length">
+<span class="sig-name descname"><span class="pre">length</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#mrfmsim.component.magnet.RectangularMagnet.length" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mrfmsim.component.magnet.RectangularMagnet.mu0_Ms">
+<span class="sig-name descname"><span class="pre">mu0_Ms</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#mrfmsim.component.magnet.RectangularMagnet.mu0_Ms" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mrfmsim.component.magnet.RectangularMagnet.origin">
+<span class="sig-name descname"><span class="pre">origin</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#mrfmsim.component.magnet.RectangularMagnet.origin" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mrfmsim.component.magnet.SphereMagnet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mrfmsim.component.magnet.</span></span><span class="sig-name descname"><span class="pre">SphereMagnet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">origin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu0_Ms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mrfmsim/component/magnet.html#SphereMagnet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.component.magnet.SphereMagnet" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ComponentBase</span></code></p>
+<p>Spherical magnet object with its Bz, Bzx, Bzxx calculations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>radius</strong> (<em>float</em>) – sphere magnet radius [nm]</p></li>
+<li><p><strong>origin</strong> (<em>list</em>) – the position of the magnet origin (x, y, z)</p></li>
+<li><p><strong>mu0_Ms</strong> (<em>float</em>) – saturation magnetization [mT]</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="mrfmsim.component.magnet.SphereMagnet.Bz_method">
+<span class="sig-name descname"><span class="pre">Bz_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mrfmsim/component/magnet.html#SphereMagnet.Bz_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.component.magnet.SphereMagnet.Bz_method" title="Permalink to this definition">#</a></dt>
+<dd><p>Calculate magnetic field <span class="math notranslate nohighlight">\(B_z\)</span> [mT].</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>) – x coordinate of sample grid [nm]</p></li>
+<li><p><strong>y</strong> (<em>float</em>) – y coordinate of sample grid [nm]</p></li>
+<li><p><strong>z</strong> (<em>float</em>) – z coordinate of sample grid [nm]</p></li>
+</ul>
+</dd>
+</dl>
+<p>The magnetic field is calculated as</p>
+<div class="math notranslate nohighlight">
+\[B_z = \dfrac{\mu_0 M_s}{3}
+\left( 3 \dfrac{Z^2}{R^5} - \dfrac{1}{R^3} \right)
+R = \sqrt{X^2+Y^2+Z^2}\]</div>
+<p>Here <span class="math notranslate nohighlight">\((x,y,z)\)</span> is the location at which we want to know the field;
+<span class="math notranslate nohighlight">\((x_0, y_0, z_0)\)</span> is the location of the center of the magnet;
+<span class="math notranslate nohighlight">\(r\)</span> is the radius of the magnet; <span class="math notranslate nohighlight">\(X = (x-x_0)/r\)</span>;
+<span class="math notranslate nohighlight">\(Y = (y-y_0)/r\)</span>, and <span class="math notranslate nohighlight">\(Z = (z-z_0)/r\)</span> are normalized
+distances to the center of the magnet;
+<span class="math notranslate nohighlight">\(\mu_0 M_s\)</span> is the magnetic sphere’s saturation
+magnetization in mT.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mrfmsim.component.magnet.SphereMagnet.Bzx_method">
+<span class="sig-name descname"><span class="pre">Bzx_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mrfmsim/component/magnet.html#SphereMagnet.Bzx_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.component.magnet.SphereMagnet.Bzx_method" title="Permalink to this definition">#</a></dt>
+<dd><p>Calcualte magnetic field gradient <span class="math notranslate nohighlight">\(B_{zx}\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(B_{zx} \equiv \partial B_z / \partial x\)</span>
+[ <span class="math notranslate nohighlight">\(\mathrm{mT} \: \mathrm{nm}^{-1}\)</span> ].
+With <span class="math notranslate nohighlight">\(X\)</span>, <span class="math notranslate nohighlight">\(Y\)</span>, <span class="math notranslate nohighlight">\(Z\)</span>, <span class="math notranslate nohighlight">\(R\)</span>, <span class="math notranslate nohighlight">\(r\)</span>, and
+<span class="math notranslate nohighlight">\(\mu_0 M_s\)</span> defined in Bz(x, y, z), the magnetic field
+gradient is calculated as</p>
+<div class="math notranslate nohighlight">
+\[B_{zx} = \dfrac{\partial B_z}{\partial z}
+= \dfrac{\mu_0 M_s}{r} X \:
+\left( \dfrac{1}{R^5} - 5 \dfrac{Z^2}{R^7} \right)
+R = \sqrt{X^2+Y^2+Z^2}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>) – x coordinate of sample grid [nm]</p></li>
+<li><p><strong>y</strong> (<em>float</em>) – y coordinate of sample grid [nm]</p></li>
+<li><p><strong>z</strong> (<em>float</em>) – z coordinate of sample grid [nm]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>magnetic field gradient</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mrfmsim.component.magnet.SphereMagnet.Bzxx_method">
+<span class="sig-name descname"><span class="pre">Bzxx_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mrfmsim/component/magnet.html#SphereMagnet.Bzxx_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.component.magnet.SphereMagnet.Bzxx_method" title="Permalink to this definition">#</a></dt>
+<dd><p>Calculate magnetic field second derivative <span class="math notranslate nohighlight">\(B_{zxx}\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(B_{zxx} \equiv \partial^2 B_z / \partial x^2\)</span>
+[<span class="math notranslate nohighlight">\(\mathrm{mT} \: \mathrm{nm}^{-2}\)</span>]. The inputs are
+With <span class="math notranslate nohighlight">\(X\)</span>, <span class="math notranslate nohighlight">\(Y\)</span>, <span class="math notranslate nohighlight">\(Z\)</span>, <span class="math notranslate nohighlight">\(R\)</span>, <span class="math notranslate nohighlight">\(r\)</span>, and
+<span class="math notranslate nohighlight">\(\mu_0 M_s\)</span> defined as above, the magnetic field
+second derivative is calculated as</p>
+<div class="math notranslate nohighlight">
+\[B_{zxx} = \dfrac{\partial B_z}{\partial z}
+= \dfrac{\mu_0 M_s}{r^2} \:
+\left( \dfrac{1}{R^5} - 5 \dfrac{X^2}{R^7}
+- 5 \dfrac{Z^2}{R^7} + 35 \dfrac{X^2 Z^2}{R^9} \right)
+R = \sqrt{X^2+Y^2+Z^2}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>) – x coordinate of sample grid [nm]</p></li>
+<li><p><strong>y</strong> (<em>float</em>) – y coordinate of sample grid [nm]</p></li>
+<li><p><strong>z</strong> (<em>float</em>) – z coordinate of sample grid [nm]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>magnetic field second derivative</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mrfmsim.component.magnet.SphereMagnet.mu0_Ms">
+<span class="sig-name descname"><span class="pre">mu0_Ms</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#mrfmsim.component.magnet.SphereMagnet.mu0_Ms" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mrfmsim.component.magnet.SphereMagnet.origin">
+<span class="sig-name descname"><span class="pre">origin</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#mrfmsim.component.magnet.SphereMagnet.origin" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mrfmsim.component.magnet.SphereMagnet.radius">
+<span class="sig-name descname"><span class="pre">radius</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#mrfmsim.component.magnet.SphereMagnet.radius" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="grid.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Grid</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="cantilever.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Cantilever</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-usage">Example Usage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-mrfmsim.component.magnet"><code class="xref py py-mod docutils literal notranslate"><span class="pre">magnet</span></code> module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.RectangularMagnet"><code class="docutils literal notranslate"><span class="pre">RectangularMagnet</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.RectangularMagnet.Bz_method"><code class="docutils literal notranslate"><span class="pre">RectangularMagnet.Bz_method()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.RectangularMagnet.Bzx_method"><code class="docutils literal notranslate"><span class="pre">RectangularMagnet.Bzx_method()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.RectangularMagnet.Bzxx_method"><code class="docutils literal notranslate"><span class="pre">RectangularMagnet.Bzxx_method()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.RectangularMagnet.length"><code class="docutils literal notranslate"><span class="pre">RectangularMagnet.length</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.RectangularMagnet.mu0_Ms"><code class="docutils literal notranslate"><span class="pre">RectangularMagnet.mu0_Ms</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.RectangularMagnet.origin"><code class="docutils literal notranslate"><span class="pre">RectangularMagnet.origin</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.SphereMagnet"><code class="docutils literal notranslate"><span class="pre">SphereMagnet</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.SphereMagnet.Bz_method"><code class="docutils literal notranslate"><span class="pre">SphereMagnet.Bz_method()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.SphereMagnet.Bzx_method"><code class="docutils literal notranslate"><span class="pre">SphereMagnet.Bzx_method()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.SphereMagnet.Bzxx_method"><code class="docutils literal notranslate"><span class="pre">SphereMagnet.Bzxx_method()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.SphereMagnet.mu0_Ms"><code class="docutils literal notranslate"><span class="pre">SphereMagnet.mu0_Ms</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.SphereMagnet.origin"><code class="docutils literal notranslate"><span class="pre">SphereMagnet.origin</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.SphereMagnet.radius"><code class="docutils literal notranslate"><span class="pre">SphereMagnet.radius</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Peter Sun
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023 - 2024, Peter Sun.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

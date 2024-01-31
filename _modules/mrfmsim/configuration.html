@@ -3,12 +3,12 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mrfmsim.configuration &#8212; mrfmsim 0.1.1 documentation</title>
+    <title>mrfmsim.configuration &#8212; mrfmsim 0.2.0 documentation</title>
   
   
   
@@ -18,27 +18,28 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_modules/mrfmsim/configuration';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -51,7 +52,15 @@
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -86,11 +95,16 @@
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -105,6 +119,7 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../../index.html">
@@ -113,19 +128,43 @@
   
   
   
-    <p class="title logo__title">mrfmsim 0.1.1 documentation</p>
+  
+    <p class="title logo__title">mrfmsim 0.2.0 documentation</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features.html">Plugin features</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Experiment Setup</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../ref_cli.html">Command Line Interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../ref_model.html">Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coordinates.html">Coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sample.html">Sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grid.html">Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../magnet.html">Magnet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cantilever.html">Cantilever</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Experiment</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../experiment.html">Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../collection.html">Collection</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Experiment Modification</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../ref_modifier.html">Modifier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../ref_shortcut.html">Shortcut</a></li>
 </ul>
@@ -133,7 +172,6 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../api_plugin.html">Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api_component.html">Component</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api_units.html">Units</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api_configuration.html">Configuration</a></li>
 </ul>
 
@@ -193,20 +231,22 @@
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -233,15 +273,14 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <h1>Source code for mrfmsim.configuration</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;Load and dump configuration files for experiment and jobs.&quot;&quot;&quot;</span>
 
 <span class="kn">import</span> <span class="nn">importlib</span>
 <span class="kn">import</span> <span class="nn">yaml</span>
-<span class="kn">from</span> <span class="nn">mmodel</span> <span class="kn">import</span> <span class="n">ModelGraph</span>
-<span class="kn">from</span> <span class="nn">mrfmsim.utils</span> <span class="kn">import</span> <span class="n">Job</span>
+<span class="kn">from</span> <span class="nn">mrfmsim</span> <span class="kn">import</span> <span class="n">Graph</span><span class="p">,</span> <span class="n">Node</span><span class="p">,</span> <span class="n">Experiment</span><span class="p">,</span> <span class="n">ExperimentCollection</span>
 
 
 <div class="viewcode-block" id="import_object"><a class="viewcode-back" href="../../api_configuration.html#mrfmsim.configuration.import_object">[docs]</a><span class="k">def</span> <span class="nf">import_object</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
@@ -289,61 +328,58 @@ document.write(`
 
 
 <div class="viewcode-block" id="graph_constructor"><a class="viewcode-back" href="../../api_configuration.html#mrfmsim.configuration.graph_constructor">[docs]</a><span class="k">def</span> <span class="nf">graph_constructor</span><span class="p">(</span><span class="n">loader</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Parse the &quot;!graph&quot; tag into ModelGraph object.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Parse the &quot;!Graph&quot; tag into Graph object.</span>
+
+<span class="sd">    The node are listed as a dictionary of node name and node object.</span>
+<span class="sd">    The design is for a clearer view of nodes. To change this</span>
+<span class="sd">    behavior, change the graph_constructor.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">param_dict</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">construct_mapping</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-    <span class="n">graph</span> <span class="o">=</span> <span class="n">ModelGraph</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">param_dict</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+    <span class="n">graph</span> <span class="o">=</span> <span class="n">Graph</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">param_dict</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
     <span class="n">graph</span><span class="o">.</span><span class="n">add_grouped_edges_from</span><span class="p">(</span><span class="n">param_dict</span><span class="p">[</span><span class="s2">&quot;grouped_edges&quot;</span><span class="p">])</span>
 
     <span class="k">for</span> <span class="n">node_name</span><span class="p">,</span> <span class="n">node_info</span> <span class="ow">in</span> <span class="n">param_dict</span><span class="p">[</span><span class="s2">&quot;node_objects&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-
-        <span class="n">func</span> <span class="o">=</span> <span class="n">node_info</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;func&quot;</span><span class="p">)</span>
-        <span class="n">output</span> <span class="o">=</span> <span class="n">node_info</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;output&quot;</span><span class="p">)</span>
-        <span class="n">inputs</span> <span class="o">=</span> <span class="n">node_info</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;inputs&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-        <span class="n">modifiers</span> <span class="o">=</span> <span class="n">node_info</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;modifiers&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-        <span class="n">graph</span><span class="o">.</span><span class="n">set_node_object</span><span class="p">(</span>
-            <span class="n">node_name</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="n">output</span><span class="p">,</span> <span class="n">inputs</span><span class="o">=</span><span class="n">inputs</span><span class="p">,</span> <span class="n">modifiers</span><span class="o">=</span><span class="n">modifiers</span><span class="p">,</span> <span class="o">**</span><span class="n">node_info</span>
-        <span class="p">)</span>
+        <span class="n">graph</span><span class="o">.</span><span class="n">set_node_object</span><span class="p">(</span><span class="n">Node</span><span class="p">(</span><span class="n">node_name</span><span class="p">,</span> <span class="o">**</span><span class="n">node_info</span><span class="p">))</span>
 
     <span class="k">return</span> <span class="n">graph</span></div>
 
 
-<div class="viewcode-block" id="execute_constructor"><a class="viewcode-back" href="../../api_configuration.html#mrfmsim.configuration.execute_constructor">[docs]</a><span class="k">def</span> <span class="nf">execute_constructor</span><span class="p">(</span><span class="n">loader</span><span class="p">:</span> <span class="n">yaml</span><span class="o">.</span><span class="n">BaseLoader</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Parse the &quot;!execute&quot; tag into a lambda function.</span>
+<div class="viewcode-block" id="experiment_constructor"><a class="viewcode-back" href="../../api_configuration.html#mrfmsim.configuration.experiment_constructor">[docs]</a><span class="k">def</span> <span class="nf">experiment_constructor</span><span class="p">(</span><span class="n">loader</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Parse the &quot;!Experiment&quot; tag into Experiment object.&quot;&quot;&quot;</span>
 
-<span class="sd">    The constructor is to simplify function types:</span>
+    <span class="n">param_dict</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">construct_mapping</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="sd">    .. code:: python</span>
+    <span class="k">return</span> <span class="n">Experiment</span><span class="p">(</span><span class="o">**</span><span class="n">param_dict</span><span class="p">)</span></div>
 
-<span class="sd">        def outerfunc(func, **kwargs):</span>
-<span class="sd">            return func(**kwargs)</span>
 
-<span class="sd">    The argument is a string that details the function and the arguments.</span>
-<span class="sd">    For example to use func on a and b, &quot;!execute func(a, b)&quot; is used.</span>
+<div class="viewcode-block" id="collection_constructor"><a class="viewcode-back" href="../../api_configuration.html#mrfmsim.configuration.collection_constructor">[docs]</a><span class="k">def</span> <span class="nf">collection_constructor</span><span class="p">(</span><span class="n">loader</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Parse the &quot;!Collection&quot; tag into ExperimentCollection object.&quot;&quot;&quot;</span>
 
-<span class="sd">    And the function type:</span>
+    <span class="n">param_dict</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">construct_mapping</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="sd">    .. code:: python</span>
+    <span class="n">node_objects</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">node_name</span><span class="p">,</span> <span class="n">node_info</span> <span class="ow">in</span> <span class="n">param_dict</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;node_objects&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">node_objects</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Node</span><span class="p">(</span><span class="n">node_name</span><span class="p">,</span> <span class="o">**</span><span class="n">node_info</span><span class="p">))</span>
 
-<span class="sd">        def outerfunc(func, arguments):</span>
-<span class="sd">            return func(*arguments)</span>
+    <span class="k">return</span> <span class="n">ExperimentCollection</span><span class="p">(</span><span class="n">node_objects</span><span class="o">=</span><span class="n">node_objects</span><span class="p">,</span> <span class="o">**</span><span class="n">param_dict</span><span class="p">)</span></div>
 
-<span class="sd">    In node execution, the function is keyword argument only. To simplify</span>
-<span class="sd">    the syntax, the above function is defined using ``!execute func(*arguments)``.</span>
+
+<div class="viewcode-block" id="func_multi_constructor"><a class="viewcode-back" href="../../api_configuration.html#mrfmsim.configuration.func_multi_constructor">[docs]</a><span class="k">def</span> <span class="nf">func_multi_constructor</span><span class="p">(</span><span class="n">loader</span><span class="p">,</span> <span class="n">tag_suffix</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Load the &quot;!func:&quot; tag from yaml string.</span>
+
+<span class="sd">    The constructor parses !func:function &quot;lambda a, b: a + b&quot;.</span>
+<span class="sd">    In the example, the name of the function is set to &quot;function&quot;,</span>
+<span class="sd">    the function is the lambda expression. The doc is None, set</span>
+<span class="sd">    doc at the node level.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">node</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">construct_scalar</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
 
-    <span class="n">func_expression</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">construct_scalar</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-    <span class="n">params_str</span> <span class="o">=</span> <span class="n">func_expression</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;(&quot;</span><span class="p">,</span> <span class="s2">&quot;,&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;)&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">func</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+    <span class="n">func</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">=</span> <span class="n">tag_suffix</span>
 
-    <span class="c1"># dynamically create lambda function</span>
-    <span class="k">return</span> <span class="nb">eval</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;lambda </span><span class="si">{</span><span class="n">params_str</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">func_expression</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
-
-
-<div class="viewcode-block" id="func_constructor"><a class="viewcode-back" href="../../api_configuration.html#mrfmsim.configuration.func_constructor">[docs]</a><span class="k">def</span> <span class="nf">func_constructor</span><span class="p">(</span><span class="n">loader</span><span class="p">:</span> <span class="n">yaml</span><span class="o">.</span><span class="n">BaseLoader</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Load function from yaml string.&quot;&quot;&quot;</span>
-
-    <span class="k">return</span> <span class="nb">eval</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">construct_scalar</span><span class="p">(</span><span class="n">node</span><span class="p">))</span></div>
+    <span class="k">return</span> <span class="n">func</span></div>
 
 
 <div class="viewcode-block" id="yaml_loader"><a class="viewcode-back" href="../../api_configuration.html#mrfmsim.configuration.yaml_loader">[docs]</a><span class="k">def</span> <span class="nf">yaml_loader</span><span class="p">(</span><span class="n">constructor</span><span class="p">):</span>
@@ -366,46 +402,17 @@ document.write(`
 <span class="n">default_constructors</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;constructor&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="s2">&quot;!import&quot;</span><span class="p">:</span> <span class="n">import_constructor</span><span class="p">,</span>
-        <span class="s2">&quot;!func&quot;</span><span class="p">:</span> <span class="n">func_constructor</span><span class="p">,</span>
-        <span class="s2">&quot;!execute&quot;</span><span class="p">:</span> <span class="n">execute_constructor</span><span class="p">,</span>
-        <span class="s2">&quot;!graph&quot;</span><span class="p">:</span> <span class="n">graph_constructor</span><span class="p">,</span>
+        <span class="s2">&quot;!Graph&quot;</span><span class="p">:</span> <span class="n">graph_constructor</span><span class="p">,</span>
+        <span class="s2">&quot;!Experiment&quot;</span><span class="p">:</span> <span class="n">experiment_constructor</span><span class="p">,</span>
+        <span class="s2">&quot;!Collection&quot;</span><span class="p">:</span> <span class="n">collection_constructor</span><span class="p">,</span>
     <span class="p">},</span>
-    <span class="s2">&quot;multi_constructor&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;!import:&quot;</span><span class="p">:</span> <span class="n">import_multi_constructor</span><span class="p">},</span>
+    <span class="s2">&quot;multi_constructor&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;!import:&quot;</span><span class="p">:</span> <span class="n">import_multi_constructor</span><span class="p">,</span>
+        <span class="s2">&quot;!func:&quot;</span><span class="p">:</span> <span class="n">func_multi_constructor</span><span class="p">,</span>
+    <span class="p">},</span>
 <span class="p">}</span>
 
 <span class="n">MrfmSimLoader</span> <span class="o">=</span> <span class="n">yaml_loader</span><span class="p">(</span><span class="n">default_constructors</span><span class="p">)</span>
-
-
-<div class="viewcode-block" id="yaml_dumper"><a class="viewcode-back" href="../../api_configuration.html#mrfmsim.configuration.yaml_dumper">[docs]</a><span class="k">def</span> <span class="nf">yaml_dumper</span><span class="p">(</span><span class="n">representer_dict</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a yaml dumper with custom representers.</span>
-
-<span class="sd">    :param dict representer_dict: dictionary of representer</span>
-<span class="sd">    :returns: yaml dumper class</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="k">class</span> <span class="nc">Dumper</span><span class="p">(</span><span class="n">yaml</span><span class="o">.</span><span class="n">SafeDumper</span><span class="p">):</span>
-        <span class="k">pass</span> 
-
-    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">representer_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="n">Dumper</span><span class="o">.</span><span class="n">add_representer</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="n">Dumper</span></div>
-
-
-<div class="viewcode-block" id="job_representer"><a class="viewcode-back" href="../../api_configuration.html#mrfmsim.configuration.job_representer">[docs]</a><span class="k">def</span> <span class="nf">job_representer</span><span class="p">(</span><span class="n">dumper</span><span class="p">:</span> <span class="n">yaml</span><span class="o">.</span><span class="n">SafeDumper</span><span class="p">,</span> <span class="n">job</span><span class="p">:</span> <span class="n">Job</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Represent a Job instance.&quot;&quot;&quot;</span>
-
-    <span class="k">return</span> <span class="n">dumper</span><span class="o">.</span><span class="n">represent_mapping</span><span class="p">(</span>
-        <span class="s2">&quot;!import:mrfmsim.utils.Job&quot;</span><span class="p">,</span>
-        <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">job</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;inputs&quot;</span><span class="p">:</span> <span class="n">job</span><span class="o">.</span><span class="n">inputs</span><span class="p">,</span> <span class="s2">&quot;shortcuts&quot;</span><span class="p">:</span> <span class="n">job</span><span class="o">.</span><span class="n">shortcuts</span><span class="p">},</span>
-    <span class="p">)</span></div>
-
-
-<span class="n">default_representers</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="n">Job</span><span class="p">:</span> <span class="n">job_representer</span><span class="p">,</span>
-<span class="p">}</span>
-
-<span class="n">MrfmSimDumper</span> <span class="o">=</span> <span class="n">yaml_dumper</span><span class="p">(</span><span class="n">default_representers</span><span class="p">)</span>
 </pre></div>
 
                 </article>
@@ -413,21 +420,19 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
               
             
           </div>
@@ -445,9 +450,10 @@ By Peter Sun
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
-      © Copyright 2023, Peter Sun.
+      © Copyright 2023 - 2024, Peter Sun.
       <br/>
     
   </p>
@@ -471,8 +477,8 @@ By Peter Sun
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>
