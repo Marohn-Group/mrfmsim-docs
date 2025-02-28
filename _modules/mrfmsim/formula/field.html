@@ -1,0 +1,488 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mrfmsim.formula.field &#8212; mrfmsim 0.3.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../_static/documentation_options.js?v=83a61292"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/mrfmsim/formula/field';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">mrfmsim 0.3.0 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim overview</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tests.html">Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Changelog</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim basics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/inheritance.html"><em>mrfmsim</em> custom classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/component.html">Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/modifier.html">Modifiers and shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/plugin.html">Plugins</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment basics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/cermit_protocol.html">CERMIT protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/geometry.html">Experiment geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/tip_size.html">Tip size: small tip vs. large tip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/spin_count.html">Sample spin distribution</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment Setups</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/coordinates.html">Coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/sample.html">Sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/grid.html">Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/magnet.html">Magnet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/cantilever.html">Cantilever</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/IBMCyclic.html">IBM cyclic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/CermitSat.html">CERMIT steady-state saturation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/CermitTD.html">CERMIT time dependent offset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/CermitARP.html">CERMIT adiabatic rapid passage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/CermitSingleSpin.html">CERMIT single spin</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">references</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_magnetization.html">Equilibrium magnetization and variance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_polarization.html">Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_field.html">Magnetic field</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_math.html">Mathematical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_misc.html">Miscellaneous</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for mrfmsim.formula.field</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Cacluations related to the magnetic field.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numba</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nb</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.math</span><span class="w"> </span><span class="kn">import</span> <span class="n">as_strided_x</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">operator</span><span class="w"> </span><span class="kn">import</span> <span class="n">sub</span>
+
+
+<div class="viewcode-block" id="B_offset">
+<a class="viewcode-back" href="../../../reference/ref_field.html#mrfmsim.formula.field.B_offset">[docs]</a>
+<span class="nd">@nb</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">parallel</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">B_offset</span><span class="p">(</span><span class="n">B_tot</span><span class="p">,</span> <span class="n">f_rf</span><span class="p">,</span> <span class="n">Gamma</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate the resonance offset.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">B_tot</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">f_rf</span> <span class="o">/</span> <span class="n">Gamma</span></div>
+
+
+
+<div class="viewcode-block" id="min_abs_offset">
+<a class="viewcode-back" href="../../../reference/ref_field.html#mrfmsim.formula.field.min_abs_offset">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">min_abs_offset</span><span class="p">(</span><span class="n">ext_B_offset</span><span class="p">,</span> <span class="n">ext_pts</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Minimum absolute value of a matrix in x direction based on the window.</span>
+
+<span class="sd">    The function is used to calculate the minimum B_offset during a saturation</span>
+<span class="sd">    experiment.</span>
+<span class="sd">    For each x-data point in the sample, calculate the resonance offset over</span>
+<span class="sd">    the expanded grid. The points to the left and right of each grid point</span>
+<span class="sd">    give the resonance offset as the cantilever moves. The algorithm finds the</span>
+<span class="sd">    minimum resonance offset over the range of array values corresponding to the</span>
+<span class="sd">    cantilever motion and computes the saturation polarization using that</span>
+<span class="sd">    minimum offset and the given :math:`B_1` value.</span>
+
+<span class="sd">    To calculate the spin polarization profile resulting from the cantilever</span>
+<span class="sd">    moving while spin-saturating irradiation is applied, we use the following</span>
+<span class="sd">    algorithm:</span>
+
+<span class="sd">        If the resonance offset changed sign during the sweep, then the spin</span>
+<span class="sd">        must have experienced a zero resonance offset during the sweep, so set</span>
+<span class="sd">        the resonance offset to zero manually.</span>
+
+<span class="sd">    This procedure mitigates the problem of previous algorithms not finding</span>
+<span class="sd">    the true minimum resonance offset (and polarization) due to the finite grid</span>
+<span class="sd">    size. While this new procedure will still not capture the shape of the</span>
+<span class="sd">    polarization at the edge of the sensitive slice, it should produce a</span>
+<span class="sd">    polarization that is properly saturated inside the sensitive slice.</span>
+
+<span class="sd">    This is used for calculating :math:`\delta F` of the experiment</span>
+<span class="sd">    calculate the corresponding gradient based on the grid array</span>
+<span class="sd">    points and tip-sample separation (equation 3 in &quot;Overview&quot;).</span>
+<span class="sd">    The integral is approximated with Trapezoid summation over</span>
+<span class="sd">    :math:`2 \pi` with n points.</span>
+<span class="sd">    The summation is over pi to increase the performance since it is</span>
+<span class="sd">    symmetric in :math:`[-\pi, 0]` to :math:`[0, \pi]` for the summation.</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">        \Delta f = \frac{\sum_j \int_{-\pi}^{\pi} \mu_z(\vec{r}_j,\theta)</span>
+<span class="sd">        \frac{\partial B_z^\mathrm{tip}(x - x_\mathrm{pk} \cos{\theta},y,z)}{\partial x}</span>
+<span class="sd">        x_\mathrm{pk} \cos{\theta} d\theta}{\pi x_\mathrm{pk}^2}</span>
+
+<span class="sd">    :param float ext_B_offset: resonance offset of extended grid [mT]</span>
+<span class="sd">    :param int ext_pts: number of grid points used to determine the minimum offset</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">window</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">ext_pts</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">b_offset_strided</span> <span class="o">=</span> <span class="n">as_strided_x</span><span class="p">(</span><span class="n">ext_B_offset</span><span class="p">,</span> <span class="n">window</span><span class="p">)</span>
+    <span class="n">b_offset_abs_strided</span> <span class="o">=</span> <span class="n">as_strided_x</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">ext_B_offset</span><span class="p">),</span> <span class="n">window</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">b_offset_abs_strided</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">logical_or</span><span class="p">(</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">b_offset_strided</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">b_offset_strided</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+    <span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="xtrapz_fxdtheta">
+<a class="viewcode-back" href="../../../reference/ref_field.html#mrfmsim.formula.field.xtrapz_fxdtheta">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">xtrapz_fxdtheta</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">ogrid</span><span class="p">,</span> <span class="n">n_pts</span><span class="p">,</span> <span class="n">xrange</span><span class="p">,</span> <span class="n">x_0p</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Calculate the integral of a function over a range of theta.</span>
+
+<span class="sd">    The calculation is done by extend the original ogrid to a new grid</span>
+<span class="sd">    by extend the number of points in the x direction.</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">        \int_{x_\mathrm{min}}^{x_\mathrm{max}} f(x - x_0\cos\theta)x_0\cos\theta d\theta</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">xrange</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">xrange</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">n_pts</span><span class="p">)</span>
+    <span class="n">grid_shape</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">ogrid</span><span class="p">)),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+    <span class="n">grid_shape_x</span> <span class="o">=</span> <span class="n">grid_shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">grid_dim</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">grid_shape</span><span class="p">)</span>
+
+    <span class="c1"># calculate the new grid</span>
+    <span class="n">new_ogrid_shape</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">grid_dim</span><span class="p">)</span>
+    <span class="n">new_ogrid_shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">n_pts</span> <span class="o">*</span> <span class="n">grid_shape_x</span>
+    <span class="n">new_ogrid_shape</span> <span class="o">=</span> <span class="n">new_ogrid_shape</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+    <span class="c1"># expand the dimension to (pts, 1, 1, 1)</span>
+    <span class="c1"># expand the x grid dimension to (1, x_shape, 1, 1)</span>
+    <span class="c1"># The result of addition is (pts, x_shape, 1, 1)</span>
+    <span class="c1"># the final (x, y, z) is (pts * x_shape, 1, 1)</span>
+    <span class="n">grid_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">ogrid</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">dx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">x_0p</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">grid_dim</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)))</span>
+    <span class="n">new_ogrid</span> <span class="o">=</span> <span class="p">[(</span><span class="n">grid_x</span> <span class="o">-</span> <span class="n">dx</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">new_ogrid_shape</span><span class="p">)]</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">ogrid</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+
+    <span class="c1"># calculate the integral</span>
+    <span class="c1"># new grid shape is (trapz_pts, x_shape, y_shape, z_shape)</span>
+    <span class="c1"># dx has the shape of (trapz_pts, 1, 1, 1)</span>
+    <span class="c1"># The multiplication is also an optimization here</span>
+    <span class="n">new_grid_shape</span> <span class="o">=</span> <span class="p">(</span><span class="n">n_pts</span><span class="p">,)</span> <span class="o">+</span> <span class="n">grid_shape</span>
+    <span class="n">integrand</span> <span class="o">=</span> <span class="n">method</span><span class="p">(</span><span class="o">*</span><span class="n">new_ogrid</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">new_grid_shape</span><span class="p">)</span> <span class="o">*</span> <span class="n">dx</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">trapz</span><span class="p">(</span><span class="n">integrand</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">theta</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="xtrapz_field_gradient">
+<a class="viewcode-back" href="../../../reference/ref_field.html#mrfmsim.formula.field.xtrapz_field_gradient">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">xtrapz_field_gradient</span><span class="p">(</span><span class="n">Bzx_method</span><span class="p">,</span> <span class="n">grid_array</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">trapz_pts</span><span class="p">,</span> <span class="n">x_0p</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Calculate CERMIT integral using Trapezoidal summation.</span>
+
+<span class="sd">    The integrand is an odd function. Therefore, we can approximate the</span>
+<span class="sd">    integral from :math:`-\pi` to :math:`\pi` and :math:`-\pi` to 0. Here, we make an important</span>
+<span class="sd">    assumption that the magnet is symmetric in the x direction. Therefore,</span>
+<span class="sd">    we approximate the integral from :math:`-\pi/2` to 0 and time the final result by 2.</span>
+<span class="sd">    The result has the unit of mT/nm^2.</span>
+
+<span class="sd">    :param list grid_array: ogrid generated by a numpy ogrid</span>
+<span class="sd">        For a one-dimensional grid, the ogrid should be encapsulated in a list</span>
+<span class="sd">    :param list h: tip-sample separation</span>
+<span class="sd">    :param int trapz_pts: points to integrate across :math: `\pi`.</span>
+<span class="sd">        In this particular implementation, the number is divided by 2 for</span>
+<span class="sd">        [:math:`-\pi/2`, 0 ] integration.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">grid</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">sub</span><span class="p">,</span> <span class="n">grid_array</span><span class="p">,</span> <span class="n">h</span><span class="p">))</span>
+    <span class="n">n_pts</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">trapz_pts</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">integral</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">xtrapz_fxdtheta</span><span class="p">(</span><span class="n">Bzx_method</span><span class="p">,</span> <span class="n">grid</span><span class="p">,</span> <span class="n">n_pts</span><span class="p">,</span> <span class="p">[</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">x_0p</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">integral</span> <span class="o">/</span> <span class="n">x_0p</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span></div>
+
+
+
+<div class="viewcode-block" id="field_func">
+<a class="viewcode-back" href="../../../reference/ref_field.html#mrfmsim.formula.field.field_func">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">field_func</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">grid_array</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate the field value at the given height and grid points.&quot;&quot;&quot;</span>
+
+    <span class="n">grid</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">sub</span><span class="p">,</span> <span class="n">grid_array</span><span class="p">,</span> <span class="n">h</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">method</span><span class="p">(</span><span class="o">*</span><span class="n">grid</span><span class="p">)</span></div>
+
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Peter Sun
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

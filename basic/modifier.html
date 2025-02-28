@@ -1,0 +1,580 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Modifiers and shortcuts &#8212; mrfmsim 0.3.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=83a61292"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'basic/modifier';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Plugins" href="plugin.html" />
+    <link rel="prev" title="Components" href="component.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">mrfmsim 0.3.0 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim overview</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tests.html">Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim basics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="inheritance.html"><em>mrfmsim</em> custom classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="component.html">Components</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Modifiers and shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin.html">Plugins</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment basics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cermit_protocol.html">CERMIT protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geometry.html">Experiment geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tip_size.html">Tip size: small tip vs. large tip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spin_count.html">Sample spin distribution</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment Setups</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../setup/coordinates.html">Coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup/sample.html">Sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup/grid.html">Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup/magnet.html">Magnet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup/cantilever.html">Cantilever</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../experiment/IBMCyclic.html">IBM cyclic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../experiment/CermitSat.html">CERMIT steady-state saturation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../experiment/CermitTD.html">CERMIT time dependent offset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../experiment/CermitARP.html">CERMIT adiabatic rapid passage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../experiment/CermitSingleSpin.html">CERMIT single spin</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">references</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../reference/ref_magnetization.html">Equilibrium magnetization and variance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/ref_polarization.html">Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/ref_field.html">Magnetic field</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/ref_math.html">Mathematical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/ref_misc.html">Miscellaneous</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/basic/modifier.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Modifiers and shortcuts</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-mrfmsim.modifier"><code class="xref py py-mod docutils literal notranslate"><span class="pre">modifier</span></code> module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.modifier.numba_jit"><code class="docutils literal notranslate"><span class="pre">numba_jit()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.modifier.replace_component"><code class="docutils literal notranslate"><span class="pre">replace_component()</span></code></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="modifiers-and-shortcuts">
+<h1>Modifiers and shortcuts<a class="headerlink" href="#modifiers-and-shortcuts" title="Link to this heading">#</a></h1>
+<p><em>mrfmsim</em> adds additional modifiers and shortcuts specific to the experimental
+simulation to the <em>mmodel</em> modifiers. See
+<a class="reference external" href="https://marohn-group.github.io/mmodel-docs/tutorial_modifier.html">modifier and shortcut</a>
+tutorial for details.
+The shortcuts are used to modify the Experiment/Model object directly, which consists
+of applying modifiers to individual nodes or the model/experiment.</p>
+<p>List of modifiers and shortcuts for the <em>mrfmsim</em> and <em>mmodel</em> package.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 9.1%" />
+<col style="width: 9.1%" />
+<col style="width: 81.8%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Modifiers/Shorcuts</p></th>
+<th class="head"><p>Module</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>loop_input</p></td>
+<td><p>mmodel.modifier</p></td>
+<td><p>Modify function to iterate one given parameter.</p></td>
+</tr>
+<tr class="row-odd"><td><p>zip_loop_inputs</p></td>
+<td><p>mmodel.modifier</p></td>
+<td><p>Modify function to iterate the parameters pairwise.</p></td>
+</tr>
+<tr class="row-even"><td><p>profile_time</p></td>
+<td><p>mmodel.modifier</p></td>
+<td><p>Profile the execution time of a function.</p></td>
+</tr>
+<tr class="row-odd"><td><p>print_inputs</p></td>
+<td><p>mmodel.modifier</p></td>
+<td><p>Print the inputs of the function with units.</p></td>
+</tr>
+<tr class="row-even"><td><p>print_output</p></td>
+<td><p>mmodel.modifier</p></td>
+<td><p>Print the outputs of the function with units.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mrfmsim.modifier.replace_component" title="mrfmsim.modifier.replace_component"><code class="xref py py-mod docutils literal notranslate"><span class="pre">replace_component</span></code></a></p></td>
+<td><p><a class="reference internal" href="#module-mrfmsim.modifier" title="mrfmsim.modifier"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mrfmsim.modifier</span></code></a></p></td>
+<td><p>Replace the component in the model.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mrfmsim.modifier.numba_jit" title="mrfmsim.modifier.numba_jit"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numba_jit</span></code></a></p></td>
+<td><p><a class="reference internal" href="#module-mrfmsim.modifier" title="mrfmsim.modifier"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mrfmsim.modifier</span></code></a></p></td>
+<td><p>Modify a node using numba jit.</p></td>
+</tr>
+<tr class="row-odd"><td><p>loop_shortcut</p></td>
+<td><p>mmodel.shortcut</p></td>
+<td><p>Loop over a parameter during the experiment execution.</p></td>
+</tr>
+<tr class="row-even"><td><p>print_shortcut</p></td>
+<td><p>mmodel.shortcut</p></td>
+<td><p>Apply <code class="docutils literal notranslate"><span class="pre">print_inputs</span></code> and <code class="docutils literal notranslate"><span class="pre">print_output</span></code> shortcuts to individual nodes
+that print out intermediate variable values during node execution.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="module-mrfmsim.modifier">
+<span id="modifier-module"></span><h2><code class="xref py py-mod docutils literal notranslate"><span class="pre">modifier</span></code> module<a class="headerlink" href="#module-mrfmsim.modifier" title="Link to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="mrfmsim.modifier.numba_jit">
+<span class="sig-prename descclassname"><span class="pre">mrfmsim.modifier.</span></span><span class="sig-name descname"><span class="pre">numba_jit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mrfmsim/modifier.html#numba_jit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.modifier.numba_jit" title="Link to this definition">#</a></dt>
+<dd><p>Numba jit modifier with keyword arguments.</p>
+<p>Add metadata to numba.jit. The numba decorator outputs
+all the parameters make it hard to read.
+Use the decorator the same way as numba.jit().</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mrfmsim.modifier.replace_component">
+<span class="sig-prename descclassname"><span class="pre">mrfmsim.modifier.</span></span><span class="sig-name descname"><span class="pre">replace_component</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">replacement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_duplicate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mrfmsim/modifier.html#replace_component"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.modifier.replace_component" title="Link to this definition">#</a></dt>
+<dd><p>Modify the signature with components.</p>
+<p>The modifier modifies the internal model function. The wrapper
+function is keyword-only. The function by default does not
+allow duplicated signature. If we want to replace several
+attributes with a component, the component name cannot exist
+in the original signature. For example, if we have a function</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def func(a, b, obj):</dt><dd><p>return a + b, obj</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>and we want to replace a and b with a component, we cannot
+name the component “obj”.</p>
+<p>In rares that we do want to replace a, b with a component,</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def func(obj):</dt><dd><p>return obj.a + obj.b, obj</p>
+</dd>
+</dl>
+<p>func(obj=obj)</p>
+</div></blockquote>
+<p>we would have to use “obj_obj” as the component name. The
+result function is equivalent to</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def func(obj_obj, obj):</dt><dd><p>return obj_obj.a + obj_obj.b + obj</p>
+</dd>
+</dl>
+<p>func(obj_obj=obj, obj=obj)</p>
+</div></blockquote>
+<p>The behavior is very confusing to users. The solution is to
+replace the components, but leave the original “obj” signature
+as it is. In the final signature, the duplicated signatures
+are combined into one. The solution here is to add a boolean
+flag allow_duplicate. If the flag is set to True, the function
+allows duplicated signatures.</p>
+<p>The solution, however, leaves another ambiguity. If we indeed
+want to replace the component with the same name, but use
+the original name with an attribute:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def func(obj):</dt><dd><p>return obj.a + obj.b, obj.obj</p>
+</dd>
+</dl>
+<p>func(obj=obj)</p>
+</div></blockquote>
+<p>We have decided that this behavior is not allowed regardless the flag.
+Because in this case, in an inspection attempt, it is confusing to
+understand if the obj is the original obj or an attribute to the new obj.
+In this case, a new object name should be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>replacement</strong> (<em>dict</em><em>[</em><em>str</em><em>]</em>) – in the format of
+{component_object: [replacement_attribute1, replacement_attribute2, …]}</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="component.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Components</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="plugin.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Plugins</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-mrfmsim.modifier"><code class="xref py py-mod docutils literal notranslate"><span class="pre">modifier</span></code> module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.modifier.numba_jit"><code class="docutils literal notranslate"><span class="pre">numba_jit()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.modifier.replace_component"><code class="docutils literal notranslate"><span class="pre">replace_component()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Peter Sun
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

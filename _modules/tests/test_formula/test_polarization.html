@@ -1,0 +1,636 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tests.test_formula.test_polarization &#8212; mrfmsim 0.3.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../_static/documentation_options.js?v=83a61292"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/tests/test_formula/test_polarization';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">mrfmsim 0.3.0 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim overview</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tests.html">Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Changelog</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim basics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/inheritance.html"><em>mrfmsim</em> custom classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/component.html">Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/modifier.html">Modifiers and shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/plugin.html">Plugins</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment basics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/cermit_protocol.html">CERMIT protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/geometry.html">Experiment geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/tip_size.html">Tip size: small tip vs. large tip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/spin_count.html">Sample spin distribution</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment Setups</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/coordinates.html">Coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/sample.html">Sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/grid.html">Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/magnet.html">Magnet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/cantilever.html">Cantilever</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/IBMCyclic.html">IBM cyclic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/CermitSat.html">CERMIT steady-state saturation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/CermitTD.html">CERMIT time dependent offset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/CermitARP.html">CERMIT adiabatic rapid passage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/CermitSingleSpin.html">CERMIT single spin</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">references</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_magnetization.html">Equilibrium magnetization and variance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_polarization.html">Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_field.html">Magnetic field</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_math.html">Mathematical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_misc.html">Miscellaneous</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for tests.test_formula.test_polarization</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Test the relative change in polarization.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">mrfmsim.formula.polarization</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pol</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">mrfmsim.component</span><span class="w"> </span><span class="kn">import</span> <span class="n">Sample</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
+
+
+<div class="viewcode-block" id="sample_e">
+<a class="viewcode-back" href="../../../tests.html#tests.test_formula.test_polarization.sample_e">[docs]</a>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">sample_e</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Electron sample.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">Sample</span><span class="p">(</span><span class="n">spin</span><span class="o">=</span><span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mf">0.001</span><span class="p">,</span> <span class="n">T1</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">T2</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">spin_density</span><span class="o">=</span><span class="mf">10.0</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="sample_h">
+<a class="viewcode-back" href="../../../tests.html#tests.test_formula.test_polarization.sample_h">[docs]</a>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">sample_h</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Nucleus sample.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">Sample</span><span class="p">(</span><span class="n">spin</span><span class="o">=</span><span class="s2">&quot;1H&quot;</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mf">4.2</span><span class="p">,</span> <span class="n">T1</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">T2</span><span class="o">=</span><span class="mf">5e-6</span><span class="p">,</span> <span class="n">spin_density</span><span class="o">=</span><span class="mf">49.0</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="test_rel_dpol_sat_steadystate">
+<a class="viewcode-back" href="../../../tests.html#tests.test_formula.test_polarization.test_rel_dpol_sat_steadystate">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_rel_dpol_sat_steadystate</span><span class="p">(</span><span class="n">sample_e</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test the rel_dpol_sat *absolute* tolerance.</span>
+
+<span class="sd">    Sample -&gt; e -&gt; electron spin, J = 1/2, high field limit</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">p1</span> <span class="o">=</span> <span class="n">pol</span><span class="o">.</span><span class="n">rel_dpol_sat_steadystate</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">sample_e</span><span class="o">.</span><span class="n">dB_sat</span><span class="p">,</span> <span class="n">sample_e</span><span class="o">.</span><span class="n">dB_hom</span><span class="p">)</span>
+    <span class="c1"># depolarized</span>
+    <span class="n">p2</span> <span class="o">=</span> <span class="n">pol</span><span class="o">.</span><span class="n">rel_dpol_sat_steadystate</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">sample_e</span><span class="o">.</span><span class="n">dB_sat</span><span class="p">,</span> <span class="n">sample_e</span><span class="o">.</span><span class="n">dB_hom</span><span class="p">)</span>
+    <span class="c1"># polarized</span>
+    <span class="n">p3</span> <span class="o">=</span> <span class="n">pol</span><span class="o">.</span><span class="n">rel_dpol_sat_steadystate</span><span class="p">(</span><span class="mf">100.0</span><span class="p">,</span> <span class="mf">1.0e-3</span><span class="p">,</span> <span class="n">sample_e</span><span class="o">.</span><span class="n">dB_sat</span><span class="p">,</span> <span class="n">sample_e</span><span class="o">.</span><span class="n">dB_hom</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">pytest</span><span class="o">.</span><span class="n">approx</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="nb">abs</span><span class="o">=</span><span class="mf">1e-10</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">p3</span><span class="p">]</span></div>
+
+
+
+<div class="viewcode-block" id="test_rel_dpol_ibm_cyclic">
+<a class="viewcode-back" href="../../../tests.html#tests.test_formula.test_polarization.test_rel_dpol_ibm_cyclic">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_rel_dpol_ibm_cyclic</span><span class="p">(</span><span class="n">sample_h</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test rpol_arp_ibm.</span>
+
+<span class="sd">    Sample -&gt; proton spin -&gt; rpol_arp_ibm() limiting cases</span>
+<span class="sd">    Sample -&gt; h -&gt; proton spin</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># on resonance</span>
+    <span class="n">n1</span> <span class="o">=</span> <span class="n">pol</span><span class="o">.</span><span class="n">rel_dpol_ibm_cyclic</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0e6</span><span class="p">,</span> <span class="n">sample_h</span><span class="o">.</span><span class="n">Gamma</span><span class="p">)</span>
+    <span class="c1"># below resonance</span>
+    <span class="n">n2</span> <span class="o">=</span> <span class="n">pol</span><span class="o">.</span><span class="n">rel_dpol_ibm_cyclic</span><span class="p">(</span><span class="o">-</span><span class="mf">100.0</span><span class="p">,</span> <span class="mf">2.0e6</span><span class="p">,</span> <span class="n">sample_h</span><span class="o">.</span><span class="n">Gamma</span><span class="p">)</span>
+    <span class="c1"># above resonance</span>
+    <span class="n">n3</span> <span class="o">=</span> <span class="n">pol</span><span class="o">.</span><span class="n">rel_dpol_ibm_cyclic</span><span class="p">(</span><span class="mf">100.0</span><span class="p">,</span> <span class="mf">2.0e6</span><span class="p">,</span> <span class="n">sample_h</span><span class="o">.</span><span class="n">Gamma</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">pytest</span><span class="o">.</span><span class="n">approx</span><span class="p">([</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">n3</span><span class="p">],</span> <span class="nb">abs</span><span class="o">=</span><span class="mf">1e-10</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span></div>
+
+
+
+<div class="viewcode-block" id="test_rel_dpol_nut">
+<a class="viewcode-back" href="../../../tests.html#tests.test_formula.test_polarization.test_rel_dpol_nut">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_rel_dpol_nut</span><span class="p">(</span><span class="n">sample_h</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test rel_dpol_nut.</span>
+
+<span class="sd">    Sample -&gt; proton spin -&gt; rpol_nut(), on resonance pulses</span>
+<span class="sd">    Sample -&gt; h -&gt; proton spin</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">Gamma</span> <span class="o">=</span> <span class="mf">0.0425774805964</span>  <span class="c1"># gyromagnetic ratio in MHz/mT</span>
+    <span class="n">rabi</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="p">(</span><span class="n">Gamma</span><span class="p">)</span>  <span class="c1"># Rabi period in microseconds for 1 mT</span>
+
+    <span class="c1"># pi/2 pulse</span>
+    <span class="n">rpol_090</span> <span class="o">=</span> <span class="n">pol</span><span class="o">.</span><span class="n">rel_dpol_nut</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">sample_h</span><span class="o">.</span><span class="n">Gamma</span><span class="p">,</span> <span class="mf">0.25</span> <span class="o">*</span> <span class="n">rabi</span> <span class="o">*</span> <span class="mf">1.0e-6</span><span class="p">)</span>
+
+    <span class="c1"># pi pulse</span>
+    <span class="n">rpol_180</span> <span class="o">=</span> <span class="n">pol</span><span class="o">.</span><span class="n">rel_dpol_nut</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">sample_h</span><span class="o">.</span><span class="n">Gamma</span><span class="p">,</span> <span class="mf">0.50</span> <span class="o">*</span> <span class="n">rabi</span> <span class="o">*</span> <span class="mf">1.0e-6</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">pytest</span><span class="o">.</span><span class="n">approx</span><span class="p">([</span><span class="n">rpol_090</span><span class="p">,</span> <span class="n">rpol_180</span><span class="p">],</span> <span class="nb">abs</span><span class="o">=</span><span class="mf">1e-10</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">]</span></div>
+
+
+
+<div class="viewcode-block" id="test_rel_dpol_arp">
+<a class="viewcode-back" href="../../../tests.html#tests.test_formula.test_polarization.test_rel_dpol_arp">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_rel_dpol_arp</span><span class="p">(</span><span class="n">sample_h</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test rel_dpol_arp.</span>
+
+<span class="sd">    if f_fm is close to infinity, the relative change in polarization</span>
+<span class="sd">    is -2.0</span>
+<span class="sd">    if b1 and the modulation frequency is small and b_offset is large</span>
+<span class="sd">    the spin does not flip therefore the relative change in polarization</span>
+<span class="sd">    is close to 0.0 (off-resonance case)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">rpol_180</span> <span class="o">=</span> <span class="n">pol</span><span class="o">.</span><span class="n">rel_dpol_arp</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1e10</span><span class="p">,</span> <span class="n">sample_h</span><span class="o">.</span><span class="n">Gamma</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">rpol_180</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">)</span>
+
+    <span class="n">rpol_0</span> <span class="o">=</span> <span class="n">pol</span><span class="o">.</span><span class="n">rel_dpol_arp</span><span class="p">(</span><span class="mf">10000.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">sample_h</span><span class="o">.</span><span class="n">Gamma</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">pytest</span><span class="o">.</span><span class="n">approx</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="nb">abs</span><span class="o">=</span><span class="mf">5e-10</span><span class="p">)</span> <span class="o">==</span> <span class="n">rpol_0</span></div>
+
+
+
+<div class="viewcode-block" id="test_rel_dpol_periodic_irrad_cont">
+<a class="viewcode-back" href="../../../tests.html#tests.test_formula.test_polarization.test_rel_dpol_periodic_irrad_cont">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_rel_dpol_periodic_irrad_cont</span><span class="p">(</span><span class="n">sample_e</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test rel_dpol_periodic_irrad in the continuous case.</span>
+
+<span class="sd">    When the if t_off is 0, the intermittent irradiation becomes continuous</span>
+<span class="sd">    irradiation. This should be the same as rel_dpol_sat</span>
+<span class="sd">    When t_on is 0, the signal should vanish</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># continuous</span>
+    <span class="n">rpol_cont</span> <span class="o">=</span> <span class="n">pol</span><span class="o">.</span><span class="n">rel_dpol_periodic_irrad</span><span class="p">(</span>
+        <span class="mi">0</span><span class="p">,</span>
+        <span class="mf">1.0</span><span class="p">,</span>
+        <span class="n">sample_e</span><span class="o">.</span><span class="n">dB_sat</span><span class="p">,</span>
+        <span class="n">sample_e</span><span class="o">.</span><span class="n">dB_hom</span><span class="p">,</span>
+        <span class="n">sample_e</span><span class="o">.</span><span class="n">T1</span><span class="p">,</span>
+        <span class="n">t_on</span><span class="o">=</span><span class="mi">10</span> <span class="o">*</span> <span class="n">sample_e</span><span class="o">.</span><span class="n">T1</span><span class="p">,</span>
+        <span class="n">t_off</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">rpol</span> <span class="o">=</span> <span class="n">pol</span><span class="o">.</span><span class="n">rel_dpol_sat_steadystate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">sample_e</span><span class="o">.</span><span class="n">dB_sat</span><span class="p">,</span> <span class="n">sample_e</span><span class="o">.</span><span class="n">dB_hom</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">pytest</span><span class="o">.</span><span class="n">approx</span><span class="p">(</span><span class="n">rpol_cont</span><span class="p">)</span> <span class="o">==</span> <span class="n">rpol</span></div>
+
+
+
+<div class="viewcode-block" id="test_rel_dpol_periodic_irrad_no_irrad">
+<a class="viewcode-back" href="../../../tests.html#tests.test_formula.test_polarization.test_rel_dpol_periodic_irrad_no_irrad">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_rel_dpol_periodic_irrad_no_irrad</span><span class="p">(</span><span class="n">sample_e</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test rel_dpol_periodic_irrad in no irradiation case.</span>
+
+<span class="sd">    When t_on is 0, the signal should vanish</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">rpol_0</span> <span class="o">=</span> <span class="n">pol</span><span class="o">.</span><span class="n">rel_dpol_periodic_irrad</span><span class="p">(</span>
+        <span class="mi">0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">sample_e</span><span class="o">.</span><span class="n">dB_sat</span><span class="p">,</span> <span class="n">sample_e</span><span class="o">.</span><span class="n">dB_hom</span><span class="p">,</span> <span class="n">sample_e</span><span class="o">.</span><span class="n">T1</span><span class="p">,</span> <span class="n">t_on</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">t_off</span><span class="o">=</span><span class="mf">2e-4</span>
+    <span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">rpol_0</span> <span class="o">==</span> <span class="mf">0.0</span></div>
+
+
+
+<div class="viewcode-block" id="test_rel_dpol_periodic_irrad_off_res">
+<a class="viewcode-back" href="../../../tests.html#tests.test_formula.test_polarization.test_rel_dpol_periodic_irrad_off_res">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_rel_dpol_periodic_irrad_off_res</span><span class="p">(</span><span class="n">sample_e</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test rel_dpol_periodic_irrad off-resonance case.</span>
+
+<span class="sd">    When is it off-resonance (B_offset is large), the signal is 0</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># off-resonance case</span>
+    <span class="n">rpol_off_res</span> <span class="o">=</span> <span class="n">pol</span><span class="o">.</span><span class="n">rel_dpol_periodic_irrad</span><span class="p">(</span>
+        <span class="mi">10000</span><span class="p">,</span>
+        <span class="mf">0.5</span><span class="p">,</span>
+        <span class="n">sample_e</span><span class="o">.</span><span class="n">dB_sat</span><span class="p">,</span>
+        <span class="n">sample_e</span><span class="o">.</span><span class="n">dB_hom</span><span class="p">,</span>
+        <span class="n">sample_e</span><span class="o">.</span><span class="n">T1</span><span class="p">,</span>
+        <span class="n">t_on</span><span class="o">=</span><span class="mf">4e-5</span><span class="p">,</span>
+        <span class="n">t_off</span><span class="o">=</span><span class="mf">2e-4</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">pytest</span><span class="o">.</span><span class="n">approx</span><span class="p">(</span><span class="n">rpol_off_res</span><span class="p">,</span> <span class="nb">abs</span><span class="o">=</span><span class="mf">5e-10</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.0</span></div>
+
+
+
+<div class="viewcode-block" id="test_rel_dpol_sat_td">
+<a class="viewcode-back" href="../../../tests.html#tests.test_formula.test_polarization.test_rel_dpol_sat_td">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_rel_dpol_sat_td</span><span class="p">(</span><span class="n">sample_e</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test rel_dpol_sat_td when offset is 0.</span>
+
+<span class="sd">    When the offset is 0, the result should be 0</span>
+
+<span class="sd">    Here we construct a 1D grid size of 3, and</span>
+<span class="sd">    extended grid size of 5</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">Bzx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">ext_B_offset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">5</span><span class="p">])</span>
+
+    <span class="n">rpol</span> <span class="o">=</span> <span class="n">pol</span><span class="o">.</span><span class="n">rel_dpol_sat_td</span><span class="p">(</span>
+        <span class="n">Bzx</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">ext_B_offset</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">sample_e</span><span class="o">.</span><span class="n">Gamma</span><span class="p">,</span> <span class="n">sample_e</span><span class="o">.</span><span class="n">T2</span><span class="p">,</span> <span class="mi">2000</span>
+    <span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">rpol</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span></div>
+
+
+
+<div class="viewcode-block" id="test_rel_dpol_sat_td_symmetry">
+<a class="viewcode-back" href="../../../tests.html#tests.test_formula.test_polarization.test_rel_dpol_sat_td_symmetry">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_rel_dpol_sat_td_symmetry</span><span class="p">(</span><span class="n">sample_e</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test rel_dpol_sat_td is symmetric around the initial and final offset.</span>
+
+<span class="sd">    Here we construct a 1D grid size of 3, and an extended grid size of 5</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">Bzx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">ext_B_offset_a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+    <span class="n">ext_B_offset_b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+
+    <span class="n">rpol_a</span> <span class="o">=</span> <span class="n">pol</span><span class="o">.</span><span class="n">rel_dpol_sat_td</span><span class="p">(</span>
+        <span class="n">Bzx</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">ext_B_offset_a</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">sample_e</span><span class="o">.</span><span class="n">Gamma</span><span class="p">,</span> <span class="n">sample_e</span><span class="o">.</span><span class="n">T2</span><span class="p">,</span> <span class="mi">2000</span>
+    <span class="p">)</span>
+    <span class="n">rpol_b</span> <span class="o">=</span> <span class="n">pol</span><span class="o">.</span><span class="n">rel_dpol_sat_td</span><span class="p">(</span>
+        <span class="n">Bzx</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">ext_B_offset_b</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">sample_e</span><span class="o">.</span><span class="n">Gamma</span><span class="p">,</span> <span class="n">sample_e</span><span class="o">.</span><span class="n">T2</span><span class="p">,</span> <span class="mi">2000</span>
+    <span class="p">)</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">rpol_a</span><span class="p">,</span> <span class="n">rpol_b</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="test_rel_dpol_sat_td_without_td">
+<a class="viewcode-back" href="../../../tests.html#tests.test_formula.test_polarization.test_rel_dpol_sat_td_without_td">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_rel_dpol_sat_td_without_td</span><span class="p">(</span><span class="n">sample_e</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test rel_dpol_sat_td completely saturate spins if no td component.</span>
+
+<span class="sd">    Here we construct a 1D grid size of 3 and an extended grid size of 5</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">Bzx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">ext_B_offset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+
+    <span class="n">rpol</span> <span class="o">=</span> <span class="n">pol</span><span class="o">.</span><span class="n">rel_dpol_sat_td</span><span class="p">(</span>
+        <span class="n">Bzx</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">ext_B_offset</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">sample_e</span><span class="o">.</span><span class="n">Gamma</span><span class="p">,</span> <span class="n">sample_e</span><span class="o">.</span><span class="n">T2</span><span class="p">,</span> <span class="mi">2000</span>
+    <span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">rpol</span><span class="p">,</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span></div>
+
+
+
+<div class="viewcode-block" id="test_rel_dol_sat_td_smallsteps">
+<a class="viewcode-back" href="../../../tests.html#tests.test_formula.test_polarization.test_rel_dol_sat_td_smallsteps">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_rel_dol_sat_td_smallsteps</span><span class="p">(</span><span class="n">sample_e</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test rel_dol_sat_td_smallsteps.</span>
+
+<span class="sd">    Small steps approximation should have the same result as regular</span>
+<span class="sd">    when Bzx stays the same, given that delta_B_offset has the same</span>
+<span class="sd">    sign as Bzx.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">Bzx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">ext_Bzx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">ext_B_offset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+
+    <span class="n">rpol_td</span> <span class="o">=</span> <span class="n">pol</span><span class="o">.</span><span class="n">rel_dpol_sat_td</span><span class="p">(</span>
+        <span class="n">Bzx</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">ext_B_offset</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">sample_e</span><span class="o">.</span><span class="n">Gamma</span><span class="p">,</span> <span class="n">sample_e</span><span class="o">.</span><span class="n">T2</span><span class="p">,</span> <span class="mf">2000.0</span>
+    <span class="p">)</span>
+
+    <span class="n">rpol_smallsteps</span> <span class="o">=</span> <span class="n">pol</span><span class="o">.</span><span class="n">rel_dpol_sat_td_smallsteps</span><span class="p">(</span>
+        <span class="mf">1.0</span><span class="p">,</span> <span class="n">ext_Bzx</span><span class="p">,</span> <span class="n">ext_B_offset</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">sample_e</span><span class="o">.</span><span class="n">Gamma</span><span class="p">,</span> <span class="n">sample_e</span><span class="o">.</span><span class="n">T2</span><span class="p">,</span> <span class="mf">2000.0</span>
+    <span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">rpol_td</span><span class="p">,</span> <span class="n">rpol_smallsteps</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="test_rel_dpol_multipulse_no_pol">
+<a class="viewcode-back" href="../../../tests.html#tests.test_formula.test_polarization.test_rel_dpol_multipulse_no_pol">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_rel_dpol_multipulse_no_pol</span><span class="p">(</span><span class="n">sample_e</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test rel_dpol_multipulse when relative polarization is 0.&quot;&quot;&quot;</span>
+
+    <span class="n">rpol</span> <span class="o">=</span> <span class="n">pol</span><span class="o">.</span><span class="n">rel_dpol_multipulse</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">sample_e</span><span class="o">.</span><span class="n">T1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">rpol</span> <span class="o">==</span> <span class="mi">0</span></div>
+
+
+
+<div class="viewcode-block" id="test_rel_dpol_multipulse_short">
+<a class="viewcode-back" href="../../../tests.html#tests.test_formula.test_polarization.test_rel_dpol_multipulse_short">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_rel_dpol_multipulse_short</span><span class="p">(</span><span class="n">sample_e</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test rel_dpol_multipulse when the pulse time difference is short.</span>
+
+<span class="sd">    Because the time between pulses is short and the equation ignores</span>
+<span class="sd">    relaxation during pulses,</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">rpol</span> <span class="o">=</span> <span class="n">pol</span><span class="o">.</span><span class="n">rel_dpol_multipulse</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">sample_e</span><span class="o">.</span><span class="n">T1</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">pytest</span><span class="o">.</span><span class="n">approx</span><span class="p">(</span><span class="n">rpol</span><span class="p">,</span> <span class="nb">abs</span><span class="o">=</span><span class="mf">0.001</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span></div>
+
+
+
+<div class="viewcode-block" id="test_rel_dpol_multipulse_long">
+<a class="viewcode-back" href="../../../tests.html#tests.test_formula.test_polarization.test_rel_dpol_multipulse_long">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_rel_dpol_multipulse_long</span><span class="p">(</span><span class="n">sample_e</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test rel_dpol_multipulse when the time between pulses is long.</span>
+
+<span class="sd">    In this case, the final polarization should be</span>
+<span class="sd">    relaxed to 1 and the chang in polarization is 0.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">rpol</span> <span class="o">=</span> <span class="n">pol</span><span class="o">.</span><span class="n">rel_dpol_multipulse</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">sample_e</span><span class="o">.</span><span class="n">T1</span><span class="p">,</span> <span class="mf">500.0</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">pytest</span><span class="o">.</span><span class="n">approx</span><span class="p">(</span><span class="n">rpol</span><span class="p">,</span> <span class="nb">abs</span><span class="o">=</span><span class="mf">0.001</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span></div>
+
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Peter Sun
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,440 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mrfmsim.formula.magnetization &#8212; mrfmsim 0.3.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../_static/documentation_options.js?v=83a61292"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/mrfmsim/formula/magnetization';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">mrfmsim 0.3.0 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim overview</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tests.html">Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Changelog</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim basics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/inheritance.html"><em>mrfmsim</em> custom classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/component.html">Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/modifier.html">Modifiers and shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/plugin.html">Plugins</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment basics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/cermit_protocol.html">CERMIT protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/geometry.html">Experiment geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/tip_size.html">Tip size: small tip vs. large tip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/spin_count.html">Sample spin distribution</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment Setups</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/coordinates.html">Coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/sample.html">Sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/grid.html">Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/magnet.html">Magnet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/cantilever.html">Cantilever</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/IBMCyclic.html">IBM cyclic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/CermitSat.html">CERMIT steady-state saturation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/CermitTD.html">CERMIT time dependent offset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/CermitARP.html">CERMIT adiabatic rapid passage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/CermitSingleSpin.html">CERMIT single spin</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">references</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_magnetization.html">Equilibrium magnetization and variance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_polarization.html">Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_field.html">Magnetic field</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_math.html">Mathematical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_misc.html">Miscellaneous</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for mrfmsim.formula.magnetization</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numba</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nb</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">HBAR</span> <span class="o">=</span> <span class="mf">1.054571628e-7</span>  <span class="c1"># aN nm s - reduced Planck constant</span>
+<span class="n">KB</span> <span class="o">=</span> <span class="mf">1.3806504e4</span>  <span class="c1"># aN nm K^{-1} - Boltzmann constant</span>
+
+
+<div class="viewcode-block" id="mz_eq">
+<a class="viewcode-back" href="../../../reference/ref_magnetization.html#mrfmsim.formula.magnetization.mz_eq">[docs]</a>
+<span class="nd">@nb</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">parallel</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">mz_eq</span><span class="p">(</span><span class="n">B_tot</span><span class="p">,</span> <span class="n">Gamma</span><span class="p">,</span> <span class="n">J</span><span class="p">,</span> <span class="n">temperature</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Magnetization per spin at the thermal equilibrium using the Brillouin function.</span>
+
+<span class="sd">    :param float gamma: the gyromagnetic ratio. [rad/s.mT]</span>
+<span class="sd">    :param float j: total spin angular momentum</span>
+<span class="sd">    :param float temperature: the spin temperature [K]</span>
+<span class="sd">    :param float spin_density: the sample spin</span>
+<span class="sd">            density :math:`\rho` [1/nm^3]</span>
+<span class="sd">    :param float b0: the external magnetic field [mT]</span>
+<span class="sd">    :param float bz: tip magnetic field in z [mT]</span>
+<span class="sd">    :return: equilibrium per-spin magnetization [aN.nm/mT]</span>
+
+<span class="sd">    The outputs are calculated from the sample properties</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">        J &amp;= \text{spin angular momentum quantum number}\:</span>
+<span class="sd">            [\mathrm{unitless}]\\</span>
+<span class="sd">        \gamma &amp; = \text{gyromagnetic ratio} \:</span>
+<span class="sd">        [\mathrm{s}^{-1} \mathrm{mT}^{-1}] \\</span>
+<span class="sd">        B_0 &amp;= \text{applied magnetic field} \: [\mathrm{mT}] \\</span>
+<span class="sd">        T &amp;= \text{temperature} \: [\mathrm{K}] \\</span>
+<span class="sd">        \rho &amp;= \text{spin density} \: [\mathrm{nm}^{-1}]</span>
+
+<span class="sd">    as follows. From the sample properties, we compute the magnetic moment</span>
+<span class="sd">    :math:`\mu` of the state with the largest :math:`m_J` quantum number,</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">        \mu = \hbar\gamma J \: [\mathrm{aN} \: \mathrm{nm} \:</span>
+<span class="sd">        \mathrm{mT}^{-1}]</span>
+
+<span class="sd">    We calculate the ratio of the energy level splitting of spin states to</span>
+<span class="sd">    the thermal energy,</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">        x = \dfrac{\mu B_0}{k_b T} \: [\mathrm{unitless}],</span>
+
+<span class="sd">    and define the following two unitless numbers:</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">        a &amp;= \dfrac{2 \: J + 1}{2 \: J} \\</span>
+<span class="sd">        b &amp;= \dfrac{1}{2 \: J}</span>
+
+<span class="sd">    In terms of these intermediate quantities, the thermal-equilibrium</span>
+<span class="sd">    polarization is given by</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">        p_{\text{eq}} = a \coth{(a x)} - b \coth{(b x)}</span>
+<span class="sd">            \: [\mathrm{unitless}].</span>
+
+<span class="sd">    The equilibrium magnetization is given by</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">        {\cal M}_{z}^{\text{eq}} =</span>
+<span class="sd">            p_{\text{eq}} \: \mu \:</span>
+<span class="sd">            [\mathrm{aN} \: \mathrm{nm} \: \mathrm{mT}^{-1}].</span>
+
+<span class="sd">    In the limit of low field or high temperature,</span>
+<span class="sd">    the equilibrium magnetization</span>
+<span class="sd">    tends towards the Curie-Weiss law,</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">        {\cal M}_{z}^{\text{eq}}</span>
+<span class="sd">        \approx \dfrac{\hbar^2 \gamma^2 \: J (J + 1)}{3 \: k_b T} B_0</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">mu_z</span> <span class="o">=</span> <span class="n">HBAR</span> <span class="o">*</span> <span class="n">Gamma</span> <span class="o">*</span> <span class="n">J</span>  <span class="c1"># aN nm s * rad/s mT = aN nm/mT</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">mu_z</span> <span class="o">*</span> <span class="n">B_tot</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">KB</span> <span class="o">*</span> <span class="n">temperature</span><span class="p">)</span>  <span class="c1"># unitless</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mf">2.0</span> <span class="o">*</span> <span class="n">J</span> <span class="o">+</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mf">2.0</span> <span class="o">*</span> <span class="n">J</span><span class="p">)</span>  <span class="c1"># unitless</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="p">(</span><span class="mf">2.0</span> <span class="o">*</span> <span class="n">J</span><span class="p">)</span>  <span class="c1"># unitless</span>
+    <span class="n">pol_eq</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="n">b</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="n">b</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">mu_z</span> <span class="o">*</span> <span class="n">pol_eq</span>  <span class="c1"># [aN.nm/mT]</span></div>
+
+
+
+<div class="viewcode-block" id="mz2_eq">
+<a class="viewcode-back" href="../../../reference/ref_magnetization.html#mrfmsim.formula.magnetization.mz2_eq">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">mz2_eq</span><span class="p">(</span><span class="n">Gamma</span><span class="p">,</span> <span class="n">J</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Compute the magnetization variance per spin.</span>
+
+<span class="sd">    :param float gamma: the gyromagnetic ratio. [rad/s.mT]</span>
+<span class="sd">    :param float J: total spin angular momentum</span>
+<span class="sd">    :return: Mz2_eq, rhoMz_eq</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">mu</span> <span class="o">=</span> <span class="n">HBAR</span> <span class="o">*</span> <span class="n">Gamma</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">J</span> <span class="o">*</span> <span class="p">(</span><span class="n">J</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mf">3.0</span><span class="p">)</span>  <span class="c1"># aN.nm/mT</span>
+    <span class="k">return</span> <span class="n">mu</span><span class="o">**</span><span class="mi">2</span>  <span class="c1"># aN^2</span></div>
+
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Peter Sun
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

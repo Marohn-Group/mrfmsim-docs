@@ -1,0 +1,497 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tests.test_experiment.test_cermitesr &#8212; mrfmsim 0.3.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../_static/documentation_options.js?v=83a61292"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/tests/test_experiment/test_cermitesr';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">mrfmsim 0.3.0 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim overview</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tests.html">Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Changelog</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim basics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/inheritance.html"><em>mrfmsim</em> custom classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/component.html">Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/modifier.html">Modifiers and shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/plugin.html">Plugins</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment basics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/cermit_protocol.html">CERMIT protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/geometry.html">Experiment geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/tip_size.html">Tip size: small tip vs. large tip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/spin_count.html">Sample spin distribution</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment Setups</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/coordinates.html">Coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/sample.html">Sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/grid.html">Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/magnet.html">Magnet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/cantilever.html">Cantilever</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/IBMCyclic.html">IBM cyclic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/CermitSat.html">CERMIT steady-state saturation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/CermitTD.html">CERMIT time dependent offset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/CermitARP.html">CERMIT adiabatic rapid passage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/CermitSingleSpin.html">CERMIT single spin</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">references</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_magnetization.html">Equilibrium magnetization and variance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_polarization.html">Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_field.html">Magnetic field</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_math.html">Mathematical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_misc.html">Miscellaneous</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for tests.test_experiment.test_cermitesr</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span><span class="w"> </span><span class="nn">mrfmsim.component</span><span class="w"> </span><span class="kn">import</span> <span class="n">SphereMagnet</span><span class="p">,</span> <span class="n">Grid</span><span class="p">,</span> <span class="n">Sample</span><span class="p">,</span> <span class="n">Cantilever</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">mrfmsim.experiment</span><span class="w"> </span><span class="kn">import</span> <span class="n">CermitESRGroup</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
+
+
+<span class="n">CermitESR</span> <span class="o">=</span> <span class="n">CermitESRGroup</span><span class="o">.</span><span class="n">experiments</span><span class="p">[</span><span class="s2">&quot;CermitESR&quot;</span><span class="p">]</span>
+<span class="n">CermitESRSmallTip</span> <span class="o">=</span> <span class="n">CermitESRGroup</span><span class="o">.</span><span class="n">experiments</span><span class="p">[</span><span class="s2">&quot;CermitESRSmallTip&quot;</span><span class="p">]</span>
+<span class="c1"># CermitSingleSpinApprox = CermitSingleSpinGroup[&quot;CermitSingleSpinApprox&quot;]</span>
+
+
+<div class="viewcode-block" id="sample">
+<a class="viewcode-back" href="../../../tests.html#tests.test_experiment.test_cermitesr.sample">[docs]</a>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">sample</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the sample object.&quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="n">Sample</span><span class="p">(</span>
+        <span class="n">spin</span><span class="o">=</span><span class="s2">&quot;e&quot;</span><span class="p">,</span>
+        <span class="n">temperature</span><span class="o">=</span><span class="mf">11.0</span><span class="p">,</span>
+        <span class="n">T1</span><span class="o">=</span><span class="mf">1.3e-3</span><span class="p">,</span>
+        <span class="n">T2</span><span class="o">=</span><span class="mf">0.45e-6</span><span class="p">,</span>
+        <span class="n">spin_density</span><span class="o">=</span><span class="mf">0.0241</span><span class="p">,</span>
+    <span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="cantilever">
+<a class="viewcode-back" href="../../../tests.html#tests.test_experiment.test_cermitesr.cantilever">[docs]</a>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">cantilever</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the cantilever object.&quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="n">Cantilever</span><span class="p">(</span><span class="n">k_c</span><span class="o">=</span><span class="mf">7.8e5</span><span class="p">,</span> <span class="n">f_c</span><span class="o">=</span><span class="mf">4.975e6</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="TestCERMITESR">
+<a class="viewcode-back" href="../../../tests.html#tests.test_experiment.test_cermitesr.TestCERMITESR">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">TestCERMITESR</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test cermitesr experiment.&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="TestCERMITESR.test_cermitesr_SPAM">
+<a class="viewcode-back" href="../../../tests.html#tests.test_experiment.test_cermitesr.TestCERMITESR.test_cermitesr_SPAM">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_cermitesr_SPAM</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sample</span><span class="p">,</span> <span class="n">cantilever</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Test the result in SPAM geometry, Moore parameters, local peak.&quot;&quot;&quot;</span>
+
+        <span class="n">magnet</span> <span class="o">=</span> <span class="n">SphereMagnet</span><span class="p">(</span>
+            <span class="n">magnet_radius</span><span class="o">=</span><span class="mf">1850.0</span><span class="p">,</span> <span class="n">mu0_Ms</span><span class="o">=</span><span class="mf">440.0</span><span class="p">,</span> <span class="n">magnet_origin</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1850</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="p">)</span>
+        <span class="n">grid</span> <span class="o">=</span> <span class="n">Grid</span><span class="p">(</span>
+            <span class="n">grid_shape</span><span class="o">=</span><span class="p">[</span><span class="mi">501</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">251</span><span class="p">],</span> <span class="n">grid_step</span><span class="o">=</span><span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="n">grid_origin</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="p">)</span>
+
+        <span class="n">cantilever</span> <span class="o">=</span> <span class="n">Cantilever</span><span class="p">(</span><span class="n">k_c</span><span class="o">=</span><span class="mf">2e4</span><span class="p">,</span> <span class="n">f_c</span><span class="o">=</span><span class="mf">3e6</span><span class="p">)</span>
+
+        <span class="n">B1</span> <span class="o">=</span> <span class="mf">3.9e-4</span>
+        <span class="n">mw_x_0p</span> <span class="o">=</span> <span class="mi">330</span>
+        <span class="n">B0</span> <span class="o">=</span> <span class="mi">700</span>
+        <span class="n">f_rf</span> <span class="o">=</span> <span class="mf">17.7e9</span>
+        <span class="n">h</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>  <span class="c1"># tip sample separation [nm]</span>
+
+        <span class="n">df_spin</span> <span class="o">=</span> <span class="n">CermitESR</span><span class="p">(</span><span class="n">B0</span><span class="p">,</span> <span class="n">B1</span><span class="p">,</span> <span class="n">cantilever</span><span class="p">,</span> <span class="n">f_rf</span><span class="p">,</span> <span class="n">grid</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">magnet</span><span class="p">,</span> <span class="n">mw_x_0p</span><span class="p">,</span> <span class="n">sample</span><span class="p">)</span>
+
+        <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">df_spin</span><span class="p">,</span> <span class="n">cantilever</span><span class="o">.</span><span class="n">k2f_modulated</span> <span class="o">*</span> <span class="o">-</span><span class="mf">0.940</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="mf">5e-1</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="TestCERMITESR.test_cermitesr_hangdown">
+<a class="viewcode-back" href="../../../tests.html#tests.test_experiment.test_cermitesr.TestCERMITESR.test_cermitesr_hangdown">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_cermitesr_hangdown</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sample</span><span class="p">,</span> <span class="n">cantilever</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Test the result in SPAM geometry, Issac parameters.&quot;&quot;&quot;</span>
+
+        <span class="n">magnet</span> <span class="o">=</span> <span class="n">SphereMagnet</span><span class="p">(</span>
+            <span class="n">magnet_radius</span><span class="o">=</span><span class="mf">3300.0</span><span class="p">,</span> <span class="n">mu0_Ms</span><span class="o">=</span><span class="mf">440.0</span><span class="p">,</span> <span class="n">magnet_origin</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3300</span><span class="p">]</span>
+        <span class="p">)</span>
+        <span class="n">grid</span> <span class="o">=</span> <span class="n">Grid</span><span class="p">(</span>
+            <span class="n">grid_shape</span><span class="o">=</span><span class="p">[</span><span class="mi">400</span><span class="p">,</span> <span class="mi">1200</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="n">grid_step</span><span class="o">=</span><span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">25</span><span class="p">],</span> <span class="n">grid_origin</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">]</span>
+        <span class="p">)</span>
+
+        <span class="n">B1</span> <span class="o">=</span> <span class="mf">1.3e-3</span>
+        <span class="n">mw_x_0p</span> <span class="o">=</span> <span class="mi">100</span>
+        <span class="n">B0</span> <span class="o">=</span> <span class="mi">570</span>
+        <span class="n">f_rf</span> <span class="o">=</span> <span class="mf">18.5e9</span>
+        <span class="n">h</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1450</span><span class="p">]</span>  <span class="c1"># tip sample separation [nm]</span>
+
+        <span class="n">df_spin</span> <span class="o">=</span> <span class="n">CermitESR</span><span class="p">(</span><span class="n">B0</span><span class="p">,</span> <span class="n">B1</span><span class="p">,</span> <span class="n">cantilever</span><span class="p">,</span> <span class="n">f_rf</span><span class="p">,</span> <span class="n">grid</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">magnet</span><span class="p">,</span> <span class="n">mw_x_0p</span><span class="p">,</span> <span class="n">sample</span><span class="p">)</span>
+
+        <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">df_spin</span><span class="p">,</span> <span class="n">cantilever</span><span class="o">.</span><span class="n">k2f_modulated</span> <span class="o">*</span> <span class="o">-</span><span class="mf">25.086</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="mf">5e-1</span><span class="p">)</span></div>
+</div>
+
+
+
+<span class="c1"># class TestCERMITESR_smalltip:</span>
+<span class="c1">#     &quot;&quot;&quot;Test cermitesr_smalltip experiment.&quot;&quot;&quot;</span>
+
+<span class="c1">#     def test_compare_smalltip_vs_singlespin_approximation(self, cantilever):</span>
+<span class="c1">#         &quot;&quot;&quot;Compare the small tip result against the single spin result.</span>
+
+<span class="c1">#         We cannot use the single spin exact solution for a rectangular tip.</span>
+<span class="c1">#         Here, we use the approximation.</span>
+<span class="c1">#         &quot;&quot;&quot;</span>
+
+<span class="c1">#         magnet = RectangularMagnet(</span>
+<span class="c1">#             magnet_length=[100.0, 70.0, 1500.0],</span>
+<span class="c1">#             mu0_Ms=1800.0,</span>
+<span class="c1">#             magnet_origin=[0.0, 0.0, 1500.0 / 2.0],</span>
+<span class="c1">#         )</span>
+
+<span class="c1">#         grid = Grid(</span>
+<span class="c1">#             grid_shape=[1, 1, 1],</span>
+<span class="c1">#             grid_step=[0.01, 0.01, 0.01],</span>
+<span class="c1">#             grid_origin=[0.0, 0.0, 0.0],</span>
+<span class="c1">#         )</span>
+
+<span class="c1">#         sample = Sample(</span>
+<span class="c1">#             spin=&quot;e&quot;,</span>
+<span class="c1">#             temperature=4.2,</span>
+<span class="c1">#             T1=1.0e-3,</span>
+<span class="c1">#             T2=450e-9,</span>
+<span class="c1">#             spin_density=1 / grid.voxel,  # only 1 spin in the grid</span>
+<span class="c1">#         )</span>
+
+<span class="c1">#         B0 = 100000</span>
+<span class="c1">#         f_rf = 2813.8039e9</span>
+<span class="c1">#         B1 = 2.2e-0</span>
+<span class="c1">#         h = [0, 0, 30.0]</span>
+<span class="c1">#         grid_array = grid.grid_array</span>
+<span class="c1">#         trapz_pts = 20</span>
+<span class="c1">#         mw_x_0p = 5</span>
+
+<span class="c1">#         analytical = cantilever.k2f_modulated * CermitSingleSpinApprox(</span>
+<span class="c1">#             magnet=magnet,</span>
+<span class="c1">#             sample=sample,</span>
+<span class="c1">#             grid_array=grid_array,</span>
+<span class="c1">#             trapz_pts=trapz_pts,</span>
+<span class="c1">#             x_0p=mw_x_0p,</span>
+<span class="c1">#             h=h,</span>
+<span class="c1">#         )</span>
+
+<span class="c1">#         result = CermitESRSmallTip(</span>
+<span class="c1">#             B0,</span>
+<span class="c1">#             B1,</span>
+<span class="c1">#             cantilever,</span>
+<span class="c1">#             f_rf,</span>
+<span class="c1">#             grid,</span>
+<span class="c1">#             h,</span>
+<span class="c1">#             magnet,</span>
+<span class="c1">#             mw_x_0p,</span>
+<span class="c1">#             sample,</span>
+<span class="c1">#             trapz_pts,</span>
+<span class="c1">#             mw_x_0p,  # here us the same x_0p (pulsing the whole cycle)</span>
+<span class="c1">#         )</span>
+
+<span class="c1">#         assert np.isclose(result, analytical, rtol=1e-4)</span>
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Peter Sun
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1200 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Tests &#8212; mrfmsim 0.3.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=83a61292"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tests';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Changelog" href="changelog.html" />
+    <link rel="prev" title="Overview" href="overview.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">mrfmsim 0.3.0 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim overview</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim basics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="basic/inheritance.html"><em>mrfmsim</em> custom classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic/component.html">Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic/modifier.html">Modifiers and shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic/plugin.html">Plugins</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment basics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="basic/cermit_protocol.html">CERMIT protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic/geometry.html">Experiment geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic/tip_size.html">Tip size: small tip vs. large tip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic/spin_count.html">Sample spin distribution</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment Setups</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="setup/coordinates.html">Coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup/sample.html">Sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup/grid.html">Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup/magnet.html">Magnet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup/cantilever.html">Cantilever</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="experiment/IBMCyclic.html">IBM cyclic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiment/CermitSat.html">CERMIT steady-state saturation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiment/CermitTD.html">CERMIT time dependent offset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiment/CermitARP.html">CERMIT adiabatic rapid passage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiment/CermitSingleSpin.html">CERMIT single spin</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">references</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="reference/ref_magnetization.html">Equilibrium magnetization and variance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/ref_polarization.html">Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/ref_field.html">Magnetic field</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/ref_math.html">Mathematical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/ref_misc.html">Miscellaneous</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/tests.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Tests</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#signal-verification">Signal verification</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#magnet-test">Magnet Test</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarization-test">Polarization Test</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-test">Experiment Test</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#force-detection">Force detection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#force-gradient-detection">Force-gradient detection</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-tests.test_experiment.test_cermitesr">Testing Lists</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitesr.TestCERMITESR"><code class="docutils literal notranslate"><span class="pre">TestCERMITESR</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitesr.TestCERMITESR.test_cermitesr_SPAM"><code class="docutils literal notranslate"><span class="pre">TestCERMITESR.test_cermitesr_SPAM()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitesr.TestCERMITESR.test_cermitesr_hangdown"><code class="docutils literal notranslate"><span class="pre">TestCERMITESR.test_cermitesr_hangdown()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitesr.cantilever"><code class="docutils literal notranslate"><span class="pre">cantilever()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitesr.sample"><code class="docutils literal notranslate"><span class="pre">sample()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitarp.TestCERMITARP"><code class="docutils literal notranslate"><span class="pre">TestCERMITARP</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitarp.TestCERMITARP.grid"><code class="docutils literal notranslate"><span class="pre">TestCERMITARP.grid()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitarp.TestCERMITARP.magnet"><code class="docutils literal notranslate"><span class="pre">TestCERMITARP.magnet()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitarp.TestCERMITARP.sample"><code class="docutils literal notranslate"><span class="pre">TestCERMITARP.sample()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitarp.TestCERMITARP.test_cermitarp"><code class="docutils literal notranslate"><span class="pre">TestCERMITARP.test_cermitarp()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitarp.TestCERMITESRSmallTip"><code class="docutils literal notranslate"><span class="pre">TestCERMITESRSmallTip</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitarp.TestCERMITESRSmallTip.sample"><code class="docutils literal notranslate"><span class="pre">TestCERMITESRSmallTip.sample()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitarp.TestCERMITESRSmallTip.test_smallamp_arp_vs_exact_solution_large_sep"><code class="docutils literal notranslate"><span class="pre">TestCERMITESRSmallTip.test_smallamp_arp_vs_exact_solution_large_sep()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitarp.TestCERMITESRSmallTip.test_smallamp_arp_vs_exact_solution_small_amp"><code class="docutils literal notranslate"><span class="pre">TestCERMITESRSmallTip.test_smallamp_arp_vs_exact_solution_small_amp()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitsinglespin.TestCermitSinglespin"><code class="docutils literal notranslate"><span class="pre">TestCermitSinglespin</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitsinglespin.TestCermitSinglespin.n_pts"><code class="docutils literal notranslate"><span class="pre">TestCermitSinglespin.n_pts()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitsinglespin.TestCermitSinglespin.sample"><code class="docutils literal notranslate"><span class="pre">TestCermitSinglespin.sample()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitsinglespin.TestCermitSinglespin.test_cermitesr_singlespin_hangdown"><code class="docutils literal notranslate"><span class="pre">TestCermitSinglespin.test_cermitesr_singlespin_hangdown()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitsinglespin.TestCermitSinglespin.test_cermitesr_singlespin_spam"><code class="docutils literal notranslate"><span class="pre">TestCermitSinglespin.test_cermitesr_singlespin_spam()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_ibmcyclic.TestIBMCyclic"><code class="docutils literal notranslate"><span class="pre">TestIBMCyclic</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_ibmcyclic.TestIBMCyclic.test_IBMCyclic_dF2_spin"><code class="docutils literal notranslate"><span class="pre">TestIBMCyclic.test_IBMCyclic_dF2_spin()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_ibmcyclic.TestIBMCyclic.test_IBMCyclic_dF_spin"><code class="docutils literal notranslate"><span class="pre">TestIBMCyclic.test_IBMCyclic_dF_spin()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_field.TestXTrapzFieldGradient"><code class="docutils literal notranslate"><span class="pre">TestXTrapzFieldGradient</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_field.TestXTrapzFieldGradient.test_xtrapz_field_gradient_large_distance"><code class="docutils literal notranslate"><span class="pre">TestXTrapzFieldGradient.test_xtrapz_field_gradient_large_distance()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_field.TestXTrapzFieldGradient.test_xtrapz_field_gradient_smallamp"><code class="docutils literal notranslate"><span class="pre">TestXTrapzFieldGradient.test_xtrapz_field_gradient_smallamp()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_field.TestXTrapzFxDtheta"><code class="docutils literal notranslate"><span class="pre">TestXTrapzFxDtheta</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_field.TestXTrapzFxDtheta.test_xtrapz_fxdtheta_cos"><code class="docutils literal notranslate"><span class="pre">TestXTrapzFxDtheta.test_xtrapz_fxdtheta_cos()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_field.TestXTrapzFxDtheta.test_xtrapz_fxdtheta_multidim"><code class="docutils literal notranslate"><span class="pre">TestXTrapzFxDtheta.test_xtrapz_fxdtheta_multidim()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_field.TestXTrapzFxDtheta.test_xtrapz_xtrapz_fxdtheta_x2cos"><code class="docutils literal notranslate"><span class="pre">TestXTrapzFxDtheta.test_xtrapz_xtrapz_fxdtheta_x2cos()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_field.TestXTrapzFxDtheta.test_xtrapz_xtrapz_fxdtheta_xcos"><code class="docutils literal notranslate"><span class="pre">TestXTrapzFxDtheta.test_xtrapz_xtrapz_fxdtheta_xcos()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_field.test_B_offset"><code class="docutils literal notranslate"><span class="pre">test_B_offset()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_field.test_field_func"><code class="docutils literal notranslate"><span class="pre">test_field_func()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_field.test_field_func_singularity"><code class="docutils literal notranslate"><span class="pre">test_field_func_singularity()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_field.test_min_abs_offset"><code class="docutils literal notranslate"><span class="pre">test_min_abs_offset()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_field.test_min_abs_offset_symmetry"><code class="docutils literal notranslate"><span class="pre">test_min_abs_offset_symmetry()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_math.test_as_strided_x"><code class="docutils literal notranslate"><span class="pre">test_as_strided_x()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_math.test_slice_matrix"><code class="docutils literal notranslate"><span class="pre">test_slice_matrix()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_magnetization.test_mz2_eq_H"><code class="docutils literal notranslate"><span class="pre">test_mz2_eq_H()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_magnetization.test_mz_eq_high_susceptibility"><code class="docutils literal notranslate"><span class="pre">test_mz_eq_high_susceptibility()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_magnetization.test_mz_eq_low_susceptibility"><code class="docutils literal notranslate"><span class="pre">test_mz_eq_low_susceptibility()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_misc.test_convert_grid_pts"><code class="docutils literal notranslate"><span class="pre">test_convert_grid_pts()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_misc.test_sum_of_product"><code class="docutils literal notranslate"><span class="pre">test_sum_of_product()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.sample_e"><code class="docutils literal notranslate"><span class="pre">sample_e()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.sample_h"><code class="docutils literal notranslate"><span class="pre">sample_h()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dol_sat_td_smallsteps"><code class="docutils literal notranslate"><span class="pre">test_rel_dol_sat_td_smallsteps()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_arp"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_arp()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_ibm_cyclic"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_ibm_cyclic()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_multipulse_long"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_multipulse_long()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_multipulse_no_pol"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_multipulse_no_pol()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_multipulse_short"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_multipulse_short()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_nut"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_nut()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_periodic_irrad_cont"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_periodic_irrad_cont()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_periodic_irrad_no_irrad"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_periodic_irrad_no_irrad()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_periodic_irrad_off_res"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_periodic_irrad_off_res()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_steadystate"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_steadystate()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_symmetry"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td_symmetry()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_without_td"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td_without_td()</span></code></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="tests">
+<h1>Tests<a class="headerlink" href="#tests" title="Link to this heading">#</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>This module is a collection of files that test the functions in the <strong>MrfmSim</strong> package.
+To run the unit tests, open up a terminal in the <code class="docutils literal notranslate"><span class="pre">MrfmSim</span></code> directory and
+run the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pytest</span>
+</pre></div>
+</div>
+</section>
+<section id="signal-verification">
+<h2>Signal verification<a class="headerlink" href="#signal-verification" title="Link to this heading">#</a></h2>
+<p>We can test the signal-calculation modules by computing the signal from a single spin.
+Consider a magnet-tipped cantilever operated in the hangdown geometry:</p>
+<ul class="simple">
+<li><p>a magnetic field is applied along the <span class="math notranslate nohighlight">\(z\)</span> direction to polarize the
+cantilever’s magnet and to define the quantization axis of the sample’s spins;</p></li>
+<li><p>the cantilever oscillates in the <span class="math notranslate nohighlight">\(x\)</span> direction;</p></li>
+<li><p>the long axis of the cantilever is parallel to the <span class="math notranslate nohighlight">\(z\)</span> direction;</p></li>
+<li><p>the magnet at the tip of the cantilever is a sphere of radius <span class="math notranslate nohighlight">\(r\)</span>, polarized
+along the <span class="math notranslate nohighlight">\(z\)</span> direction, with saturation magnetization <span class="math notranslate nohighlight">\(M_s\)</span>
+and saturation field <span class="math notranslate nohighlight">\(\mu_0 M_s\)</span>;</p></li>
+<li><p>the center of the spherical magnet lies at the origin, <span class="math notranslate nohighlight">\((0,0,0)\)</span>;</p></li>
+<li><p>the sample lies in the <span class="math notranslate nohighlight">\(xy\)</span> plane; for simplicity, we further assume
+that the spin lies along the <span class="math notranslate nohighlight">\(y = 0\)</span> line;</p></li>
+<li><p>the distance between the <em>center</em> of the magnet and the sample plane is <span class="math notranslate nohighlight">\(z\)</span>.</p></li>
+</ul>
+<p>Some notes on the additional tests</p>
+</section>
+<section id="magnet-test">
+<h2>Magnet Test<a class="headerlink" href="#magnet-test" title="Link to this heading">#</a></h2>
+<p>The RectMagnet is tested through its symmetry factors: it is symmetric in the <span class="math notranslate nohighlight">\(z\)</span> direction
+when x and y are 0. The gradient functions are tested against a numerical derivative calculation
+from the field. <span class="math notranslate nohighlight">\(B_z\)</span> is an even function in the <span class="math notranslate nohighlight">\(x\)</span> direction,
+<span class="math notranslate nohighlight">\(B_{zx}\)</span> is an odd function in the x-direction and
+:math: <cite>B_{zxx}</cite> is an even function in the <span class="math notranslate nohighlight">\(x\)</span> direction.</p>
+</section>
+<section id="polarization-test">
+<h2>Polarization Test<a class="headerlink" href="#polarization-test" title="Link to this heading">#</a></h2>
+<p>The polarization test for <code class="docutils literal notranslate"><span class="pre">irrad_periodic</span></code> function is taken from John’s notebook</p>
+</section>
+<section id="experiment-test">
+<span id="tests-experimental-section"></span><h2>Experiment Test<a class="headerlink" href="#experiment-test" title="Link to this heading">#</a></h2>
+<p>Some of the tests are calculated against some of the old notebook examples from John and Corinne.
+Note to see the notebook and examples go to the
+<a class="reference external" href="https://github.com/peterhs73/MrfmSim-archived">MrfmSim-archived</a> package’s git commit (c74d504).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">IBMCyclic</span></code> dF_spin -&gt; test_experiment from John Marohn.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IBMCyclic</span></code> dF2_spin -&gt; value taken from test-ibmexpt-1.ipynb simulation 1, #4 - 9,
+matching with relative 5e-5 precision.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CermitARP</span></code> is taken from “test_cornellexptobject.py”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CermitESR</span></code> is tested against value from “test-cornellexpt-4.ipynb”
+(Moore experiment - local peak, # 0 - 5, Issac Experiment, # 24 - 28)
+the difference in value is expected because the min_abs_offset
+function fixed a previous issue.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CermitARP_SmallTip</span></code> is tested against “test-cornellexpt-8-Hickman_nanomagnet_simulations.ipynb”, first simulation.</p></li>
+<li><p>CermitARP_SmallTip is compared with CermitARP, in two cases using a rectangular magnet,
+one is when the amplitude is small, they should be the same, and when tip_sep is large,
+the effect of amplitude is also small
+(There is a comparison in “test-micrometertip_smallampapprox_vs_exactsol.ipynb”
+on small amplitude, however, the result is unchecked).</p></li>
+<li><p>CmeritSingleSpinESR_Approx is compared with CermitARP_SmallTip.</p></li>
+<li><dl class="simple">
+<dt>SingleSpinESR</dt><dd><ul>
+<li><p>The approximation is tested against both SPAM and hangdown geometry of the analytical solution</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<section id="force-detection">
+<h3>Force detection<a class="headerlink" href="#force-detection" title="Link to this heading">#</a></h3>
+<p>The force produced by a single spin is</p>
+<div class="math notranslate nohighlight">
+\[\delta F_{\mathrm{spin}} = \mu_{\mathrm{spin}} \:
+    G_{zx}(r_{\mathrm{spin}})\]</div>
+<p>with <span class="math notranslate nohighlight">\(\mu_{\mathrm{spin}}\)</span> the spin magnetic moment and
+<span class="math notranslate nohighlight">\(G_{zx} = \partial B_z / \partial x\)</span> and <span class="math notranslate nohighlight">\(r_{\mathrm{spin}}\)</span>
+the location of the spin.
+The gradient experienced by a spin located in the <span class="math notranslate nohighlight">\(y = 0\)</span> plane is</p>
+<div class="math notranslate nohighlight">
+\[G_{zx}(x,0,z) = 4 \mu_0 M_s r^3 \:
+    \frac{x \: (x^2 - 4 z^2)}{(x^2 + z^2)^{7/2}}\]</div>
+<p>We see that the gradient <span class="math notranslate nohighlight">\(G_{zx}\)</span> is zero for a spin directly below the
+tip at <span class="math notranslate nohighlight">\((0,0,z)\)</span>.  For the single-spin force experiment, we must therefore
+place the spin “off to the side”, at a location <span class="math notranslate nohighlight">\((x,0,z)\)</span>.
+The gradient is maximized at (approximately) <span class="math notranslate nohighlight">\(x_{\mathrm{opt}} = \pm 0.389295 \: z\)</span>.
+For a spin placed at this optimal location,</p>
+<div class="math notranslate nohighlight">
+\[G_{zx}(x_{\mathrm{opt}}, 0, z)
+    \approx 0.914269 \: \frac{\mu_0 M_s}{r}
+    \left( \frac{r}{z} \right)^{4}\]</div>
+<p>In the hangdown-geometry experiment delineated above, the force acting on a magnet-tipped
+cantilever from a single spin placed at an optimal location “off to the side” of the cantilever tip is</p>
+<div class="math notranslate nohighlight">
+\[\delta F_{\mathrm{spin}}
+    \approx 0.914269 \: \mu_{\mathrm{spin}} \:
+    \frac{\mu_0 M_s}{r}
+    \left( \frac{r}{z} \right)^{4}\]</div>
+<p>With</p>
+<ul class="simple">
+<li><p>tip magnetization <span class="math notranslate nohighlight">\(\mu_0 M_s = 1800 \: \mathrm{mT}\)</span> (cobalt)</p></li>
+<li><p>tip radius <span class="math notranslate nohighlight">\(r = 50 \: \mathrm{nm}\)</span></p></li>
+<li><p>tip-sample separation <span class="math notranslate nohighlight">\(20 \: \mathrm{nm}\)</span>, that is, <span class="math notranslate nohighlight">\(z = 70 \: \mathrm{nm}\)</span></p></li>
+<li><p>a single (fully polarized) electron spin placed at <span class="math notranslate nohighlight">\((27.2507, 0.0000, 70.0000) \: \mathrm{nm}\)</span></p></li>
+</ul>
+<p>the force is</p>
+<div class="math notranslate nohighlight">
+\[\delta F_{\mathrm{spin}} = -79.231 \: \mathrm{aN}\]</div>
+</section>
+<section id="force-gradient-detection">
+<h3>Force-gradient detection<a class="headerlink" href="#force-gradient-detection" title="Link to this heading">#</a></h3>
+<p>The force-gradient produced by a single spin is</p>
+<div class="math notranslate nohighlight">
+\[\delta k_{\mathrm{spin}} = \mu_{\mathrm{spin}} \:
+    G_{zxx}(r_{\mathrm{spin}})\]</div>
+<p>with <span class="math notranslate nohighlight">\(G_{zxx} = \partial^2 B_z / \partial x^2\)</span>.
+For a single spin directly below the tip at <span class="math notranslate nohighlight">\((0,0,z)\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[G_{zxx}(0,0,z) = - \frac{4 \mu_0 M_s r^3}{z^5}
+ = - \frac{4 \mu_0 M_s}{r^2} \left( \frac{r}{z} \right)^{5}\]</div>
+<p>In the hangdown-geometry experiment delineated above, the force gradient
+acting on a magnet-tipped cantilever from a single spin placed directly below the cantilever tip is</p>
+<div class="math notranslate nohighlight">
+\[\delta k_{\mathrm{spin}}
+    = - \mu_{\mathrm{spin}} \: \frac{4 \mu_0 M_s}{r^2}
+        \left( \frac{r}{z} \right)^{5}\]</div>
+<p>With</p>
+<ul class="simple">
+<li><p>tip magnetization <span class="math notranslate nohighlight">\(\mu_0 M_s = 1800 \: \mathrm{mT}\)</span> (cobalt)</p></li>
+<li><p>tip radius <span class="math notranslate nohighlight">\(r = 50 \: \mathrm{nm}\)</span></p></li>
+<li><p>tip-sample separation <span class="math notranslate nohighlight">\(20 \: \mathrm{nm}\)</span>, that is, <span class="math notranslate nohighlight">\(z = 70 \: \mathrm{nm}\)</span></p></li>
+<li><p>a single (fully polarized) electron spin placed at <span class="math notranslate nohighlight">\((0.0, 0.0, 70.0) \: \mathrm{nm}\)</span></p></li>
+</ul>
+<p>the force gradient is</p>
+<div class="math notranslate nohighlight">
+\[\delta k_{\mathrm{spin}} = 4.95203 \: \mathrm{aN} \: \mathrm{nm}^{-1}
+ = 4.95203 \: \mathrm{nN} \: \mathrm{m}^{-1}\]</div>
+</section>
+</section>
+<section id="module-tests.test_experiment.test_cermitesr">
+<span id="testing-lists"></span><h2>Testing Lists<a class="headerlink" href="#module-tests.test_experiment.test_cermitesr" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.test_experiment.test_cermitesr.TestCERMITESR">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.test_experiment.test_cermitesr.</span></span><span class="sig-name descname"><span class="pre">TestCERMITESR</span></span><a class="reference internal" href="_modules/tests/test_experiment/test_cermitesr.html#TestCERMITESR"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_experiment.test_cermitesr.TestCERMITESR" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Test cermitesr experiment.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_experiment.test_cermitesr.TestCERMITESR.test_cermitesr_SPAM">
+<span class="sig-name descname"><span class="pre">test_cermitesr_SPAM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cantilever</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_experiment/test_cermitesr.html#TestCERMITESR.test_cermitesr_SPAM"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_experiment.test_cermitesr.TestCERMITESR.test_cermitesr_SPAM" title="Link to this definition">#</a></dt>
+<dd><p>Test the result in SPAM geometry, Moore parameters, local peak.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_experiment.test_cermitesr.TestCERMITESR.test_cermitesr_hangdown">
+<span class="sig-name descname"><span class="pre">test_cermitesr_hangdown</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cantilever</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_experiment/test_cermitesr.html#TestCERMITESR.test_cermitesr_hangdown"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_experiment.test_cermitesr.TestCERMITESR.test_cermitesr_hangdown" title="Link to this definition">#</a></dt>
+<dd><p>Test the result in SPAM geometry, Issac parameters.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_experiment.test_cermitesr.cantilever">
+<span class="sig-prename descclassname"><span class="pre">tests.test_experiment.test_cermitesr.</span></span><span class="sig-name descname"><span class="pre">cantilever</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_experiment/test_cermitesr.html#cantilever"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_experiment.test_cermitesr.cantilever" title="Link to this definition">#</a></dt>
+<dd><p>Return the cantilever object.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_experiment.test_cermitesr.sample">
+<span class="sig-prename descclassname"><span class="pre">tests.test_experiment.test_cermitesr.</span></span><span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_experiment/test_cermitesr.html#sample"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_experiment.test_cermitesr.sample" title="Link to this definition">#</a></dt>
+<dd><p>Return the sample object.</p>
+</dd></dl>
+
+<dl class="py class" id="module-tests.test_experiment.test_cermitarp">
+<dt class="sig sig-object py" id="tests.test_experiment.test_cermitarp.TestCERMITARP">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.test_experiment.test_cermitarp.</span></span><span class="sig-name descname"><span class="pre">TestCERMITARP</span></span><a class="reference internal" href="_modules/tests/test_experiment/test_cermitarp.html#TestCERMITARP"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_experiment.test_cermitarp.TestCERMITARP" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Test cermitarp experiments.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">grid</span> <span class="o">=</span> <span class="n">GridObject</span><span class="p">(</span>
+    <span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5E-3</span><span class="p">,</span><span class="mf">0.5E-3</span><span class="p">,</span><span class="mf">0.5E-3</span><span class="p">],</span>
+    <span class="n">dL</span><span class="o">=</span> <span class="p">[</span><span class="mf">0.5E-3</span><span class="p">,</span><span class="mf">0.5E-3</span><span class="p">,</span><span class="mf">0.5E-3</span><span class="p">],</span>
+    <span class="n">o</span><span class="o">=</span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>The resulting grid is</p>
+<ul class="simple">
+<li><p>centered at zero,</p></li>
+<li><p>contains <span class="math notranslate nohighlight">\(2 \times 2 \times 2 = 8\)</span> grid points, and</p></li>
+<li><p>runs from <code class="docutils literal notranslate"><span class="pre">-0.5e-3</span></code> to <code class="docutils literal notranslate"><span class="pre">+0.5e-3</span></code> nm in each direction.</p></li>
+</ul>
+<p>So that the grid contains 1 spin total, we need to fudge the spin density
+to be
+<span class="math notranslate nohighlight">\(1.0 \times 10^{9} \: \mathrm{spins} \: \mathrm{nm}^{3}\)</span>.
+Other notable features of the calculations:</p>
+<ul class="simple">
+<li><p>We work at 10 millikelvin and 10.0 tesla so that the electron spin is
+nearly fully polarized</p></li>
+<li><p>In the ARP experiment, we set the irradiation frequency to be in
+resonance with spins directly below the tip.  These spins experience
+a total field of 10437.318 mT.
+The assumed <span class="math notranslate nohighlight">\(B_1\)</span> is 10 mT, and the FM sweep is ten times
+that (in field units).  In setting up <code class="docutils literal notranslate"><span class="pre">expt1</span></code> below, we must take
+care to set <code class="docutils literal notranslate"><span class="pre">B_0_start</span></code> to 10000.0 mT and not 10437.318 mT.</p></li>
+</ul>
+<p>We check to see that the single-spin signal and the pulse time agree with
+expected values to be within a 2 percent (relative) error.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_experiment.test_cermitarp.TestCERMITARP.grid">
+<span class="sig-name descname"><span class="pre">grid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_experiment/test_cermitarp.html#TestCERMITARP.grid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_experiment.test_cermitarp.TestCERMITARP.grid" title="Link to this definition">#</a></dt>
+<dd><p>Setup grid.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_experiment.test_cermitarp.TestCERMITARP.magnet">
+<span class="sig-name descname"><span class="pre">magnet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_experiment/test_cermitarp.html#TestCERMITARP.magnet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_experiment.test_cermitarp.TestCERMITARP.magnet" title="Link to this definition">#</a></dt>
+<dd><p>Setup magnet.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_experiment.test_cermitarp.TestCERMITARP.sample">
+<span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_experiment/test_cermitarp.html#TestCERMITARP.sample"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_experiment.test_cermitarp.TestCERMITARP.sample" title="Link to this definition">#</a></dt>
+<dd><p>Setup sample.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_experiment.test_cermitarp.TestCERMITARP.test_cermitarp">
+<span class="sig-name descname"><span class="pre">test_cermitarp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">magnet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_experiment/test_cermitarp.html#TestCERMITARP.test_cermitarp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_experiment.test_cermitarp.TestCERMITARP.test_cermitarp" title="Link to this definition">#</a></dt>
+<dd><p>Test Cornell ARP full signal simulation.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.test_experiment.test_cermitarp.TestCERMITESRSmallTip">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.test_experiment.test_cermitarp.</span></span><span class="sig-name descname"><span class="pre">TestCERMITESRSmallTip</span></span><a class="reference internal" href="_modules/tests/test_experiment/test_cermitarp.html#TestCERMITESRSmallTip"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_experiment.test_cermitarp.TestCERMITESRSmallTip" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Compare different limits between experiment settings.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_experiment.test_cermitarp.TestCERMITESRSmallTip.sample">
+<span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_experiment/test_cermitarp.html#TestCERMITESRSmallTip.sample"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_experiment.test_cermitarp.TestCERMITESRSmallTip.sample" title="Link to this definition">#</a></dt>
+<dd><p>Setup sample.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_experiment.test_cermitarp.TestCERMITESRSmallTip.test_smallamp_arp_vs_exact_solution_large_sep">
+<span class="sig-name descname"><span class="pre">test_smallamp_arp_vs_exact_solution_large_sep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_experiment/test_cermitarp.html#TestCERMITESRSmallTip.test_smallamp_arp_vs_exact_solution_large_sep"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_experiment.test_cermitarp.TestCERMITESRSmallTip.test_smallamp_arp_vs_exact_solution_large_sep" title="Link to this definition">#</a></dt>
+<dd><p>Test cermitarp_smalltip vs cermitarp</p>
+<p>Test that when tip-sample separation is large the amplitude can also
+be ignored</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_experiment.test_cermitarp.TestCERMITESRSmallTip.test_smallamp_arp_vs_exact_solution_small_amp">
+<span class="sig-name descname"><span class="pre">test_smallamp_arp_vs_exact_solution_small_amp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_experiment/test_cermitarp.html#TestCERMITESRSmallTip.test_smallamp_arp_vs_exact_solution_small_amp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_experiment.test_cermitarp.TestCERMITESRSmallTip.test_smallamp_arp_vs_exact_solution_small_amp" title="Link to this definition">#</a></dt>
+<dd><p>Test smalltip_arp vs. cornellcermit_arp</p>
+<p>Test that in small amplitude conditions, the approximation is the
+same as the small tip, which does not ignore the amplitude.</p>
+</dd></dl>
+
+</dd></dl>
+
+<p id="module-tests.test_experiment.test_cermitsinglespin">Test the group of CERMIT ESR experiments.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.test_experiment.test_cermitsinglespin.TestCermitSinglespin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.test_experiment.test_cermitsinglespin.</span></span><span class="sig-name descname"><span class="pre">TestCermitSinglespin</span></span><a class="reference internal" href="_modules/tests/test_experiment/test_cermitsinglespin.html#TestCermitSinglespin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_experiment.test_cermitsinglespin.TestCermitSinglespin" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Test the CERMIT ESR experiment with a single spin.</p>
+<p>See test_misc.py for the test of the numerical solution.
+Here, we test that the approximated solution is similar to the exact solution.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_experiment.test_cermitsinglespin.TestCermitSinglespin.n_pts">
+<span class="sig-name descname"><span class="pre">n_pts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_experiment/test_cermitsinglespin.html#TestCermitSinglespin.n_pts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_experiment.test_cermitsinglespin.TestCermitSinglespin.n_pts" title="Link to this definition">#</a></dt>
+<dd><p>Number of points in the trapezoid approximation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_experiment.test_cermitsinglespin.TestCermitSinglespin.sample">
+<span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_experiment/test_cermitsinglespin.html#TestCermitSinglespin.sample"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_experiment.test_cermitsinglespin.TestCermitSinglespin.sample" title="Link to this definition">#</a></dt>
+<dd><p>Return the sample object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_experiment.test_cermitsinglespin.TestCermitSinglespin.test_cermitesr_singlespin_hangdown">
+<span class="sig-name descname"><span class="pre">test_cermitesr_singlespin_hangdown</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_pts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_0p</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_experiment/test_cermitsinglespin.html#TestCermitSinglespin.test_cermitesr_singlespin_hangdown"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_experiment.test_cermitsinglespin.TestCermitSinglespin.test_cermitesr_singlespin_hangdown" title="Link to this definition">#</a></dt>
+<dd><p>Compare the numerical solution with the exact solution.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_experiment.test_cermitsinglespin.TestCermitSinglespin.test_cermitesr_singlespin_spam">
+<span class="sig-name descname"><span class="pre">test_cermitesr_singlespin_spam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_pts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_0p</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_experiment/test_cermitsinglespin.html#TestCermitSinglespin.test_cermitesr_singlespin_spam"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_experiment.test_cermitsinglespin.TestCermitSinglespin.test_cermitesr_singlespin_spam" title="Link to this definition">#</a></dt>
+<dd><p>Compare the numerical solution with the exact solution.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class" id="module-tests.test_experiment.test_ibmcyclic">
+<dt class="sig sig-object py" id="tests.test_experiment.test_ibmcyclic.TestIBMCyclic">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.test_experiment.test_ibmcyclic.</span></span><span class="sig-name descname"><span class="pre">TestIBMCyclic</span></span><a class="reference internal" href="_modules/tests/test_experiment/test_ibmcyclic.html#TestIBMCyclic"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_experiment.test_ibmcyclic.TestIBMCyclic" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Test IBMCyclic Experimental method.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_experiment.test_ibmcyclic.TestIBMCyclic.test_IBMCyclic_dF2_spin">
+<span class="sig-name descname"><span class="pre">test_IBMCyclic_dF2_spin</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_experiment/test_ibmcyclic.html#TestIBMCyclic.test_IBMCyclic_dF2_spin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_experiment.test_ibmcyclic.TestIBMCyclic.test_IBMCyclic_dF2_spin" title="Link to this definition">#</a></dt>
+<dd><p>Test IBM cyclic force variance signal for nucleus.</p>
+<p>Values are taken from “test-ibmexpt-1.ipynb” simulation 1 #4- #9
+based on John’s calculation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_experiment.test_ibmcyclic.TestIBMCyclic.test_IBMCyclic_dF_spin">
+<span class="sig-name descname"><span class="pre">test_IBMCyclic_dF_spin</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_experiment/test_ibmcyclic.html#TestIBMCyclic.test_IBMCyclic_dF_spin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_experiment.test_ibmcyclic.TestIBMCyclic.test_IBMCyclic_dF_spin" title="Link to this definition">#</a></dt>
+<dd><p>Test IBM curie law signal.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class" id="module-tests.test_formula.test_field">
+<dt class="sig sig-object py" id="tests.test_formula.test_field.TestXTrapzFieldGradient">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_field.</span></span><span class="sig-name descname"><span class="pre">TestXTrapzFieldGradient</span></span><a class="reference internal" href="_modules/tests/test_formula/test_field.html#TestXTrapzFieldGradient"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_field.TestXTrapzFieldGradient" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Test trapz field gradient.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_formula.test_field.TestXTrapzFieldGradient.test_xtrapz_field_gradient_large_distance">
+<span class="sig-name descname"><span class="pre">test_xtrapz_field_gradient_large_distance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_field.html#TestXTrapzFieldGradient.test_xtrapz_field_gradient_large_distance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_field.TestXTrapzFieldGradient.test_xtrapz_field_gradient_large_distance" title="Link to this definition">#</a></dt>
+<dd><p>Test gradient against a large tip-sample separation.</p>
+<p>When the distance is very large, the change of Bzx in between the
+grid points are small.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_formula.test_field.TestXTrapzFieldGradient.test_xtrapz_field_gradient_smallamp">
+<span class="sig-name descname"><span class="pre">test_xtrapz_field_gradient_smallamp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_field.html#TestXTrapzFieldGradient.test_xtrapz_field_gradient_smallamp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_field.TestXTrapzFieldGradient.test_xtrapz_field_gradient_smallamp" title="Link to this definition">#</a></dt>
+<dd><p>Test gradient against a small x0p.</p>
+<p>When the 0 to the peak is very small compared to the magnet, the field is
+equivalent to Bzxx. Here we “fake” a small grid step for the x direction,
+because the grid step here is only used to calculate x_0p. The cantilever is
+150 nm away from the sample.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.test_formula.test_field.TestXTrapzFxDtheta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_field.</span></span><span class="sig-name descname"><span class="pre">TestXTrapzFxDtheta</span></span><a class="reference internal" href="_modules/tests/test_formula/test_field.html#TestXTrapzFxDtheta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_field.TestXTrapzFxDtheta" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Test xtrapz_fxdtheta.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_formula.test_field.TestXTrapzFxDtheta.test_xtrapz_fxdtheta_cos">
+<span class="sig-name descname"><span class="pre">test_xtrapz_fxdtheta_cos</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_field.html#TestXTrapzFxDtheta.test_xtrapz_fxdtheta_cos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_field.TestXTrapzFxDtheta.test_xtrapz_fxdtheta_cos" title="Link to this definition">#</a></dt>
+<dd><p>Test xtrapz_fxdtheta against :math: <cite>cos{x}dx</cite></p>
+<p>Let’s consider the field method returns 1, the Trapezoid integral
+should return the value of</p>
+<div class="math notranslate nohighlight">
+\[\int_{-\pi}^{\pi}{x_0 \cos\theta d\theta}\]</div>
+<p>The results:
+(-pi/2 -&gt; 0): x0
+(-pi -&gt; 0): 0</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_formula.test_field.TestXTrapzFxDtheta.test_xtrapz_fxdtheta_multidim">
+<span class="sig-name descname"><span class="pre">test_xtrapz_fxdtheta_multidim</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_field.html#TestXTrapzFxDtheta.test_xtrapz_fxdtheta_multidim"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_field.TestXTrapzFxDtheta.test_xtrapz_fxdtheta_multidim" title="Link to this definition">#</a></dt>
+<dd><p>Test xtrapz_fxdtheta against :math: <cite>x cos{x}</cite> for multi-dimensions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_formula.test_field.TestXTrapzFxDtheta.test_xtrapz_xtrapz_fxdtheta_x2cos">
+<span class="sig-name descname"><span class="pre">test_xtrapz_xtrapz_fxdtheta_x2cos</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_field.html#TestXTrapzFxDtheta.test_xtrapz_xtrapz_fxdtheta_x2cos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_field.TestXTrapzFxDtheta.test_xtrapz_xtrapz_fxdtheta_x2cos" title="Link to this definition">#</a></dt>
+<dd><p>Test xtrapz_fxdtheta against :math: <cite>x2cos{x}</cite>.</p>
+<p>Let’s consider a case where the field f(x) = x</p>
+<div class="math notranslate nohighlight">
+\[\int_{-\pi}^{\pi}{(x-x_0 \cos\theta)x_0 \cos\theta d\theta}\]</div>
+<p>The results:
+(-pi/2 -&gt; 0): x^2*x0 - pi/2*x*x0^2 + 2/3 * x0^3
+(-pi -&gt; 0): - pi*x*x0^2</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_formula.test_field.TestXTrapzFxDtheta.test_xtrapz_xtrapz_fxdtheta_xcos">
+<span class="sig-name descname"><span class="pre">test_xtrapz_xtrapz_fxdtheta_xcos</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_field.html#TestXTrapzFxDtheta.test_xtrapz_xtrapz_fxdtheta_xcos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_field.TestXTrapzFxDtheta.test_xtrapz_xtrapz_fxdtheta_xcos" title="Link to this definition">#</a></dt>
+<dd><p>Test xtrapz_fxdtheta against :math: <cite>x cos{x}</cite>.</p>
+<p>Let’s consider a case where the field f(x) = x</p>
+<div class="math notranslate nohighlight">
+\[\int_{-\pi}^{\pi}{(x-x_0 \cos\theta)x_0 \cos\theta d\theta}\]</div>
+<p>The results:
+(-pi/2 -&gt; 0): x*x0 - x0^2*pi/4
+(-pi -&gt; 0): - x0^2 * pi/2</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_formula.test_field.test_B_offset">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_field.</span></span><span class="sig-name descname"><span class="pre">test_B_offset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_field.html#test_B_offset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_field.test_B_offset" title="Link to this definition">#</a></dt>
+<dd><p>Test B_offset.</p>
+<p>Test the nucleus.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_formula.test_field.test_field_func">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_field.</span></span><span class="sig-name descname"><span class="pre">test_field_func</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_field.html#test_field_func"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_field.test_field_func" title="Link to this definition">#</a></dt>
+<dd><p>Test field.</p>
+<p>Test the field calculation against ogrid and mgrid.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_formula.test_field.test_field_func_singularity">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_field.</span></span><span class="sig-name descname"><span class="pre">test_field_func_singularity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_field.html#test_field_func_singularity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_field.test_field_func_singularity" title="Link to this definition">#</a></dt>
+<dd><p>Test field when the grid has one point in one direction.</p>
+<p>In this example, the z direction has only one point. The resulting
+grid is effectively a 2d plane.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_formula.test_field.test_min_abs_offset">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_field.</span></span><span class="sig-name descname"><span class="pre">test_min_abs_offset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_field.html#test_min_abs_offset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_field.test_min_abs_offset" title="Link to this definition">#</a></dt>
+<dd><p>Test min_abs_x.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_formula.test_field.test_min_abs_offset_symmetry">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_field.</span></span><span class="sig-name descname"><span class="pre">test_min_abs_offset_symmetry</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_field.html#test_min_abs_offset_symmetry"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_field.test_min_abs_offset_symmetry" title="Link to this definition">#</a></dt>
+<dd><p>Test if min_abs_x result is symmetric.
+If a matrix is flipped, the result should also be flipped</p>
+</dd></dl>
+
+<dl class="py function" id="module-tests.test_formula.test_math">
+<dt class="sig sig-object py" id="tests.test_formula.test_math.test_as_strided_x">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_math.</span></span><span class="sig-name descname"><span class="pre">test_as_strided_x</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_math.html#test_as_strided_x"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_math.test_as_strided_x" title="Link to this definition">#</a></dt>
+<dd><p>Testing if as_strided_x maximum matches running max.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_formula.test_math.test_slice_matrix">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_math.</span></span><span class="sig-name descname"><span class="pre">test_slice_matrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_math.html#test_slice_matrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_math.test_slice_matrix" title="Link to this definition">#</a></dt>
+<dd><p>Test slice matrix cuts the matrix in the center.</p>
+</dd></dl>
+
+<dl class="py function" id="module-tests.test_formula.test_magnetization">
+<dt class="sig sig-object py" id="tests.test_formula.test_magnetization.test_mz2_eq_H">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_magnetization.</span></span><span class="sig-name descname"><span class="pre">test_mz2_eq_H</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_magnetization.html#test_mz2_eq_H"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_magnetization.test_mz2_eq_H" title="Link to this definition">#</a></dt>
+<dd><p>Test proton magnetization variance at equilibrium.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_formula.test_magnetization.test_mz_eq_high_susceptibility">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_magnetization.</span></span><span class="sig-name descname"><span class="pre">test_mz_eq_high_susceptibility</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">J</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mz_eq_true</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_magnetization.html#test_mz_eq_high_susceptibility"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_magnetization.test_mz_eq_high_susceptibility" title="Link to this definition">#</a></dt>
+<dd><p>Test mz_eq function on different types of samples at low temperature.
+The total field is set to 100 T</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_formula.test_magnetization.test_mz_eq_low_susceptibility">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_magnetization.</span></span><span class="sig-name descname"><span class="pre">test_mz_eq_low_susceptibility</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">B_tot</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_magnetization.html#test_mz_eq_low_susceptibility"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_magnetization.test_mz_eq_low_susceptibility" title="Link to this definition">#</a></dt>
+<dd><p>Test mz_eq on 71Ga at high temperature.</p>
+</dd></dl>
+
+<dl class="py function" id="module-tests.test_formula.test_misc">
+<dt class="sig sig-object py" id="tests.test_formula.test_misc.test_convert_grid_pts">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_misc.</span></span><span class="sig-name descname"><span class="pre">test_convert_grid_pts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_misc.html#test_convert_grid_pts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_misc.test_convert_grid_pts" title="Link to this definition">#</a></dt>
+<dd><p>Test convert_grid_pts.</p>
+<p>Make sure the final value is an int and is the floor value.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_formula.test_misc.test_sum_of_product">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_misc.</span></span><span class="sig-name descname"><span class="pre">test_sum_of_product</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_misc.html#test_sum_of_product"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_misc.test_sum_of_product" title="Link to this definition">#</a></dt>
+<dd><p>Test sum_of_product.</p>
+<p>Make sure the final value is an int and is the floor value.</p>
+</dd></dl>
+
+<p id="module-tests.test_formula.test_polarization">Test the relative change in polarization.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_formula.test_polarization.sample_e">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_polarization.</span></span><span class="sig-name descname"><span class="pre">sample_e</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_polarization.html#sample_e"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_polarization.sample_e" title="Link to this definition">#</a></dt>
+<dd><p>Electron sample.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_formula.test_polarization.sample_h">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_polarization.</span></span><span class="sig-name descname"><span class="pre">sample_h</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_polarization.html#sample_h"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_polarization.sample_h" title="Link to this definition">#</a></dt>
+<dd><p>Nucleus sample.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_formula.test_polarization.test_rel_dol_sat_td_smallsteps">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_polarization.</span></span><span class="sig-name descname"><span class="pre">test_rel_dol_sat_td_smallsteps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample_e</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_polarization.html#test_rel_dol_sat_td_smallsteps"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_polarization.test_rel_dol_sat_td_smallsteps" title="Link to this definition">#</a></dt>
+<dd><p>Test rel_dol_sat_td_smallsteps.</p>
+<p>Small steps approximation should have the same result as regular
+when Bzx stays the same, given that delta_B_offset has the same
+sign as Bzx.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_formula.test_polarization.test_rel_dpol_arp">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_polarization.</span></span><span class="sig-name descname"><span class="pre">test_rel_dpol_arp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample_h</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_polarization.html#test_rel_dpol_arp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_polarization.test_rel_dpol_arp" title="Link to this definition">#</a></dt>
+<dd><p>Test rel_dpol_arp.</p>
+<p>if f_fm is close to infinity, the relative change in polarization
+is -2.0
+if b1 and the modulation frequency is small and b_offset is large
+the spin does not flip therefore the relative change in polarization
+is close to 0.0 (off-resonance case)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_formula.test_polarization.test_rel_dpol_ibm_cyclic">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_polarization.</span></span><span class="sig-name descname"><span class="pre">test_rel_dpol_ibm_cyclic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample_h</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_polarization.html#test_rel_dpol_ibm_cyclic"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_polarization.test_rel_dpol_ibm_cyclic" title="Link to this definition">#</a></dt>
+<dd><p>Test rpol_arp_ibm.</p>
+<p>Sample -&gt; proton spin -&gt; rpol_arp_ibm() limiting cases
+Sample -&gt; h -&gt; proton spin</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_formula.test_polarization.test_rel_dpol_multipulse_long">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_polarization.</span></span><span class="sig-name descname"><span class="pre">test_rel_dpol_multipulse_long</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample_e</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_polarization.html#test_rel_dpol_multipulse_long"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_polarization.test_rel_dpol_multipulse_long" title="Link to this definition">#</a></dt>
+<dd><p>Test rel_dpol_multipulse when the time between pulses is long.</p>
+<p>In this case, the final polarization should be
+relaxed to 1 and the chang in polarization is 0.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_formula.test_polarization.test_rel_dpol_multipulse_no_pol">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_polarization.</span></span><span class="sig-name descname"><span class="pre">test_rel_dpol_multipulse_no_pol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample_e</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_polarization.html#test_rel_dpol_multipulse_no_pol"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_polarization.test_rel_dpol_multipulse_no_pol" title="Link to this definition">#</a></dt>
+<dd><p>Test rel_dpol_multipulse when relative polarization is 0.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_formula.test_polarization.test_rel_dpol_multipulse_short">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_polarization.</span></span><span class="sig-name descname"><span class="pre">test_rel_dpol_multipulse_short</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample_e</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_polarization.html#test_rel_dpol_multipulse_short"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_polarization.test_rel_dpol_multipulse_short" title="Link to this definition">#</a></dt>
+<dd><p>Test rel_dpol_multipulse when the pulse time difference is short.</p>
+<p>Because the time between pulses is short and the equation ignores
+relaxation during pulses,</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_formula.test_polarization.test_rel_dpol_nut">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_polarization.</span></span><span class="sig-name descname"><span class="pre">test_rel_dpol_nut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample_h</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_polarization.html#test_rel_dpol_nut"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_polarization.test_rel_dpol_nut" title="Link to this definition">#</a></dt>
+<dd><p>Test rel_dpol_nut.</p>
+<p>Sample -&gt; proton spin -&gt; rpol_nut(), on resonance pulses
+Sample -&gt; h -&gt; proton spin</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_formula.test_polarization.test_rel_dpol_periodic_irrad_cont">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_polarization.</span></span><span class="sig-name descname"><span class="pre">test_rel_dpol_periodic_irrad_cont</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample_e</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_polarization.html#test_rel_dpol_periodic_irrad_cont"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_polarization.test_rel_dpol_periodic_irrad_cont" title="Link to this definition">#</a></dt>
+<dd><p>Test rel_dpol_periodic_irrad in the continuous case.</p>
+<p>When the if t_off is 0, the intermittent irradiation becomes continuous
+irradiation. This should be the same as rel_dpol_sat
+When t_on is 0, the signal should vanish</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_formula.test_polarization.test_rel_dpol_periodic_irrad_no_irrad">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_polarization.</span></span><span class="sig-name descname"><span class="pre">test_rel_dpol_periodic_irrad_no_irrad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample_e</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_polarization.html#test_rel_dpol_periodic_irrad_no_irrad"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_polarization.test_rel_dpol_periodic_irrad_no_irrad" title="Link to this definition">#</a></dt>
+<dd><p>Test rel_dpol_periodic_irrad in no irradiation case.</p>
+<p>When t_on is 0, the signal should vanish</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_formula.test_polarization.test_rel_dpol_periodic_irrad_off_res">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_polarization.</span></span><span class="sig-name descname"><span class="pre">test_rel_dpol_periodic_irrad_off_res</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample_e</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_polarization.html#test_rel_dpol_periodic_irrad_off_res"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_polarization.test_rel_dpol_periodic_irrad_off_res" title="Link to this definition">#</a></dt>
+<dd><p>Test rel_dpol_periodic_irrad off-resonance case.</p>
+<p>When is it off-resonance (B_offset is large), the signal is 0</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_formula.test_polarization.test_rel_dpol_sat_steadystate">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_polarization.</span></span><span class="sig-name descname"><span class="pre">test_rel_dpol_sat_steadystate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample_e</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_polarization.html#test_rel_dpol_sat_steadystate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_steadystate" title="Link to this definition">#</a></dt>
+<dd><p>Test the rel_dpol_sat <em>absolute</em> tolerance.</p>
+<p>Sample -&gt; e -&gt; electron spin, J = 1/2, high field limit</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_formula.test_polarization.test_rel_dpol_sat_td">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_polarization.</span></span><span class="sig-name descname"><span class="pre">test_rel_dpol_sat_td</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample_e</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_polarization.html#test_rel_dpol_sat_td"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td" title="Link to this definition">#</a></dt>
+<dd><p>Test rel_dpol_sat_td when offset is 0.</p>
+<p>When the offset is 0, the result should be 0</p>
+<p>Here we construct a 1D grid size of 3, and
+extended grid size of 5</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_formula.test_polarization.test_rel_dpol_sat_td_symmetry">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_polarization.</span></span><span class="sig-name descname"><span class="pre">test_rel_dpol_sat_td_symmetry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample_e</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_polarization.html#test_rel_dpol_sat_td_symmetry"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_symmetry" title="Link to this definition">#</a></dt>
+<dd><p>Test rel_dpol_sat_td is symmetric around the initial and final offset.</p>
+<p>Here we construct a 1D grid size of 3, and an extended grid size of 5</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_formula.test_polarization.test_rel_dpol_sat_td_without_td">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_polarization.</span></span><span class="sig-name descname"><span class="pre">test_rel_dpol_sat_td_without_td</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample_e</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_polarization.html#test_rel_dpol_sat_td_without_td"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_without_td" title="Link to this definition">#</a></dt>
+<dd><p>Test rel_dpol_sat_td completely saturate spins if no td component.</p>
+<p>Here we construct a 1D grid size of 3 and an extended grid size of 5</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="overview.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Overview</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="changelog.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Changelog</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#signal-verification">Signal verification</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#magnet-test">Magnet Test</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarization-test">Polarization Test</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-test">Experiment Test</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#force-detection">Force detection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#force-gradient-detection">Force-gradient detection</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-tests.test_experiment.test_cermitesr">Testing Lists</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitesr.TestCERMITESR"><code class="docutils literal notranslate"><span class="pre">TestCERMITESR</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitesr.TestCERMITESR.test_cermitesr_SPAM"><code class="docutils literal notranslate"><span class="pre">TestCERMITESR.test_cermitesr_SPAM()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitesr.TestCERMITESR.test_cermitesr_hangdown"><code class="docutils literal notranslate"><span class="pre">TestCERMITESR.test_cermitesr_hangdown()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitesr.cantilever"><code class="docutils literal notranslate"><span class="pre">cantilever()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitesr.sample"><code class="docutils literal notranslate"><span class="pre">sample()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitarp.TestCERMITARP"><code class="docutils literal notranslate"><span class="pre">TestCERMITARP</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitarp.TestCERMITARP.grid"><code class="docutils literal notranslate"><span class="pre">TestCERMITARP.grid()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitarp.TestCERMITARP.magnet"><code class="docutils literal notranslate"><span class="pre">TestCERMITARP.magnet()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitarp.TestCERMITARP.sample"><code class="docutils literal notranslate"><span class="pre">TestCERMITARP.sample()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitarp.TestCERMITARP.test_cermitarp"><code class="docutils literal notranslate"><span class="pre">TestCERMITARP.test_cermitarp()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitarp.TestCERMITESRSmallTip"><code class="docutils literal notranslate"><span class="pre">TestCERMITESRSmallTip</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitarp.TestCERMITESRSmallTip.sample"><code class="docutils literal notranslate"><span class="pre">TestCERMITESRSmallTip.sample()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitarp.TestCERMITESRSmallTip.test_smallamp_arp_vs_exact_solution_large_sep"><code class="docutils literal notranslate"><span class="pre">TestCERMITESRSmallTip.test_smallamp_arp_vs_exact_solution_large_sep()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitarp.TestCERMITESRSmallTip.test_smallamp_arp_vs_exact_solution_small_amp"><code class="docutils literal notranslate"><span class="pre">TestCERMITESRSmallTip.test_smallamp_arp_vs_exact_solution_small_amp()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitsinglespin.TestCermitSinglespin"><code class="docutils literal notranslate"><span class="pre">TestCermitSinglespin</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitsinglespin.TestCermitSinglespin.n_pts"><code class="docutils literal notranslate"><span class="pre">TestCermitSinglespin.n_pts()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitsinglespin.TestCermitSinglespin.sample"><code class="docutils literal notranslate"><span class="pre">TestCermitSinglespin.sample()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitsinglespin.TestCermitSinglespin.test_cermitesr_singlespin_hangdown"><code class="docutils literal notranslate"><span class="pre">TestCermitSinglespin.test_cermitesr_singlespin_hangdown()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_cermitsinglespin.TestCermitSinglespin.test_cermitesr_singlespin_spam"><code class="docutils literal notranslate"><span class="pre">TestCermitSinglespin.test_cermitesr_singlespin_spam()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_ibmcyclic.TestIBMCyclic"><code class="docutils literal notranslate"><span class="pre">TestIBMCyclic</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_ibmcyclic.TestIBMCyclic.test_IBMCyclic_dF2_spin"><code class="docutils literal notranslate"><span class="pre">TestIBMCyclic.test_IBMCyclic_dF2_spin()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_experiment.test_ibmcyclic.TestIBMCyclic.test_IBMCyclic_dF_spin"><code class="docutils literal notranslate"><span class="pre">TestIBMCyclic.test_IBMCyclic_dF_spin()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_field.TestXTrapzFieldGradient"><code class="docutils literal notranslate"><span class="pre">TestXTrapzFieldGradient</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_field.TestXTrapzFieldGradient.test_xtrapz_field_gradient_large_distance"><code class="docutils literal notranslate"><span class="pre">TestXTrapzFieldGradient.test_xtrapz_field_gradient_large_distance()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_field.TestXTrapzFieldGradient.test_xtrapz_field_gradient_smallamp"><code class="docutils literal notranslate"><span class="pre">TestXTrapzFieldGradient.test_xtrapz_field_gradient_smallamp()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_field.TestXTrapzFxDtheta"><code class="docutils literal notranslate"><span class="pre">TestXTrapzFxDtheta</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_field.TestXTrapzFxDtheta.test_xtrapz_fxdtheta_cos"><code class="docutils literal notranslate"><span class="pre">TestXTrapzFxDtheta.test_xtrapz_fxdtheta_cos()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_field.TestXTrapzFxDtheta.test_xtrapz_fxdtheta_multidim"><code class="docutils literal notranslate"><span class="pre">TestXTrapzFxDtheta.test_xtrapz_fxdtheta_multidim()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_field.TestXTrapzFxDtheta.test_xtrapz_xtrapz_fxdtheta_x2cos"><code class="docutils literal notranslate"><span class="pre">TestXTrapzFxDtheta.test_xtrapz_xtrapz_fxdtheta_x2cos()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_field.TestXTrapzFxDtheta.test_xtrapz_xtrapz_fxdtheta_xcos"><code class="docutils literal notranslate"><span class="pre">TestXTrapzFxDtheta.test_xtrapz_xtrapz_fxdtheta_xcos()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_field.test_B_offset"><code class="docutils literal notranslate"><span class="pre">test_B_offset()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_field.test_field_func"><code class="docutils literal notranslate"><span class="pre">test_field_func()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_field.test_field_func_singularity"><code class="docutils literal notranslate"><span class="pre">test_field_func_singularity()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_field.test_min_abs_offset"><code class="docutils literal notranslate"><span class="pre">test_min_abs_offset()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_field.test_min_abs_offset_symmetry"><code class="docutils literal notranslate"><span class="pre">test_min_abs_offset_symmetry()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_math.test_as_strided_x"><code class="docutils literal notranslate"><span class="pre">test_as_strided_x()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_math.test_slice_matrix"><code class="docutils literal notranslate"><span class="pre">test_slice_matrix()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_magnetization.test_mz2_eq_H"><code class="docutils literal notranslate"><span class="pre">test_mz2_eq_H()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_magnetization.test_mz_eq_high_susceptibility"><code class="docutils literal notranslate"><span class="pre">test_mz_eq_high_susceptibility()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_magnetization.test_mz_eq_low_susceptibility"><code class="docutils literal notranslate"><span class="pre">test_mz_eq_low_susceptibility()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_misc.test_convert_grid_pts"><code class="docutils literal notranslate"><span class="pre">test_convert_grid_pts()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_misc.test_sum_of_product"><code class="docutils literal notranslate"><span class="pre">test_sum_of_product()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.sample_e"><code class="docutils literal notranslate"><span class="pre">sample_e()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.sample_h"><code class="docutils literal notranslate"><span class="pre">sample_h()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dol_sat_td_smallsteps"><code class="docutils literal notranslate"><span class="pre">test_rel_dol_sat_td_smallsteps()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_arp"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_arp()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_ibm_cyclic"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_ibm_cyclic()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_multipulse_long"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_multipulse_long()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_multipulse_no_pol"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_multipulse_no_pol()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_multipulse_short"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_multipulse_short()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_nut"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_nut()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_periodic_irrad_cont"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_periodic_irrad_cont()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_periodic_irrad_no_irrad"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_periodic_irrad_no_irrad()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_periodic_irrad_off_res"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_periodic_irrad_off_res()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_steadystate"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_steadystate()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_symmetry"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td_symmetry()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_without_td"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td_without_td()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Peter Sun
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

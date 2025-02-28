@@ -1,52 +1,56 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>MrfmSim &#8212; mrfmsim 0.2.0 documentation</title>
+    <title>MrfmSim &#8212; mrfmsim 0.3.0 documentation</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
   
-  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
-  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script src="_static/documentation_options.js?v=83a61292"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Overview" href="overview.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -54,31 +58,16 @@
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -86,7 +75,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -94,10 +82,15 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -108,7 +101,8 @@
       
         
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -123,6 +117,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="#">
   
@@ -131,50 +127,61 @@
   
   
   
-    <p class="title logo__title">mrfmsim 0.2.0 documentation</p>
+    <p class="title logo__title">mrfmsim 0.3.0 documentation</p>
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <ul class="nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim overview</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="features.html">Plugin features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tests.html">Tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Experiment Setup</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim basics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="coordinates.html">Coordinates</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">Sample</a></li>
-<li class="toctree-l1"><a class="reference internal" href="grid.html">Grid</a></li>
-<li class="toctree-l1"><a class="reference internal" href="magnet.html">Magnet</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cantilever.html">Cantilever</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic/inheritance.html"><em>mrfmsim</em> custom classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic/component.html">Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic/modifier.html">Modifiers and shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic/plugin.html">Plugins</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Experiment</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment basics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="experiment.html">Experiment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="collection.html">Collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic/cermit_protocol.html">CERMIT protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic/geometry.html">Experiment geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic/tip_size.html">Tip size: small tip vs. large tip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic/spin_count.html">Sample spin distribution</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Experiment Modification</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment Setups</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="ref_modifier.html">Modifier</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ref_shortcut.html">Shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup/coordinates.html">Coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup/sample.html">Sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup/grid.html">Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup/magnet.html">Magnet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup/cantilever.html">Cantilever</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiments</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="api_plugin.html">Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api_component.html">Component</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api_configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiment/IBMCyclic.html">IBM cyclic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiment/CermitSat.html">CERMIT steady-state saturation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiment/CermitTD.html">CERMIT time dependent offset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiment/CermitARP.html">CERMIT adiabatic rapid passage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiment/CermitSingleSpin.html">CERMIT single spin</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">references</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="reference/ref_magnetization.html">Equilibrium magnetization and variance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/ref_polarization.html">Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/ref_field.html">Magnetic field</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/ref_math.html">Mathematical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/ref_misc.html">Miscellaneous</a></li>
 </ul>
 
     </div>
@@ -183,14 +190,19 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -199,14 +211,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -282,27 +294,19 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -352,24 +356,31 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="mrfmsim">
-<h1>MrfmSim<a class="headerlink" href="#mrfmsim" title="Permalink to this heading">#</a></h1>
+<h1>MrfmSim<a class="headerlink" href="#mrfmsim" title="Link to this heading">#</a></h1>
 <p><a class="reference external" href="https://github.com/Marohn-Group/mrfmsim"><img alt="GitHub version" src="https://badge.fury.io/gh/Marohn-Group%2Fmrfmsim.svg" /></a> <a class="reference external" href="https://github.com/Marohn-Group/mrfmsim/actions"><img alt="Unit tests" src="https://github.com/Marohn-Group/mrfmsim/actions/workflows/tox.yml/badge.svg" /></a> <a class="reference external" href="https://zenodo.org/badge/latestdoi/534295792"><img alt="DOI" src="https://zenodo.org/badge/534295792.svg" /></a></p>
-<p>MrfmSim is a Python framework for simulating magnetic resonance force microscopy (MRFM)
+<p><em>mrfmsim</em> is a Python framework for simulating magnetic resonance force microscopy (MRFM)
 experiments. The package is based on the
 <a class="reference external" href="https://marohn-group.github.io/mmodel-docs/">mmodel</a> framework, which provides
-modular modeling capabilities for the experiments. The framework offers additional
-functionalities for interacting and modifying the experiment models, for example,
-scripting using YAML files, creating optimized loops, printing out intermediate
-results, and grouping experiments using experiment collections. The package also
-provides various features through the plugin system, including a command line interface,
-unit system, and three-dimensional plotting capabilities. The detailed API and the
-available plugins are <a class="reference external" href="https://marohn-group.github.io/mrfmsim-docs/">documented</a>.</p>
+modular modeling capabilities for the experiments.</p>
+<p>This <em>mrfmsim</em> package contains tools to simulate signals in a Magnetic Resonance Force
+Microscope (MRFM) <a class="footnote-reference brackets" href="#sidles1995jan" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#kuehn2008feb" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#poggio2010aug" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> experiment.
+The code in the package simulates signal from <strong>electron spins</strong>,
+particularly the <strong>nitroxide spin radical</strong> “TEMPO” to <strong>selected nuclear
+spins (1H, 19F, and 71Ga)</strong>.</p>
+<p>The package host variety of MRFM experiments with the tip-on-cantilever setup.
+It can simulate signals from both <strong>Curie-law spin magnetization</strong> and <strong>spin
+fluctuations</strong> (in the small polarization limit); and can simulate <strong>force
+experiments</strong> and <strong>force-gradient experiments</strong> (in the
+small-cantilever-amplitude limit and without the small amplitude approximation
+— in the large amplitude limit). It can simulate signal with the cantilever
+and field-aligned in both the <strong>hangdown</strong> <a class="footnote-reference brackets" href="#mamin2003nov" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> and <strong>SPAM</strong> <a class="footnote-reference brackets" href="#marohn1998dec" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>
+<a class="footnote-reference brackets" href="#garner2004jun" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a> experimental geometries.</p>
 <section id="quickstart">
-<h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this heading">#</a></h2>
+<h2>Quickstart<a class="headerlink" href="#quickstart" title="Link to this heading">#</a></h2>
 <section id="installation">
-<h3>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h3>
+<h3>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h3>
 <section id="graphviz-installation">
-<h4><em>Graphviz</em> installation<a class="headerlink" href="#graphviz-installation" title="Permalink to this heading">#</a></h4>
+<h4><em>Graphviz</em> installation<a class="headerlink" href="#graphviz-installation" title="Link to this heading">#</a></h4>
 <p>To view the graph, Graphviz needs to be installed:
 <a class="reference external" href="https://graphviz.org/download/">Graphviz Installation</a>
 For Windows installation, please choose “add Graphviz to the
@@ -382,7 +393,7 @@ with conda:</p>
 </div>
 </section>
 <section id="mrfmsim-installation">
-<h4><em>mrfmsim</em> installation<a class="headerlink" href="#mrfmsim-installation" title="Permalink to this heading">#</a></h4>
+<h4><em>mrfmsim</em> installation<a class="headerlink" href="#mrfmsim-installation" title="Link to this heading">#</a></h4>
 <p>To install the package, run:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">.</span>
 </pre></div>
@@ -390,7 +401,7 @@ with conda:</p>
 </section>
 </section>
 <section id="tests">
-<h3>Tests<a class="headerlink" href="#tests" title="Permalink to this heading">#</a></h3>
+<h3>Tests<a class="headerlink" href="#tests" title="Link to this heading">#</a></h3>
 <p>To run the tests locally:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pytest</span>
 </pre></div>
@@ -399,13 +410,61 @@ with conda:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tox</span>
 </pre></div>
 </div>
+<p class="rubric">References</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="sidles1995jan" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Sidles, J. A.; Garbini, J. J.; Bruland, K. J.; Rugar, D.;
+Züger, O.; Hoen, S. &amp; Yannoni, C. S. “Magnetic Resonance Force Microscopy”,
+<em>Rev. Mod. Phys.</em>, <strong>1995</strong>, <em>67</em>, 249 - 265
+[<a class="reference external" href="http://doi.org/10.1103/RevModPhys.67.249">10.1103/RevModPhys.67.249</a>].</p>
+</aside>
+<aside class="footnote brackets" id="kuehn2008feb" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>Kuehn, S.; Hickman, S. A. &amp; Marohn, J. A. “Advances in
+Mechanical Detection of Magnetic Resonance”, <em>J. Chem. Phys.</em>, <strong>2008</strong>,
+<em>128</em>, 052208
+[<a class="reference external" href="http://dx.doi.org/10.1063/1.2834737">10.1063/1.2834737</a>].
+<strong>OPEN ACCESS</strong>.</p>
+</aside>
+<aside class="footnote brackets" id="poggio2010aug" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<p>Poggio, M. &amp; Degen, C. L. “Force-Detected Nuclear Magnetic
+Resonance: Recent Advances and Future Challenges”,
+<em>Nanotechnology</em>, <strong>2010</strong>, <em>21</em>, 342001
+[<a class="reference external" href="http://doi.org/10.1088/0957-4484/21/34/342001">10.1088/0957-4484/21/34/342001</a>].</p>
+</aside>
+<aside class="footnote brackets" id="mamin2003nov" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
+<p>Mamin, H. J.; Budakian, R.; Chui, B. W. &amp; Rugar, D.
+“Detection and Manipulation of Statistical Polarization in Small
+Spin Ensembles”, <em>Phys. Rev. Lett.</em>, <strong>2003</strong>, <em>91</em>, 207604
+[<a class="reference external" href="http://doi.org/10.1103/PhysRevLett.91.207604">10.1103/PhysRevLett.91.207604</a>].</p>
+</aside>
+<aside class="footnote brackets" id="marohn1998dec" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">5</a><span class="fn-bracket">]</span></span>
+<p>Marohn, J. A.; Fainchtein, R. &amp; Smith, D. D.
+“An Optimal Magnetic Tip Configuration for Magnetic-Resonance Force
+Microscopy of Microscale Buried Features”, <em>Appl. Phys. Lett.</em>, <strong>1998</strong>,
+<em>73</em>, 3778 - 3780
+[<a class="reference external" href="http://dx.doi.org/10.1063/1.122892">10.1063/1.122892</a>].
+SPAM stands for Springiness Preservation by Aligning Magnetization.</p>
+</aside>
+<aside class="footnote brackets" id="garner2004jun" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">6</a><span class="fn-bracket">]</span></span>
+<p>Garner, S. R.; Kuehn, S.; Dawlaty, J. M.; Jenkins, N. E.
+&amp; Marohn, J. A. “Force-Gradient Detected Nuclear Magnetic Resonance”,
+<em>Appl. Phys. Lett.</em>, <strong>2004</strong>, <em>84</em>, 5091 - 5093
+[<a class="reference external" href="http://dx.doi.org/10.1063/1.1762700">10.1063/1.1762700</a>].</p>
+</aside>
+</aside>
 </section>
 </section>
 </section>
 <section id="license">
-<h1>License<a class="headerlink" href="#license" title="Permalink to this heading">#</a></h1>
+<h1>License<a class="headerlink" href="#license" title="Link to this heading">#</a></h1>
 <p>MrfmSim is distributed with the 3-clause BSD license.:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Copyright</span> <span class="p">(</span><span class="n">C</span><span class="p">)</span> <span class="mi">2023</span><span class="o">-</span><span class="mi">2024</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Copyright</span> <span class="p">(</span><span class="n">C</span><span class="p">)</span> <span class="mi">2023</span><span class="o">-</span><span class="mi">2025</span>
 <span class="n">Peter</span> <span class="n">Sun</span> <span class="o">&lt;</span><span class="n">hs859</span><span class="nd">@cornell</span><span class="o">.</span><span class="n">edu</span><span class="o">&gt;</span>
 <span class="n">John</span> <span class="n">Marohn</span> <span class="o">&lt;</span><span class="n">jam99</span><span class="nd">@cornell</span><span class="o">.</span><span class="n">edu</span><span class="o">&gt;</span>
 <span class="n">All</span> <span class="n">rights</span> <span class="n">reserved</span><span class="o">.</span>
@@ -424,7 +483,7 @@ with conda:</p>
 
 <span class="o">*</span> <span class="n">Neither</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">NetworkX</span> <span class="n">Developers</span> <span class="n">nor</span> <span class="n">the</span> <span class="n">names</span> <span class="n">of</span> <span class="n">its</span>
     <span class="n">contributors</span> <span class="n">may</span> <span class="n">be</span> <span class="n">used</span> <span class="n">to</span> <span class="n">endorse</span> <span class="ow">or</span> <span class="n">promote</span> <span class="n">products</span> <span class="n">derived</span>
-    <span class="kn">from</span> <span class="nn">this</span> <span class="n">software</span> <span class="n">without</span> <span class="n">specific</span> <span class="n">prior</span> <span class="n">written</span> <span class="n">permission</span><span class="o">.</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">this</span> <span class="n">software</span> <span class="n">without</span> <span class="n">specific</span> <span class="n">prior</span> <span class="n">written</span> <span class="n">permission</span><span class="o">.</span>
 
 <span class="n">THIS</span> <span class="n">SOFTWARE</span> <span class="n">IS</span> <span class="n">PROVIDED</span> <span class="n">BY</span> <span class="n">THE</span> <span class="n">COPYRIGHT</span> <span class="n">HOLDERS</span> <span class="n">AND</span> <span class="n">CONTRIBUTORS</span>
 <span class="s2">&quot;AS IS&quot;</span> <span class="n">AND</span> <span class="n">ANY</span> <span class="n">EXPRESS</span> <span class="n">OR</span> <span class="n">IMPLIED</span> <span class="n">WARRANTIES</span><span class="p">,</span> <span class="n">INCLUDING</span><span class="p">,</span> <span class="n">BUT</span> <span class="n">NOT</span>
@@ -440,18 +499,157 @@ with conda:</p>
 </pre></div>
 </div>
 <div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#examples">examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tests.html">Tests</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tests.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html#signal-verification">Signal verification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html#magnet-test">Magnet Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html#polarization-test">Polarization Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html#experiment-test">Experiment Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html#module-tests.test_experiment.test_cermitesr">Testing Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id1">[0.3.0] - 2025-02-25</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id2">[0.2.0]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id6">[0.1.1] - 2023-06-23</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id9">[0.1.0] - 2020-04-17</a></li>
+</ul>
+</li>
+</ul>
 </div>
 <div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim basics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="basic/inheritance.html"><em>mrfmsim</em> custom classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="basic/inheritance.html#node">Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic/inheritance.html#graph">Graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic/inheritance.html#experiment">Experiment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic/inheritance.html#component-objects">Component objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic/inheritance.html#experimentgroup">ExperimentGroup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="basic/component.html">Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic/modifier.html">Modifiers and shortcuts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="basic/modifier.html#module-mrfmsim.modifier"><code class="xref py py-mod docutils literal notranslate"><span class="pre">modifier</span></code> module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="basic/plugin.html">Plugins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="basic/plugin.html#mrfmsim-ymal-yaml-configuration-plugin">mrfmsim-ymal: YAML configuration plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic/plugin.html#mrfmsim-cli-command-line-interface-plugin">mrfmsim-cli: command line interface plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic/plugin.html#mrfmsim-unit-unit-plugin">mrfmsim-unit: unit plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic/plugin.html#mrfmsim-plot-plot-plugin">mrfmsim-plot: plot plugin</a></li>
+</ul>
+</li>
+</ul>
 </div>
 <div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment basics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="basic/cermit_protocol.html">CERMIT protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic/geometry.html">Experiment geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic/tip_size.html">Tip size: small tip vs. large tip</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="basic/tip_size.html#large-tip-small-amplitude-limit">Large tip - small amplitude limit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic/tip_size.html#small-tip-large-amplitude-limit">Small tip - large amplitude limit</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="basic/spin_count.html">Sample spin distribution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="basic/spin_count.html#uniformly-distributed-sample">Uniformly distributed sample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic/spin_count.html#non-uniformly-distributed-sample">Non-uniformly distributed sample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic/spin_count.html#single-spin-directly-under-a-spherical-magnet">Single spin directly under a spherical magnet</a></li>
+</ul>
+</li>
+</ul>
 </div>
 <div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment Setups</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="setup/coordinates.html">Coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup/sample.html">Sample</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="setup/sample.html#example-usage">Example Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="setup/grid.html">Grid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="setup/grid.html#example-usage">Example Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup/grid.html#module-mrfmsim.component.grid"><code class="xref py py-mod docutils literal notranslate"><span class="pre">grid</span></code> module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="setup/magnet.html">Magnet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="setup/magnet.html#example-usage">Example Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup/magnet.html#module-mrfmsim.component.magnet"><code class="xref py py-mod docutils literal notranslate"><span class="pre">magnet</span></code> module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="setup/cantilever.html">Cantilever</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="setup/cantilever.html#example-usage">Example Usage</a></li>
+</ul>
+</li>
+</ul>
 </div>
 <div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiments</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="experiment/IBMCyclic.html">IBM cyclic</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="experiment/IBMCyclic.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="experiment/IBMCyclic.html#experiment-summary">Experiment Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="experiment/CermitSat.html">CERMIT steady-state saturation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="experiment/CermitSat.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="experiment/CermitSat.html#steady-state-solution">Steady-state solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="experiment/CermitSat.html#experiment-summary">Experiment Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="experiment/CermitTD.html">CERMIT time dependent offset</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="experiment/CermitTD.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="experiment/CermitTD.html#experiment-summary">Experiment Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="experiment/CermitARP.html">CERMIT adiabatic rapid passage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="experiment/CermitARP.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="experiment/CermitARP.html#experiment-summary">Experiment Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="experiment/CermitSingleSpin.html">CERMIT single spin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="experiment/CermitSingleSpin.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="experiment/CermitSingleSpin.html#experiment-summary">Experiment Summary</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">references</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="reference/ref_magnetization.html">Equilibrium magnetization and variance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reference/ref_magnetization.html#equilibrium-magnetization">Equilibrium magnetization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/ref_magnetization.html#equilibrium-variance">Equilibrium variance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reference/ref_polarization.html">Polarization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reference/ref_polarization.html#module-mrfmsim.formula.polarization"><code class="xref py py-mod docutils literal notranslate"><span class="pre">formula.polarization</span></code> module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reference/ref_field.html">Magnetic field</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reference/ref_field.html#module-mrfmsim.formula.field"><code class="xref py py-mod docutils literal notranslate"><span class="pre">formula.field</span></code> module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reference/ref_math.html">Mathematical</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reference/ref_math.html#module-mrfmsim.formula.math"><code class="xref py py-mod docutils literal notranslate"><span class="pre">formula.math</span></code> module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reference/ref_misc.html">Miscellaneous</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reference/ref_misc.html#module-mrfmsim.formula.misc"><code class="xref py py-mod docutils literal notranslate"><span class="pre">formula.misc</span></code> module</a></li>
+</ul>
+</li>
+</ul>
 </div>
 </section>
 <section id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading">#</a></h1>
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
@@ -467,7 +665,7 @@ with conda:</p>
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="right-next"
@@ -486,7 +684,8 @@ with conda:</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -534,13 +733,6 @@ By Peter Sun
   <div class="footer-item">
     
 
-  <p class="copyright">
-    
-      © Copyright 2023 - 2024, Peter Sun.
-      <br/>
-    
-  </p>
-
   </div>
   
   <div class="footer-item">
@@ -560,8 +752,8 @@ By Peter Sun
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -1,0 +1,677 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Polarization &#8212; mrfmsim 0.3.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=83a61292"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/ref_polarization';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Magnetic field" href="ref_field.html" />
+    <link rel="prev" title="Equilibrium magnetization and variance" href="ref_magnetization.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">mrfmsim 0.3.0 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim overview</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tests.html">Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim basics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../basic/inheritance.html"><em>mrfmsim</em> custom classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/component.html">Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/modifier.html">Modifiers and shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/plugin.html">Plugins</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment basics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../basic/cermit_protocol.html">CERMIT protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/geometry.html">Experiment geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/tip_size.html">Tip size: small tip vs. large tip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/spin_count.html">Sample spin distribution</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment Setups</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../setup/coordinates.html">Coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup/sample.html">Sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup/grid.html">Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup/magnet.html">Magnet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup/cantilever.html">Cantilever</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../experiment/IBMCyclic.html">IBM cyclic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../experiment/CermitSat.html">CERMIT steady-state saturation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../experiment/CermitTD.html">CERMIT time dependent offset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../experiment/CermitARP.html">CERMIT adiabatic rapid passage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../experiment/CermitSingleSpin.html">CERMIT single spin</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">references</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ref_magnetization.html">Equilibrium magnetization and variance</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref_field.html">Magnetic field</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref_math.html">Mathematical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref_misc.html">Miscellaneous</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/reference/ref_polarization.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Polarization</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-mrfmsim.formula.polarization"><code class="xref py py-mod docutils literal notranslate"><span class="pre">formula.polarization</span></code> module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.formula.polarization.rel_dpol_arp"><code class="docutils literal notranslate"><span class="pre">rel_dpol_arp()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.formula.polarization.rel_dpol_ibm_cyclic"><code class="docutils literal notranslate"><span class="pre">rel_dpol_ibm_cyclic()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.formula.polarization.rel_dpol_multipulse"><code class="docutils literal notranslate"><span class="pre">rel_dpol_multipulse()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.formula.polarization.rel_dpol_nut"><code class="docutils literal notranslate"><span class="pre">rel_dpol_nut()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.formula.polarization.rel_dpol_nut_multi_freq_pulse"><code class="docutils literal notranslate"><span class="pre">rel_dpol_nut_multi_freq_pulse()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.formula.polarization.rel_dpol_periodic_irrad"><code class="docutils literal notranslate"><span class="pre">rel_dpol_periodic_irrad()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.formula.polarization.rel_dpol_sat_steadystate"><code class="docutils literal notranslate"><span class="pre">rel_dpol_sat_steadystate()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.formula.polarization.rel_dpol_sat_td"><code class="docutils literal notranslate"><span class="pre">rel_dpol_sat_td()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.formula.polarization.rel_dpol_sat_td_smallsteps"><code class="docutils literal notranslate"><span class="pre">rel_dpol_sat_td_smallsteps()</span></code></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="polarization">
+<h1>Polarization<a class="headerlink" href="#polarization" title="Link to this heading">#</a></h1>
+<section id="module-mrfmsim.formula.polarization">
+<span id="formula-polarization-module"></span><h2><code class="xref py py-mod docutils literal notranslate"><span class="pre">formula.polarization</span></code> module<a class="headerlink" href="#module-mrfmsim.formula.polarization" title="Link to this heading">#</a></h2>
+<p>Collection of calculations of relative changes in polarization.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="mrfmsim.formula.polarization.rel_dpol_arp">
+<span class="sig-prename descclassname"><span class="pre">mrfmsim.formula.polarization.</span></span><span class="sig-name descname"><span class="pre">rel_dpol_arp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">B_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df_fm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Gamma</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mrfmsim/formula/polarization.html#rel_dpol_arp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.formula.polarization.rel_dpol_arp" title="Link to this definition">#</a></dt>
+<dd><p>Relative change in polarization for adiabatic rapid passage.</p>
+<p>Compute the resonance offset at each point in the sample and compute
+the change in the polarization at each point in the sample following the
+adiabatic rapid passage. The experiment here is a swept-field experiment
+or a swept-tip experiment, where</p>
+<div class="math notranslate nohighlight">
+\[\Delta B_\text{offset} =
+B_0 + B_\text{tip} - 2 \pi f_\text{rf}/\gamma\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\Omega_\text{initial} = B_0 + B_\text{tip} -
+(2 \pi f_\text{rf}/\gamma - 2 \pi \Delta f_\text{FM}/\gamma)
+= \Delta B_\text{offset} + 2 \pi \Delta f_\text{FM} / \gamma\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Gamma</strong> (<em>float</em>) – the gyromagnetic ratio [rad/s.mT]</p></li>
+<li><p><strong>B_offset</strong> (<em>float</em>) – resonance offset field <span class="math notranslate nohighlight">\(\Delta B_{\text{offset}}\)</span> [mT]</p></li>
+<li><p><strong>B_1</strong> (<em>float</em>) – amplitude <span class="math notranslate nohighlight">\(B_1\)</span> of the applied transverse field [mT]</p></li>
+<li><p><strong>df_fm</strong> (<em>float</em>) – the peak-to-peak frequency modulation <span class="math notranslate nohighlight">\(\Delta f_{\text{FM}}\)</span>
+of the applied transverse radio frequency magnetic field [Hz]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>relative change in polarization</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array, the same shape as B_offset</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mrfmsim.formula.polarization.rel_dpol_ibm_cyclic">
+<span class="sig-prename descclassname"><span class="pre">mrfmsim.formula.polarization.</span></span><span class="sig-name descname"><span class="pre">rel_dpol_ibm_cyclic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">B_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df_fm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Gamma</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mrfmsim/formula/polarization.html#rel_dpol_ibm_cyclic"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.formula.polarization.rel_dpol_ibm_cyclic" title="Link to this definition">#</a></dt>
+<dd><p>Relative change in polarization for IBM adiabatic rapid passage.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\eta \, (\Delta B_{\text{offset}}) = \begin{cases}
+ \cos^2 \left(\dfrac{\gamma \Delta B_{\text{offset}}}
+ {2 \: \Delta f_{\text{FM}}} \right) &amp; \text{for }
+ \Delta B_{\text{offset}}
+ \leq \pi \Delta f_{\text{FM}} / \gamma, \\
+ 0 &amp; \text{otherwise.} \end{cases}\end{split}\]</div>
+<p>with</p>
+<div class="math notranslate nohighlight">
+\[\Delta B_{\text{offset}} = B_0 - 2 \pi f_{\text{rf}} / \, \gamma
+[\mathrm{mT}]\]</div>
+<p>The result added in pol_arp
+the negative sign for it is the signal of final - initial.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Gamma</strong> (<em>float</em>) – the gyromagnetic ratio [rad/s.mT]</p></li>
+<li><p><strong>B_offset</strong> (<em>float</em>) – resonant offset
+<span class="math notranslate nohighlight">\(\Delta B_{\text{offset}}\)</span> [mT]</p></li>
+<li><p><strong>df_fm</strong> (<em>float</em>) – the peak-to-peak frequency modulation
+<span class="math notranslate nohighlight">\(\Delta df_{\text{FM}}\)</span> of the applied transverse
+radio frequency magnetic field [Hz]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>relative change in polarization</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array, the same shape as B_offset</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mrfmsim.formula.polarization.rel_dpol_multipulse">
+<span class="sig-prename descclassname"><span class="pre">mrfmsim.formula.polarization.</span></span><span class="sig-name descname"><span class="pre">rel_dpol_multipulse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rel_dpol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt_pulse</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mrfmsim/formula/polarization.html#rel_dpol_multipulse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.formula.polarization.rel_dpol_multipulse" title="Link to this definition">#</a></dt>
+<dd><p>Calculate the average relative change in polarization after multiple pulses.</p>
+<p>The formula ignores relaxation during pulses.
+:param float dt_pulse: time between pulses</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mrfmsim.formula.polarization.rel_dpol_nut">
+<span class="sig-prename descclassname"><span class="pre">mrfmsim.formula.polarization.</span></span><span class="sig-name descname"><span class="pre">rel_dpol_nut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">B_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_p</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mrfmsim/formula/polarization.html#rel_dpol_nut"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.formula.polarization.rel_dpol_nut" title="Link to this definition">#</a></dt>
+<dd><p>Relative change in polarization under the evolution of irradiation.</p>
+<p>Equations:</p>
+<div class="math notranslate nohighlight">
+\[\rho_{\mathrm{rel}} = \frac{\Delta M_{z}}{M_{z}(0)}
+= \frac{1}{\Omega^2+1}
+(1 + \cos{(\Omega_1 t_p \sqrt{\Omega^2+1})})\]</div>
+<p>with</p>
+<div class="math notranslate nohighlight">
+\[\Delta B_{\mathrm{offset}} = B_z(\vec{r}) - \omega/\gamma\]</div>
+<p>the resonance offset field and</p>
+<div class="math notranslate nohighlight">
+\[\Omega_1 = \gamma B_1\]</div>
+<div class="math notranslate nohighlight">
+\[\Omega = \frac{\Delta B_{\mathrm{offset}}}{B_1}\]</div>
+<p>the unitless resonance offset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Gamma</strong> (<em>float</em>) – the gyromagnetic ratio. [rad/s.mT]</p></li>
+<li><p><strong>B_offset</strong> (<em>float</em>) – resonance offset field
+<span class="math notranslate nohighlight">\(\Delta B_{\text{offset}}\)</span> [mT]</p></li>
+<li><p><strong>B_1</strong> (<em>float</em>) – amplitude of the applied transverse field
+<span class="math notranslate nohighlight">\(B_{\text{1}}\)</span> [mT]</p></li>
+<li><p><strong>t_p</strong> (<em>float</em>) – pulse time <span class="math notranslate nohighlight">\(t_{\mathrm{p}}\)</span> [s]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>relative polarization</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array, the same shape as B_offset</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mrfmsim.formula.polarization.rel_dpol_nut_multi_freq_pulse">
+<span class="sig-prename descclassname"><span class="pre">mrfmsim.formula.polarization.</span></span><span class="sig-name descname"><span class="pre">rel_dpol_nut_multi_freq_pulse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">B_tot</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f_rf_array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_p</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mrfmsim/formula/polarization.html#rel_dpol_nut_multi_freq_pulse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.formula.polarization.rel_dpol_nut_multi_freq_pulse" title="Link to this definition">#</a></dt>
+<dd><p>Nutation experiments where different frequencies are applied in steps.</p>
+<p>The polarization is aggregated as a product.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mrfmsim.formula.polarization.rel_dpol_periodic_irrad">
+<span class="sig-prename descclassname"><span class="pre">mrfmsim.formula.polarization.</span></span><span class="sig-name descname"><span class="pre">rel_dpol_periodic_irrad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">B_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dB_sat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dB_hom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_on</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_off</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mrfmsim/formula/polarization.html#rel_dpol_periodic_irrad"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.formula.polarization.rel_dpol_periodic_irrad" title="Link to this definition">#</a></dt>
+<dd><p>Relative change in polarization for intermittent irradiation.</p>
+<div class="math notranslate nohighlight">
+\[\langle \Delta M_z \rangle = - \frac{S^2 \, M_0}{1 + S^2 + \Omega^2}
+\left(\frac{1}{r_1} \frac{1}{\tau_\text{on}+\tau_\text{off}}
+\frac{(1 - E_\text{on})(1 - E_\text{off})}
+{1 - E_\text{on} \, E_\text{off}}
+\frac{S^2}{1 + S^2 + \Omega^2} + \frac{\tau_\text{on}}
+ {\tau_\text{on}+\tau_\text{off}}\right)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dB_hom</strong> (<em>float</em>) – the homogeneous linewidth [mT]</p></li>
+<li><p><strong>dB_sat</strong> (<em>float</em>) – the saturation linewidth [mT]</p></li>
+<li><p><strong>B_offset</strong> (<em>float</em>) – resonant offset
+<span class="math notranslate nohighlight">\(\Delta B_{\text{offset}}\)</span> [mT]</p></li>
+<li><p><strong>B_1</strong> (<em>float</em>) – the amplitude
+<span class="math notranslate nohighlight">\(B_1\)</span> of the applied transverse field [mT]</p></li>
+<li><p><strong>t_1</strong> (<em>float</em>) – spin-lattice relaxation [s]</p></li>
+<li><p><strong>t_on</strong> (<em>float</em>) – time with the microwaves on [s]</p></li>
+<li><p><strong>t_off</strong> (<em>float</em>) – time with the microwaves off [s]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>relative change in polarization</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array, the same shape as B_offset</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mrfmsim.formula.polarization.rel_dpol_sat_steadystate">
+<span class="sig-prename descclassname"><span class="pre">mrfmsim.formula.polarization.</span></span><span class="sig-name descname"><span class="pre">rel_dpol_sat_steadystate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">B_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dB_sat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dB_hom</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mrfmsim/formula/polarization.html#rel_dpol_sat_steadystate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.formula.polarization.rel_dpol_sat_steadystate" title="Link to this definition">#</a></dt>
+<dd><p>Relative change in polarization for steady-state.</p>
+<p>Compute and return the sample’s <em>relative</em> steady-state spin
+polarization. As given by the Bloch equations,</p>
+<div class="math notranslate nohighlight">
+\[\Delta\rho_{\text{rel}} = \dfrac{\Delta {\cal M}_z}
+{{\cal M}_{z}^{\text{eq}}} = - \dfrac{(B_1 / \Delta B_{\text{sat}})^2}
+{1 + (\Delta B_{\text{offset}} / \Delta B_{\text{homog}})^2 +
+    (B_1 / \Delta B_{\text{sat}})^2}\]</div>
+<p>At resonance,</p>
+<div class="math notranslate nohighlight">
+\[\rho_{\text{rel}} = \dfrac{S}{1+S}\]</div>
+<p>and the change in polarization is governed by the <em>saturation factor</em></p>
+<div class="math notranslate nohighlight">
+\[S = (B_1 / \Delta B_{\text{sat}})^2\]</div>
+<p><span class="math notranslate nohighlight">\(\rho_{\text{rel}}\)</span> under irradiation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dB_hom</strong> (<em>float</em>) – the homogeneous linewidth
+<span class="math notranslate nohighlight">\(\Delta B_{\text{homog}}\)</span> [mT]</p></li>
+<li><p><strong>dB_sat</strong> (<em>float</em>) – the saturation linewidth
+<span class="math notranslate nohighlight">\(\Delta B_{\text{sat}}\)</span> [mT]</p></li>
+<li><p><strong>B_offset</strong> (<em>float</em>) – resonant offset
+<span class="math notranslate nohighlight">\(\Delta B_{\text{offset}}\)</span> [mT]</p></li>
+<li><p><strong>B_1</strong> (<em>float</em>) – the amplitude of the applied transverse field
+<span class="math notranslate nohighlight">\(B_1\)</span> [mT]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>relative polarization</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array, the same shape as B_offset</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mrfmsim.formula.polarization.rel_dpol_sat_td">
+<span class="sig-prename descclassname"><span class="pre">mrfmsim.formula.polarization.</span></span><span class="sig-name descname"><span class="pre">rel_dpol_sat_td</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Bzx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ext_B_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ext_pts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tip_v</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mrfmsim/formula/polarization.html#rel_dpol_sat_td"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.formula.polarization.rel_dpol_sat_td" title="Link to this definition">#</a></dt>
+<dd><p>Relative change in polarization for time-dependent saturation.</p>
+<p>The result is not a steady-state solution because it ignores T1 relaxation.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mrfmsim.formula.polarization.rel_dpol_sat_td_smallsteps">
+<span class="sig-prename descclassname"><span class="pre">mrfmsim.formula.polarization.</span></span><span class="sig-name descname"><span class="pre">rel_dpol_sat_td_smallsteps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">B1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ext_Bzx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ext_B_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ext_pts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tip_v</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mrfmsim/formula/polarization.html#rel_dpol_sat_td_smallsteps"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.formula.polarization.rel_dpol_sat_td_smallsteps" title="Link to this definition">#</a></dt>
+<dd><p>Small step approximation of the time-dependent relative change in polarization.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ref_magnetization.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Equilibrium magnetization and variance</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="ref_field.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Magnetic field</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-mrfmsim.formula.polarization"><code class="xref py py-mod docutils literal notranslate"><span class="pre">formula.polarization</span></code> module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.formula.polarization.rel_dpol_arp"><code class="docutils literal notranslate"><span class="pre">rel_dpol_arp()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.formula.polarization.rel_dpol_ibm_cyclic"><code class="docutils literal notranslate"><span class="pre">rel_dpol_ibm_cyclic()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.formula.polarization.rel_dpol_multipulse"><code class="docutils literal notranslate"><span class="pre">rel_dpol_multipulse()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.formula.polarization.rel_dpol_nut"><code class="docutils literal notranslate"><span class="pre">rel_dpol_nut()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.formula.polarization.rel_dpol_nut_multi_freq_pulse"><code class="docutils literal notranslate"><span class="pre">rel_dpol_nut_multi_freq_pulse()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.formula.polarization.rel_dpol_periodic_irrad"><code class="docutils literal notranslate"><span class="pre">rel_dpol_periodic_irrad()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.formula.polarization.rel_dpol_sat_steadystate"><code class="docutils literal notranslate"><span class="pre">rel_dpol_sat_steadystate()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.formula.polarization.rel_dpol_sat_td"><code class="docutils literal notranslate"><span class="pre">rel_dpol_sat_td()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.formula.polarization.rel_dpol_sat_td_smallsteps"><code class="docutils literal notranslate"><span class="pre">rel_dpol_sat_td_smallsteps()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Peter Sun
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,506 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mrfmsim.formula.misc &#8212; mrfmsim 0.3.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../_static/documentation_options.js?v=83a61292"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/mrfmsim/formula/misc';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">mrfmsim 0.3.0 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim overview</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tests.html">Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Changelog</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim basics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/inheritance.html"><em>mrfmsim</em> custom classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/component.html">Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/modifier.html">Modifiers and shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/plugin.html">Plugins</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment basics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/cermit_protocol.html">CERMIT protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/geometry.html">Experiment geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/tip_size.html">Tip size: small tip vs. large tip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/spin_count.html">Sample spin distribution</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment Setups</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/coordinates.html">Coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/sample.html">Sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/grid.html">Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/magnet.html">Magnet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/cantilever.html">Cantilever</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/IBMCyclic.html">IBM cyclic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/CermitSat.html">CERMIT steady-state saturation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/CermitTD.html">CERMIT time dependent offset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/CermitARP.html">CERMIT adiabatic rapid passage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/CermitSingleSpin.html">CERMIT single spin</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">references</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_magnetization.html">Equilibrium magnetization and variance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_polarization.html">Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_field.html">Magnetic field</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_math.html">Mathematical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_misc.html">Miscellaneous</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for mrfmsim.formula.misc</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">scipy.special</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">functools</span><span class="w"> </span><span class="kn">import</span> <span class="n">reduce</span>
+
+<span class="n">HBAR</span> <span class="o">=</span> <span class="mf">1.054571628e-7</span>  <span class="c1"># aN nm s - reduced Planck constant</span>
+
+
+<div class="viewcode-block" id="convert_grid_pts">
+<a class="viewcode-back" href="../../../reference/ref_misc.html#mrfmsim.formula.misc.convert_grid_pts">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">convert_grid_pts</span><span class="p">(</span><span class="n">distance</span><span class="p">,</span> <span class="n">grid_step</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert distance to ext points.</span>
+
+<span class="sd">    :param int distance: distance in the x direction.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">distance</span> <span class="o">/</span> <span class="n">grid_step</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span></div>
+
+
+
+<div class="viewcode-block" id="singlespin_analytical">
+<a class="viewcode-back" href="../../../reference/ref_misc.html#mrfmsim.formula.misc.singlespin_analytical">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">singlespin_analytical</span><span class="p">(</span>
+    <span class="n">Gamma</span><span class="p">,</span> <span class="n">geometry</span><span class="p">,</span> <span class="n">J</span><span class="p">,</span> <span class="n">magnet_spin_dist</span><span class="p">,</span> <span class="n">magnet_origin</span><span class="p">,</span> <span class="n">magnet_radius</span><span class="p">,</span> <span class="n">mu0_Ms</span><span class="p">,</span> <span class="n">x_0p</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;The analytical calculation for a single spin.</span>
+
+<span class="sd">    The analytical solution to the exact equations for the delta k</span>
+<span class="sd">    without any approximations as derived below:</span>
+<span class="sd">    :math:`\Delta f = - \frac{f}{k x_{pk}^2} \langle F_{ts} x \rangle`</span>
+<span class="sd">    where :math:`x_{pk}` is the zero-to-peak amplitude of the cantilever.</span>
+<span class="sd">    This equation can be expressed as an integral over an angle</span>
+<span class="sd">    :math:`\theta`</span>
+<span class="sd">    For the *hangdown* geometry,</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">        F_{ts} = \mu_z \mu_0 M r^3 \dfrac{x^3 - 4z^2x}{(z^2 + x^2)^{7/2}}</span>
+
+<span class="sd">    For the *SPAM* geometry,</span>
+<span class="sd">    :math:`F_{ts} = \dfrac{\mu_z \mu_0 M r^3 x}{(x^2 + y^2)^{5/2}}`</span>
+<span class="sd">    where :math:`\mu_z` is the spin magnetic moment, :math:`\mu_0 M` is</span>
+<span class="sd">    the saturation magnetization of the tip, and r is the tip radius.</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">        \Delta f =  \frac{f}{2 \pi k x_{pk}^2} \int_{-\pi}^{\pi}</span>
+<span class="sd">        \mu(x,y,z,\theta) \times \frac{\partial B_{z}^{\mathrm{tip}}</span>
+<span class="sd">        (x-x_{pk}\cos \theta, y, z)}{\partial x} x_{pk}\cos \theta d\theta</span>
+
+<span class="sd">    Substituting into the integral and introducing a unitless variable</span>
+<span class="sd">    :math:`\hat{z} = z/x_{peak}` for the *hangdown* geometry and</span>
+<span class="sd">    :math:`\hat{y}/x_{peak}` for the SPAM geometry,</span>
+<span class="sd">    we obtain the following integrals:</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">        \Delta f = \frac{f}{2 k x_{pk}}\frac{\mu_z \mu_0 M}{a}</span>
+<span class="sd">        (\frac{a}{z})^4 \times \frac{\bar{z}^4}{\pi}</span>
+<span class="sd">        \int_0^{2\pi} \frac{\cos^4 \theta - 4\hat{z}^2\cos^2\theta}</span>
+<span class="sd">        {(\hat{z}^2 + \cos^2\theta)^{7/2}} d\theta</span>
+
+<span class="sd">    This integral (along with the :math:`\frac{\hat{z}^4}{\pi}` prefactor)</span>
+<span class="sd">    can be solved exactly in Mathematica to give a solution in terms of</span>
+<span class="sd">    Elliptic Integrals</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">        \frac{\hat{z}^3}{3\pi(\hat{z}^2 +1)}(4(2\hat{z}^4 -</span>
+<span class="sd">        7\hat{z}^2 -1)E(-1/\hat{z}^2) -8(\hat{z}^4 - 1)K(-1/\hat{z}^2))</span>
+
+<span class="sd">    where :math:`K(m)` and :math:`E(m)` are, respectively,</span>
+<span class="sd">    the complete elliptic integrals of the first and second kind.</span>
+<span class="sd">    For the *SPAM* geometry,</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">        \Delta f = \frac{f}{2 k x_{pk}} \frac{\mu_z \mu_0 M}</span>
+<span class="sd">        {z} \left(\frac{a}{y}\right)^4 \times \frac{\hat{z}^4}{\pi}</span>
+<span class="sd">        \int_0^{2\pi}\frac{\cos^2 \theta}{(\cos^2 \theta +</span>
+<span class="sd">        \hat{y}^2)^{5/2}}d\theta</span>
+
+<span class="sd">    This integral (along with the :math:`\frac{\hat{y}^4}{\pi}` prefactor</span>
+<span class="sd">    can be solved exactly in terms of Elliptic integrals:</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">        \frac{4\hat{y}^3}{3\pi(1+\hat{y}^2)^2}[(1+\hat{y}^2)E(-1/\hat{y}^2)</span>
+<span class="sd">        - (\hat{y}^2 -1)K(-1/\hat{y}^2)</span>
+
+<span class="sd">    :param float Gamma: the gyromagnetic ratio</span>
+<span class="sd">    :param float J: the spin angular momentum</span>
+<span class="sd">    :param array magnet_origin: the origin of the magnet</span>
+<span class="sd">    :param float magnet_radius: the radius of the magnet</span>
+<span class="sd">    :param float mu0_Ms: the saturation magnetization of the magnet</span>
+<span class="sd">    :param float mu_z: the spin magnetic moment</span>
+<span class="sd">    :param float magnet_spin_distance: magnet-spin distance</span>
+
+<span class="sd">    :return: The analytical solution for a single spin (effective force).</span>
+<span class="sd">        The spin constant shift is the effective force divided by the 0 to peak amplitude.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">mu_z</span> <span class="o">=</span> <span class="n">HBAR</span> <span class="o">*</span> <span class="n">Gamma</span> <span class="o">*</span> <span class="n">J</span>
+
+    <span class="k">if</span> <span class="n">geometry</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;spam&quot;</span><span class="p">:</span>
+        <span class="n">origin_sample_distance</span> <span class="o">=</span> <span class="n">magnet_origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">magnet_spin_dist</span>
+        <span class="n">Y</span> <span class="o">=</span> <span class="n">origin_sample_distance</span> <span class="o">/</span> <span class="n">x_0p</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span> <span class="o">/</span> <span class="n">Y</span><span class="o">**</span><span class="mi">2</span>
+        <span class="n">ek</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">special</span><span class="o">.</span><span class="n">ellipk</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+        <span class="n">ee</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">special</span><span class="o">.</span><span class="n">ellipe</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+
+        <span class="n">I_term</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="mf">4.0</span>
+            <span class="o">*</span> <span class="n">Y</span><span class="o">**</span><span class="mi">3</span>
+            <span class="o">/</span> <span class="p">(</span><span class="mf">3.0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">+</span> <span class="n">Y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="o">*</span> <span class="p">((</span><span class="mf">1.0</span> <span class="o">+</span> <span class="n">Y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">ek</span> <span class="o">-</span> <span class="p">(</span><span class="n">Y</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">*</span> <span class="n">ee</span><span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">geometry</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;hangdown&quot;</span><span class="p">:</span>
+        <span class="n">origin_sample_distance</span> <span class="o">=</span> <span class="n">magnet_origin</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">magnet_spin_dist</span>
+        <span class="n">Z</span> <span class="o">=</span> <span class="n">origin_sample_distance</span> <span class="o">/</span> <span class="n">x_0p</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span> <span class="o">/</span> <span class="n">Z</span><span class="o">**</span><span class="mi">2</span>
+        <span class="n">ek</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">special</span><span class="o">.</span><span class="n">ellipk</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+        <span class="n">ee</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">special</span><span class="o">.</span><span class="n">ellipe</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+
+        <span class="n">I_term</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">Z</span><span class="o">**</span><span class="mi">3</span>
+            <span class="o">/</span> <span class="p">(</span><span class="mf">3.0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">Z</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">3</span><span class="p">)</span>
+            <span class="o">*</span> <span class="p">(</span><span class="mf">4.0</span> <span class="o">*</span> <span class="p">(</span><span class="mf">2.0</span> <span class="o">*</span> <span class="n">Z</span><span class="o">**</span><span class="mi">4</span> <span class="o">-</span> <span class="mf">7.0</span> <span class="o">*</span> <span class="n">Z</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">*</span> <span class="n">ee</span> <span class="o">-</span> <span class="mf">8.0</span> <span class="o">*</span> <span class="p">(</span><span class="n">Z</span><span class="o">**</span><span class="mi">4</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">*</span> <span class="n">ek</span><span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid geometry&quot;</span><span class="p">)</span>
+
+    <span class="n">const_term</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span>
+        <span class="n">mu0_Ms</span> <span class="o">*</span> <span class="n">mu_z</span> <span class="o">/</span> <span class="n">magnet_radius</span> <span class="o">*</span> <span class="p">(</span><span class="n">magnet_radius</span> <span class="o">/</span> <span class="n">origin_sample_distance</span><span class="p">)</span> <span class="o">**</span> <span class="mi">4</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Assuming the spin is completely saturated, from 1 to 0</span>
+    <span class="c1"># polarization change is -1, hence the negative sign.</span>
+    <span class="n">dF_spin</span> <span class="o">=</span> <span class="o">-</span><span class="n">const_term</span> <span class="o">*</span> <span class="n">I_term</span>
+
+    <span class="k">return</span> <span class="n">dF_spin</span></div>
+
+
+
+<div class="viewcode-block" id="sum_of_product">
+<a class="viewcode-back" href="../../../reference/ref_misc.html#mrfmsim.formula.misc.sum_of_product">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">sum_of_product</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate the sum of the product input values.</span>
+
+<span class="sd">    The args can be a list of values since NumPy multiple can calculate</span>
+<span class="sd">    the value.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">reduce</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">multiply</span><span class="p">,</span> <span class="n">args</span><span class="p">))</span></div>
+
+
+
+<div class="viewcode-block" id="neg_sum_of_product">
+<a class="viewcode-back" href="../../../reference/ref_misc.html#mrfmsim.formula.misc.neg_sum_of_product">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">neg_sum_of_product</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate the negative sum of the product input values.</span>
+
+<span class="sd">    The args can be a list of values, since numpy multiple can calculate</span>
+<span class="sd">    the value. The function is used to simplify the definition in some of</span>
+<span class="sd">    the experiments. The approximation of the signal results in a negative</span>
+<span class="sd">    sign at the front.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">reduce</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">multiply</span><span class="p">,</span> <span class="n">args</span><span class="p">))</span></div>
+
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Peter Sun
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

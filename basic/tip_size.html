@@ -1,0 +1,627 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Tip size: small tip vs. large tip &#8212; mrfmsim 0.3.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=83a61292"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'basic/tip_size';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Sample spin distribution" href="spin_count.html" />
+    <link rel="prev" title="Experiment geometry" href="geometry.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">mrfmsim 0.3.0 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim overview</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tests.html">Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim basics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="inheritance.html"><em>mrfmsim</em> custom classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="component.html">Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modifier.html">Modifiers and shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin.html">Plugins</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment basics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cermit_protocol.html">CERMIT protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geometry.html">Experiment geometry</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tip size: small tip vs. large tip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spin_count.html">Sample spin distribution</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment Setups</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../setup/coordinates.html">Coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup/sample.html">Sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup/grid.html">Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup/magnet.html">Magnet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup/cantilever.html">Cantilever</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../experiment/IBMCyclic.html">IBM cyclic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../experiment/CermitSat.html">CERMIT steady-state saturation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../experiment/CermitTD.html">CERMIT time dependent offset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../experiment/CermitARP.html">CERMIT adiabatic rapid passage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../experiment/CermitSingleSpin.html">CERMIT single spin</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">references</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../reference/ref_magnetization.html">Equilibrium magnetization and variance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/ref_polarization.html">Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/ref_field.html">Magnetic field</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/ref_math.html">Mathematical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/ref_misc.html">Miscellaneous</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/basic/tip_size.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Tip size: small tip vs. large tip</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#large-tip-small-amplitude-limit">Large tip - small amplitude limit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#small-tip-large-amplitude-limit">Small tip - large amplitude limit</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="tip-size-small-tip-vs-large-tip">
+<h1>Tip size: small tip vs. large tip<a class="headerlink" href="#tip-size-small-tip-vs-large-tip" title="Link to this heading">#</a></h1>
+<p>Currently, we have two different sizes of magnets — the large tips
+are micron-sized spherical magnets (1 - 4 µm in diameter);
+the small tips are nanometer-sized rectangular prism
+(~100 nm in cross-section length).</p>
+<p>For large tips, the cantilever amplitude (100 - 300 nm) is small compared to the
+tip size, and for small tips, the cantilever amplitude is comparable to
+the tip size. They result in different approximations for the <strong>CERMIT protocol</strong>.</p>
+<section id="large-tip-small-amplitude-limit">
+<h2>Large tip - small amplitude limit<a class="headerlink" href="#large-tip-small-amplitude-limit" title="Link to this heading">#</a></h2>
+<p>In the small-amplitude limit, we can calculate the spin-dependent frequency
+shift experienced by the cantilever using</p>
+<div class="math notranslate nohighlight" id="equation-eq-largetipdf">
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq-largetipdf" title="Link to this equation">#</a></span>\[\Delta f = - \frac{f}{2 k} \sum_j \mu_z(\vec{r}_j)
+    \frac{\partial^{\, 2} B_z^{\mathrm{tip}}( \vec{r}_j )}{\partial x^2}\]</div>
+<p>where <span class="math notranslate nohighlight">\(f \: [\mathrm{Hz}]\)</span> is the cantilever resonance frequency and
+<span class="math notranslate nohighlight">\(k \: [\mathrm{N} \: \mathrm{m}^{-1}]\)</span> is the cantilever spring
+constant. The direction of the applied magnetic field is the <span class="math notranslate nohighlight">\(z\)</span> and the
+direction of the cantilever motion is <span class="math notranslate nohighlight">\(x\)</span>. In equation <a class="reference internal" href="#equation-eq-largetipdf">(1)</a>,
+<span class="math notranslate nohighlight">\(\mu_z \: [\mathrm{N} \: \mathrm{m} \: \mathrm{T}^{-1}]\)</span> is the <span class="math notranslate nohighlight">\(z\)</span>
+component of the spin magnetic moment, and <span class="math notranslate nohighlight">\(B_z^{\mathrm{tip}} \:
+[\mathrm{T}]\)</span> is the <span class="math notranslate nohighlight">\(z\)</span> component of the magnetic field produced by the
+cantilever’s magnetic tip. The sum represents a sum over all spins in
+resonance (discussed below). The frequency shift arises from a spring constant
+shift of</p>
+<div class="math notranslate nohighlight" id="equation-eq-largetipdk">
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq-largetipdk" title="Link to this equation">#</a></span>\[\Delta k = - \sum_j \mu_z(\vec{r}_j)
+    \frac{\partial^{\, 2} B_z^{\mathrm{tip}}( \vec{r}_j )}{\partial x^2}\]</div>
+<p>Equations <a class="reference internal" href="#equation-eq-largetipdf">(1)</a> and <a class="reference internal" href="#equation-eq-largetipdk">(2)</a> are valid when the
+zero-to-peak amplitude of the cantilever oscillation is much smaller than the
+distance between the center of the (spherical) magnet and the sample spins.
+<a class="footnote-reference brackets" href="#lee2012apra" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p>
+<p>In the ESR-CERMIT experiment of Moore <em>et al.</em>, the magnetization distribution
+<span class="math notranslate nohighlight">\(\mu_z (\vec{r})\)</span> depends, according to the steady-state Bloch
+equations, on the frequency <span class="math notranslate nohighlight">\(f_{\mathrm{rf}}\)</span> and strength <span class="math notranslate nohighlight">\(B_1\)</span>
+of the microwave field, the sample relaxation times <span class="math notranslate nohighlight">\(T_1\)</span> and <span class="math notranslate nohighlight">\(T_2\)</span>
+, the sample spin density, the applied magnetic field <span class="math notranslate nohighlight">\(B_0\)</span>, the tip
+magnetic field <span class="math notranslate nohighlight">\(B_z^{\mathrm{tip}}\)</span>, and cantilever position.  In the
+Moore experiment, the cantilever sweeps out a region of saturated
+magnetization as it moves.</p>
+<p>In the NMR-CERMIT experiment of Garner <em>et al.</em>, <a class="footnote-reference brackets" href="#garner2004jun" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a>
+the frequency of the applied radio frequency field <span class="math notranslate nohighlight">\(f_{\mathrm{rf}}\)</span> is
+swept. The initial magnetization follows the effective field at each location
+in the sample, resulting in a region of inverted magnetization below the tip.</p>
+</section>
+<section id="small-tip-large-amplitude-limit">
+<h2>Small tip - large amplitude limit<a class="headerlink" href="#small-tip-large-amplitude-limit" title="Link to this heading">#</a></h2>
+<p>The small-amplitude approximation used to derive the above equations may not
+be valid in a small-tip ESR-CERMIT experiment.[#Lee2012apra]_ In this case, we
+must calculate the signal using Equation 20: <a class="footnote-reference brackets" href="#lee2012apra" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#lee2012note" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p>
+<div class="math notranslate nohighlight" id="equation-eq-smalltipdf">
+<span class="eqno">(3)<a class="headerlink" href="#equation-eq-smalltipdf" title="Link to this equation">#</a></span>\[\Delta f = \frac{f}{2 \pi k x_{\mathrm{pk}}^2}
+    \sum_j \int_{-\pi}^{\pi} \mu_z(\vec{r}_j,\theta)
+        \frac{\partial B_z^{\mathrm{tip}}(x - x_{\mathrm{pk}}
+        \cos{\theta},y,z)}{\partial x}
+        x_{\mathrm{pk}} \cos{\theta} d\theta\]</div>
+<p>where <span class="math notranslate nohighlight">\(x_{\mathrm{pk}}\)</span> is the zero-to-peak amplitude of the cantilever
+oscillation. We write <span class="math notranslate nohighlight">\(\mu_z(\vec{r}_j,\theta)\)</span> to indicate that if the
+microwaves are left on during cantilever motion, then the magnetization may
+vary in synchrony with the cantilever oscillation. In the i-OSCAR experiment of
+Rugar and coworkers, <a class="footnote-reference brackets" href="#rugar2004jul" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a> the resulting position-dependent change
+in magnetization led to a measurable frequency shift.</p>
+<p>Equation <a class="reference internal" href="#equation-eq-smalltipdf">(3)</a> is exact.  To understand the nature of the
+large-tip approximation, Eq. <a class="reference internal" href="#equation-eq-largetipdf">(1)</a>, let us expand the Eq.
+<a class="reference internal" href="#equation-eq-smalltipdf">(3)</a> gradient in the <span class="math notranslate nohighlight">\(x\)</span> variable:</p>
+<div class="math notranslate nohighlight" id="equation-eq-expansion">
+<span class="eqno">(4)<a class="headerlink" href="#equation-eq-expansion" title="Link to this equation">#</a></span>\[\frac{\partial B_z^{\mathrm{tip}}(x - x_{\mathrm{pk}} \cos{\theta},y,z)}
+{\partial x} \approx \frac{\partial B_z^{\mathrm{tip}}(x,y,z)}{\partial x}
+- x_{\mathrm{pk}} \cos{\theta} \frac{\partial^2 B_z^{\mathrm{tip}}(x,y,z)}
+{\partial x^2} + {\cal O}(x_{\mathrm{pk}}^2)\]</div>
+<p>In calculating the signal from our ESR-CERMIT experiment, we will assume for
+simplicity that the spin distribution <span class="math notranslate nohighlight">\(\mu_z(\vec{r}_j)\)</span> has reached
+steady-state; we neglect any change in the magnetization during the cantilever
+motion. In this approximation</p>
+<div class="math notranslate nohighlight" id="equation-eq-smalltipdf2">
+<span class="eqno">(5)<a class="headerlink" href="#equation-eq-smalltipdf2" title="Link to this equation">#</a></span>\[\Delta f = \frac{f}{2 \pi k x_{\mathrm{pk}}^2} \sum_j
+\int_{-\pi}^{\pi}
+    \mu_z(\vec{r}_j)
+        \left(
+            \frac{\partial B_z^{\mathrm{tip}}(x,y,z)}{\partial x}
+            - x_{\mathrm{pk}}
+            \cos{\theta} \: \frac{\partial^2
+            B_z^{\mathrm{tip}}(x,y,z)}{\partial x^2}
+        \right)
+    \: x_{\mathrm{pk}} \cos{\theta}
+\: d\theta\]</div>
+<p>There are two terms. The first term is</p>
+<div class="math notranslate nohighlight">
+\[\Delta f^{(1)} = \frac{f}{2 \pi k x_{\mathrm{pk}}} \sum_j \mu_z(\vec{r}_j)
+\frac{\partial B_z^{\mathrm{tip}}(x,y,z)}{\partial x}
+\int_{-\pi}^{\pi} \cos{\theta} \: d\theta\]</div>
+<p>We are interested in experiments in the SPAM geometry and the
+“hangdown” geometry. The geometries are shown in doc <a class="reference internal" href="geometry.html"><span class="doc">Experiment geometry</span></a>.
+In both cases, the first term vanishes: the sum
+over sample spins is zero since the gradient is positive and negative
+over the sensitive slice. Moreover, the integral over <span class="math notranslate nohighlight">\(\theta\)</span> is zero.
+The second term in Eq. <a class="reference internal" href="#equation-eq-smalltipdf2">(5)</a> is</p>
+<div class="math notranslate nohighlight">
+\[\Delta f^{(2)} = - \frac{f}{2 k} \sum_j \mu_z(\vec{r}_j)
+\frac{\partial^2 B_z^{\mathrm{tip}}(x,y,z)}{\partial x^2}
+\underbrace{\frac{1}{\pi} \int_{-\pi}^{\pi} \cos^2{\theta} \:
+d\theta}_{= 1}\]</div>
+<p>which simplifies to the large-tip result, Eq. <a class="reference internal" href="#equation-eq-largetipdf">(1)</a>,</p>
+<div class="math notranslate nohighlight">
+\[\Delta f^{(2)} = - \frac{f}{2 k}
+\sum_j \mu_z(\vec{r}_j) \frac{\partial^2
+B_z^{\mathrm{tip}}(x,y,z)}{\partial x^2}\]</div>
+<p>We see from this derivation that the validity of Eq. <a class="reference internal" href="#equation-eq-largetipdf">(1)</a> rests
+on the validity of the approximation in Eq. <a class="reference internal" href="#equation-eq-expansion">(4)</a>.  According to
+Eq. <a class="reference internal" href="#equation-eq-expansion">(4)</a>, for Eq. <a class="reference internal" href="#equation-eq-largetipdf">(1)</a> to be valid, the change in
+the gradient experienced by any spin in the sample should be strictly linear
+in the cantilever amplitude.  This is not true for a large-amplitude
+motion of the cantilever.</p>
+<p>Let us rewrite Eq. <a class="reference internal" href="#equation-eq-smalltipdf">(3)</a> by</p>
+<ol class="arabic simple">
+<li><p>assuming that the magnetization distribution is in steady-state,</p></li>
+<li><p>writing the frequency shift in terms of an equivalent spring constant shift,</p></li>
+<li><p>expressing the result in terms of an equivalent force.</p></li>
+</ol>
+<p>We showed in Ref. <a class="footnote-reference brackets" href="#lee2012apra" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> that maximizing this equivalent force
+will maximize the signal-to-noise ratio in a frequency-shift experiment. In
+terms of a force, the ESR-CERMIT signal is</p>
+<div class="math notranslate nohighlight" id="equation-eq-smalltipd-f">
+<span class="eqno">(6)<a class="headerlink" href="#equation-eq-smalltipd-f" title="Link to this equation">#</a></span>\[\Delta F = \Delta k \: x_{\mathrm{pk}} = \frac{2}{\pi} \sum_j
+\int_{0}^{\pi}
+    \mu_z(\vec{r}_j)
+    \: \frac{\partial B_z^{\mathrm{tip}}(x - x_{\mathrm{pk}}
+         \cos{\theta},y,z)}{\partial x}
+    \: \cos{\theta}
+\: d\theta\]</div>
+<p>In writing Eq. <a class="reference internal" href="#equation-eq-smalltipd-f">(6)</a> we have condensed the integral to a half
+cycle of the cantilever oscillation. In the integrand, the position variable
+<span class="math notranslate nohighlight">\(x(\theta) = x - x_{\mathrm{pk}} \cos{\theta}\)</span> runs from <span class="math notranslate nohighlight">\(x -
+x_{\mathrm{pk}}\)</span> to <span class="math notranslate nohighlight">\(x + x_{\mathrm{pk}}\)</span> as <span class="math notranslate nohighlight">\(\theta\)</span> runs from
+<span class="math notranslate nohighlight">\(0\)</span> to <span class="math notranslate nohighlight">\(\pi\)</span>.  In the steady-state approximation, the spin
+distribution <span class="math notranslate nohighlight">\(\mu_z(\vec{r}_j)\)</span> in Eq. <a class="reference internal" href="#equation-eq-smalltipd-f">(6)</a> is
+determined in the same way as in the large-tip experiment.</p>
+<p>Eric Moore and co-workers previously implemented Eqs. <a class="reference internal" href="#equation-eq-smalltipdf">(3)</a> and
+<a class="reference internal" href="#equation-eq-smalltipd-f">(6)</a> to calculate the ESR-MRFM signal from a single spin.
+<a class="footnote-reference brackets" href="#lee2012apra" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#moore2009" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
+<p>And to simulate the amplitude dependence of the
+signal from a single slice whose magnetization has been inverted <em>via</em> an
+adiabatic rapid passage. <a class="footnote-reference brackets" href="#moore2009dec" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<p class="rubric">References</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="moore2009dec" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">1</a><span class="fn-bracket">]</span></span>
+<p>Moore, E. W.; Lee, S.-G.; Hickman, S. A.; Wright, S. J.;
+Harrell, L. E.; Borbat, P. P.; Freed, J. H. &amp; Marohn, J. A. “Scanned-Probe
+Detection of Electron Spin Resonance from a Nitroxide Spin Probe”, <em>Proc.
+Natl. Acad. Sci. U.S.A.</em>, <strong>2009</strong>, <em>106</em>, 22251 - 22256
+[<a class="reference external" href="http://doi.org/10.1073/pnas.0908120106">10.1073/pnas.0908120106</a>].</p>
+</aside>
+<aside class="footnote brackets" id="moore2009" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">2</a><span class="fn-bracket">]</span></span>
+<p>Moore, E. W. &amp; Marohn, J. A. <em>Unpublished calculation</em>,
+<strong>2009</strong>.</p>
+</aside>
+<aside class="footnote brackets" id="lee2012apra" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id3">2</a>,<a role="doc-backlink" href="#id6">3</a>,<a role="doc-backlink" href="#id7">4</a>)</span>
+<p>Lee, S.-G.; Moore, E. W. &amp; Marohn, J. A. “A Unified Picture
+of Cantilever Frequency-Shift Measurements of Magnetic Resonance”,
+<em>Phys. Rev. B</em>, <strong>2012</strong>, <em>85</em>, 165447
+[<a class="reference external" href="http://doi.org/10.1103/PhysRevB.85.165447">10.1103/PhysRevB.85.165447</a>].</p>
+</aside>
+<aside class="footnote brackets" id="lee2012note" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
+<p>Equation 20 in Lee <em>et al.</em> <strong>2012</strong> is off by a factor of
+<span class="math notranslate nohighlight">\(-1\)</span>.  We give the correct equation above.</p>
+</aside>
+<aside class="footnote brackets" id="rugar2004jul" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">5</a><span class="fn-bracket">]</span></span>
+<p>Rugar, D.; Budakian, R.; Mamin, H. J. &amp; Chui, B. W. “Single
+Spin Detection by Magnetic Resonance Force Microscopy”, <em>Nature</em>, <strong>2004</strong>
+, <em>430</em>, 329 - 332
+[<a class="reference external" href="http://dx.doi.org/10.1038/nature02658">10.1038/nature02658</a>].</p>
+</aside>
+<aside class="footnote brackets" id="garner2004jun" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">6</a><span class="fn-bracket">]</span></span>
+<p>Garner, S. R.; Kuehn, S.; Dawlaty, J. M.; Jenkins, N. E. &amp;
+Marohn, J. A.  “Force-Gradient Detected Nuclear Magnetic Resonance” <em>Appl.
+Phys. Lett.</em>, <strong>2004</strong>, <em>84</em>, 5091 - 5093
+[<a class="reference external" href="http://dx.doi.org/10.1063/1.1762700">10.1063/1.1762700</a>].</p>
+</aside>
+</aside>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="geometry.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Experiment geometry</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="spin_count.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Sample spin distribution</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#large-tip-small-amplitude-limit">Large tip - small amplitude limit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#small-tip-large-amplitude-limit">Small tip - large amplitude limit</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Peter Sun
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

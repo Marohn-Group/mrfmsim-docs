@@ -1,50 +1,53 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mrfmsim.modifier &#8212; mrfmsim 0.2.0 documentation</title>
+    <title>mrfmsim.modifier &#8212; mrfmsim 0.3.0 documentation</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
   
-  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css" />
-  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js"></script>
+    <script src="../../_static/documentation_options.js?v=83a61292"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_modules/mrfmsim/modifier';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -52,31 +55,16 @@
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -84,7 +72,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -92,10 +79,15 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -106,7 +98,8 @@
       
         
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -121,6 +114,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../../index.html">
   
@@ -129,50 +124,61 @@
   
   
   
-    <p class="title logo__title">mrfmsim 0.2.0 documentation</p>
+    <p class="title logo__title">mrfmsim 0.3.0 documentation</p>
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <ul class="nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim overview</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../features.html">Plugin features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tests.html">Tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Experiment Setup</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim basics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../coordinates.html">Coordinates</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sample.html">Sample</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../grid.html">Grid</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../magnet.html">Magnet</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../cantilever.html">Cantilever</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/inheritance.html"><em>mrfmsim</em> custom classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/component.html">Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/modifier.html">Modifiers and shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/plugin.html">Plugins</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Experiment</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment basics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../experiment.html">Experiment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../collection.html">Collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/cermit_protocol.html">CERMIT protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/geometry.html">Experiment geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/tip_size.html">Tip size: small tip vs. large tip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/spin_count.html">Sample spin distribution</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Experiment Modification</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment Setups</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../ref_modifier.html">Modifier</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../ref_shortcut.html">Shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../setup/coordinates.html">Coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../setup/sample.html">Sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../setup/grid.html">Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../setup/magnet.html">Magnet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../setup/cantilever.html">Cantilever</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiments</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../api_plugin.html">Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api_component.html">Component</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api_configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../experiment/IBMCyclic.html">IBM cyclic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../experiment/CermitSat.html">CERMIT steady-state saturation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../experiment/CermitTD.html">CERMIT time dependent offset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../experiment/CermitARP.html">CERMIT adiabatic rapid passage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../experiment/CermitSingleSpin.html">CERMIT single spin</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">references</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../reference/ref_magnetization.html">Equilibrium magnetization and variance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/ref_polarization.html">Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/ref_field.html">Magnetic field</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/ref_math.html">Mathematical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/ref_misc.html">Miscellaneous</a></li>
 </ul>
 
     </div>
@@ -181,14 +187,19 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -197,14 +208,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -232,24 +243,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 
 </div></div>
       
@@ -276,151 +279,137 @@ document.write(`
                 <article class="bd-article">
                   
   <h1>Source code for mrfmsim.modifier</h1><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">mmodel.utility</span> <span class="kn">import</span> <span class="n">param_sorter</span>
-<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
-<span class="kn">import</span> <span class="nn">numba</span> <span class="k">as</span> <span class="nn">nb</span>
-<span class="kn">from</span> <span class="nn">inspect</span> <span class="kn">import</span> <span class="n">Parameter</span><span class="p">,</span> <span class="n">signature</span><span class="p">,</span> <span class="n">Signature</span>
-<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pformat</span>
-<span class="kn">from</span> <span class="nn">string</span> <span class="kn">import</span> <span class="n">Formatter</span>
-<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+<span></span><span class="kn">from</span><span class="w"> </span><span class="nn">mmodel.utility</span><span class="w"> </span><span class="kn">import</span> <span class="n">param_sorter</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">functools</span><span class="w"> </span><span class="kn">import</span> <span class="n">wraps</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numba</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nb</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">inspect</span><span class="w"> </span><span class="kn">import</span> <span class="n">Parameter</span><span class="p">,</span> <span class="n">signature</span><span class="p">,</span> <span class="n">Signature</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pprint</span><span class="w"> </span><span class="kn">import</span> <span class="n">pformat</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">copy</span><span class="w"> </span><span class="kn">import</span> <span class="n">deepcopy</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">mmodel</span>
 
 
-<div class="viewcode-block" id="replace_component"><a class="viewcode-back" href="../../ref_modifier.html#mrfmsim.modifier.replace_component">[docs]</a><span class="k">def</span> <span class="nf">replace_component</span><span class="p">(</span><span class="n">replacement</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+<div class="viewcode-block" id="replace_component">
+<a class="viewcode-back" href="../../basic/modifier.html#mrfmsim.modifier.replace_component">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">replace_component</span><span class="p">(</span><span class="n">replacement</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">allow_duplicate</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Modify the signature with components.</span>
 
 <span class="sd">    The modifier modifies the internal model function. The wrapper</span>
-<span class="sd">    function is keyword-only.</span>
+<span class="sd">    function is keyword-only. The function by default does not</span>
+<span class="sd">    allow duplicated signature. If we want to replace several</span>
+<span class="sd">    attributes with a component, the component name cannot exist</span>
+<span class="sd">    in the original signature. For example, if we have a function</span>
 
-<span class="sd">    :param dict[list | str] replacement: in the format of</span>
-<span class="sd">        {component: [[original, replacement], original ...}</span>
+<span class="sd">        def func(a, b, obj):</span>
+<span class="sd">            return a + b, obj</span>
+
+<span class="sd">    and we want to replace a and b with a component, we cannot</span>
+<span class="sd">    name the component &quot;obj&quot;.</span>
+
+<span class="sd">    In rares that we do want to replace a, b with a component,</span>
+
+<span class="sd">        def func(obj):</span>
+<span class="sd">            return obj.a + obj.b, obj</span>
+
+<span class="sd">        func(obj=obj)</span>
+
+<span class="sd">    we would have to use &quot;obj_obj&quot; as the component name. The</span>
+<span class="sd">    result function is equivalent to</span>
+
+<span class="sd">        def func(obj_obj, obj):</span>
+<span class="sd">            return obj_obj.a + obj_obj.b + obj</span>
+
+<span class="sd">        func(obj_obj=obj, obj=obj)</span>
+
+<span class="sd">    The behavior is very confusing to users. The solution is to</span>
+<span class="sd">    replace the components, but leave the original &quot;obj&quot; signature</span>
+<span class="sd">    as it is. In the final signature, the duplicated signatures</span>
+<span class="sd">    are combined into one. The solution here is to add a boolean</span>
+<span class="sd">    flag allow_duplicate. If the flag is set to True, the function</span>
+<span class="sd">    allows duplicated signatures.</span>
+
+<span class="sd">    The solution, however, leaves another ambiguity. If we indeed</span>
+<span class="sd">    want to replace the component with the same name, but use</span>
+<span class="sd">    the original name with an attribute:</span>
+
+<span class="sd">        def func(obj):</span>
+<span class="sd">            return obj.a + obj.b, obj.obj</span>
+
+<span class="sd">        func(obj=obj)</span>
+
+<span class="sd">    We have decided that this behavior is not allowed regardless the flag.</span>
+<span class="sd">    Because in this case, in an inspection attempt, it is confusing to</span>
+<span class="sd">    understand if the obj is the original obj or an attribute to the new obj.</span>
+<span class="sd">    In this case, a new object name should be used.</span>
+
+<span class="sd">    :param dict[str] replacement: in the format of</span>
+<span class="sd">        {component_object: [replacement_attribute1, replacement_attribute2, ...]}</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">modifier</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">modifier</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
         <span class="n">sig</span> <span class="o">=</span> <span class="n">signature</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
         <span class="n">params</span> <span class="o">=</span> <span class="n">sig</span><span class="o">.</span><span class="n">parameters</span>  <span class="c1"># immutable</span>
 
         <span class="n">new_params_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>  <span class="c1"># mutable</span>
         <span class="n">replacement_dict</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">comp</span><span class="p">,</span> <span class="n">rep_list</span> <span class="ow">in</span> <span class="n">replacement</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-            <span class="k">assert</span> <span class="p">(</span>
-                <span class="n">comp</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">params</span>
-            <span class="p">),</span> <span class="sa">f</span><span class="s2">&quot;Parameter </span><span class="si">{</span><span class="nb">repr</span><span class="p">(</span><span class="n">comp</span><span class="p">)</span><span class="si">}</span><span class="s2"> is already in the signature.&quot;</span>
-            <span class="n">new_params_dict</span><span class="p">[</span><span class="n">comp</span><span class="p">]</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">(</span><span class="n">comp</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
-            <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">rep_list</span><span class="p">:</span>
-                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-                    <span class="n">attr</span> <span class="o">=</span> <span class="n">element</span>
-                    <span class="n">replacement_dict</span><span class="p">[</span><span class="n">comp</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">attr</span><span class="p">,</span> <span class="n">attr</span><span class="p">))</span>
-                <span class="k">else</span><span class="p">:</span>
-                    <span class="n">attr</span> <span class="o">=</span> <span class="n">element</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-                    <span class="n">replacement_dict</span><span class="p">[</span><span class="n">comp</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
-                <span class="n">new_params_dict</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="c1"># in the event that the duplication is allowed</span>
+        <span class="c1"># and the component is already in the signature</span>
+        <span class="c1"># the list is maintained for the wrapped function</span>
+        <span class="n">duplicated_copmp</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">comp</span><span class="p">,</span> <span class="n">rep_attrs</span> <span class="ow">in</span> <span class="n">replacement</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">allow_duplicate</span><span class="p">:</span>
+                <span class="c1"># check duplication last</span>
+                <span class="k">assert</span> <span class="p">(</span>
+                    <span class="n">comp</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">params</span>
+                <span class="p">),</span> <span class="sa">f</span><span class="s2">&quot;parameter </span><span class="si">{</span><span class="nb">repr</span><span class="p">(</span><span class="n">comp</span><span class="p">)</span><span class="si">}</span><span class="s2"> already in the signature&quot;</span>
+
+            <span class="k">elif</span> <span class="n">comp</span> <span class="ow">in</span> <span class="n">params</span><span class="p">:</span>
+                <span class="n">duplicated_copmp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">comp</span><span class="p">)</span>
+            <span class="c1"># new_params_dict[comp] = Parameter(comp, 1)</span>
+
+            <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">rep_attrs</span><span class="p">:</span>
+                <span class="c1"># check attr</span>
+                <span class="c1"># the error is related to the component dictionary</span>
+                <span class="c1"># definition, regardless of the target function signature</span>
+                <span class="k">if</span> <span class="n">attr</span> <span class="o">==</span> <span class="n">comp</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">&quot;attribute name cannot be the same as component </span><span class="si">{</span><span class="nb">repr</span><span class="p">(</span><span class="n">comp</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+                    <span class="p">)</span>
+                <span class="k">if</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">params</span><span class="p">:</span>
+                    <span class="n">replacement_dict</span><span class="p">[</span><span class="n">comp</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">attr</span><span class="p">)</span>
+                    <span class="n">new_params_dict</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+                    <span class="c1"># overwrite if duplicated</span>
+                    <span class="n">new_params_dict</span><span class="p">[</span><span class="n">comp</span><span class="p">]</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">(</span><span class="n">comp</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
         <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
-        <span class="k">def</span> <span class="nf">wrapped</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-            <span class="k">for</span> <span class="n">comp</span><span class="p">,</span> <span class="n">rep_list</span> <span class="ow">in</span> <span class="n">replacement_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-                <span class="n">comp_obj</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">comp</span><span class="p">)</span>
-                <span class="k">for</span> <span class="n">param</span><span class="p">,</span> <span class="n">repl</span> <span class="ow">in</span> <span class="n">rep_list</span><span class="p">:</span>
-                    <span class="n">kwargs</span><span class="p">[</span><span class="n">param</span><span class="p">]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">comp_obj</span><span class="p">,</span> <span class="n">repl</span><span class="p">)</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">wrapped</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">comp</span><span class="p">,</span> <span class="n">rep_attrs</span> <span class="ow">in</span> <span class="n">replacement_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="k">if</span> <span class="n">comp</span> <span class="ow">in</span> <span class="n">duplicated_copmp</span><span class="p">:</span>
+                    <span class="n">comp_obj</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="n">comp</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">comp_obj</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">comp</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">rep_attrs</span><span class="p">:</span>
+                    <span class="n">kwargs</span><span class="p">[</span><span class="n">attr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">comp_obj</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
 
             <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
         <span class="n">wrapped</span><span class="o">.</span><span class="n">__signature__</span> <span class="o">=</span> <span class="n">Signature</span><span class="p">(</span>
             <span class="n">parameters</span><span class="o">=</span><span class="nb">sorted</span><span class="p">(</span><span class="n">new_params_dict</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="n">param_sorter</span><span class="p">)</span>
         <span class="p">)</span>
+        <span class="c1"># deepcopy to prevent modification</span>
+        <span class="n">wrapped</span><span class="o">.</span><span class="n">param_replacements</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">replacement_dict</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">wrapped</span>
 
     <span class="n">modifier</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;replace_component(</span><span class="si">{</span><span class="n">pformat</span><span class="p">(</span><span class="n">replacement</span><span class="p">)</span><span class="si">}</span><span class="s2">)&quot;</span>
     <span class="k">return</span> <span class="n">modifier</span></div>
 
 
-<div class="viewcode-block" id="parse_fields"><a class="viewcode-back" href="../../ref_modifier.html#mrfmsim.modifier.parse_fields">[docs]</a><span class="k">def</span> <span class="nf">parse_fields</span><span class="p">(</span><span class="n">format_str</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Parse the field from the format string.</span>
 
-<span class="sd">    :param str format_str: format string</span>
-<span class="sd">    :return: list of fields</span>
-
-<span class="sd">    The function parses out the field names in the format string.</span>
-<span class="sd">    Some field names have slicers or attribute access, such as</span>
-<span class="sd">    B0.value, B0[0], B0[0:2]. The function only returns B0 for all</span>
-<span class="sd">    these fields. Since there can be duplicated fields after the</span>
-<span class="sd">    name split, the function returns unique elements.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="c1"># this is a internal function for Formatter</span>
-    <span class="c1"># consider rewrite with custom function to prevent breaking</span>
-    <span class="c1"># the function ignores slicing and attribute access</span>
-    <span class="c1"># B0.value -&gt; B0, B0[0] -&gt; B0</span>
-    <span class="kn">from</span> <span class="nn">_string</span> <span class="kn">import</span> <span class="n">formatter_field_name_split</span>
-
-    <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span>
-        <span class="n">formatter_field_name_split</span><span class="p">(</span><span class="n">field</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-        <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">Formatter</span><span class="p">()</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">format_str</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">field</span>
-    <span class="p">]</span>
-    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">fields</span><span class="p">))</span>  <span class="c1"># return unique elements</span></div>
-
-
-<div class="viewcode-block" id="print_inputs"><a class="viewcode-back" href="../../ref_modifier.html#mrfmsim.modifier.print_inputs">[docs]</a><span class="k">def</span> <span class="nf">print_inputs</span><span class="p">(</span><span class="n">stdout_format</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">**</span><span class="n">pargs</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Print the node input to the console.</span>
-
-<span class="sd">    :param str stdout_format: format string for input and output</span>
-<span class="sd">        The format should be keyword only.</span>
-<span class="sd">    :param pargs: keyword arguments for the print function</span>
-
-<span class="sd">    The names of the parameters are parsed from the format string.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="k">def</span> <span class="nf">stdout_inputs_modifier</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-        <span class="n">inputs</span> <span class="o">=</span> <span class="n">parse_fields</span><span class="p">(</span><span class="n">stdout_format</span><span class="p">)</span>
-
-        <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
-        <span class="k">def</span> <span class="nf">wrapped</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="w">            </span><span class="sd">&quot;&quot;&quot;Print input parameter.&quot;&quot;&quot;</span>
-            <span class="n">input_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">kwargs</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">inputs</span><span class="p">}</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">stdout_format</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">input_dict</span><span class="p">),</span> <span class="o">**</span><span class="n">pargs</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-        <span class="k">return</span> <span class="n">wrapped</span>
-
-    <span class="n">params</span> <span class="o">=</span> <span class="p">[</span><span class="nb">repr</span><span class="p">(</span><span class="n">stdout_format</span><span class="p">)]</span> <span class="o">+</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">=</span><span class="si">{</span><span class="nb">repr</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">pargs</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
-    <span class="n">stdout_inputs_modifier</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;print_inputs(</span><span class="si">{</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">params</span><span class="p">)</span><span class="si">}</span><span class="s2">)&quot;</span>
-    <span class="k">return</span> <span class="n">stdout_inputs_modifier</span></div>
-
-
-<div class="viewcode-block" id="print_output"><a class="viewcode-back" href="../../ref_modifier.html#mrfmsim.modifier.print_output">[docs]</a><span class="k">def</span> <span class="nf">print_output</span><span class="p">(</span><span class="n">stdout_format</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">**</span><span class="n">pargs</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Print the node output to the console.</span>
-
-<span class="sd">    :param str stdout_format: format string for input and output</span>
-<span class="sd">        The format should be keyword only. The behavior is for keeping the</span>
-<span class="sd">        consistency with other print modifiers.</span>
-<span class="sd">    :param str end: end of printout</span>
-
-<span class="sd">    The names of the parameters are parsed from the format string. The</span>
-<span class="sd">    use of the stdout_format is different from the input method, as</span>
-<span class="sd">    the modifiers do not know the return name of the node. Only one</span>
-<span class="sd">    output field is allowed and the field name is used as the return name.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="k">def</span> <span class="nf">stdout_output_modifier</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-        <span class="n">output</span> <span class="o">=</span> <span class="n">parse_fields</span><span class="p">(</span><span class="n">stdout_format</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-
-        <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
-        <span class="k">def</span> <span class="nf">wrapped</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="w">            </span><span class="sd">&quot;&quot;&quot;Print output parameter.&quot;&quot;&quot;</span>
-
-            <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">stdout_format</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="p">{</span><span class="n">output</span><span class="p">:</span> <span class="n">result</span><span class="p">}),</span> <span class="o">**</span><span class="n">pargs</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">result</span>
-
-        <span class="k">return</span> <span class="n">wrapped</span>
-
-    <span class="n">params</span> <span class="o">=</span> <span class="p">[</span><span class="nb">repr</span><span class="p">(</span><span class="n">stdout_format</span><span class="p">)]</span> <span class="o">+</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">=</span><span class="si">{</span><span class="nb">repr</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">pargs</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
-    <span class="n">stdout_output_modifier</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;print_output(</span><span class="si">{</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">params</span><span class="p">)</span><span class="si">}</span><span class="s2">)&quot;</span>
-    <span class="k">return</span> <span class="n">stdout_output_modifier</span></div>
-
-
-<div class="viewcode-block" id="numba_jit"><a class="viewcode-back" href="../../ref_modifier.html#mrfmsim.modifier.numba_jit">[docs]</a><span class="k">def</span> <span class="nf">numba_jit</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="numba_jit">
+<a class="viewcode-back" href="../../basic/modifier.html#mrfmsim.modifier.numba_jit">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">numba_jit</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Numba jit modifier with keyword arguments.</span>
 
 <span class="sd">    Add metadata to numba.jit. The numba decorator outputs</span>
@@ -428,13 +417,13 @@ document.write(`
 <span class="sd">    Use the decorator the same way as numba.jit().</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="nd">@mmodel</span><span class="o">.</span><span class="n">modifier</span><span class="o">.</span><span class="n">add_modifier_metadata</span><span class="p">(</span><span class="s2">&quot;numba_jit&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
         <span class="n">func</span> <span class="o">=</span> <span class="n">nb</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)(</span><span class="n">func</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">func</span>
 
-    <span class="n">meta</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">=</span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
-    <span class="n">decorator</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;numba_jit(</span><span class="si">{</span><span class="n">meta</span><span class="si">}</span><span class="s2">)&quot;</span>
     <span class="k">return</span> <span class="n">decorator</span></div>
+
 </pre></div>
 
                 </article>
@@ -444,7 +433,7 @@ document.write(`
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
 </div>
@@ -453,8 +442,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"></div>
               
             
           </div>
@@ -472,13 +459,6 @@ By Peter Sun
   
   <div class="footer-item">
     
-
-  <p class="copyright">
-    
-      © Copyright 2023 - 2024, Peter Sun.
-      <br/>
-    
-  </p>
 
   </div>
   
@@ -499,8 +479,8 @@ By Peter Sun
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

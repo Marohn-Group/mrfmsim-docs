@@ -1,50 +1,53 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; mrfmsim 0.2.0 documentation</title>
+    <title>Index &#8212; mrfmsim 0.3.0 documentation</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
   
-  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
-  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script src="_static/documentation_options.js?v=83a61292"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
     <link rel="index" title="Index" href="#" />
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -52,31 +55,16 @@
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -84,7 +72,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -92,10 +79,15 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -106,7 +98,8 @@
       
         
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -121,6 +114,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="index.html">
   
@@ -129,50 +124,61 @@
   
   
   
-    <p class="title logo__title">mrfmsim 0.2.0 documentation</p>
+    <p class="title logo__title">mrfmsim 0.3.0 documentation</p>
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <ul class="nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim overview</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="features.html">Plugin features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tests.html">Tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Experiment Setup</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim basics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="coordinates.html">Coordinates</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">Sample</a></li>
-<li class="toctree-l1"><a class="reference internal" href="grid.html">Grid</a></li>
-<li class="toctree-l1"><a class="reference internal" href="magnet.html">Magnet</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cantilever.html">Cantilever</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic/inheritance.html"><em>mrfmsim</em> custom classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic/component.html">Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic/modifier.html">Modifiers and shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic/plugin.html">Plugins</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Experiment</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment basics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="experiment.html">Experiment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="collection.html">Collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic/cermit_protocol.html">CERMIT protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic/geometry.html">Experiment geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic/tip_size.html">Tip size: small tip vs. large tip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic/spin_count.html">Sample spin distribution</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Experiment Modification</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment Setups</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="ref_modifier.html">Modifier</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ref_shortcut.html">Shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup/coordinates.html">Coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup/sample.html">Sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup/grid.html">Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup/magnet.html">Magnet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup/cantilever.html">Cantilever</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiments</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="api_plugin.html">Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api_component.html">Component</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api_configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiment/IBMCyclic.html">IBM cyclic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiment/CermitSat.html">CERMIT steady-state saturation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiment/CermitTD.html">CERMIT time dependent offset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiment/CermitARP.html">CERMIT adiabatic rapid passage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiment/CermitSingleSpin.html">CERMIT single spin</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">references</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="reference/ref_magnetization.html">Equilibrium magnetization and variance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/ref_polarization.html">Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/ref_field.html">Magnetic field</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/ref_math.html">Mathematical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/ref_misc.html">Miscellaneous</a></li>
 </ul>
 
     </div>
@@ -181,14 +187,19 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -197,14 +208,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -232,24 +243,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 
 </div></div>
       
@@ -279,7 +282,8 @@ document.write(`
 <h1 id="index">Index</h1>
 
 <div class="genindex-jumpbox">
- <a href="#B"><strong>B</strong></a>
+ <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
  | <a href="#C"><strong>C</strong></a>
  | <a href="#D"><strong>D</strong></a>
  | <a href="#E"><strong>E</strong></a>
@@ -287,39 +291,45 @@ document.write(`
  | <a href="#G"><strong>G</strong></a>
  | <a href="#I"><strong>I</strong></a>
  | <a href="#J"><strong>J</strong></a>
- | <a href="#L"><strong>L</strong></a>
  | <a href="#M"><strong>M</strong></a>
  | <a href="#N"><strong>N</strong></a>
- | <a href="#O"><strong>O</strong></a>
- | <a href="#P"><strong>P</strong></a>
  | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
  | <a href="#T"><strong>T</strong></a>
- | <a href="#V"><strong>V</strong></a>
- | <a href="#Y"><strong>Y</strong></a>
+ | <a href="#X"><strong>X</strong></a>
  
 </div>
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/ref_math.html#mrfmsim.formula.math.as_strided_x">as_strided_x() (in module mrfmsim.formula.math)</a>
+</li>
+  </ul></td>
+</tr></table>
+
 <h2 id="B">B</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="magnet.html#mrfmsim.component.magnet.RectangularMagnet.Bz_method">Bz_method() (mrfmsim.component.magnet.RectangularMagnet method)</a>
-
-      <ul>
-        <li><a href="magnet.html#mrfmsim.component.magnet.SphereMagnet.Bz_method">(mrfmsim.component.magnet.SphereMagnet method)</a>
+      <li><a href="reference/ref_field.html#mrfmsim.formula.field.B_offset">B_offset() (in module mrfmsim.formula.field)</a>
 </li>
-      </ul></li>
-      <li><a href="magnet.html#mrfmsim.component.magnet.RectangularMagnet.Bzx_method">Bzx_method() (mrfmsim.component.magnet.RectangularMagnet method)</a>
+      <li><a href="setup/magnet.html#mrfmsim.component.magnet.RectangularMagnet.Bz_method">Bz_method() (mrfmsim.component.magnet.RectangularMagnet method)</a>
 
       <ul>
-        <li><a href="magnet.html#mrfmsim.component.magnet.SphereMagnet.Bzx_method">(mrfmsim.component.magnet.SphereMagnet method)</a>
+        <li><a href="setup/magnet.html#mrfmsim.component.magnet.SphereMagnet.Bz_method">(mrfmsim.component.magnet.SphereMagnet method)</a>
 </li>
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="magnet.html#mrfmsim.component.magnet.RectangularMagnet.Bzxx_method">Bzxx_method() (mrfmsim.component.magnet.RectangularMagnet method)</a>
+      <li><a href="setup/magnet.html#mrfmsim.component.magnet.RectangularMagnet.Bzx_method">Bzx_method() (mrfmsim.component.magnet.RectangularMagnet method)</a>
 
       <ul>
-        <li><a href="magnet.html#mrfmsim.component.magnet.SphereMagnet.Bzxx_method">(mrfmsim.component.magnet.SphereMagnet method)</a>
+        <li><a href="setup/magnet.html#mrfmsim.component.magnet.SphereMagnet.Bzx_method">(mrfmsim.component.magnet.SphereMagnet method)</a>
+</li>
+      </ul></li>
+      <li><a href="setup/magnet.html#mrfmsim.component.magnet.RectangularMagnet.Bzxx_method">Bzxx_method() (mrfmsim.component.magnet.RectangularMagnet method)</a>
+
+      <ul>
+        <li><a href="setup/magnet.html#mrfmsim.component.magnet.SphereMagnet.Bzxx_method">(mrfmsim.component.magnet.SphereMagnet method)</a>
 </li>
       </ul></li>
   </ul></td>
@@ -328,11 +338,21 @@ document.write(`
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="cantilever.html#mrfmsim.component.cantilever.Cantilever">Cantilever (class in mrfmsim.component.cantilever)</a>
+      <li><a href="setup/cantilever.html#mrfmsim.component.cantilever.Cantilever">Cantilever (class in mrfmsim.component.cantilever)</a>
+</li>
+      <li><a href="tests.html#tests.test_experiment.test_cermitesr.cantilever">cantilever() (in module tests.test_experiment.test_cermitesr)</a>
+</li>
+      <li><a href="experiment/CermitARP.html#mrfmsim.experiment.CermitARPGroup">CermitARPGroup (in module mrfmsim.experiment)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api_configuration.html#mrfmsim.configuration.collection_constructor">collection_constructor() (in module mrfmsim.configuration)</a>
+      <li><a href="experiment/CermitSat.html#mrfmsim.experiment.CermitESRGroup">CermitESRGroup (in module mrfmsim.experiment)</a>
+</li>
+      <li><a href="experiment/CermitSingleSpin.html#mrfmsim.experiment.CermitSingleSpinGroup">CermitSingleSpinGroup (in module mrfmsim.experiment)</a>
+</li>
+      <li><a href="experiment/CermitTD.html#mrfmsim.experiment.CermitTDGroup">CermitTDGroup (in module mrfmsim.experiment)</a>
+</li>
+      <li><a href="reference/ref_misc.html#mrfmsim.formula.misc.convert_grid_pts">convert_grid_pts() (in module mrfmsim.formula.misc)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -340,11 +360,11 @@ document.write(`
 <h2 id="D">D</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="sample.html#mrfmsim.component.sample.Sample.dB_hom">dB_hom (mrfmsim.component.sample.Sample attribute)</a>
+      <li><a href="setup/sample.html#mrfmsim.component.sample.Sample.dB_hom">dB_hom (mrfmsim.component.sample.Sample attribute)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="sample.html#mrfmsim.component.sample.Sample.dB_sat">dB_sat (mrfmsim.component.sample.Sample attribute)</a>
+      <li><a href="setup/sample.html#mrfmsim.component.sample.Sample.dB_sat">dB_sat (mrfmsim.component.sample.Sample attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -352,13 +372,11 @@ document.write(`
 <h2 id="E">E</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api_configuration.html#mrfmsim.configuration.experiment_constructor">experiment_constructor() (in module mrfmsim.configuration)</a>
+      <li><a href="setup/grid.html#mrfmsim.component.grid.Grid.extend_grid_by_length">extend_grid_by_length() (mrfmsim.component.grid.Grid method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="grid.html#mrfmsim.component.grid.Grid.extend_grid_by_length">extend_grid_by_length() (mrfmsim.component.grid.Grid method)</a>
-</li>
-      <li><a href="grid.html#mrfmsim.component.grid.Grid.extend_grid_by_points">extend_grid_by_points() (mrfmsim.component.grid.Grid method)</a>
+      <li><a href="setup/grid.html#mrfmsim.component.grid.Grid.extend_grid_by_points">extend_grid_by_points() (mrfmsim.component.grid.Grid method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -366,7 +384,7 @@ document.write(`
 <h2 id="F">F</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api_configuration.html#mrfmsim.configuration.func_multi_constructor">func_multi_constructor() (in module mrfmsim.configuration)</a>
+      <li><a href="reference/ref_field.html#mrfmsim.formula.field.field_func">field_func() (in module mrfmsim.formula.field)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -374,17 +392,29 @@ document.write(`
 <h2 id="G">G</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="sample.html#mrfmsim.component.sample.Sample.Gamma">Gamma (mrfmsim.component.sample.Sample attribute)</a>
+      <li><a href="setup/sample.html#mrfmsim.component.sample.Sample.Gamma">Gamma (mrfmsim.component.sample.Sample attribute)</a>
 </li>
-      <li><a href="api_configuration.html#mrfmsim.configuration.graph_constructor">graph_constructor() (in module mrfmsim.configuration)</a>
+      <li><a href="setup/grid.html#mrfmsim.component.grid.Grid">Grid (class in mrfmsim.component.grid)</a>
+</li>
+      <li><a href="tests.html#tests.test_experiment.test_cermitarp.TestCERMITARP.grid">grid() (tests.test_experiment.test_cermitarp.TestCERMITARP method)</a>
+</li>
+      <li><a href="setup/grid.html#mrfmsim.component.grid.Grid.grid_array">grid_array (mrfmsim.component.grid.Grid property)</a>
+</li>
+      <li><a href="setup/grid.html#mrfmsim.component.grid.Grid.grid_extents_method">grid_extents_method() (mrfmsim.component.grid.Grid static method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="grid.html#mrfmsim.component.grid.Grid">Grid (class in mrfmsim.component.grid)</a>
+      <li><a href="setup/grid.html#mrfmsim.component.grid.Grid.grid_length">grid_length (mrfmsim.component.grid.Grid attribute)</a>
 </li>
-      <li><a href="grid.html#mrfmsim.component.grid.Grid.grid_array">grid_array (mrfmsim.component.grid.Grid property)</a>
+      <li><a href="setup/grid.html#mrfmsim.component.grid.Grid.grid_origin">grid_origin (mrfmsim.component.grid.Grid attribute)</a>
 </li>
-      <li><a href="grid.html#mrfmsim.component.grid.Grid.grid_extents">grid_extents() (mrfmsim.component.grid.Grid static method)</a>
+      <li><a href="setup/grid.html#mrfmsim.component.grid.Grid.grid_range">grid_range (mrfmsim.component.grid.Grid attribute)</a>
+</li>
+      <li><a href="setup/grid.html#mrfmsim.component.grid.Grid.grid_shape">grid_shape (mrfmsim.component.grid.Grid attribute)</a>
+</li>
+      <li><a href="setup/grid.html#mrfmsim.component.grid.Grid.grid_step">grid_step (mrfmsim.component.grid.Grid attribute)</a>
+</li>
+      <li><a href="setup/grid.html#mrfmsim.component.grid.Grid.grid_voxel">grid_voxel (mrfmsim.component.grid.Grid attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -392,13 +422,7 @@ document.write(`
 <h2 id="I">I</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api_configuration.html#mrfmsim.configuration.import_constructor">import_constructor() (in module mrfmsim.configuration)</a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api_configuration.html#mrfmsim.configuration.import_multi_constructor">import_multi_constructor() (in module mrfmsim.configuration)</a>
-</li>
-      <li><a href="api_configuration.html#mrfmsim.configuration.import_object">import_object() (in module mrfmsim.configuration)</a>
+      <li><a href="experiment/IBMCyclic.html#mrfmsim.experiment.IBMCyclic">IBMCyclic (in module mrfmsim.experiment)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -406,25 +430,7 @@ document.write(`
 <h2 id="J">J</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="sample.html#mrfmsim.component.sample.Sample.J">J (mrfmsim.component.sample.Sample attribute)</a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="L">L</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="grid.html#mrfmsim.component.grid.Grid.length">length (mrfmsim.component.grid.Grid attribute)</a>
-
-      <ul>
-        <li><a href="magnet.html#mrfmsim.component.magnet.RectangularMagnet.length">(mrfmsim.component.magnet.RectangularMagnet attribute)</a>
-</li>
-      </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api_plugin.html#mrfmsim.plugin.load_plugins">load_plugins() (in module mrfmsim.plugin)</a>
-</li>
-      <li><a href="ref_shortcut.html#mrfmsim.shortcut.loop_shortcut">loop_shortcut() (in module mrfmsim.shortcut)</a>
+      <li><a href="setup/sample.html#mrfmsim.component.sample.Sample.J">J (mrfmsim.component.sample.Sample attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -432,137 +438,158 @@ document.write(`
 <h2 id="M">M</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="tests.html#tests.test_experiment.test_cermitarp.TestCERMITARP.magnet">magnet() (tests.test_experiment.test_cermitarp.TestCERMITARP method)</a>
+</li>
+      <li><a href="setup/magnet.html#mrfmsim.component.magnet.RectangularMagnet.magnet_length">magnet_length (mrfmsim.component.magnet.RectangularMagnet attribute)</a>
+</li>
+      <li><a href="setup/magnet.html#mrfmsim.component.magnet.RectangularMagnet.magnet_origin">magnet_origin (mrfmsim.component.magnet.RectangularMagnet attribute)</a>
+
+      <ul>
+        <li><a href="setup/magnet.html#mrfmsim.component.magnet.SphereMagnet.magnet_origin">(mrfmsim.component.magnet.SphereMagnet attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="setup/magnet.html#mrfmsim.component.magnet.SphereMagnet.magnet_radius">magnet_radius (mrfmsim.component.magnet.SphereMagnet attribute)</a>
+</li>
+      <li><a href="reference/ref_field.html#mrfmsim.formula.field.min_abs_offset">min_abs_offset() (in module mrfmsim.formula.field)</a>
+</li>
       <li>
     module
 
       <ul>
-        <li><a href="cantilever.html#module-mrfmsim.component.cantilever">mrfmsim.component.cantilever</a>
+        <li><a href="setup/cantilever.html#module-mrfmsim.component.cantilever">mrfmsim.component.cantilever</a>
 </li>
-        <li><a href="grid.html#module-mrfmsim.component.grid">mrfmsim.component.grid</a>
+        <li><a href="setup/grid.html#module-mrfmsim.component.grid">mrfmsim.component.grid</a>
 </li>
-        <li><a href="magnet.html#module-mrfmsim.component.magnet">mrfmsim.component.magnet</a>
+        <li><a href="setup/magnet.html#module-mrfmsim.component.magnet">mrfmsim.component.magnet</a>
 </li>
-        <li><a href="sample.html#module-mrfmsim.component.sample">mrfmsim.component.sample</a>
+        <li><a href="setup/sample.html#module-mrfmsim.component.sample">mrfmsim.component.sample</a>
 </li>
-        <li><a href="api_configuration.html#module-mrfmsim.configuration">mrfmsim.configuration</a>
+        <li><a href="reference/ref_field.html#module-mrfmsim.formula.field">mrfmsim.formula.field</a>
 </li>
-        <li><a href="experiment.html#module-mrfmsim.model.Experiment">mrfmsim.model.Experiment</a>
+        <li><a href="reference/ref_magnetization.html#module-mrfmsim.formula.magnetization">mrfmsim.formula.magnetization</a>
 </li>
-        <li><a href="ref_modifier.html#module-mrfmsim.modifier">mrfmsim.modifier</a>
+        <li><a href="reference/ref_math.html#module-mrfmsim.formula.math">mrfmsim.formula.math</a>
 </li>
-        <li><a href="api_plugin.html#module-mrfmsim.plugin">mrfmsim.plugin</a>
+        <li><a href="reference/ref_misc.html#module-mrfmsim.formula.misc">mrfmsim.formula.misc</a>
 </li>
-        <li><a href="ref_shortcut.html#module-mrfmsim.shortcut">mrfmsim.shortcut</a>
+        <li><a href="reference/ref_polarization.html#module-mrfmsim.formula.polarization">mrfmsim.formula.polarization</a>
+</li>
+        <li><a href="basic/modifier.html#module-mrfmsim.modifier">mrfmsim.modifier</a>
+</li>
+        <li><a href="tests.html#module-tests.test_experiment.test_cermitarp">tests.test_experiment.test_cermitarp</a>
+</li>
+        <li><a href="tests.html#module-tests.test_experiment.test_cermitesr">tests.test_experiment.test_cermitesr</a>
+</li>
+        <li><a href="tests.html#module-tests.test_experiment.test_cermitsinglespin">tests.test_experiment.test_cermitsinglespin</a>
+</li>
+        <li><a href="tests.html#module-tests.test_experiment.test_ibmcyclic">tests.test_experiment.test_ibmcyclic</a>
+</li>
+        <li><a href="tests.html#module-tests.test_formula.test_field">tests.test_formula.test_field</a>
+</li>
+        <li><a href="tests.html#module-tests.test_formula.test_magnetization">tests.test_formula.test_magnetization</a>
+</li>
+        <li><a href="tests.html#module-tests.test_formula.test_math">tests.test_formula.test_math</a>
+</li>
+        <li><a href="tests.html#module-tests.test_formula.test_misc">tests.test_formula.test_misc</a>
+</li>
+        <li><a href="tests.html#module-tests.test_formula.test_polarization">tests.test_formula.test_polarization</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     mrfmsim.component.cantilever
 
       <ul>
-        <li><a href="cantilever.html#module-mrfmsim.component.cantilever">module</a>
+        <li><a href="setup/cantilever.html#module-mrfmsim.component.cantilever">module</a>
 </li>
       </ul></li>
       <li>
     mrfmsim.component.grid
 
       <ul>
-        <li><a href="grid.html#module-mrfmsim.component.grid">module</a>
+        <li><a href="setup/grid.html#module-mrfmsim.component.grid">module</a>
 </li>
       </ul></li>
       <li>
     mrfmsim.component.magnet
 
       <ul>
-        <li><a href="magnet.html#module-mrfmsim.component.magnet">module</a>
+        <li><a href="setup/magnet.html#module-mrfmsim.component.magnet">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     mrfmsim.component.sample
 
       <ul>
-        <li><a href="sample.html#module-mrfmsim.component.sample">module</a>
+        <li><a href="setup/sample.html#module-mrfmsim.component.sample">module</a>
 </li>
       </ul></li>
       <li>
-    mrfmsim.configuration
+    mrfmsim.formula.field
 
       <ul>
-        <li><a href="api_configuration.html#module-mrfmsim.configuration">module</a>
+        <li><a href="reference/ref_field.html#module-mrfmsim.formula.field">module</a>
 </li>
       </ul></li>
       <li>
-    mrfmsim.model.Experiment
+    mrfmsim.formula.magnetization
 
       <ul>
-        <li><a href="experiment.html#module-mrfmsim.model.Experiment">module</a>
+        <li><a href="reference/ref_magnetization.html#module-mrfmsim.formula.magnetization">module</a>
+</li>
+      </ul></li>
+      <li>
+    mrfmsim.formula.math
+
+      <ul>
+        <li><a href="reference/ref_math.html#module-mrfmsim.formula.math">module</a>
+</li>
+      </ul></li>
+      <li>
+    mrfmsim.formula.misc
+
+      <ul>
+        <li><a href="reference/ref_misc.html#module-mrfmsim.formula.misc">module</a>
+</li>
+      </ul></li>
+      <li>
+    mrfmsim.formula.polarization
+
+      <ul>
+        <li><a href="reference/ref_polarization.html#module-mrfmsim.formula.polarization">module</a>
 </li>
       </ul></li>
       <li>
     mrfmsim.modifier
 
       <ul>
-        <li><a href="ref_modifier.html#module-mrfmsim.modifier">module</a>
+        <li><a href="basic/modifier.html#module-mrfmsim.modifier">module</a>
 </li>
       </ul></li>
-      <li>
-    mrfmsim.plugin
+      <li><a href="setup/magnet.html#mrfmsim.component.magnet.RectangularMagnet.mu0_Ms">mu0_Ms (mrfmsim.component.magnet.RectangularMagnet attribute)</a>
 
       <ul>
-        <li><a href="api_plugin.html#module-mrfmsim.plugin">module</a>
+        <li><a href="setup/magnet.html#mrfmsim.component.magnet.SphereMagnet.mu0_Ms">(mrfmsim.component.magnet.SphereMagnet attribute)</a>
 </li>
       </ul></li>
-      <li>
-    mrfmsim.shortcut
-
-      <ul>
-        <li><a href="ref_shortcut.html#module-mrfmsim.shortcut">module</a>
+      <li><a href="reference/ref_magnetization.html#mrfmsim.formula.magnetization.mz2_eq">mz2_eq() (in module mrfmsim.formula.magnetization)</a>
 </li>
-      </ul></li>
-      <li><a href="magnet.html#mrfmsim.component.magnet.RectangularMagnet.mu0_Ms">mu0_Ms (mrfmsim.component.magnet.RectangularMagnet attribute)</a>
-
-      <ul>
-        <li><a href="magnet.html#mrfmsim.component.magnet.SphereMagnet.mu0_Ms">(mrfmsim.component.magnet.SphereMagnet attribute)</a>
+      <li><a href="reference/ref_magnetization.html#mrfmsim.formula.magnetization.mz_eq">mz_eq() (in module mrfmsim.formula.magnetization)</a>
 </li>
-      </ul></li>
   </ul></td>
 </tr></table>
 
 <h2 id="N">N</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="ref_modifier.html#mrfmsim.modifier.numba_jit">numba_jit() (in module mrfmsim.modifier)</a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="O">O</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="grid.html#mrfmsim.component.grid.Grid.origin">origin (mrfmsim.component.grid.Grid attribute)</a>
-
-      <ul>
-        <li><a href="magnet.html#mrfmsim.component.magnet.RectangularMagnet.origin">(mrfmsim.component.magnet.RectangularMagnet attribute)</a>
-</li>
-        <li><a href="magnet.html#mrfmsim.component.magnet.SphereMagnet.origin">(mrfmsim.component.magnet.SphereMagnet attribute)</a>
-</li>
-      </ul></li>
-  </ul></td>
-</tr></table>
-
-<h2 id="P">P</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="ref_modifier.html#mrfmsim.modifier.parse_fields">parse_fields() (in module mrfmsim.modifier)</a>
-</li>
-      <li><a href="ref_modifier.html#mrfmsim.modifier.print_inputs">print_inputs() (in module mrfmsim.modifier)</a>
+      <li><a href="tests.html#tests.test_experiment.test_cermitsinglespin.TestCermitSinglespin.n_pts">n_pts() (tests.test_experiment.test_cermitsinglespin.TestCermitSinglespin method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="ref_modifier.html#mrfmsim.modifier.print_output">print_output() (in module mrfmsim.modifier)</a>
+      <li><a href="reference/ref_misc.html#mrfmsim.formula.misc.neg_sum_of_product">neg_sum_of_product() (in module mrfmsim.formula.misc)</a>
 </li>
-      <li><a href="ref_shortcut.html#mrfmsim.shortcut.print_shortcut">print_shortcut() (in module mrfmsim.shortcut)</a>
+      <li><a href="basic/modifier.html#mrfmsim.modifier.numba_jit">numba_jit() (in module mrfmsim.modifier)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -570,15 +597,29 @@ document.write(`
 <h2 id="R">R</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="magnet.html#mrfmsim.component.magnet.SphereMagnet.radius">radius (mrfmsim.component.magnet.SphereMagnet attribute)</a>
+      <li><a href="setup/magnet.html#mrfmsim.component.magnet.RectangularMagnet">RectangularMagnet (class in mrfmsim.component.magnet)</a>
 </li>
-      <li><a href="grid.html#mrfmsim.component.grid.Grid.range">range (mrfmsim.component.grid.Grid attribute)</a>
+      <li><a href="reference/ref_polarization.html#mrfmsim.formula.polarization.rel_dpol_arp">rel_dpol_arp() (in module mrfmsim.formula.polarization)</a>
+</li>
+      <li><a href="reference/ref_polarization.html#mrfmsim.formula.polarization.rel_dpol_ibm_cyclic">rel_dpol_ibm_cyclic() (in module mrfmsim.formula.polarization)</a>
+</li>
+      <li><a href="reference/ref_polarization.html#mrfmsim.formula.polarization.rel_dpol_multipulse">rel_dpol_multipulse() (in module mrfmsim.formula.polarization)</a>
+</li>
+      <li><a href="reference/ref_polarization.html#mrfmsim.formula.polarization.rel_dpol_nut">rel_dpol_nut() (in module mrfmsim.formula.polarization)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="magnet.html#mrfmsim.component.magnet.RectangularMagnet">RectangularMagnet (class in mrfmsim.component.magnet)</a>
+      <li><a href="reference/ref_polarization.html#mrfmsim.formula.polarization.rel_dpol_nut_multi_freq_pulse">rel_dpol_nut_multi_freq_pulse() (in module mrfmsim.formula.polarization)</a>
 </li>
-      <li><a href="ref_modifier.html#mrfmsim.modifier.replace_component">replace_component() (in module mrfmsim.modifier)</a>
+      <li><a href="reference/ref_polarization.html#mrfmsim.formula.polarization.rel_dpol_periodic_irrad">rel_dpol_periodic_irrad() (in module mrfmsim.formula.polarization)</a>
+</li>
+      <li><a href="reference/ref_polarization.html#mrfmsim.formula.polarization.rel_dpol_sat_steadystate">rel_dpol_sat_steadystate() (in module mrfmsim.formula.polarization)</a>
+</li>
+      <li><a href="reference/ref_polarization.html#mrfmsim.formula.polarization.rel_dpol_sat_td">rel_dpol_sat_td() (in module mrfmsim.formula.polarization)</a>
+</li>
+      <li><a href="reference/ref_polarization.html#mrfmsim.formula.polarization.rel_dpol_sat_td_smallsteps">rel_dpol_sat_td_smallsteps() (in module mrfmsim.formula.polarization)</a>
+</li>
+      <li><a href="basic/modifier.html#mrfmsim.modifier.replace_component">replace_component() (in module mrfmsim.modifier)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -586,19 +627,35 @@ document.write(`
 <h2 id="S">S</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="sample.html#mrfmsim.component.sample.Sample">Sample (class in mrfmsim.component.sample)</a>
+      <li><a href="setup/sample.html#mrfmsim.component.sample.Sample">Sample (class in mrfmsim.component.sample)</a>
 </li>
-      <li><a href="grid.html#mrfmsim.component.grid.Grid.shape">shape (mrfmsim.component.grid.Grid attribute)</a>
+      <li><a href="tests.html#tests.test_experiment.test_cermitesr.sample">sample() (in module tests.test_experiment.test_cermitesr)</a>
+
+      <ul>
+        <li><a href="tests.html#tests.test_experiment.test_cermitarp.TestCERMITARP.sample">(tests.test_experiment.test_cermitarp.TestCERMITARP method)</a>
 </li>
-      <li><a href="magnet.html#mrfmsim.component.magnet.SphereMagnet">SphereMagnet (class in mrfmsim.component.magnet)</a>
+        <li><a href="tests.html#tests.test_experiment.test_cermitarp.TestCERMITESRSmallTip.sample">(tests.test_experiment.test_cermitarp.TestCERMITESRSmallTip method)</a>
+</li>
+        <li><a href="tests.html#tests.test_experiment.test_cermitsinglespin.TestCermitSinglespin.sample">(tests.test_experiment.test_cermitsinglespin.TestCermitSinglespin method)</a>
+</li>
+      </ul></li>
+      <li><a href="tests.html#tests.test_formula.test_polarization.sample_e">sample_e() (in module tests.test_formula.test_polarization)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="sample.html#mrfmsim.component.sample.Sample.spin">spin (mrfmsim.component.sample.Sample attribute)</a>
+      <li><a href="tests.html#tests.test_formula.test_polarization.sample_h">sample_h() (in module tests.test_formula.test_polarization)</a>
 </li>
-      <li><a href="sample.html#mrfmsim.component.sample.Sample.spin_density">spin_density (mrfmsim.component.sample.Sample attribute)</a>
+      <li><a href="reference/ref_misc.html#mrfmsim.formula.misc.singlespin_analytical">singlespin_analytical() (in module mrfmsim.formula.misc)</a>
 </li>
-      <li><a href="grid.html#mrfmsim.component.grid.Grid.step">step (mrfmsim.component.grid.Grid attribute)</a>
+      <li><a href="reference/ref_math.html#mrfmsim.formula.math.slice_matrix">slice_matrix() (in module mrfmsim.formula.math)</a>
+</li>
+      <li><a href="setup/magnet.html#mrfmsim.component.magnet.SphereMagnet">SphereMagnet (class in mrfmsim.component.magnet)</a>
+</li>
+      <li><a href="setup/sample.html#mrfmsim.component.sample.Sample.spin">spin (mrfmsim.component.sample.Sample attribute)</a>
+</li>
+      <li><a href="setup/sample.html#mrfmsim.component.sample.Sample.spin_density">spin_density (mrfmsim.component.sample.Sample attribute)</a>
+</li>
+      <li><a href="reference/ref_misc.html#mrfmsim.formula.misc.sum_of_product">sum_of_product() (in module mrfmsim.formula.misc)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -606,29 +663,184 @@ document.write(`
 <h2 id="T">T</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="sample.html#mrfmsim.component.sample.Sample.T1">T1 (mrfmsim.component.sample.Sample attribute)</a>
+      <li><a href="setup/sample.html#mrfmsim.component.sample.Sample.T1">T1 (mrfmsim.component.sample.Sample attribute)</a>
+</li>
+      <li><a href="setup/sample.html#mrfmsim.component.sample.Sample.T2">T2 (mrfmsim.component.sample.Sample attribute)</a>
+</li>
+      <li><a href="setup/sample.html#mrfmsim.component.sample.Sample.temperature">temperature (mrfmsim.component.sample.Sample attribute)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_math.test_as_strided_x">test_as_strided_x() (in module tests.test_formula.test_math)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_field.test_B_offset">test_B_offset() (in module tests.test_formula.test_field)</a>
+</li>
+      <li><a href="tests.html#tests.test_experiment.test_cermitarp.TestCERMITARP.test_cermitarp">test_cermitarp() (tests.test_experiment.test_cermitarp.TestCERMITARP method)</a>
+</li>
+      <li><a href="tests.html#tests.test_experiment.test_cermitesr.TestCERMITESR.test_cermitesr_hangdown">test_cermitesr_hangdown() (tests.test_experiment.test_cermitesr.TestCERMITESR method)</a>
+</li>
+      <li><a href="tests.html#tests.test_experiment.test_cermitsinglespin.TestCermitSinglespin.test_cermitesr_singlespin_hangdown">test_cermitesr_singlespin_hangdown() (tests.test_experiment.test_cermitsinglespin.TestCermitSinglespin method)</a>
+</li>
+      <li><a href="tests.html#tests.test_experiment.test_cermitsinglespin.TestCermitSinglespin.test_cermitesr_singlespin_spam">test_cermitesr_singlespin_spam() (tests.test_experiment.test_cermitsinglespin.TestCermitSinglespin method)</a>
+</li>
+      <li><a href="tests.html#tests.test_experiment.test_cermitesr.TestCERMITESR.test_cermitesr_SPAM">test_cermitesr_SPAM() (tests.test_experiment.test_cermitesr.TestCERMITESR method)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_misc.test_convert_grid_pts">test_convert_grid_pts() (in module tests.test_formula.test_misc)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_field.test_field_func">test_field_func() (in module tests.test_formula.test_field)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_field.test_field_func_singularity">test_field_func_singularity() (in module tests.test_formula.test_field)</a>
+</li>
+      <li><a href="tests.html#tests.test_experiment.test_ibmcyclic.TestIBMCyclic.test_IBMCyclic_dF2_spin">test_IBMCyclic_dF2_spin() (tests.test_experiment.test_ibmcyclic.TestIBMCyclic method)</a>
+</li>
+      <li><a href="tests.html#tests.test_experiment.test_ibmcyclic.TestIBMCyclic.test_IBMCyclic_dF_spin">test_IBMCyclic_dF_spin() (tests.test_experiment.test_ibmcyclic.TestIBMCyclic method)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_field.test_min_abs_offset">test_min_abs_offset() (in module tests.test_formula.test_field)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_field.test_min_abs_offset_symmetry">test_min_abs_offset_symmetry() (in module tests.test_formula.test_field)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_magnetization.test_mz2_eq_H">test_mz2_eq_H() (in module tests.test_formula.test_magnetization)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_magnetization.test_mz_eq_high_susceptibility">test_mz_eq_high_susceptibility() (in module tests.test_formula.test_magnetization)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_magnetization.test_mz_eq_low_susceptibility">test_mz_eq_low_susceptibility() (in module tests.test_formula.test_magnetization)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_polarization.test_rel_dol_sat_td_smallsteps">test_rel_dol_sat_td_smallsteps() (in module tests.test_formula.test_polarization)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_polarization.test_rel_dpol_arp">test_rel_dpol_arp() (in module tests.test_formula.test_polarization)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_polarization.test_rel_dpol_ibm_cyclic">test_rel_dpol_ibm_cyclic() (in module tests.test_formula.test_polarization)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_polarization.test_rel_dpol_multipulse_long">test_rel_dpol_multipulse_long() (in module tests.test_formula.test_polarization)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_polarization.test_rel_dpol_multipulse_no_pol">test_rel_dpol_multipulse_no_pol() (in module tests.test_formula.test_polarization)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_polarization.test_rel_dpol_multipulse_short">test_rel_dpol_multipulse_short() (in module tests.test_formula.test_polarization)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_polarization.test_rel_dpol_nut">test_rel_dpol_nut() (in module tests.test_formula.test_polarization)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_polarization.test_rel_dpol_periodic_irrad_cont">test_rel_dpol_periodic_irrad_cont() (in module tests.test_formula.test_polarization)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_polarization.test_rel_dpol_periodic_irrad_no_irrad">test_rel_dpol_periodic_irrad_no_irrad() (in module tests.test_formula.test_polarization)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_polarization.test_rel_dpol_periodic_irrad_off_res">test_rel_dpol_periodic_irrad_off_res() (in module tests.test_formula.test_polarization)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_polarization.test_rel_dpol_sat_steadystate">test_rel_dpol_sat_steadystate() (in module tests.test_formula.test_polarization)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_polarization.test_rel_dpol_sat_td">test_rel_dpol_sat_td() (in module tests.test_formula.test_polarization)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_polarization.test_rel_dpol_sat_td_symmetry">test_rel_dpol_sat_td_symmetry() (in module tests.test_formula.test_polarization)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_polarization.test_rel_dpol_sat_td_without_td">test_rel_dpol_sat_td_without_td() (in module tests.test_formula.test_polarization)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="sample.html#mrfmsim.component.sample.Sample.T2">T2 (mrfmsim.component.sample.Sample attribute)</a>
+      <li><a href="tests.html#tests.test_formula.test_math.test_slice_matrix">test_slice_matrix() (in module tests.test_formula.test_math)</a>
 </li>
-      <li><a href="sample.html#mrfmsim.component.sample.Sample.temperature">temperature (mrfmsim.component.sample.Sample attribute)</a>
+      <li><a href="tests.html#tests.test_experiment.test_cermitarp.TestCERMITESRSmallTip.test_smallamp_arp_vs_exact_solution_large_sep">test_smallamp_arp_vs_exact_solution_large_sep() (tests.test_experiment.test_cermitarp.TestCERMITESRSmallTip method)</a>
+</li>
+      <li><a href="tests.html#tests.test_experiment.test_cermitarp.TestCERMITESRSmallTip.test_smallamp_arp_vs_exact_solution_small_amp">test_smallamp_arp_vs_exact_solution_small_amp() (tests.test_experiment.test_cermitarp.TestCERMITESRSmallTip method)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_misc.test_sum_of_product">test_sum_of_product() (in module tests.test_formula.test_misc)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_field.TestXTrapzFieldGradient.test_xtrapz_field_gradient_large_distance">test_xtrapz_field_gradient_large_distance() (tests.test_formula.test_field.TestXTrapzFieldGradient method)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_field.TestXTrapzFieldGradient.test_xtrapz_field_gradient_smallamp">test_xtrapz_field_gradient_smallamp() (tests.test_formula.test_field.TestXTrapzFieldGradient method)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_field.TestXTrapzFxDtheta.test_xtrapz_fxdtheta_cos">test_xtrapz_fxdtheta_cos() (tests.test_formula.test_field.TestXTrapzFxDtheta method)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_field.TestXTrapzFxDtheta.test_xtrapz_fxdtheta_multidim">test_xtrapz_fxdtheta_multidim() (tests.test_formula.test_field.TestXTrapzFxDtheta method)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_field.TestXTrapzFxDtheta.test_xtrapz_xtrapz_fxdtheta_x2cos">test_xtrapz_xtrapz_fxdtheta_x2cos() (tests.test_formula.test_field.TestXTrapzFxDtheta method)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_field.TestXTrapzFxDtheta.test_xtrapz_xtrapz_fxdtheta_xcos">test_xtrapz_xtrapz_fxdtheta_xcos() (tests.test_formula.test_field.TestXTrapzFxDtheta method)</a>
+</li>
+      <li><a href="tests.html#tests.test_experiment.test_cermitarp.TestCERMITARP">TestCERMITARP (class in tests.test_experiment.test_cermitarp)</a>
+</li>
+      <li><a href="tests.html#tests.test_experiment.test_cermitesr.TestCERMITESR">TestCERMITESR (class in tests.test_experiment.test_cermitesr)</a>
+</li>
+      <li><a href="tests.html#tests.test_experiment.test_cermitarp.TestCERMITESRSmallTip">TestCERMITESRSmallTip (class in tests.test_experiment.test_cermitarp)</a>
+</li>
+      <li><a href="tests.html#tests.test_experiment.test_cermitsinglespin.TestCermitSinglespin">TestCermitSinglespin (class in tests.test_experiment.test_cermitsinglespin)</a>
+</li>
+      <li><a href="tests.html#tests.test_experiment.test_ibmcyclic.TestIBMCyclic">TestIBMCyclic (class in tests.test_experiment.test_ibmcyclic)</a>
+</li>
+      <li>
+    tests.test_experiment.test_cermitarp
+
+      <ul>
+        <li><a href="tests.html#module-tests.test_experiment.test_cermitarp">module</a>
+</li>
+      </ul></li>
+      <li>
+    tests.test_experiment.test_cermitesr
+
+      <ul>
+        <li><a href="tests.html#module-tests.test_experiment.test_cermitesr">module</a>
+</li>
+      </ul></li>
+      <li>
+    tests.test_experiment.test_cermitsinglespin
+
+      <ul>
+        <li><a href="tests.html#module-tests.test_experiment.test_cermitsinglespin">module</a>
+</li>
+      </ul></li>
+      <li>
+    tests.test_experiment.test_ibmcyclic
+
+      <ul>
+        <li><a href="tests.html#module-tests.test_experiment.test_ibmcyclic">module</a>
+</li>
+      </ul></li>
+      <li>
+    tests.test_formula.test_field
+
+      <ul>
+        <li><a href="tests.html#module-tests.test_formula.test_field">module</a>
+</li>
+      </ul></li>
+      <li>
+    tests.test_formula.test_magnetization
+
+      <ul>
+        <li><a href="tests.html#module-tests.test_formula.test_magnetization">module</a>
+</li>
+      </ul></li>
+      <li>
+    tests.test_formula.test_math
+
+      <ul>
+        <li><a href="tests.html#module-tests.test_formula.test_math">module</a>
+</li>
+      </ul></li>
+      <li>
+    tests.test_formula.test_misc
+
+      <ul>
+        <li><a href="tests.html#module-tests.test_formula.test_misc">module</a>
+</li>
+      </ul></li>
+      <li>
+    tests.test_formula.test_polarization
+
+      <ul>
+        <li><a href="tests.html#module-tests.test_formula.test_polarization">module</a>
+</li>
+      </ul></li>
+      <li><a href="tests.html#tests.test_formula.test_field.TestXTrapzFieldGradient">TestXTrapzFieldGradient (class in tests.test_formula.test_field)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_field.TestXTrapzFxDtheta">TestXTrapzFxDtheta (class in tests.test_formula.test_field)</a>
 </li>
   </ul></td>
 </tr></table>
 
-<h2 id="V">V</h2>
+<h2 id="X">X</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="grid.html#mrfmsim.component.grid.Grid.voxel">voxel (mrfmsim.component.grid.Grid attribute)</a>
+      <li><a href="reference/ref_field.html#mrfmsim.formula.field.xtrapz_field_gradient">xtrapz_field_gradient() (in module mrfmsim.formula.field)</a>
 </li>
   </ul></td>
-</tr></table>
-
-<h2 id="Y">Y</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api_configuration.html#mrfmsim.configuration.yaml_loader">yaml_loader() (in module mrfmsim.configuration)</a>
+      <li><a href="reference/ref_field.html#mrfmsim.formula.field.xtrapz_fxdtheta">xtrapz_fxdtheta() (in module mrfmsim.formula.field)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -642,7 +854,7 @@ document.write(`
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
 </div>
@@ -651,8 +863,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"></div>
               
             
           </div>
@@ -670,13 +880,6 @@ By Peter Sun
   
   <div class="footer-item">
     
-
-  <p class="copyright">
-    
-      © Copyright 2023 - 2024, Peter Sun.
-      <br/>
-    
-  </p>
 
   </div>
   
@@ -697,8 +900,8 @@ By Peter Sun
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

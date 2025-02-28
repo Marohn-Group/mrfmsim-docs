@@ -1,0 +1,797 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>CERMIT adiabatic rapid passage &#8212; mrfmsim 0.3.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=83a61292"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'experiment/CermitARP';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="CERMIT single spin" href="CermitSingleSpin.html" />
+    <link rel="prev" title="CERMIT time dependent offset" href="CermitTD.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">mrfmsim 0.3.0 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim overview</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tests.html">Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim basics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../basic/inheritance.html"><em>mrfmsim</em> custom classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/component.html">Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/modifier.html">Modifiers and shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/plugin.html">Plugins</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment basics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../basic/cermit_protocol.html">CERMIT protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/geometry.html">Experiment geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/tip_size.html">Tip size: small tip vs. large tip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/spin_count.html">Sample spin distribution</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment Setups</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../setup/coordinates.html">Coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup/sample.html">Sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup/grid.html">Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup/magnet.html">Magnet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup/cantilever.html">Cantilever</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiments</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="IBMCyclic.html">IBM cyclic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CermitSat.html">CERMIT steady-state saturation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CermitTD.html">CERMIT time dependent offset</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">CERMIT adiabatic rapid passage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CermitSingleSpin.html">CERMIT single spin</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">references</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../reference/ref_magnetization.html">Equilibrium magnetization and variance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/ref_polarization.html">Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/ref_field.html">Magnetic field</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/ref_math.html">Mathematical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/ref_misc.html">Miscellaneous</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/experiment/CermitARP.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>CERMIT adiabatic rapid passage</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adiabaticity">Adiabaticity</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-summary">Experiment Summary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.experiment.CermitARPGroup"><code class="docutils literal notranslate"><span class="pre">CermitARPGroup</span></code></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="cermit-adiabatic-rapid-passage">
+<h1>CERMIT adiabatic rapid passage<a class="headerlink" href="#cermit-adiabatic-rapid-passage" title="Link to this heading">#</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>The Zeeman field <span class="math notranslate nohighlight">\(B_z(\vec{r})\)</span> experienced by spins at location
+<span class="math notranslate nohighlight">\(\vec{r}\)</span> is a sum of the <span class="math notranslate nohighlight">\(z\)</span> component of the tip field and the
+static field, which we take to be oriented along the <span class="math notranslate nohighlight">\(z\)</span> axis,</p>
+<div class="math notranslate nohighlight" id="equation-eq-bz">
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq-bz" title="Link to this equation">#</a></span>\[B_z(\vec{r}) = B_0 + B_z^{\mathrm{tip}}(\vec{r})\]</div>
+<p>Here we assume that  <span class="math notranslate nohighlight">\(B_0 \gg B_z^{\mathrm{tip}}\)</span>, which requires us
+to consider only the <span class="math notranslate nohighlight">\(z\)</span> component of the tip field and spin
+magnetization.
+The spin-dependent change in the spring constant is determined using</p>
+<div class="math notranslate nohighlight" id="equation-eq-deltak">
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq-deltak" title="Link to this equation">#</a></span>\[\delta k_{\mathrm{spin}} = - \sum_j
+    \delta M_z (\vec{r}_j)
+    \frac{\partial^2 B_{z}^{\mathrm{tip}}({\vec{r}}_j)}{\partial z^2}
+    \Delta V_j\]</div>
+<p>where <span class="math notranslate nohighlight">\(\delta M_z\)</span> is the change in magnetization density and
+<span class="math notranslate nohighlight">\(\Delta V_j\)</span> is the volume of each voxel (or volume element) in the
+sample. We have drawn equation <a class="reference internal" href="#equation-eq-deltak">(2)</a> (with its leading minus sign)
+from reference <a class="footnote-reference brackets" href="#lee2012apra" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> (equation 8). We have taken care to implement
+the leading minus sign here.</p>
+<p>Let us now derive the equations we will use to calculate the change in
+magnetization density <span class="math notranslate nohighlight">\(\delta M_z (\vec{r})\)</span> resulting from the
+adiabatic rapid passage. In a frame of reference rotating counter-clockwise
+about the <span class="math notranslate nohighlight">\(z\)</span> axis at frequency <span class="math notranslate nohighlight">\(\omega\)</span>, the magnetization
+density evolves under the action of the effective field</p>
+<div class="math notranslate nohighlight" id="equation-eq-b-eff">
+<span class="eqno">(3)<a class="headerlink" href="#equation-eq-b-eff" title="Link to this equation">#</a></span>\[\vec{B}_{\mathrm{eff}} =
+    (B_z(\vec{r}) - \frac{\omega}{\gamma}) \hat{z}
+    + B_1 \hat{x}_{\mathrm{R}}\]</div>
+<p>with <span class="math notranslate nohighlight">\(\hat{z}\)</span> a unit vector along <span class="math notranslate nohighlight">\(z\)</span> axis,
+<span class="math notranslate nohighlight">\(\hat{x}_{\mathrm{R}}\)</span> a transverse rotating basis vector,
+<span class="math notranslate nohighlight">\(B_z(\vec{r})\)</span> given by equation <a class="reference internal" href="#equation-eq-bz">(1)</a>, <span class="math notranslate nohighlight">\(\omega\)</span> the
+frequency of the applied oscillating field, <span class="math notranslate nohighlight">\(\gamma\)</span> the gyromagnetic
+ratio, and <span class="math notranslate nohighlight">\(2 B_1\)</span> the amplitude of the oscillating magnetic field,
+assumed to be linearly polarized. We are making the rotating wave
+approximation in using equation <a class="reference internal" href="#equation-eq-b-eff">(3)</a> to describe the evolution of
+magnetization under linearly polarized irradiation. It is useful to write
+down a unit vector parallel to the effective field:</p>
+<div class="math notranslate nohighlight" id="equation-eq-beff">
+<span class="eqno">(4)<a class="headerlink" href="#equation-eq-beff" title="Link to this equation">#</a></span>\[\vec{b}_{\mathrm{eff}} =
+    \frac{B_z(\vec{r}) - \omega/\gamma}
+    {\sqrt{(B_z(\vec{r}) - \omega/\gamma)^2 + B_1^2}} \hat{z}
+    + \frac{B_1}
+    {\sqrt{(B_z(\vec{r}) - \omega/\gamma)^2 + B_1^2}} \hat{x}_{\mathrm{R}}\]</div>
+<p>Dividing both the numerators and denominators in the equation <a class="reference internal" href="#equation-eq-beff">(4)</a> by
+<span class="math notranslate nohighlight">\(B_1\)</span>, this unit vector can be written as</p>
+<div class="math notranslate nohighlight" id="equation-eq-beff2">
+<span class="eqno">(5)<a class="headerlink" href="#equation-eq-beff2" title="Link to this equation">#</a></span>\[\hat{b}_{\mathrm{eff}}(\Omega) =
+    \frac{\Omega}{\sqrt{\Omega^2+1}} \hat{z}
+    + \frac{1}{\sqrt{\Omega^2+1}} \hat{x}_{\mathrm{R}}\]</div>
+<p>with</p>
+<div class="math notranslate nohighlight" id="equation-eq-omega">
+<span class="eqno">(6)<a class="headerlink" href="#equation-eq-omega" title="Link to this equation">#</a></span>\[\Omega = \frac{\gamma B_z(\vec{r}) - \omega}{\gamma B_1}\]</div>
+<p>the (unitless) ratio of the resonance offset to the Rabi frequency;
+<span class="math notranslate nohighlight">\(\Omega &gt; 0\)</span> and <span class="math notranslate nohighlight">\(\hat{b}_{\mathrm{eff},z} &gt; 0\)</span> for spins at
+a field above the resonance field <span class="math notranslate nohighlight">\(\omega/\gamma\)</span> while
+<span class="math notranslate nohighlight">\(\Omega &lt; 0\)</span> and <span class="math notranslate nohighlight">\(\hat{b}_{\mathrm{eff},z} &lt; 0\)</span> for spins at
+a field below the resonance field <span class="math notranslate nohighlight">\(\omega/\gamma\)</span>.</p>
+<p>Now consider the evolution of sample magnetization during an adiabatic rapid
+passage through resonance. The magnetization is initially along the <span class="math notranslate nohighlight">\(z\)</span>
+axis. Just before time <span class="math notranslate nohighlight">\(t = 0\)</span>,</p>
+<div class="math notranslate nohighlight" id="equation-eq-mz0-minus">
+<span class="eqno">(7)<a class="headerlink" href="#equation-eq-mz0-minus" title="Link to this equation">#</a></span>\[\vec{M}(0^{-}) = M_{z}(0) \: \hat{z}\]</div>
+<p>At time <span class="math notranslate nohighlight">\(t = 0\)</span> the irradiation is turned on with an initial offset
+frequency of <span class="math notranslate nohighlight">\(\Omega_{\mathrm{i}}\)</span>. Since this effective field is not
+quite parallel to the <span class="math notranslate nohighlight">\(z\)</span> axis in the rotating frame, the initial
+magnetization vector will precess around it. The component of the initial
+magnetization perpendicular to the initial effective field
+<span class="math notranslate nohighlight">\(\hat{b}_{\mathrm{eff}}(\Omega_{\mathrm{i}})\)</span> will quickly dephase,
+within in a time <span class="math notranslate nohighlight">\(T_2 \sim 5 \: \mu\mathrm{s}\)</span>. The component of the
+initial magnetization parallel to the initial effective field will survive
+this dephasing.
+The magnetization after this dephasing, at time <span class="math notranslate nohighlight">\(t = 0^{+}\)</span>,
+is given by the projection of <span class="math notranslate nohighlight">\(\vec{M}_{z}(0^{-})\)</span> onto
+<span class="math notranslate nohighlight">\(\hat{b}_{\mathrm{eff}}\)</span>,</p>
+<div class="math notranslate nohighlight" id="equation-eq-mz0-plus">
+<span class="eqno">(8)<a class="headerlink" href="#equation-eq-mz0-plus" title="Link to this equation">#</a></span>\[\vec{M}(0^{+}) =
+    M_{z}(0) \left( \hat{b}_{\mathrm{eff}}(\Omega_{\mathrm{i}})
+    \cdot \vec{M}_{z}(0^{-}) \right)
+    \: \hat{b}_{\mathrm{eff}}(\Omega_{\mathrm{i}})\]</div>
+<p>The prefactor in parenthesis may be positive or negative, depending on whether
+<span class="math notranslate nohighlight">\(\vec{M}_{z}(0^{-})\)</span> and
+<span class="math notranslate nohighlight">\(\hat{b}_{\mathrm{eff}}(\Omega_{\mathrm{i}})\)</span> are parallel
+(<span class="math notranslate nohighlight">\(\Omega &gt;0\)</span>) or antiparallel (<span class="math notranslate nohighlight">\(\Omega &lt;0\)</span>). Substituting
+equations <a class="reference internal" href="#equation-eq-beff2">(5)</a> and <a class="reference internal" href="#equation-eq-mz0-minus">(7)</a> into equation <a class="reference internal" href="#equation-eq-mz0-plus">(8)</a></p>
+<div class="math notranslate nohighlight" id="equation-eq-mz0-2">
+<span class="eqno">(9)<a class="headerlink" href="#equation-eq-mz0-2" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
+\vec{M}(0^{+}) &amp; =
+    M_{z}(0) \frac{\Omega_{\mathrm{i}}}{\sqrt{\Omega_{\mathrm{i}}^2+1}}
+    \left(
+        \frac{\Omega_{\mathrm{i}}}{\sqrt{\Omega_{\mathrm{i}}^2+1}} \hat{z}
+        + \frac{1}{\sqrt{\Omega_{\mathrm{i}}^2+1}} \hat{x}_{\mathrm{R}}
+    \right) \\
+&amp; =
+M_{z}(0)
+    \left(
+        \frac{\Omega_{\mathrm{i}}^2}{\Omega_{\mathrm{i}}^2+1} \hat{z}
+        + \frac{\Omega_{\mathrm{i}}}{\Omega^2_{\mathrm{i}}+1}
+        \hat{x}_{\mathrm{R}}
+    \right)
+\end{align}\end{split}\]</div>
+<p>We can see that equation <a class="reference internal" href="#equation-eq-mz0-2">(9)</a> captures <span class="math notranslate nohighlight">\(\vec{M}_{z}(0^{+})\)</span>
+correctly for spins initially above and below resonance when the irradiation
+is turned on.  For example, when <span class="math notranslate nohighlight">\(\Omega = +10\)</span>,
+<span class="math notranslate nohighlight">\(\vec{M}_{z}(0^{+}) = 0.99 \: \hat{z} + 0.01 \: \hat{x}_{\mathrm{R}}\)</span>
+while when <span class="math notranslate nohighlight">\(\Omega = -10\)</span>,
+<span class="math notranslate nohighlight">\(\vec{M}_{z}(0^{+}) = 0.99 \: \hat{z} - 0.01\: \hat{x}_{\mathrm{R}}\)</span>.
+In both cases, <span class="math notranslate nohighlight">\(\vec{M}_{z}(0^{+})\)</span> points
+up as it should. The magnitude of <span class="math notranslate nohighlight">\(\vec{M}_{z}(0^{+})\)</span> is</p>
+<div class="math notranslate nohighlight" id="equation-eq-absmz0">
+<span class="eqno">(10)<a class="headerlink" href="#equation-eq-absmz0" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
+\| \vec{M}(0^{+}) \|
+&amp; = M_{z}(0)
+\left(
+    \frac{\Omega_{\mathrm{i}}^4}{(\Omega_{\mathrm{i}}^2+1)^2}
+    + \frac{\Omega_{\mathrm{i}}^2}{(\Omega_{\mathrm{i}}^2+1)^2}
+\right)^{1/2} \\
+&amp; = M_{z}(0)
+\left(
+    \frac{\Omega_{\mathrm{i}}^2 (\Omega_{\mathrm{i}}^2 + 1) }
+    {(\Omega_{\mathrm{i}}^2+1)^2}
+\right)^{1/2} \\
+&amp; = M_{z}(0)
+\frac{\| \Omega_{\mathrm{i}} \|}{\sqrt{\Omega_{\mathrm{i}}^2 + 1}}
+\end{align}\end{split}\]</div>
+<p>At a time just <em>after</em> <span class="math notranslate nohighlight">\(t = 0^+\)</span>, the adiabatic rapid passage is
+initiated and <span class="math notranslate nohighlight">\(\Omega\)</span> is swept from the initial offset
+<span class="math notranslate nohighlight">\(\Omega_{\mathrm{i}}\)</span> to a final offset <span class="math notranslate nohighlight">\(\Omega_{\mathrm{f}}\)</span>. At
+the end of the sweep, at time <span class="math notranslate nohighlight">\(t_{\mathrm{f}}\)</span>, the magnetization
+density vector will have the same magnitude as it did at time
+<span class="math notranslate nohighlight">\(t = 0^+\)</span>,
+but will be oriented parallel or antiparallel to the final effective field,
+<span class="math notranslate nohighlight">\(\hat{b}_{\mathrm{eff}}(\Omega_{\mathrm{f}})\)</span>,</p>
+<div class="math notranslate nohighlight" id="equation-eq-vecmtf">
+<span class="eqno">(11)<a class="headerlink" href="#equation-eq-vecmtf" title="Link to this equation">#</a></span>\[\vec{M}(t_{\mathrm{f}}) =
+\| \vec{M}_{z}(0^{+}) \| \: \mathrm{sign}(\Omega_{\mathrm{i}})
+\left(
+    \frac{\Omega_{\mathrm{f}}}{\sqrt{\Omega_{\mathrm{f}}^2+1}} \hat{z}
+    + \frac{1}{\sqrt{\Omega_{\mathrm{f}}^2+1}} \hat{x}_{\mathrm{R}}
+\right)\]</div>
+<p>Here <span class="math notranslate nohighlight">\(\mathrm{sign}(\Omega_{\mathrm{i}})\)</span> accounts for the final
+magnetization being parallel (for positive initial offset,
+<span class="math notranslate nohighlight">\(\mathrm{sign}(\Omega_{\mathrm{i}}) = +1\)</span>) or antiparallel (for
+negative initial offset, <span class="math notranslate nohighlight">\(\mathrm{sign}(\Omega_{\mathrm{i}}) = -1\)</span>) to
+the final effective field. We are interested in the <span class="math notranslate nohighlight">\(z\)</span>-component of
+the final magnetic field vector. Substituting  equation <a class="reference internal" href="#equation-eq-absmz0">(10)</a>
+into equation <a class="reference internal" href="#equation-eq-vecmtf">(11)</a> and using</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{sign}(\Omega_{\mathrm{i}}) \: \|
+\Omega_{\mathrm{i}} \| = \Omega_{\mathrm{i}}\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-mzf">
+<span class="eqno">(12)<a class="headerlink" href="#equation-eq-mzf" title="Link to this equation">#</a></span>\[M_{z}(t_{\mathrm{f}})
+=  M_{z}(0)
+    \dfrac{\Omega_{\mathrm{i}}}{\sqrt{\Omega_{\mathrm{i}}^2+1}}
+    \dfrac{\Omega_{\mathrm{f}}}{\sqrt{\Omega_{\mathrm{f}}^2+1}}\]</div>
+<p>At each point in the sample, the change, final minus initial, in <span class="math notranslate nohighlight">\(z\)</span>
+component of magnetization following the adiabatic rapid passage is given by</p>
+<div class="math notranslate nohighlight" id="equation-eq-deltamz">
+<span class="eqno">(13)<a class="headerlink" href="#equation-eq-deltamz" title="Link to this equation">#</a></span>\[\delta M_{z} = M_{z}(t_{\mathrm{f}}) - M_{z}(0)
+=  M_{z}(0)
+\left(
+    \dfrac{\Omega_{\mathrm{i}}}{\sqrt{\Omega_{\mathrm{i}}^2+1}}
+    \dfrac{\Omega_{\mathrm{f}}}{\sqrt{\Omega_{\mathrm{f}}^2+1}}
+    -1
+\right)\]</div>
+<p>If we sweep from <span class="math notranslate nohighlight">\(\Omega_{\mathrm{i}} \rightarrow +\infty\)</span> (way above
+resonance) to <span class="math notranslate nohighlight">\(\Omega_{\mathrm{f}} \rightarrow -\infty\)</span> (way below
+resonance), then <span class="math notranslate nohighlight">\(\delta M_{z} = -2 M_{z}(0)\)</span>. This is what we expect
+to see. For a swept-field or swept-tip experiment,</p>
+<div class="math notranslate nohighlight" id="equation-eq-omegas1">
+<span class="eqno">(14)<a class="headerlink" href="#equation-eq-omegas1" title="Link to this equation">#</a></span>\[\Omega_{\mathrm{i}} =
+\frac{B_z(\vec{r}_{\mathrm{i}}) - \omega/\gamma}{B_1}
+\: \: \: \mathrm{and} \: \: \:
+\Omega_{\mathrm{f}} =
+\frac{B_z(\vec{r}_{\mathrm{f}}) - \omega/\gamma}{B_1}\]</div>
+<p>while for a swept-frequency experiment,</p>
+<div class="math notranslate nohighlight" id="equation-eq-omegas2">
+<span class="eqno">(15)<a class="headerlink" href="#equation-eq-omegas2" title="Link to this equation">#</a></span>\[\Omega_{\mathrm{i}} =
+\frac{B_z(\vec{r}) - \omega_{\mathrm{i}}/\gamma}{B_1}
+\: \: \: \mathrm{and} \: \: \:
+\Omega_{\mathrm{f}} =
+\frac{B_z(\vec{r}) - \omega_{\mathrm{f}}/\gamma}{B_1}\]</div>
+<p>To compute the change in magnetization contributing to signal at each
+position, we will use the equation <a class="reference internal" href="#equation-eq-deltamz">(13)</a> and either equation
+<a class="reference internal" href="#equation-eq-omegas1">(14)</a> (for a swept-tip experiment) or equation <a class="reference internal" href="#equation-eq-omegas2">(15)</a>
+(for a swept-frequency experiment). In the swept-frequency calculation we
+need to compute the field at each point. In the swept-tip calculation, we
+need to compute at each position <span class="math notranslate nohighlight">\(\vec{r}\)</span> in the sample the <span class="math notranslate nohighlight">\(z\)</span>
+component of the magnetic field <em>only</em> at the beginning
+(<span class="math notranslate nohighlight">\(\vec{r} = \vec{r}_{\mathrm{i}}\)</span>) and end
+(<span class="math notranslate nohighlight">\(\vec{r} = \vec{r}_{\mathrm{f}}\)</span>) of the tip sweep.</p>
+<section id="adiabaticity">
+<h3>Adiabaticity<a class="headerlink" href="#adiabaticity" title="Link to this heading">#</a></h3>
+<p>We would also like to assess the adiabaticity of the sweep.  With</p>
+<div class="math notranslate nohighlight">
+\[M_{z}(t) = M_{z}(0) \: \cos{(\theta(t))},\]</div>
+<p>the adiabaticity parameter is generally defined as</p>
+<div class="math notranslate nohighlight">
+\[\alpha = \frac{\dot{\theta}}{\gamma B_1}.\]</div>
+<p>In a cryogenic ESR-MRFM observing <span class="math notranslate nohighlight">\(\mathrm{E}^{\prime}\)</span> centers in
+quartz <em>via</em> cyclic adiabatic inversion, Wago and coworkers observed a peaking
+of signal when <span class="math notranslate nohighlight">\(\alpha \sim 0.1\)</span> (note that they define the adiabaticity
+parameter as <span class="math notranslate nohighlight">\(1/\alpha\)</span>) <a class="footnote-reference brackets" href="#wago1998jan" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>. In a room temperature NMR-MRFM
+experiment observing proton magnetization in an ammonium nitrate crystal <em>via</em>
+cyclic adiabatic inversion and force detection, Klein and coworkers observed
+lossless inversion of magnetization when
+<span class="math notranslate nohighlight">\(\alpha \leq 0.1\)</span> <a class="footnote-reference brackets" href="#klein2000aug" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.
+In both of these experiments, a linear frequency sweep was used. We note
+that more efficient sweeps have been devised. <a class="footnote-reference brackets" href="#baum1985dec" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#kupce1996feb" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>
+For a linear sweep, the adiabaticity parameter is <em>largest</em> near resonance,
+where</p>
+<div class="math notranslate nohighlight">
+\[\alpha_{\mathrm{res}}
+    = \frac{1}{\gamma B_1^2} \frac{d B_{\mathrm{eff}}}{d t}
+    = \frac{1}{\omega_1} \frac{d \Omega}{d t}\]</div>
+<p>Here <span class="math notranslate nohighlight">\(\Omega\)</span> is given by equation <a class="reference internal" href="#equation-eq-omega">(6)</a> and <span class="math notranslate nohighlight">\(\omega_1 =
+\gamma B_1\)</span> is the Rabi frequency.  In a swept-tip experiment, the field at
+position <span class="math notranslate nohighlight">\(\vec{r}\)</span> changes by an amount <span class="math notranslate nohighlight">\(\delta B =
+B_{z}^{\mathrm{tip}}(\vec{r}_{\mathrm{f}}) - B_
+{z}^{\mathrm{tip}}(\vec{r}_{\mathrm{i}})\)</span> in a time equal to half of a
+cantilever period, <span class="math notranslate nohighlight">\(\delta t = 1/(2 f_c)\)</span>.  If we approximate the sweep
+as linear, then the adiabaticity parameter is given by</p>
+<div class="math notranslate nohighlight" id="equation-eq-alpha-swept-tip">
+<span class="eqno">(16)<a class="headerlink" href="#equation-eq-alpha-swept-tip" title="Link to this equation">#</a></span>\[\alpha_{\mathrm{res}}(\vec{r})
+    \approx \frac{1}{\gamma B_1^2} \frac{\delta B}{\delta t}
+= \frac{2 f_c}{\gamma B_1^2}
+\| B_{z}^{\mathrm{tip}}(\vec{r}_{\mathrm{f}}) -
+B_{z}^{\mathrm{tip}}(\vec{r}_{\mathrm{i}}) \|\]</div>
+<p>We have introduced an absolute value sign to guarantee that <span class="math notranslate nohighlight">\(\alpha\)</span> is
+positive and independent of the sweep direction. We write :math:`
+alpha_{mathrm{res}}(vec{r})` to emphasize that the adiabaticity parameter
+should be evaluated at each position <span class="math notranslate nohighlight">\(\vec{r}\)</span> in the sample. Equation
+<a class="reference internal" href="#equation-eq-alpha-swept-tip">(16)</a> is only strictly valid at resonance and, moreover,
+does not account for the sinusoidal time dependence of <span class="math notranslate nohighlight">\(\vec{r}(t)\)</span>
+during the cantilever motion. Nevertheless, we will use it to access the
+adiabaticity of the spin inversion in the swept-tip experiment. Since :math:`
+alpha` is smaller for sample spins that do not pass through resonance,
+equation <a class="reference internal" href="#equation-eq-alpha-swept-tip">(16)</a> provides an upper-bound estimate for the
+adiabaticity parameter at any location. The spins that contribute most to
+the signal are those that pass through resonance; for these spins, equation :eq:`
+Eq:alpha-swept-tip` should be reasonably accurate.</p>
+<p>In the swept-frequency experiment, the irradiation frequency is ramped from
+<span class="math notranslate nohighlight">\(\omega_{\mathrm{i}}\)</span> to <span class="math notranslate nohighlight">\(\omega_{\mathrm{f}}\)</span> in a time :math:`
+Delta T_{mathrm{sweep}}`; the period of the sweep <span class="math notranslate nohighlight">\(\Delta T_
+{\mathrm{sweep}}\)</span> is not restricted to be half a cantilever period. The
+adiabaticity parameter is independent of position <span class="math notranslate nohighlight">\(\vec{r}\)</span> and,
+assuming a linear frequency sweep, equal to</p>
+<div class="math notranslate nohighlight" id="equation-eq-alpha-swept-freq">
+<span class="eqno">(17)<a class="headerlink" href="#equation-eq-alpha-swept-freq" title="Link to this equation">#</a></span>\[\alpha_{\mathrm{res}} =
+    \frac{1}{\gamma^2 B_1^2}
+    \frac{\| \omega_{\mathrm{f}} - \omega_{\mathrm{i}} \|}
+    {\Delta T_{\mathrm{sweep}}}\]</div>
+<p>As with equation <a class="reference internal" href="#equation-eq-alpha-swept-tip">(16)</a>, equation  <a class="reference internal" href="#equation-eq-alpha-swept-freq">(17)</a>
+is only strictly valid for spins that pass through resonance.  Spins far away
+from the resonant slice will experience an <span class="math notranslate nohighlight">\(\alpha\)</span> even smaller and
+<span class="math notranslate nohighlight">\(\alpha_{\mathrm{res}}\)</span>.  We can therefore regard equation :eq:`
+Eq:alpha-swept-freq` as an upper bound for the adiabaticity parameter
+experienced by any spin in the sample.</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="klein2000aug" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">1</a><span class="fn-bracket">]</span></span>
+<p>Klein, O.; Naletov, V. &amp; Alloul, H. “Mechanical Detection
+of Nuclear Spin Relaxation in a Micron-size Crystal”, <em>Eur. Phys. J. B</em>,
+<strong>2000</strong>, <em>17</em>, 57 - 68
+[<a class="reference external" href="http://dx.doi.org/10.1007/s100510070160">10.1007/s100510070160</a>].</p>
+</aside>
+<aside class="footnote brackets" id="lee2012apra" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">2</a><span class="fn-bracket">]</span></span>
+<p>Lee, S.-G.; Moore, E. W. &amp; Marohn, J. A. “A Unified Picture
+of Cantilever Frequency-Shift Measurements of Magnetic Resonance”,
+<em>Phys. Rev. B</em>, <strong>2012</strong>, <em>85</em>, 165447
+[<a class="reference external" href="http://dx.doi.org/10.1103/PhysRevB.85.165447">10.1103/PhysRevB.85.165447</a>].</p>
+</aside>
+<aside class="footnote brackets" id="wago1998jan" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">3</a><span class="fn-bracket">]</span></span>
+<p>Wago, K.; Botkin, D.; Yannoni, C. &amp; Rugar, D.
+“Force-detected Electron-spin Resonance: Adiabatic Inversion, Nutation,
+and Spin Echo”, <em>Phys. Rev. B</em>, <strong>1998</strong>, <em>57</em>, 1108 - 1114
+[<a class="reference external" href="http://doi.org/10.1103/PhysRevB.57.1108">10.1103/PhysRevB.57.1108</a>].</p>
+</aside>
+<aside class="footnote brackets" id="baum1985dec" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
+<p>Baum, J.; Tycko, R. &amp; Pines, A. “Broadband and Adiabatic
+Inversion of a Two-level System by Phase-modulated Pulses”, <em>Phys. Rev. A</em>
+, <strong>1985</strong>, <em>32</em>, 3435 - 3447
+[<a class="reference external" href="http://dx.doi.org/10.1103/PhysRevA.32.3435">10.1103/PhysRevA.32.3435</a>].</p>
+</aside>
+<aside class="footnote brackets" id="kupce1996feb" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">5</a><span class="fn-bracket">]</span></span>
+<p>Kupce, E. &amp; Freeman, R. “Optimized Adiabatic Pulses for
+Wideband Spin Inversion”, <em>Journal of Magnetic Resonance, Series A</em>,
+<strong>1996</strong>, <em>118</em>, 299 - 303
+[<a class="reference external" href="http://dx.doi.org/10.1006/jmra.1996.0042">10.1006/jmra.1996.0042</a>].</p>
+</aside>
+</aside>
+</section>
+</section>
+<section id="experiment-summary">
+<h2>Experiment Summary<a class="headerlink" href="#experiment-summary" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mrfmsim.experiment.CermitARPGroup" title="mrfmsim.experiment.CermitARPGroup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mrfmsim.experiment.CermitARPGroup</span></code></a></p></td>
+<td><p>Simulates a Cornell-style frequency-shift magnetic resonance  force microscope experiment in which a single frequency-sweep adiabatic  rapid passage through resonance is used to invert the spins.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../reference/ref_polarization.html#mrfmsim.formula.polarization.rel_dpol_arp" title="mrfmsim.formula.polarization.rel_dpol_arp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mrfmsim.formula.polarization.rel_dpol_arp</span></code></a>(...)</p></td>
+<td><p>Relative change in polarization for adiabatic rapid passage.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py data">
+<dt class="sig sig-object py" id="mrfmsim.experiment.CermitARPGroup">
+<span class="sig-prename descclassname"><span class="pre">mrfmsim.experiment.</span></span><span class="sig-name descname"><span class="pre">CermitARPGroup</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;mrfmsim.group.ExperimentGroup</span> <span class="pre">'CermitARPGroup'&gt;</span></em><a class="headerlink" href="#mrfmsim.experiment.CermitARPGroup" title="Link to this definition">#</a></dt>
+<dd><p>Simulates a Cornell-style frequency-shift magnetic resonance 
+force microscope experiment in which a single frequency-sweep adiabatic 
+rapid passage through resonance is used to invert the spins.</p>
+</dd></dl>
+
+<ul>
+<li><strong>CermitARP</strong><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CermitARP</span><span class="p">(</span><span class="n">B0</span><span class="p">,</span> <span class="n">B1</span><span class="p">,</span> <span class="n">df_fm</span><span class="p">,</span> <span class="n">f_rf</span><span class="p">,</span> <span class="n">grid</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">magnet</span><span class="p">,</span> <span class="n">sample</span><span class="p">)</span>
+<span class="n">returns</span><span class="p">:</span> <span class="n">dk_spin</span>
+<span class="n">group</span><span class="p">:</span> <span class="n">CermitARPGroup</span>
+<span class="n">graph</span><span class="p">:</span> <span class="n">CermitARP_graph</span>
+<span class="n">handler</span><span class="p">:</span> <span class="n">MemHandler</span>
+
+<span class="n">Simulate</span> <span class="n">CERMIT</span> <span class="n">ARP</span> <span class="k">for</span> <span class="n">a</span> <span class="n">large</span> <span class="n">tip</span><span class="o">.</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<ul>
+<li><strong>CermitARPSmallTip</strong><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CermitARPSmallTip</span><span class="p">(</span><span class="n">B0</span><span class="p">,</span> <span class="n">B1</span><span class="p">,</span> <span class="n">df_fm</span><span class="p">,</span> <span class="n">f_rf</span><span class="p">,</span> <span class="n">grid</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">magnet</span><span class="p">,</span> <span class="n">sample</span><span class="p">,</span> <span class="n">trapz_pts</span><span class="p">,</span> <span class="n">x_0p</span><span class="p">)</span>
+<span class="n">returns</span><span class="p">:</span> <span class="n">dk_spin</span>
+<span class="n">group</span><span class="p">:</span> <span class="n">CermitARPGroup</span>
+<span class="n">graph</span><span class="p">:</span> <span class="n">CermitARPSmallTip_graph</span>
+<span class="n">handler</span><span class="p">:</span> <span class="n">MemHandler</span>
+
+<span class="n">Simulate</span> <span class="n">CERMIT</span> <span class="n">ARP</span> <span class="k">for</span> <span class="n">a</span> <span class="n">small</span> <span class="n">tip</span><span class="o">.</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="CermitTD.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">CERMIT time dependent offset</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="CermitSingleSpin.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">CERMIT single spin</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adiabaticity">Adiabaticity</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-summary">Experiment Summary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.experiment.CermitARPGroup"><code class="docutils literal notranslate"><span class="pre">CermitARPGroup</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Peter Sun
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
