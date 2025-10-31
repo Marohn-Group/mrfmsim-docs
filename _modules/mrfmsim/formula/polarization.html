@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mrfmsim.formula.polarization &#8212; mrfmsim 0.3.0 documentation</title>
+    <title>mrfmsim.formula.polarization &#8212; mrfmsim 0.4.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../_static/documentation_options.js?v=83a61292"></script>
+    <script src="../../../_static/documentation_options.js?v=183391d5"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
@@ -124,7 +124,7 @@
   
   
   
-    <p class="title logo__title">mrfmsim 0.3.0 documentation</p>
+    <p class="title logo__title">mrfmsim 0.4.0 documentation</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -141,6 +141,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../tests.html">Tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute.html">Contribute</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim basics</span></p>
 <ul class="nav bd-sidenav">
@@ -283,8 +284,7 @@
 <span class="c1"># -*- coding: utf-8 -*-</span>
 <span class="c1"># Peter Sun</span>
 
-<span class="sd">&quot;&quot;&quot;Collection of calculations of relative changes in polarization.</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">&quot;&quot;&quot;Collection of calculations of relative changes in polarization.&quot;&quot;&quot;</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">numba</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -534,6 +534,10 @@
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Relative change in polarization for time-dependent saturation.</span>
 
 <span class="sd">    The result is not a steady-state solution because it ignores T1 relaxation.</span>
+<span class="sd">    In the case where Bzx is 0, and B_offset is symmetric, the division will be nan.</span>
+<span class="sd">    Here we try to adjust the nan values to the average of the surrounding values.</span>
+<span class="sd">    However, if the resulting value is still nan or there are nan values at the boundary,</span>
+<span class="sd">    an ValueError is raised.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># ignore division error the Exp takes care of the inf, and nan</span>
     <span class="n">np</span><span class="o">.</span><span class="n">seterr</span><span class="p">(</span><span class="n">divide</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">invalid</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
@@ -545,10 +549,19 @@
 
     <span class="n">div</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">atan_omega_f</span> <span class="o">-</span> <span class="n">atan_omega_i</span><span class="p">,</span> <span class="n">Bzx</span><span class="p">)</span>
 
-    <span class="c1"># adjust for the center slice of the discontinuous issue</span>
-    <span class="n">center_index</span> <span class="o">=</span> <span class="n">div</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">//</span> <span class="mi">2</span>  <span class="c1"># if the grid is even it should not be a problem</span>
-    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">div</span><span class="p">[</span><span class="n">center_index</span><span class="p">])):</span>
-        <span class="n">div</span><span class="p">[</span><span class="n">center_index</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">div</span><span class="p">[</span><span class="n">center_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">div</span><span class="p">[</span><span class="n">center_index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="c1"># adjust the nan values to the average of the surrounding values</span>
+    <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">div</span><span class="p">))[</span><span class="mi">0</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">idx</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">idx</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">div</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;Nan values at the boundary, check the Bzx and B_offset values.&quot;</span>
+            <span class="p">)</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="p">(</span><span class="n">div</span><span class="p">[</span><span class="n">idx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">div</span><span class="p">[</span><span class="n">idx</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
+
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;Nan value from division, check the Bzx and B_offset values.&quot;</span>
+            <span class="p">)</span>
+        <span class="n">div</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
 
     <span class="n">rt</span> <span class="o">=</span> <span class="n">Gamma</span> <span class="o">*</span> <span class="n">B1</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">div</span><span class="p">)</span> <span class="o">/</span> <span class="n">tip_v</span>
     <span class="n">dpol</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">rt</span><span class="p">)</span>

@@ -1,0 +1,921 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mrfmsim.component.cylindermagnet &#8212; mrfmsim 0.4.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../_static/documentation_options.js?v=183391d5"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/mrfmsim/component/cylindermagnet';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">mrfmsim 0.4.0 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim overview</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tests.html">Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute.html">Contribute</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim basics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/inheritance.html"><em>mrfmsim</em> custom classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/component.html">Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/modifier.html">Modifiers and shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/plugin.html">Plugins</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment basics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/cermit_protocol.html">CERMIT protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/geometry.html">Experiment geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/tip_size.html">Tip size: small tip vs. large tip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/spin_count.html">Sample spin distribution</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiment Setups</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/coordinates.html">Coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/sample.html">Sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/grid.html">Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/magnet.html">Magnet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/cantilever.html">Cantilever</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">experiments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/IBMCyclic.html">IBM cyclic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/CermitSat.html">CERMIT steady-state saturation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/CermitTD.html">CERMIT time dependent offset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/CermitARP.html">CERMIT adiabatic rapid passage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment/CermitSingleSpin.html">CERMIT single spin</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">references</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_magnetization.html">Equilibrium magnetization and variance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_polarization.html">Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_field.html">Magnetic field</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_math.html">Mathematical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/ref_misc.html">Miscellaneous</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for mrfmsim.component.cylindermagnet</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numba</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nb</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span><span class="p">,</span> <span class="n">field</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">mrfmsim.component</span><span class="w"> </span><span class="kn">import</span> <span class="n">ComponentBase</span>
+
+
+<div class="viewcode-block" id="CylinderMagnetApprox">
+<a class="viewcode-back" href="../../../setup/magnet.html#mrfmsim.component.cylindermagnet.CylinderMagnetApprox">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">CylinderMagnetApprox</span><span class="p">(</span><span class="n">ComponentBase</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Cylinder magnet object approximated by Rectangular Magnets.</span>
+
+<span class="sd">    :param float magnet_radius: cylinder magnet radius [nm]</span>
+<span class="sd">    :param float magnet_length: cylinder magnet length [nm]</span>
+<span class="sd">    :param tuple magnet_origin: the position of the magnet origin</span>
+<span class="sd">        :math:`(x, y, z)` [nm]</span>
+<span class="sd">    :param float mu0_Ms: saturation magnetization [mT]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">magnet_radius</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">metadata</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;nm&quot;</span><span class="p">,</span> <span class="s2">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;.1f&quot;</span><span class="p">})</span>
+    <span class="n">magnet_length</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">metadata</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;nm&quot;</span><span class="p">,</span> <span class="s2">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;.1f&quot;</span><span class="p">})</span>
+    <span class="n">magnet_origin</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span>
+        <span class="n">metadata</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;nm&quot;</span><span class="p">,</span> <span class="s2">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;.1f&quot;</span><span class="p">}</span>
+    <span class="p">)</span>
+    <span class="n">mu0_Ms</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">metadata</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;mT&quot;</span><span class="p">})</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">magnet_radius</span> <span class="o">/</span> <span class="mi">10</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_range</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+            <span class="p">[</span>
+                <span class="p">[</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">magnet_length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">magnet_length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="p">],</span>
+                <span class="p">[</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">9</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">9</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">magnet_length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">magnet_length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="p">],</span>
+                <span class="p">[</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">9</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">9</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">magnet_length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">magnet_length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="p">],</span>
+                <span class="p">[</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">7</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">magnet_length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">magnet_length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="p">],</span>
+                <span class="p">[</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">7</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">magnet_length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">magnet_length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="p">],</span>
+                <span class="p">[</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">7</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">7</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">7</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">magnet_length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">magnet_length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="p">],</span>
+                <span class="p">[</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">7</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">7</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">7</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">magnet_length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">magnet_length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="p">],</span>
+                <span class="p">[</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">9</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">magnet_length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">magnet_length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="p">],</span>
+                <span class="p">[</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">9</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">magnet_length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">magnet_length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="p">],</span>
+                <span class="p">[</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">9</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">magnet_length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">magnet_length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="p">],</span>
+                <span class="p">[</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">9</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">magnet_length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">magnet_origin</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">magnet_length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="p">],</span>
+            <span class="p">]</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_pre_term</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mu0_Ms</span> <span class="o">/</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+
+<div class="viewcode-block" id="CylinderMagnetApprox.Bz_method">
+<a class="viewcode-back" href="../../../setup/magnet.html#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.Bz_method">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">Bz_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Calculate magnetic field :math:`B_z` [mT].</span>
+
+<span class="sd">        Approximating Cylinder Magnet by 11 Rectangular Magnets. When viewed from the</span>
+<span class="sd">        vertical direction, we are using a row of rectangles to approximate a circle,</span>
+<span class="sd">        these rectangular blocks are arranged side by side.</span>
+
+<span class="sd">        The magnetic field of each rectangular magnet is calculated following the</span>
+<span class="sd">        method described in Ravaud2009 [#]_.  The magnet is set up so that the</span>
+<span class="sd">        :math:`x` and :math:`y`  dimensions are centered about the zero point. </span>
+<span class="sd">        The translation in :math:`z` shifts the tip of the magnet in the </span>
+<span class="sd">        :math:`z`-direction to be the given distance from the surface.</span>
+<span class="sd">        Using the Coulombian model, assuming a uniform magnetization throughout</span>
+<span class="sd">        the volume of the magnet and modeling each face of the magnet as a</span>
+<span class="sd">        layer of continuous current density. The total field is found by</span>
+<span class="sd">        summing over the faces.</span>
+<span class="sd">        The magnetic field is given by:</span>
+
+<span class="sd">        .. math::</span>
+<span class="sd">            B_z = \dfrac{\mu_0 M_s}{4\pi} \sum_{i=1}^{2}</span>
+<span class="sd">                \sum_{j=1}^2 \sum_{k=1}^2(-1)^{i+j+k}</span>
+<span class="sd">                \arctan \left( \dfrac{(x - x_i)(y - y_i))}{(z - z_k)R} \right)</span>
+
+<span class="sd">        Here :math:`(x,y,z)` are the coordinates for the location at which we</span>
+<span class="sd">        want to know the field;</span>
+<span class="sd">        The magnet spans from :math:`x_1` to :math:`x_2` in the :math:`x`-direction,</span>
+<span class="sd">        :math:`y_1` to :math:`y_2` in the :math:`y`-direction, and :math:`z_1` to </span>
+<span class="sd">        :math:`z_2` in the :math:`z`-direction;</span>
+
+<span class="sd">        .. math::</span>
+<span class="sd">            R = \sqrt{(x - x_i)^2 + (y - y_j)^2 + (z - z_k)^2}</span>
+
+<span class="sd">        where :math:`\mu_0 M_s` is the magnet&#39;s saturation magnetization in mT.</span>
+
+<span class="sd">        .. [#] Ravaud, R. and Lemarquand, G. &quot;Magnetic field produced by a</span>
+<span class="sd">           parallelepipedic magnet of various and uniform polarization&quot; ,</span>
+<span class="sd">           *PIER*, **2009**, *98*, 207-219</span>
+<span class="sd">           [`10.2528/PIER09091704 &lt;http://dx.doi.org/10.2528/PIER09091704&gt;`__].</span>
+
+
+<span class="sd">        :param float x: :math:`x` coordinate of sample grid [nm]</span>
+<span class="sd">        :param float y: :math:`y` coordinate of sample grid [nm]</span>
+<span class="sd">        :param float z: :math:`z` coordinate of sample grid [nm]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">dx11</span><span class="p">,</span> <span class="n">dx12</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy11</span><span class="p">,</span> <span class="n">dy12</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz11</span><span class="p">,</span> <span class="n">dz12</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx21</span><span class="p">,</span> <span class="n">dx22</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy21</span><span class="p">,</span> <span class="n">dy22</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz21</span><span class="p">,</span> <span class="n">dz22</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx31</span><span class="p">,</span> <span class="n">dx32</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy31</span><span class="p">,</span> <span class="n">dy32</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz31</span><span class="p">,</span> <span class="n">dz32</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx41</span><span class="p">,</span> <span class="n">dx42</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy41</span><span class="p">,</span> <span class="n">dy42</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz41</span><span class="p">,</span> <span class="n">dz42</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx51</span><span class="p">,</span> <span class="n">dx52</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy51</span><span class="p">,</span> <span class="n">dy52</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz51</span><span class="p">,</span> <span class="n">dz52</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx61</span><span class="p">,</span> <span class="n">dx62</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy61</span><span class="p">,</span> <span class="n">dy62</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz61</span><span class="p">,</span> <span class="n">dz62</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx71</span><span class="p">,</span> <span class="n">dx72</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">6</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">6</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy71</span><span class="p">,</span> <span class="n">dy72</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">6</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">6</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz71</span><span class="p">,</span> <span class="n">dz72</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">6</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">6</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx81</span><span class="p">,</span> <span class="n">dx82</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy81</span><span class="p">,</span> <span class="n">dy82</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz81</span><span class="p">,</span> <span class="n">dz82</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx91</span><span class="p">,</span> <span class="n">dx92</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">8</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">8</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy91</span><span class="p">,</span> <span class="n">dy92</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">8</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">8</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz91</span><span class="p">,</span> <span class="n">dz92</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">8</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">8</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx101</span><span class="p">,</span> <span class="n">dx102</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">9</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">9</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy101</span><span class="p">,</span> <span class="n">dy102</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">9</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">9</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz101</span><span class="p">,</span> <span class="n">dz102</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">9</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">9</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx111</span><span class="p">,</span> <span class="n">dx112</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">10</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">10</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy111</span><span class="p">,</span> <span class="n">dy112</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">10</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">10</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz111</span><span class="p">,</span> <span class="n">dz112</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">10</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">10</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pre_term</span> <span class="o">*</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_bz</span><span class="p">(</span><span class="n">dx11</span><span class="p">,</span> <span class="n">dx12</span><span class="p">,</span> <span class="n">dy11</span><span class="p">,</span> <span class="n">dy12</span><span class="p">,</span> <span class="n">dz11</span><span class="p">,</span> <span class="n">dz12</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bz</span><span class="p">(</span><span class="n">dx21</span><span class="p">,</span> <span class="n">dx22</span><span class="p">,</span> <span class="n">dy21</span><span class="p">,</span> <span class="n">dy22</span><span class="p">,</span> <span class="n">dz21</span><span class="p">,</span> <span class="n">dz22</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bz</span><span class="p">(</span><span class="n">dx31</span><span class="p">,</span> <span class="n">dx32</span><span class="p">,</span> <span class="n">dy31</span><span class="p">,</span> <span class="n">dy32</span><span class="p">,</span> <span class="n">dz31</span><span class="p">,</span> <span class="n">dz32</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bz</span><span class="p">(</span><span class="n">dx41</span><span class="p">,</span> <span class="n">dx42</span><span class="p">,</span> <span class="n">dy41</span><span class="p">,</span> <span class="n">dy42</span><span class="p">,</span> <span class="n">dz41</span><span class="p">,</span> <span class="n">dz42</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bz</span><span class="p">(</span><span class="n">dx51</span><span class="p">,</span> <span class="n">dx52</span><span class="p">,</span> <span class="n">dy51</span><span class="p">,</span> <span class="n">dy52</span><span class="p">,</span> <span class="n">dz51</span><span class="p">,</span> <span class="n">dz52</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bz</span><span class="p">(</span><span class="n">dx61</span><span class="p">,</span> <span class="n">dx62</span><span class="p">,</span> <span class="n">dy61</span><span class="p">,</span> <span class="n">dy62</span><span class="p">,</span> <span class="n">dz61</span><span class="p">,</span> <span class="n">dz62</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bz</span><span class="p">(</span><span class="n">dx71</span><span class="p">,</span> <span class="n">dx72</span><span class="p">,</span> <span class="n">dy71</span><span class="p">,</span> <span class="n">dy72</span><span class="p">,</span> <span class="n">dz71</span><span class="p">,</span> <span class="n">dz72</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bz</span><span class="p">(</span><span class="n">dx81</span><span class="p">,</span> <span class="n">dx82</span><span class="p">,</span> <span class="n">dy81</span><span class="p">,</span> <span class="n">dy82</span><span class="p">,</span> <span class="n">dz81</span><span class="p">,</span> <span class="n">dz82</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bz</span><span class="p">(</span><span class="n">dx91</span><span class="p">,</span> <span class="n">dx92</span><span class="p">,</span> <span class="n">dy91</span><span class="p">,</span> <span class="n">dy92</span><span class="p">,</span> <span class="n">dz91</span><span class="p">,</span> <span class="n">dz92</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bz</span><span class="p">(</span><span class="n">dx101</span><span class="p">,</span> <span class="n">dx102</span><span class="p">,</span> <span class="n">dy101</span><span class="p">,</span> <span class="n">dy102</span><span class="p">,</span> <span class="n">dz101</span><span class="p">,</span> <span class="n">dz102</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bz</span><span class="p">(</span><span class="n">dx111</span><span class="p">,</span> <span class="n">dx112</span><span class="p">,</span> <span class="n">dy111</span><span class="p">,</span> <span class="n">dy112</span><span class="p">,</span> <span class="n">dz111</span><span class="p">,</span> <span class="n">dz112</span><span class="p">)</span>
+        <span class="p">)</span></div>
+
+
+    <span class="nd">@staticmethod</span>
+    <span class="nd">@nb</span><span class="o">.</span><span class="n">vectorize</span><span class="p">(</span>
+        <span class="p">[</span>
+            <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="p">],</span>
+        <span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">target</span><span class="o">=</span><span class="s2">&quot;parallel&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_bz</span><span class="p">(</span><span class="n">dx1</span><span class="p">,</span> <span class="n">dx2</span><span class="p">,</span> <span class="n">dy1</span><span class="p">,</span> <span class="n">dy2</span><span class="p">,</span> <span class="n">dz1</span><span class="p">,</span> <span class="n">dz2</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Calculate the summation term for magnetic field optimized by numba.</span>
+
+<span class="sd">        See method Bz_method for the explanation.</span>
+
+<span class="sd">        :param float dx1: distance between grid and one end of magnet</span>
+<span class="sd">                    in :math:`x` direction [nm]</span>
+<span class="sd">        :param float dx2: distance between grid and other end of magnet</span>
+<span class="sd">                    in :math:`x` direction [nm]</span>
+<span class="sd">        :param float dy1: distance between grid and one end of magnet</span>
+<span class="sd">                    in :math:`y` direction [nm]</span>
+<span class="sd">        :param float dy2: distance between grid and other end of magnet</span>
+<span class="sd">                    in :math:`y` direction [nm]</span>
+<span class="sd">        :param float dz1: distance between grid and one end of magnet</span>
+<span class="sd">                    in :math:`z` direction [nm]</span>
+<span class="sd">        :param float dz2: distance between grid and other end of magnet</span>
+<span class="sd">                    in :math:`z` direction [nm]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">dx1</span> <span class="o">*</span> <span class="n">dy1</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">dz1</span><span class="p">))</span>
+            <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">dx2</span> <span class="o">*</span> <span class="n">dy1</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">dz1</span><span class="p">))</span>
+            <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">dx1</span> <span class="o">*</span> <span class="n">dy2</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">dz1</span><span class="p">))</span>
+            <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">dx2</span> <span class="o">*</span> <span class="n">dy2</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">dz1</span><span class="p">))</span>
+            <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">dx1</span> <span class="o">*</span> <span class="n">dy1</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">dz2</span><span class="p">))</span>
+            <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">dx2</span> <span class="o">*</span> <span class="n">dy1</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">dz2</span><span class="p">))</span>
+            <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">dx1</span> <span class="o">*</span> <span class="n">dy2</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">dz2</span><span class="p">))</span>
+            <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">dx2</span> <span class="o">*</span> <span class="n">dy2</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">dz2</span><span class="p">))</span>
+        <span class="p">)</span>
+
+<div class="viewcode-block" id="CylinderMagnetApprox.Bzx_method">
+<a class="viewcode-back" href="../../../setup/magnet.html#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.Bzx_method">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">Bzx_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Calculate magnetic field gradient :math:`B_{zx}`.</span>
+
+<span class="sd">        Approximating Cylinder Magnet by 11 Rectangular Magnets. When viewed from the</span>
+<span class="sd">        vertical direction, we are using a row of rectangles to approximate a circle,</span>
+<span class="sd">        these rectangular blocks are arranged side by side.</span>
+
+<span class="sd">        The magnetic field gradient for RectangularMagnet is:</span>
+<span class="sd">        :math:`B_{zx} = \dfrac{\partial{B_z}}{\partial x}` is</span>
+<span class="sd">        given by the following:</span>
+
+<span class="sd">        .. math::</span>
+<span class="sd">           B_{zx} = \dfrac{\mu_0 M_s}{4 \pi} \sum_{i=1}^2 \sum_{j=1}^2</span>
+<span class="sd">               \sum_{k=1}^2(-1)^{i+j+k}</span>
+<span class="sd">               \left( \dfrac{(y-y_j)(z-z_k)}{ R((x-x_i)^2 + (z-z_k)^2))}</span>
+<span class="sd">               \right)</span>
+
+<span class="sd">        As described above, :math:`(x,y,z)` are coordinates for the location</span>
+<span class="sd">        at which we want to know the field gradient; the magnet spans from</span>
+<span class="sd">        x1 to x2 in the :math:`x`-direction, y1 to y2 in the :math:`y`-direction, and</span>
+<span class="sd">        from z1 to z2 in the :math:`z`-direction;</span>
+
+<span class="sd">        .. math::</span>
+<span class="sd">            R = \sqrt{(x - x_i)^2 + (y - y_j)^2 + (z - z_k)^2}</span>
+
+<span class="sd">        :math:`\mu_0 M_s` is the magnet&#39;s saturation magnetization in mT.</span>
+
+<span class="sd">        :param float x: :math:`x` coordinate [nm]</span>
+<span class="sd">        :param float y: :math:`y` coordinate [nm]</span>
+<span class="sd">        :param float z: :math:`z` coordinate [nm]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">dx11</span><span class="p">,</span> <span class="n">dx12</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy11</span><span class="p">,</span> <span class="n">dy12</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz11</span><span class="p">,</span> <span class="n">dz12</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx21</span><span class="p">,</span> <span class="n">dx22</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy21</span><span class="p">,</span> <span class="n">dy22</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz21</span><span class="p">,</span> <span class="n">dz22</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx31</span><span class="p">,</span> <span class="n">dx32</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy31</span><span class="p">,</span> <span class="n">dy32</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz31</span><span class="p">,</span> <span class="n">dz32</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx41</span><span class="p">,</span> <span class="n">dx42</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy41</span><span class="p">,</span> <span class="n">dy42</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz41</span><span class="p">,</span> <span class="n">dz42</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx51</span><span class="p">,</span> <span class="n">dx52</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy51</span><span class="p">,</span> <span class="n">dy52</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz51</span><span class="p">,</span> <span class="n">dz52</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx61</span><span class="p">,</span> <span class="n">dx62</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy61</span><span class="p">,</span> <span class="n">dy62</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz61</span><span class="p">,</span> <span class="n">dz62</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx71</span><span class="p">,</span> <span class="n">dx72</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">6</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">6</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy71</span><span class="p">,</span> <span class="n">dy72</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">6</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">6</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz71</span><span class="p">,</span> <span class="n">dz72</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">6</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">6</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx81</span><span class="p">,</span> <span class="n">dx82</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy81</span><span class="p">,</span> <span class="n">dy82</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz81</span><span class="p">,</span> <span class="n">dz82</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx91</span><span class="p">,</span> <span class="n">dx92</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">8</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">8</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy91</span><span class="p">,</span> <span class="n">dy92</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">8</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">8</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz91</span><span class="p">,</span> <span class="n">dz92</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">8</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">8</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx101</span><span class="p">,</span> <span class="n">dx102</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">9</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">9</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy101</span><span class="p">,</span> <span class="n">dy102</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">9</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">9</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz101</span><span class="p">,</span> <span class="n">dz102</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">9</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">9</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx111</span><span class="p">,</span> <span class="n">dx112</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">10</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">10</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy111</span><span class="p">,</span> <span class="n">dy112</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">10</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">10</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz111</span><span class="p">,</span> <span class="n">dz112</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">10</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">10</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pre_term</span> <span class="o">*</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_bzx</span><span class="p">(</span><span class="n">dx11</span><span class="p">,</span> <span class="n">dx12</span><span class="p">,</span> <span class="n">dy11</span><span class="p">,</span> <span class="n">dy12</span><span class="p">,</span> <span class="n">dz11</span><span class="p">,</span> <span class="n">dz12</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bzx</span><span class="p">(</span><span class="n">dx21</span><span class="p">,</span> <span class="n">dx22</span><span class="p">,</span> <span class="n">dy21</span><span class="p">,</span> <span class="n">dy22</span><span class="p">,</span> <span class="n">dz21</span><span class="p">,</span> <span class="n">dz22</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bzx</span><span class="p">(</span><span class="n">dx31</span><span class="p">,</span> <span class="n">dx32</span><span class="p">,</span> <span class="n">dy31</span><span class="p">,</span> <span class="n">dy32</span><span class="p">,</span> <span class="n">dz31</span><span class="p">,</span> <span class="n">dz32</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bzx</span><span class="p">(</span><span class="n">dx41</span><span class="p">,</span> <span class="n">dx42</span><span class="p">,</span> <span class="n">dy41</span><span class="p">,</span> <span class="n">dy42</span><span class="p">,</span> <span class="n">dz41</span><span class="p">,</span> <span class="n">dz42</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bzx</span><span class="p">(</span><span class="n">dx51</span><span class="p">,</span> <span class="n">dx52</span><span class="p">,</span> <span class="n">dy51</span><span class="p">,</span> <span class="n">dy52</span><span class="p">,</span> <span class="n">dz51</span><span class="p">,</span> <span class="n">dz52</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bzx</span><span class="p">(</span><span class="n">dx61</span><span class="p">,</span> <span class="n">dx62</span><span class="p">,</span> <span class="n">dy61</span><span class="p">,</span> <span class="n">dy62</span><span class="p">,</span> <span class="n">dz61</span><span class="p">,</span> <span class="n">dz62</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bzx</span><span class="p">(</span><span class="n">dx71</span><span class="p">,</span> <span class="n">dx72</span><span class="p">,</span> <span class="n">dy71</span><span class="p">,</span> <span class="n">dy72</span><span class="p">,</span> <span class="n">dz71</span><span class="p">,</span> <span class="n">dz72</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bzx</span><span class="p">(</span><span class="n">dx81</span><span class="p">,</span> <span class="n">dx82</span><span class="p">,</span> <span class="n">dy81</span><span class="p">,</span> <span class="n">dy82</span><span class="p">,</span> <span class="n">dz81</span><span class="p">,</span> <span class="n">dz82</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bzx</span><span class="p">(</span><span class="n">dx91</span><span class="p">,</span> <span class="n">dx92</span><span class="p">,</span> <span class="n">dy91</span><span class="p">,</span> <span class="n">dy92</span><span class="p">,</span> <span class="n">dz91</span><span class="p">,</span> <span class="n">dz92</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bzx</span><span class="p">(</span><span class="n">dx101</span><span class="p">,</span> <span class="n">dx102</span><span class="p">,</span> <span class="n">dy101</span><span class="p">,</span> <span class="n">dy102</span><span class="p">,</span> <span class="n">dz101</span><span class="p">,</span> <span class="n">dz102</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bzx</span><span class="p">(</span><span class="n">dx111</span><span class="p">,</span> <span class="n">dx112</span><span class="p">,</span> <span class="n">dy111</span><span class="p">,</span> <span class="n">dy112</span><span class="p">,</span> <span class="n">dz111</span><span class="p">,</span> <span class="n">dz112</span><span class="p">)</span>
+        <span class="p">)</span></div>
+
+
+    <span class="nd">@staticmethod</span>
+    <span class="nd">@nb</span><span class="o">.</span><span class="n">vectorize</span><span class="p">(</span>
+        <span class="p">[</span>
+            <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="p">],</span>
+        <span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">target</span><span class="o">=</span><span class="s2">&quot;parallel&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_bzx</span><span class="p">(</span><span class="n">dx1</span><span class="p">,</span> <span class="n">dx2</span><span class="p">,</span> <span class="n">dy1</span><span class="p">,</span> <span class="n">dy2</span><span class="p">,</span> <span class="n">dz1</span><span class="p">,</span> <span class="n">dz2</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Calculate the summation term for magnetic field gradient.</span>
+
+<span class="sd">        Optimized with numba. See method ``Bzx_method`` for the explanation.</span>
+
+<span class="sd">        :param float dx1: distance between grid and one end of magnet</span>
+<span class="sd">                    in :math:`x` direction [nm]</span>
+<span class="sd">        :param float dx2: distance between grid and other end of magnet</span>
+<span class="sd">                    in :math:`x` direction [nm]</span>
+<span class="sd">        :param float dy1: distance between grid and one end of magnet</span>
+<span class="sd">                    in :math:`y` direction [nm]</span>
+<span class="sd">        :param float dy2: distance between grid and other end of magnet</span>
+<span class="sd">                    in :math:`y` direction [nm]</span>
+<span class="sd">        :param float dz1: distance between grid and one end of magnet</span>
+<span class="sd">                    in :math:`z` direction [nm]</span>
+<span class="sd">        :param float dz2: distance between grid and other end of magnet</span>
+<span class="sd">                    in :math:`z` direction [nm]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="o">-</span><span class="n">dy1</span> <span class="o">*</span> <span class="n">dz1</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+            <span class="o">+</span> <span class="n">dy1</span> <span class="o">*</span> <span class="n">dz1</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+            <span class="o">+</span> <span class="n">dy2</span> <span class="o">*</span> <span class="n">dz1</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+            <span class="o">-</span> <span class="n">dy2</span> <span class="o">*</span> <span class="n">dz1</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+            <span class="o">+</span> <span class="n">dy1</span> <span class="o">*</span> <span class="n">dz2</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+            <span class="o">-</span> <span class="n">dy1</span> <span class="o">*</span> <span class="n">dz2</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+            <span class="o">-</span> <span class="n">dy2</span> <span class="o">*</span> <span class="n">dz2</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+            <span class="o">+</span> <span class="n">dy2</span> <span class="o">*</span> <span class="n">dz2</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+        <span class="p">)</span>
+
+<div class="viewcode-block" id="CylinderMagnetApprox.Bzxx_method">
+<a class="viewcode-back" href="../../../setup/magnet.html#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.Bzxx_method">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">Bzxx_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Calculate magnetic field second derivative :math:`B_{zxx}`.</span>
+
+<span class="sd">        Approximating Cylinder Magnet by 11 Rectangular Magnets. When viewed from the</span>
+<span class="sd">        vertical direction, we are using a row of rectangles to approximate a circle,</span>
+<span class="sd">        these rectangular blocks are arranged side by side.</span>
+
+<span class="sd">        The magnetic field second derivative for RectangularMagnet is:</span>
+<span class="sd">        :math:`B_{zxx} \equiv \partial^2 B_z / \partial x^2`</span>
+<span class="sd">        [ :math:`\mathrm{mT} \; \mathrm{nm}^{-2}`]</span>
+<span class="sd">        The magnetic field&#39;s second derivative is given by the following:</span>
+
+<span class="sd">        .. math::</span>
+<span class="sd">           B_{zxx} = \dfrac{\partial^2 B_z}{\partial x^2}</span>
+<span class="sd">               = \dfrac{\mu_0 M_s}{4 \pi} \sum_{i=1}^2</span>
+<span class="sd">                   \sum_{j=1}^2 \sum_{k=1}^2(-1)^{i+j+k}</span>
+<span class="sd">                   \left( \dfrac{-(x-x_i)(y-y_j)(z-z_k)</span>
+<span class="sd">                   (3(x-x_i)^2 +2(y-y_j)^2 + 3(z-z_k)^2)}</span>
+<span class="sd">                   {((x-x_i)^2 + (y-y_j)^2 + (z-z_k)^2)^{3/2}</span>
+<span class="sd">                   ((x-x_i)^2 + (z-z_k)^2)^2} \right)</span>
+
+<span class="sd">        with the variables defined above.</span>
+
+<span class="sd">        :param float x: :math:`x` coordinate [nm]</span>
+<span class="sd">        :param float y: :math:`y` coordinate [nm]</span>
+<span class="sd">        :param float z: :math:`z` coordinate [nm]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">dx11</span><span class="p">,</span> <span class="n">dx12</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy11</span><span class="p">,</span> <span class="n">dy12</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz11</span><span class="p">,</span> <span class="n">dz12</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx21</span><span class="p">,</span> <span class="n">dx22</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy21</span><span class="p">,</span> <span class="n">dy22</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz21</span><span class="p">,</span> <span class="n">dz22</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx31</span><span class="p">,</span> <span class="n">dx32</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy31</span><span class="p">,</span> <span class="n">dy32</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz31</span><span class="p">,</span> <span class="n">dz32</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx41</span><span class="p">,</span> <span class="n">dx42</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy41</span><span class="p">,</span> <span class="n">dy42</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz41</span><span class="p">,</span> <span class="n">dz42</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx51</span><span class="p">,</span> <span class="n">dx52</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy51</span><span class="p">,</span> <span class="n">dy52</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz51</span><span class="p">,</span> <span class="n">dz52</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx61</span><span class="p">,</span> <span class="n">dx62</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy61</span><span class="p">,</span> <span class="n">dy62</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz61</span><span class="p">,</span> <span class="n">dz62</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx71</span><span class="p">,</span> <span class="n">dx72</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">6</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">6</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy71</span><span class="p">,</span> <span class="n">dy72</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">6</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">6</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz71</span><span class="p">,</span> <span class="n">dz72</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">6</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">6</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx81</span><span class="p">,</span> <span class="n">dx82</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy81</span><span class="p">,</span> <span class="n">dy82</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz81</span><span class="p">,</span> <span class="n">dz82</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx91</span><span class="p">,</span> <span class="n">dx92</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">8</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">8</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy91</span><span class="p">,</span> <span class="n">dy92</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">8</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">8</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz91</span><span class="p">,</span> <span class="n">dz92</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">8</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">8</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx101</span><span class="p">,</span> <span class="n">dx102</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">9</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">9</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy101</span><span class="p">,</span> <span class="n">dy102</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">9</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">9</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz101</span><span class="p">,</span> <span class="n">dz102</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">9</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">9</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="n">dx111</span><span class="p">,</span> <span class="n">dx112</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">10</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">10</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dy111</span><span class="p">,</span> <span class="n">dy112</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">10</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">10</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">dz111</span><span class="p">,</span> <span class="n">dz112</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">10</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">10</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pre_term</span> <span class="o">*</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_bzxx</span><span class="p">(</span><span class="n">dx11</span><span class="p">,</span> <span class="n">dx12</span><span class="p">,</span> <span class="n">dy11</span><span class="p">,</span> <span class="n">dy12</span><span class="p">,</span> <span class="n">dz11</span><span class="p">,</span> <span class="n">dz12</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bzxx</span><span class="p">(</span><span class="n">dx21</span><span class="p">,</span> <span class="n">dx22</span><span class="p">,</span> <span class="n">dy21</span><span class="p">,</span> <span class="n">dy22</span><span class="p">,</span> <span class="n">dz21</span><span class="p">,</span> <span class="n">dz22</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bzxx</span><span class="p">(</span><span class="n">dx31</span><span class="p">,</span> <span class="n">dx32</span><span class="p">,</span> <span class="n">dy31</span><span class="p">,</span> <span class="n">dy32</span><span class="p">,</span> <span class="n">dz31</span><span class="p">,</span> <span class="n">dz32</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bzxx</span><span class="p">(</span><span class="n">dx41</span><span class="p">,</span> <span class="n">dx42</span><span class="p">,</span> <span class="n">dy41</span><span class="p">,</span> <span class="n">dy42</span><span class="p">,</span> <span class="n">dz41</span><span class="p">,</span> <span class="n">dz42</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bzxx</span><span class="p">(</span><span class="n">dx51</span><span class="p">,</span> <span class="n">dx52</span><span class="p">,</span> <span class="n">dy51</span><span class="p">,</span> <span class="n">dy52</span><span class="p">,</span> <span class="n">dz51</span><span class="p">,</span> <span class="n">dz52</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bzxx</span><span class="p">(</span><span class="n">dx61</span><span class="p">,</span> <span class="n">dx62</span><span class="p">,</span> <span class="n">dy61</span><span class="p">,</span> <span class="n">dy62</span><span class="p">,</span> <span class="n">dz61</span><span class="p">,</span> <span class="n">dz62</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bzxx</span><span class="p">(</span><span class="n">dx71</span><span class="p">,</span> <span class="n">dx72</span><span class="p">,</span> <span class="n">dy71</span><span class="p">,</span> <span class="n">dy72</span><span class="p">,</span> <span class="n">dz71</span><span class="p">,</span> <span class="n">dz72</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bzxx</span><span class="p">(</span><span class="n">dx81</span><span class="p">,</span> <span class="n">dx82</span><span class="p">,</span> <span class="n">dy81</span><span class="p">,</span> <span class="n">dy82</span><span class="p">,</span> <span class="n">dz81</span><span class="p">,</span> <span class="n">dz82</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bzxx</span><span class="p">(</span><span class="n">dx91</span><span class="p">,</span> <span class="n">dx92</span><span class="p">,</span> <span class="n">dy91</span><span class="p">,</span> <span class="n">dy92</span><span class="p">,</span> <span class="n">dz91</span><span class="p">,</span> <span class="n">dz92</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bzxx</span><span class="p">(</span><span class="n">dx101</span><span class="p">,</span> <span class="n">dx102</span><span class="p">,</span> <span class="n">dy101</span><span class="p">,</span> <span class="n">dy102</span><span class="p">,</span> <span class="n">dz101</span><span class="p">,</span> <span class="n">dz102</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bzxx</span><span class="p">(</span><span class="n">dx111</span><span class="p">,</span> <span class="n">dx112</span><span class="p">,</span> <span class="n">dy111</span><span class="p">,</span> <span class="n">dy112</span><span class="p">,</span> <span class="n">dz111</span><span class="p">,</span> <span class="n">dz112</span><span class="p">)</span>
+        <span class="p">)</span></div>
+
+
+    <span class="nd">@staticmethod</span>
+    <span class="nd">@nb</span><span class="o">.</span><span class="n">vectorize</span><span class="p">(</span>
+        <span class="p">[</span>
+            <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                <span class="n">nb</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="p">],</span>
+        <span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">target</span><span class="o">=</span><span class="s2">&quot;parallel&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_bzxx</span><span class="p">(</span><span class="n">dx1</span><span class="p">,</span> <span class="n">dx2</span><span class="p">,</span> <span class="n">dy1</span><span class="p">,</span> <span class="n">dy2</span><span class="p">,</span> <span class="n">dz1</span><span class="p">,</span> <span class="n">dz2</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The summation term for the second derivative of magnetic field.</span>
+
+<span class="sd">        Optimized by numba. See Bzxx_method for the explanation.</span>
+
+<span class="sd">        :param float dx1: distance between grid and one end of magnet</span>
+<span class="sd">                        in :math:`x` direction [nm]</span>
+<span class="sd">        :param float dx2: distance between grid and other end of magnet</span>
+<span class="sd">                        in :math:`x` direction [nm]</span>
+<span class="sd">        :param float dy1: distance between grid and one end of magnet</span>
+<span class="sd">                        in :math:`y` direction [nm]</span>
+<span class="sd">        :param float dy2: distance between grid and other end of magnet</span>
+<span class="sd">                        in :math:`y` direction [nm]</span>
+<span class="sd">        :param float dz1: distance between grid and one end of magnet</span>
+<span class="sd">                        in :math:`z` direction [nm]</span>
+<span class="sd">        :param float dz2: distance between grid and other end of magnet</span>
+<span class="sd">                        in :math:`z` direction [nm]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="o">+</span><span class="n">dx1</span>
+            <span class="o">*</span> <span class="n">dy1</span>
+            <span class="o">*</span> <span class="n">dz1</span>
+            <span class="o">*</span> <span class="p">(</span><span class="mf">3.0</span> <span class="o">*</span> <span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">3.0</span> <span class="o">*</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+            <span class="o">/</span> <span class="p">((</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="o">-</span> <span class="n">dx2</span>
+            <span class="o">*</span> <span class="n">dy1</span>
+            <span class="o">*</span> <span class="n">dz1</span>
+            <span class="o">*</span> <span class="p">(</span><span class="mf">3.0</span> <span class="o">*</span> <span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">3.0</span> <span class="o">*</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+            <span class="o">/</span> <span class="p">((</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="o">-</span> <span class="n">dx1</span>
+            <span class="o">*</span> <span class="n">dy2</span>
+            <span class="o">*</span> <span class="n">dz1</span>
+            <span class="o">*</span> <span class="p">(</span><span class="mf">3.0</span> <span class="o">*</span> <span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">3.0</span> <span class="o">*</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+            <span class="o">/</span> <span class="p">((</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="o">+</span> <span class="n">dx2</span>
+            <span class="o">*</span> <span class="n">dy2</span>
+            <span class="o">*</span> <span class="n">dz1</span>
+            <span class="o">*</span> <span class="p">(</span><span class="mf">3.0</span> <span class="o">*</span> <span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">3.0</span> <span class="o">*</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+            <span class="o">/</span> <span class="p">((</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="o">-</span> <span class="n">dx1</span>
+            <span class="o">*</span> <span class="n">dy1</span>
+            <span class="o">*</span> <span class="n">dz2</span>
+            <span class="o">*</span> <span class="p">(</span><span class="mf">3.0</span> <span class="o">*</span> <span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">3.0</span> <span class="o">*</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+            <span class="o">/</span> <span class="p">((</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="o">+</span> <span class="n">dx2</span>
+            <span class="o">*</span> <span class="n">dy1</span>
+            <span class="o">*</span> <span class="n">dz2</span>
+            <span class="o">*</span> <span class="p">(</span><span class="mf">3.0</span> <span class="o">*</span> <span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">3.0</span> <span class="o">*</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+            <span class="o">/</span> <span class="p">((</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="o">+</span> <span class="n">dx1</span>
+            <span class="o">*</span> <span class="n">dy2</span>
+            <span class="o">*</span> <span class="n">dz2</span>
+            <span class="o">*</span> <span class="p">(</span><span class="mf">3.0</span> <span class="o">*</span> <span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">3.0</span> <span class="o">*</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+            <span class="o">/</span> <span class="p">((</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="o">-</span> <span class="n">dx2</span>
+            <span class="o">*</span> <span class="n">dy2</span>
+            <span class="o">*</span> <span class="n">dz2</span>
+            <span class="o">*</span> <span class="p">(</span><span class="mf">3.0</span> <span class="o">*</span> <span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">3.0</span> <span class="o">*</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+            <span class="o">/</span> <span class="p">((</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dz2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="p">)</span></div>
+
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Peter Sun
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

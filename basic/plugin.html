@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Plugins &#8212; mrfmsim 0.3.0 documentation</title>
+    <title>Plugins &#8212; mrfmsim 0.4.0 documentation</title>
   
   
   
@@ -39,7 +39,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=83a61292"></script>
+    <script src="../_static/documentation_options.js?v=183391d5"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
@@ -125,7 +125,7 @@
   
   
   
-    <p class="title logo__title">mrfmsim 0.3.0 documentation</p>
+    <p class="title logo__title">mrfmsim 0.4.0 documentation</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -142,6 +142,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tests.html">Tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim basics</span></p>
 <ul class="current nav bd-sidenav">
@@ -325,7 +326,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim-ymal-yaml-configuration-plugin">mrfmsim-ymal: YAML configuration plugin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim-yaml-yaml-configuration-plugin">mrfmsim-yaml: YAML configuration plugin</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim-cli-command-line-interface-plugin">mrfmsim-cli: command line interface plugin</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim-unit-unit-plugin">mrfmsim-unit: unit plugin</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim-plot-plot-plugin">mrfmsim-plot: plot plugin</a></li>
@@ -345,12 +346,12 @@
 <p>Ancillary features are added to the mrfmsim ecosystem through plugin packages.
 The separation of the core functionality and the plugins allows for an easy maintenance
 of the mrfmsim package. The core functionalities do not depend on the plugins.</p>
-<section id="mrfmsim-ymal-yaml-configuration-plugin">
-<h2>mrfmsim-ymal: YAML configuration plugin<a class="headerlink" href="#mrfmsim-ymal-yaml-configuration-plugin" title="Link to this heading">#</a></h2>
+<section id="mrfmsim-yaml-yaml-configuration-plugin">
+<h2>mrfmsim-yaml: YAML configuration plugin<a class="headerlink" href="#mrfmsim-yaml-yaml-configuration-plugin" title="Link to this heading">#</a></h2>
 <p>mrfmsim classes can be fully defined using YAML configuration files. The plugin
 creates a <code class="docutils literal notranslate"><span class="pre">MrfmSimLoader</span></code> and a <code class="docutils literal notranslate"><span class="pre">MrfmSimDumper</span></code> that can be used to load and
 dump the mrfmsim classes to and from YAML files. For detailed usage of the package
-see the <a class="reference external" href="https://github.com/Marohn-Group/mrfmsim-yaml">mrfmsim-ymal</a>.</p>
+see the <a class="reference external" href="https://github.com/Marohn-Group/mrfmsim-yaml">mrfmsim-yaml</a>.</p>
 <p>To define an experiment or experiment group with YAML files, the available tags are:
 “!func”, “!import”, “!nodes”, “!Graph”, “!Experiment”, and “!ExperimentGroup”.</p>
 <div class="pst-scrollable-table-container"><table class="table">
@@ -576,7 +577,7 @@ conversion from the experiment data to the
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim-ymal-yaml-configuration-plugin">mrfmsim-ymal: YAML configuration plugin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim-yaml-yaml-configuration-plugin">mrfmsim-yaml: YAML configuration plugin</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim-cli-command-line-interface-plugin">mrfmsim-cli: command line interface plugin</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim-unit-unit-plugin">mrfmsim-unit: unit plugin</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim-plot-plot-plugin">mrfmsim-plot: plot plugin</a></li>

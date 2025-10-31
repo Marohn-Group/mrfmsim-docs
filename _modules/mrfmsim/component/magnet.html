@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mrfmsim.component.magnet &#8212; mrfmsim 0.3.0 documentation</title>
+    <title>mrfmsim.component.magnet &#8212; mrfmsim 0.4.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../_static/documentation_options.js?v=83a61292"></script>
+    <script src="../../../_static/documentation_options.js?v=183391d5"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
@@ -124,7 +124,7 @@
   
   
   
-    <p class="title logo__title">mrfmsim 0.3.0 documentation</p>
+    <p class="title logo__title">mrfmsim 0.4.0 documentation</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -141,6 +141,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../tests.html">Tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute.html">Contribute</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim basics</span></p>
 <ul class="nav bd-sidenav">
@@ -291,8 +292,9 @@
 <span class="k">class</span><span class="w"> </span><span class="nc">SphereMagnet</span><span class="p">(</span><span class="n">ComponentBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Spherical magnet object with its Bz, Bzx, Bzxx calculations.</span>
 
-<span class="sd">    :param float radius: sphere magnet radius [nm]</span>
-<span class="sd">    :param list origin: the position of the magnet origin (x, y, z)</span>
+<span class="sd">    :param float magnet_radius: sphere magnet radius [nm]</span>
+<span class="sd">    :param list magnet_origin: the position of the magnet origin</span>
+<span class="sd">        :math:`(x, y, z)` [nm]</span>
 <span class="sd">    :param float mu0_Ms: saturation magnetization [mT]</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -305,9 +307,9 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">Bz_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Calculate magnetic field :math:`B_z` [mT].</span>
 
-<span class="sd">        :param float x: x coordinate of sample grid [nm]</span>
-<span class="sd">        :param float y: y coordinate of sample grid [nm]</span>
-<span class="sd">        :param float z: z coordinate of sample grid [nm]</span>
+<span class="sd">        :param float x: :math:`x` coordinate of sample grid [nm]</span>
+<span class="sd">        :param float y: :math:`y` coordinate of sample grid [nm]</span>
+<span class="sd">        :param float z: :math:`z` coordinate of sample grid [nm]</span>
 
 <span class="sd">        The magnetic field is calculated as</span>
 
@@ -343,12 +345,15 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">_bz</span><span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="n">dy</span><span class="p">,</span> <span class="n">dz</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Internal calculation for bz, optimized with numba.</span>
 
-<span class="sd">        :param dx: normalized distances to the center of the magnet in x</span>
-<span class="sd">        :param dx: normalized distances to the center of the magnet in y</span>
-<span class="sd">        :param dx: normalized distances to the center of the magnet in z</span>
-<span class="sd">        :type: np.array</span>
+<span class="sd">        :param float dx: normalized distances to the center of the magnet in</span>
+<span class="sd">            :math:`x` direction [nm]</span>
+<span class="sd">        :param float dy: normalized distances to the center of the magnet in</span>
+<span class="sd">            :math:`y` direction [nm]</span>
+<span class="sd">        :param float dz: normalized distances to the center of the magnet in</span>
+<span class="sd">            :math:`z` direction [nm]</span>
+
 <span class="sd">        :return: bz without pre-term</span>
-<span class="sd">        :rtype: np.array</span>
+<span class="sd">        :rtype: float</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">return</span> <span class="p">(</span>
@@ -368,14 +373,14 @@
 <span class="sd">        gradient is calculated as</span>
 
 <span class="sd">        .. math::</span>
-<span class="sd">            B_{zx} = \dfrac{\partial B_z}{\partial z}</span>
+<span class="sd">            B_{zx} = \dfrac{\partial B_z}{\partial x}</span>
 <span class="sd">            = \dfrac{\mu_0 M_s}{r} X \:</span>
 <span class="sd">            \left( \dfrac{1}{R^5} - 5 \dfrac{Z^2}{R^7} \right)</span>
 <span class="sd">            R = \sqrt{X^2+Y^2+Z^2}</span>
 
-<span class="sd">        :param float x: x coordinate of sample grid [nm]</span>
-<span class="sd">        :param float y: y coordinate of sample grid [nm]</span>
-<span class="sd">        :param float z: z coordinate of sample grid [nm]</span>
+<span class="sd">        :param float x: :math:`x` coordinate of sample grid [nm]</span>
+<span class="sd">        :param float y: :math:`y` coordinate of sample grid [nm]</span>
+<span class="sd">        :param float z: :math:`z` coordinate of sample grid [nm]</span>
 <span class="sd">        :return: magnetic field gradient</span>
 <span class="sd">        :rtype: np.array</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -397,12 +402,15 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">_bzx</span><span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="n">dy</span><span class="p">,</span> <span class="n">dz</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Internal calculation for bzx, optimized with numba.</span>
 
-<span class="sd">        :param dx: normalized distances to the center of the magnet in x</span>
-<span class="sd">        :param dy: normalized distances to the center of the magnet in y</span>
-<span class="sd">        :param dz: normalized distances to the center of the magnet in z</span>
-<span class="sd">        :type: np.array</span>
+<span class="sd">        :param float dx: normalized distances to the center of the magnet in</span>
+<span class="sd">            :math:`x` direction [nm]</span>
+<span class="sd">        :param float dy: normalized distances to the center of the magnet in</span>
+<span class="sd">            :math:`y` direction [nm]</span>
+<span class="sd">        :param float dz: normalized distances to the center of the magnet in</span>
+<span class="sd">            :math:`z` direction [nm]</span>
+
 <span class="sd">        :return: bzx without pre-term</span>
-<span class="sd">        :rtype: np.array</span>
+<span class="sd">        :rtype: float</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">return</span> <span class="n">dx</span> <span class="o">*</span> <span class="p">(</span>
@@ -422,15 +430,15 @@
 <span class="sd">        second derivative is calculated as</span>
 
 <span class="sd">        .. math::</span>
-<span class="sd">            B_{zxx} = \dfrac{\partial B_z}{\partial z}</span>
+<span class="sd">            B_{zxx} = \dfrac{\partial^2 B_z}{\partial x^2}</span>
 <span class="sd">            = \dfrac{\mu_0 M_s}{r^2} \:</span>
 <span class="sd">            \left( \dfrac{1}{R^5} - 5 \dfrac{X^2}{R^7}</span>
 <span class="sd">            - 5 \dfrac{Z^2}{R^7} + 35 \dfrac{X^2 Z^2}{R^9} \right)</span>
 <span class="sd">            R = \sqrt{X^2+Y^2+Z^2}</span>
 
-<span class="sd">        :param float x: x coordinate of sample grid [nm]</span>
-<span class="sd">        :param float y: y coordinate of sample grid [nm]</span>
-<span class="sd">        :param float z: z coordinate of sample grid [nm]</span>
+<span class="sd">        :param float x: :math:`x` coordinate of sample grid [nm]</span>
+<span class="sd">        :param float y: :math:`y` coordinate of sample grid [nm]</span>
+<span class="sd">        :param float z: :math:`z` coordinate of sample grid [nm]</span>
 <span class="sd">        :return: magnetic field second derivative</span>
 <span class="sd">        :rtype: np.array</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -452,12 +460,15 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">_bzxx</span><span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="n">dy</span><span class="p">,</span> <span class="n">dz</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Internal calculation for bzxx, optimized with numba.</span>
 
-<span class="sd">        :param dx: normalized distances to the center of the magnet in x</span>
-<span class="sd">        :param dy: normalized distances to the center of the magnet in y</span>
-<span class="sd">        :param dz: normalized distances to the center of the magnet in z</span>
-<span class="sd">        :type: np.array</span>
+<span class="sd">        :param float dx: normalized distances to the center of the magnet in</span>
+<span class="sd">            :math:`x` direction [nm]</span>
+<span class="sd">        :param float dy: normalized distances to the center of the magnet in</span>
+<span class="sd">            :math:`y` direction [nm]</span>
+<span class="sd">        :param float dz: normalized distances to the center of the magnet in</span>
+<span class="sd">            :math:`z` direction [nm]</span>
+
 <span class="sd">        :return: bzxx without pre-term</span>
-<span class="sd">        :rtype: np.array</span>
+<span class="sd">        :rtype: float</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">return</span> <span class="p">(</span>
@@ -475,12 +486,11 @@
 <span class="k">class</span><span class="w"> </span><span class="nc">RectangularMagnet</span><span class="p">(</span><span class="n">ComponentBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Rectangular magnet object with the bz, bzx, bzxx calculations.</span>
 
-<span class="sd">    :param list length: length of rectangular magnet in (x, y, z) direction [nm]</span>
-<span class="sd">    :param list origin: the position of the magnet origin (x, y, z)</span>
+<span class="sd">    :param list magnet_length: length of rectangular magnet in</span>
+<span class="sd">        :math:`(x, y, z)` direction [nm]</span>
+<span class="sd">    :param list magnet_origin: the position of the magnet origin</span>
+<span class="sd">        :math:`(x, y, z)` [nm]</span>
 <span class="sd">    :param float mu0_Ms: saturation magnetization [mT]</span>
-<span class="sd">    :ivar np.array _range:</span>
-<span class="sd">        [-xrange, +xrange, -yrange, +yrange, -zrange, zrange]</span>
-<span class="sd">        range in the x, y and z direction after the center point to the origin.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">magnet_length</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">metadata</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;nm&quot;</span><span class="p">,</span> <span class="s2">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;.1f&quot;</span><span class="p">})</span>
@@ -501,11 +511,18 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">Bz_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Calculate magnetic field :math:`B_z` [mT].</span>
 
-<span class="sd">        The magnetic field is calculated following Ravaud2009.</span>
+<span class="sd">        The magnetic field is calculated following Ravaud2009 [#]_.</span>
+
+<span class="sd">        The magnet is set up so that the</span>
+<span class="sd">        :math:`x` and :math:`y`  dimensions are centered about the zero point.</span>
+<span class="sd">        The translation in :math:`z` shifts the tip of the magnet in the</span>
+<span class="sd">        :math:`z`-direction to be the given distance from the surface.</span>
+
 <span class="sd">        Using the Coulombian model, assuming a uniform magnetization throughout</span>
 <span class="sd">        the volume of the magnet and modeling each face of the magnet as a</span>
 <span class="sd">        layer of continuous current density. The total field is found by</span>
 <span class="sd">        summing over the faces.</span>
+
 <span class="sd">        The magnetic field is given by:</span>
 
 <span class="sd">        .. math::</span>
@@ -515,29 +532,24 @@
 
 <span class="sd">        Here :math:`(x,y,z)` are the coordinates for the location at which we</span>
 <span class="sd">        want to know the field;</span>
-<span class="sd">        The magnet spans from x1 to x2 in the ``x``-direction,</span>
-<span class="sd">        y1 to y2 in the ``y``-direction, and z1 to z2 in</span>
-<span class="sd">        the ``z``-direction;</span>
+<span class="sd">        The magnet spans from x1 to x2 in the :math:`x`-direction,</span>
+<span class="sd">        y1 to y2 in the :math:`y`-direction, and z1 to z2 in</span>
+<span class="sd">        the :math:`z`-direction;</span>
 
 <span class="sd">        .. math::</span>
 <span class="sd">            R = \sqrt{(x - x_i)^2 + (y - y_j)^2 + (z - z_k)^2}</span>
 
 <span class="sd">        where :math:`\mu_0 M_s` is the magnet&#39;s saturation magnetization in mT.</span>
 
-<span class="sd">        **Reference**:</span>
-<span class="sd">        Ravaud, R. and Lemarquand, G. &quot;Magnetic field produced by a</span>
-<span class="sd">        parallelepipedic magnet of various and uniform polarization&quot; ,</span>
-<span class="sd">        *PIER*, **2009**, *98*, 207-219</span>
-<span class="sd">        [`10.2528/PIER09091704 &lt;http://dx.doi.org/10.2528/PIER09091704&gt;`__].</span>
+<span class="sd">        .. [#] Ravaud, R. and Lemarquand, G. &quot;Magnetic field produced by a</span>
+<span class="sd">           parallelepipedic magnet of various and uniform polarization&quot; ,</span>
+<span class="sd">           *PIER*, **2009**, *98*, 207-219</span>
+<span class="sd">           [`10.2528/PIER09091704 &lt;http://dx.doi.org/10.2528/PIER09091704&gt;`__].</span>
 
-<span class="sd">        - set the magnet up so that the x and y dimensions are centered about</span>
-<span class="sd">          the zero point.</span>
-<span class="sd">        - The translation in z should shift the tip of the magnet in the</span>
-<span class="sd">          z-direction to be the given distance from the surface.</span>
 
-<span class="sd">        :param float x: x coordinate of sample grid [nm]</span>
-<span class="sd">        :param float y: y coordinate of sample grid [nm]</span>
-<span class="sd">        :param float z: z coordinate of sample grid [nm]</span>
+<span class="sd">        :param float x: :math:`x` coordinate of sample grid [nm]</span>
+<span class="sd">        :param float y: :math:`y` coordinate of sample grid [nm]</span>
+<span class="sd">        :param float z: :math:`z` coordinate of sample grid [nm]</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="n">dx1</span><span class="p">,</span> <span class="n">dx2</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -565,13 +577,20 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">_bz</span><span class="p">(</span><span class="n">dx1</span><span class="p">,</span> <span class="n">dx2</span><span class="p">,</span> <span class="n">dy1</span><span class="p">,</span> <span class="n">dy2</span><span class="p">,</span> <span class="n">dz1</span><span class="p">,</span> <span class="n">dz2</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Calculate the summation term for magnetic field optimized by numba.</span>
 
-<span class="sd">        See method bz for the explanation.</span>
-<span class="sd">        :param float dx1, dx2: distance between grid and the one end of magnet</span>
-<span class="sd">                        in x direction [nm]</span>
-<span class="sd">        :param float dy1, dy2: distance between grid and the one end of magnet</span>
-<span class="sd">                        in y direction [nm]</span>
-<span class="sd">        :param float dz1, dz2: distance between grid and the one end of magnet</span>
-<span class="sd">                        in z direction [nm]</span>
+<span class="sd">        See method Bz_method for the explanation.</span>
+
+<span class="sd">        :param float dx1: distance between grid and one end of magnet in</span>
+<span class="sd">            :math:`x` direction [nm]</span>
+<span class="sd">        :param float dx2: distance between grid and other end of magnet in</span>
+<span class="sd">            :math:`x` direction [nm]</span>
+<span class="sd">        :param float dy1: distance between grid and one end of magnet in</span>
+<span class="sd">            :math:`y` direction [nm]</span>
+<span class="sd">        :param float dy2: distance between grid and other end of magnet in</span>
+<span class="sd">            :math:`y` direction [nm]</span>
+<span class="sd">        :param float dz1: distance between grid and one end of magnet in</span>
+<span class="sd">            :math:`z` direction [nm]</span>
+<span class="sd">        :param float dz2: distance between grid and other end of magnet in</span>
+<span class="sd">            :math:`z` direction [nm]</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">return</span> <span class="p">(</span>
@@ -608,13 +627,13 @@
 <span class="sd">        from z1 to z2 in the ``z``-direction;</span>
 
 <span class="sd">        .. math::</span>
-<span class="sd">            R = \sqrt{(x - x_i) + (y - y_j) + (z - z_k)}</span>
+<span class="sd">            R = \sqrt{(x - x_i)^2 + (y - y_j)^2 + (z - z_k)^2}</span>
 
 <span class="sd">        :math:`\mu_0 M_s` is the magnet&#39;s saturation magnetization in mT.</span>
 
-<span class="sd">        :param float x: ``x`` coordinate [nm]</span>
-<span class="sd">        :param float y: ``y`` coordinate [nm]</span>
-<span class="sd">        :param float z: ``z`` coordinate [nm]</span>
+<span class="sd">        :param float x: :math:`x` coordinate [nm]</span>
+<span class="sd">        :param float y: :math:`y` coordinate [nm]</span>
+<span class="sd">        :param float z: :math:`z` coordinate [nm]</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="n">dx1</span><span class="p">,</span> <span class="n">dx2</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -642,14 +661,20 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">_bzx</span><span class="p">(</span><span class="n">dx1</span><span class="p">,</span> <span class="n">dx2</span><span class="p">,</span> <span class="n">dy1</span><span class="p">,</span> <span class="n">dy2</span><span class="p">,</span> <span class="n">dz1</span><span class="p">,</span> <span class="n">dz2</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Calculate the summation term for magnetic field gradient.</span>
 
-<span class="sd">        Optimized with numba. See method bzx for the explanation.</span>
+<span class="sd">        Optimized with numba. See method Bzx_method for the explanation.</span>
 
-<span class="sd">        :param np.array dx1, dx2: distance between grid and the 2 ends of</span>
-<span class="sd">            magnet in x direction [nm]</span>
-<span class="sd">        :param np.array dy1, dy2: distance between grid and the 2 ends of</span>
-<span class="sd">            magnet in y direction [nm]</span>
-<span class="sd">        :param np.array dz1, dz2: distance between grid and the 2 ends of</span>
-<span class="sd">            magnet in z direction [nm]</span>
+<span class="sd">        :param float dx1: distance between grid and one end of magnet in</span>
+<span class="sd">            :math:`x` direction [nm]</span>
+<span class="sd">        :param float dx2: distance between grid and other end of magnet in</span>
+<span class="sd">            :math:`x` direction [nm]</span>
+<span class="sd">        :param float dy1: distance between grid and one end of magnet in</span>
+<span class="sd">            :math:`y` direction [nm]</span>
+<span class="sd">        :param float dy2: distance between grid and other end of magnet in</span>
+<span class="sd">            :math:`y` direction [nm]</span>
+<span class="sd">        :param float dz1: distance between grid and one end of magnet in</span>
+<span class="sd">            :math:`z` direction [nm]</span>
+<span class="sd">        :param float dz2: distance between grid and other end of magnet in</span>
+<span class="sd">            :math:`z` direction [nm]</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">return</span> <span class="p">(</span>
@@ -666,14 +691,14 @@
 <div class="viewcode-block" id="RectangularMagnet.Bzxx_method">
 <a class="viewcode-back" href="../../../setup/magnet.html#mrfmsim.component.magnet.RectangularMagnet.Bzxx_method">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">Bzxx_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
-<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Calculate magnetic field second derivative :math:`B_{zxx}`/</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Calculate magnetic field second derivative :math:`B_{zxx}`.</span>
 
 <span class="sd">        :math:`B_{zxx} \equiv \partial^2 B_z / \partial x^2`</span>
 <span class="sd">        [ :math:`\mathrm{mT} \; \mathrm{nm}^{-2}`]</span>
 <span class="sd">        The magnetic field&#39;s second derivative is given by the following:</span>
 
 <span class="sd">        .. math::</span>
-<span class="sd">           B_{zxx} = \dfrac{\partial B_z}{\partial z}</span>
+<span class="sd">           B_{zxx} = \dfrac{\partial^2 B_z}{\partial x^2}</span>
 <span class="sd">               = \dfrac{\mu_0 M_s}{4 \pi} \sum_{i=1}^2</span>
 <span class="sd">                   \sum_{j=1}^2 \sum_{k=1}^2(-1)^{i+j+k}</span>
 <span class="sd">                   \left( \dfrac{-(x-x_i)(y-y_j)(z-z_k)</span>
@@ -682,9 +707,10 @@
 <span class="sd">                   ((x-x_i)^2 + (z-z_k)^2)^2} \right)</span>
 
 <span class="sd">        with the variables defined above.</span>
-<span class="sd">        :param float x: ``x`` coordinate [nm]</span>
-<span class="sd">        :param float y: ``y`` coordinate [nm]</span>
-<span class="sd">        :param float z: ``z`` coordinate [nm]</span>
+
+<span class="sd">        :param float x: :math:`x` coordinate [nm]</span>
+<span class="sd">        :param float y: :math:`y` coordinate [nm]</span>
+<span class="sd">        :param float z: :math:`z` coordinate [nm]</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="n">dx1</span><span class="p">,</span> <span class="n">dx2</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_range</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -712,13 +738,20 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">_bzxx</span><span class="p">(</span><span class="n">dx1</span><span class="p">,</span> <span class="n">dx2</span><span class="p">,</span> <span class="n">dy1</span><span class="p">,</span> <span class="n">dy2</span><span class="p">,</span> <span class="n">dz1</span><span class="p">,</span> <span class="n">dz2</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;The summation term for the second derivative of magnetic field.</span>
 
-<span class="sd">        Optimized by numba. See bzxx method for the explanation.</span>
-<span class="sd">        :param float dx1, dx2: distance between grid and the one end of magnet</span>
-<span class="sd">                        in x direction [nm]</span>
-<span class="sd">        :param float dy1, dy2: distance between grid and the one end of magnet</span>
-<span class="sd">                        in y direction [nm]</span>
-<span class="sd">        :param float dz1, dz2: distance between grid and the one end of magnet</span>
-<span class="sd">                        in z direction [nm]</span>
+<span class="sd">        Optimized by numba. See Bzxx_method for the explanation.</span>
+
+<span class="sd">        :param float dx1: distance between grid and one end of magnet in</span>
+<span class="sd">            :math:`x` direction [nm]</span>
+<span class="sd">        :param float dx2: distance between grid and other end of magnet in</span>
+<span class="sd">            :math:`x` direction [nm]</span>
+<span class="sd">        :param float dy1: distance between grid and one end of magnet in</span>
+<span class="sd">            :math:`y` direction [nm]</span>
+<span class="sd">        :param float dy2: distance between grid and other end of magnet in</span>
+<span class="sd">            :math:`y` direction [nm]</span>
+<span class="sd">        :param float dz1: distance between grid and one end of magnet in</span>
+<span class="sd">            :math:`z` direction [nm]</span>
+<span class="sd">        :param float dz2: distance between grid and other end of magnet in</span>
+<span class="sd">            :math:`z` direction [nm]</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">return</span> <span class="p">(</span>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Grid &#8212; mrfmsim 0.3.0 documentation</title>
+    <title>Grid &#8212; mrfmsim 0.4.0 documentation</title>
   
   
   
@@ -39,7 +39,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=83a61292"></script>
+    <script src="../_static/documentation_options.js?v=183391d5"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
@@ -126,7 +126,7 @@
   
   
   
-    <p class="title logo__title">mrfmsim 0.3.0 documentation</p>
+    <p class="title logo__title">mrfmsim 0.4.0 documentation</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -143,6 +143,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tests.html">Tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim basics</span></p>
 <ul class="nav bd-sidenav">
@@ -365,8 +366,8 @@ The grid point is at the center of each voxel.</p>
 </pre></div>
 </div>
 <p>The resulting grid is rectangular with the shape of (21, 11, 101), the distance between
-two edge grid points in each direction are (200, 40, 2000) nm, and the full grid size
-is (220 <span class="math notranslate nohighlight">\(\times\)</span> 44 <span class="math notranslate nohighlight">\(\times\)</span> 2020) nm.
+two edge grid points in each direction are (400, 40, 2000) nm, and the full grid size
+is (420 <span class="math notranslate nohighlight">\(\times\)</span> 44 <span class="math notranslate nohighlight">\(\times\)</span> 2020) nm.
 The returned grid points are numpy “ogrid” points:
 <a class="reference external" href="https://numpy.org/devdocs/reference/generated/numpy.ogrid.html">np.ogrid</a>.</p>
 <p>To print out a summary of the grid properties:</p>
@@ -394,17 +395,21 @@ benefits.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>length</strong> (<em>np.array</em>) – array of lengths along (x, y, z)</p></li>
-<li><p><strong>step</strong> (<em>list</em>) – a list of step sizes</p></li>
-<li><p><strong>origin</strong> (<em>list</em>) – the grid origin</p></li>
-<li><p><strong>shape</strong> (<em>tuple</em><em>[</em><em>int</em><em>]</em>) – grid dimension
+<li><p><strong>grid_shape</strong> (<em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>]</em>) – grid dimension
 (number of points in x, y, z direction)</p></li>
-<li><p><strong>step</strong> – grid setup size in x, y, z direction</p></li>
-<li><p><strong>origin</strong> – grid origin</p></li>
-<li><p><strong>voxel</strong> (<em>float</em>) – the volume of each grid voxel</p></li>
-<li><p><strong>range</strong> (<em>np.array</em>) – range in (x, y, z direction), shape (3, 2)</p></li>
-<li><p><strong>length</strong> – actual lengths of the grid. This is recalculated
+<li><p><strong>grid_step</strong> (<em>list</em><em>[</em><em>float</em><em>]</em>) – grid step size in x, y, z direction [nm]</p></li>
+<li><p><strong>grid_origin</strong> (<em>list</em><em>[</em><em>float</em><em>]</em>) – the grid origin [nm]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>grid_length</strong> (<em>ndarray</em>) – array of lengths along (x, y, z)</p></li>
+<li><p><strong>grid_voxel</strong> (<em>float</em>) – the volume of each grid voxel</p></li>
+<li><p><strong>grid_range</strong> (<em>ndarray</em>) – range in (x, y, z direction), shape (3, 2)</p></li>
+<li><p><strong>grid_length</strong> – actual lengths of the grid. This is recalculated
 based on the rounded value of grid shape and step size.</p></li>
+<li><p><strong>grid_extents</strong> (<em>ndarray</em>) – the grid extents in (x, y, z direction), shape (3, 2)</p></li>
+<li><p><strong>grid_array</strong> (<em>ndarray</em>) – the grid array in (x, y, z direction), shape (3, n)</p></li>
 </ul>
 </dd>
 </dl>
@@ -416,7 +421,7 @@ based on the rounded value of grid shape and step size.</p></li>
 The length needs to be more than the step size to count.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>ext_pts</strong> (<em>int</em>) – distance (one side) to extend along x direction
+<dd class="field-odd"><p><strong>ext_length</strong> (<em>int</em>) – distance (one side) to extend along x direction
 (cantilever motion direction). The length should be a list of
 three dimensions.</p>
 </dd>

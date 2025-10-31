@@ -63,11 +63,9 @@ of a parameter as a ``dataclass`` field. Python
 is used to simplify the definition process.
 
 
-
-
 ExperimentGroup
 ----------------
 
 The ``mrfmsim.group.ExperimentGroup`` class adds additional properties
-``epxeriments`` and ``epxeriment_defaults`` alongside the parent class's
+``experiments`` and ``experiment_defaults`` alongside the parent class's
 ``models`` and ``model_defaults`` properties. 

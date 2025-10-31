@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; mrfmsim 0.3.0 documentation</title>
+    <title>Index &#8212; mrfmsim 0.4.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/documentation_options.js?v=83a61292"></script>
+    <script src="_static/documentation_options.js?v=183391d5"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
@@ -124,7 +124,7 @@
   
   
   
-    <p class="title logo__title">mrfmsim 0.3.0 documentation</p>
+    <p class="title logo__title">mrfmsim 0.4.0 documentation</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -141,6 +141,7 @@
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tests.html">Tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">Contribute</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim basics</span></p>
 <ul class="nav bd-sidenav">
@@ -312,23 +313,29 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="reference/ref_field.html#mrfmsim.formula.field.B_offset">B_offset() (in module mrfmsim.formula.field)</a>
 </li>
-      <li><a href="setup/magnet.html#mrfmsim.component.magnet.RectangularMagnet.Bz_method">Bz_method() (mrfmsim.component.magnet.RectangularMagnet method)</a>
+      <li><a href="setup/magnet.html#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.Bz_method">Bz_method() (mrfmsim.component.cylindermagnet.CylinderMagnetApprox method)</a>
 
       <ul>
+        <li><a href="setup/magnet.html#mrfmsim.component.magnet.RectangularMagnet.Bz_method">(mrfmsim.component.magnet.RectangularMagnet method)</a>
+</li>
         <li><a href="setup/magnet.html#mrfmsim.component.magnet.SphereMagnet.Bz_method">(mrfmsim.component.magnet.SphereMagnet method)</a>
+</li>
+      </ul></li>
+      <li><a href="setup/magnet.html#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.Bzx_method">Bzx_method() (mrfmsim.component.cylindermagnet.CylinderMagnetApprox method)</a>
+
+      <ul>
+        <li><a href="setup/magnet.html#mrfmsim.component.magnet.RectangularMagnet.Bzx_method">(mrfmsim.component.magnet.RectangularMagnet method)</a>
+</li>
+        <li><a href="setup/magnet.html#mrfmsim.component.magnet.SphereMagnet.Bzx_method">(mrfmsim.component.magnet.SphereMagnet method)</a>
 </li>
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="setup/magnet.html#mrfmsim.component.magnet.RectangularMagnet.Bzx_method">Bzx_method() (mrfmsim.component.magnet.RectangularMagnet method)</a>
+      <li><a href="setup/magnet.html#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.Bzxx_method">Bzxx_method() (mrfmsim.component.cylindermagnet.CylinderMagnetApprox method)</a>
 
       <ul>
-        <li><a href="setup/magnet.html#mrfmsim.component.magnet.SphereMagnet.Bzx_method">(mrfmsim.component.magnet.SphereMagnet method)</a>
+        <li><a href="setup/magnet.html#mrfmsim.component.magnet.RectangularMagnet.Bzxx_method">(mrfmsim.component.magnet.RectangularMagnet method)</a>
 </li>
-      </ul></li>
-      <li><a href="setup/magnet.html#mrfmsim.component.magnet.RectangularMagnet.Bzxx_method">Bzxx_method() (mrfmsim.component.magnet.RectangularMagnet method)</a>
-
-      <ul>
         <li><a href="setup/magnet.html#mrfmsim.component.magnet.SphereMagnet.Bzxx_method">(mrfmsim.component.magnet.SphereMagnet method)</a>
 </li>
       </ul></li>
@@ -344,15 +351,17 @@
 </li>
       <li><a href="experiment/CermitARP.html#mrfmsim.experiment.CermitARPGroup">CermitARPGroup (in module mrfmsim.experiment)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="experiment/CermitSat.html#mrfmsim.experiment.CermitESRGroup">CermitESRGroup (in module mrfmsim.experiment)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="experiment/CermitSingleSpin.html#mrfmsim.experiment.CermitSingleSpinGroup">CermitSingleSpinGroup (in module mrfmsim.experiment)</a>
 </li>
       <li><a href="experiment/CermitTD.html#mrfmsim.experiment.CermitTDGroup">CermitTDGroup (in module mrfmsim.experiment)</a>
 </li>
       <li><a href="reference/ref_misc.html#mrfmsim.formula.misc.convert_grid_pts">convert_grid_pts() (in module mrfmsim.formula.misc)</a>
+</li>
+      <li><a href="setup/magnet.html#mrfmsim.component.cylindermagnet.CylinderMagnetApprox">CylinderMagnetApprox (class in mrfmsim.component.cylindermagnet)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -440,16 +449,26 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="tests.html#tests.test_experiment.test_cermitarp.TestCERMITARP.magnet">magnet() (tests.test_experiment.test_cermitarp.TestCERMITARP method)</a>
 </li>
-      <li><a href="setup/magnet.html#mrfmsim.component.magnet.RectangularMagnet.magnet_length">magnet_length (mrfmsim.component.magnet.RectangularMagnet attribute)</a>
-</li>
-      <li><a href="setup/magnet.html#mrfmsim.component.magnet.RectangularMagnet.magnet_origin">magnet_origin (mrfmsim.component.magnet.RectangularMagnet attribute)</a>
+      <li><a href="setup/magnet.html#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.magnet_length">magnet_length (mrfmsim.component.cylindermagnet.CylinderMagnetApprox attribute)</a>
 
       <ul>
+        <li><a href="setup/magnet.html#mrfmsim.component.magnet.RectangularMagnet.magnet_length">(mrfmsim.component.magnet.RectangularMagnet attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="setup/magnet.html#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.magnet_origin">magnet_origin (mrfmsim.component.cylindermagnet.CylinderMagnetApprox attribute)</a>
+
+      <ul>
+        <li><a href="setup/magnet.html#mrfmsim.component.magnet.RectangularMagnet.magnet_origin">(mrfmsim.component.magnet.RectangularMagnet attribute)</a>
+</li>
         <li><a href="setup/magnet.html#mrfmsim.component.magnet.SphereMagnet.magnet_origin">(mrfmsim.component.magnet.SphereMagnet attribute)</a>
 </li>
       </ul></li>
-      <li><a href="setup/magnet.html#mrfmsim.component.magnet.SphereMagnet.magnet_radius">magnet_radius (mrfmsim.component.magnet.SphereMagnet attribute)</a>
+      <li><a href="setup/magnet.html#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.magnet_radius">magnet_radius (mrfmsim.component.cylindermagnet.CylinderMagnetApprox attribute)</a>
+
+      <ul>
+        <li><a href="setup/magnet.html#mrfmsim.component.magnet.SphereMagnet.magnet_radius">(mrfmsim.component.magnet.SphereMagnet attribute)</a>
 </li>
+      </ul></li>
       <li><a href="reference/ref_field.html#mrfmsim.formula.field.min_abs_offset">min_abs_offset() (in module mrfmsim.formula.field)</a>
 </li>
       <li>
@@ -457,6 +476,8 @@
 
       <ul>
         <li><a href="setup/cantilever.html#module-mrfmsim.component.cantilever">mrfmsim.component.cantilever</a>
+</li>
+        <li><a href="setup/magnet.html#module-mrfmsim.component.cylindermagnet">mrfmsim.component.cylindermagnet</a>
 </li>
         <li><a href="setup/grid.html#module-mrfmsim.component.grid">mrfmsim.component.grid</a>
 </li>
@@ -502,6 +523,13 @@
 
       <ul>
         <li><a href="setup/cantilever.html#module-mrfmsim.component.cantilever">module</a>
+</li>
+      </ul></li>
+      <li>
+    mrfmsim.component.cylindermagnet
+
+      <ul>
+        <li><a href="setup/magnet.html#module-mrfmsim.component.cylindermagnet">module</a>
 </li>
       </ul></li>
       <li>
@@ -567,9 +595,11 @@
         <li><a href="basic/modifier.html#module-mrfmsim.modifier">module</a>
 </li>
       </ul></li>
-      <li><a href="setup/magnet.html#mrfmsim.component.magnet.RectangularMagnet.mu0_Ms">mu0_Ms (mrfmsim.component.magnet.RectangularMagnet attribute)</a>
+      <li><a href="setup/magnet.html#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.mu0_Ms">mu0_Ms (mrfmsim.component.cylindermagnet.CylinderMagnetApprox attribute)</a>
 
       <ul>
+        <li><a href="setup/magnet.html#mrfmsim.component.magnet.RectangularMagnet.mu0_Ms">(mrfmsim.component.magnet.RectangularMagnet attribute)</a>
+</li>
         <li><a href="setup/magnet.html#mrfmsim.component.magnet.SphereMagnet.mu0_Ms">(mrfmsim.component.magnet.SphereMagnet attribute)</a>
 </li>
       </ul></li>
@@ -727,12 +757,18 @@
 </li>
       <li><a href="tests.html#tests.test_formula.test_polarization.test_rel_dpol_sat_td">test_rel_dpol_sat_td() (in module tests.test_formula.test_polarization)</a>
 </li>
-      <li><a href="tests.html#tests.test_formula.test_polarization.test_rel_dpol_sat_td_symmetry">test_rel_dpol_sat_td_symmetry() (in module tests.test_formula.test_polarization)</a>
+      <li><a href="tests.html#tests.test_formula.test_polarization.test_rel_dpol_sat_td_nan">test_rel_dpol_sat_td_nan() (in module tests.test_formula.test_polarization)</a>
 </li>
-      <li><a href="tests.html#tests.test_formula.test_polarization.test_rel_dpol_sat_td_without_td">test_rel_dpol_sat_td_without_td() (in module tests.test_formula.test_polarization)</a>
+      <li><a href="tests.html#tests.test_formula.test_polarization.test_rel_dpol_sat_td_nan_boundary">test_rel_dpol_sat_td_nan_boundary() (in module tests.test_formula.test_polarization)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_polarization.test_rel_dpol_sat_td_nan_division">test_rel_dpol_sat_td_nan_division() (in module tests.test_formula.test_polarization)</a>
+</li>
+      <li><a href="tests.html#tests.test_formula.test_polarization.test_rel_dpol_sat_td_symmetry">test_rel_dpol_sat_td_symmetry() (in module tests.test_formula.test_polarization)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="tests.html#tests.test_formula.test_polarization.test_rel_dpol_sat_td_without_td">test_rel_dpol_sat_td_without_td() (in module tests.test_formula.test_polarization)</a>
+</li>
       <li><a href="tests.html#tests.test_formula.test_math.test_slice_matrix">test_slice_matrix() (in module tests.test_formula.test_math)</a>
 </li>
       <li><a href="tests.html#tests.test_experiment.test_cermitarp.TestCERMITESRSmallTip.test_smallamp_arp_vs_exact_solution_large_sep">test_smallamp_arp_vs_exact_solution_large_sep() (tests.test_experiment.test_cermitarp.TestCERMITESRSmallTip method)</a>

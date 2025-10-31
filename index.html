@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>MrfmSim &#8212; mrfmsim 0.3.0 documentation</title>
+    <title>MrfmSim &#8212; mrfmsim 0.4.0 documentation</title>
   
   
   
@@ -39,7 +39,7 @@
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/documentation_options.js?v=83a61292"></script>
+    <script src="_static/documentation_options.js?v=183391d5"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
@@ -127,7 +127,7 @@
   
   
   
-    <p class="title logo__title">mrfmsim 0.3.0 documentation</p>
+    <p class="title logo__title">mrfmsim 0.4.0 documentation</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -144,6 +144,7 @@
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tests.html">Tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">Contribute</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim basics</span></p>
 <ul class="nav bd-sidenav">
@@ -335,6 +336,7 @@
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests">Tests</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contributing">Contributing</a></li>
 </ul>
 </li>
 </ul>
@@ -410,6 +412,10 @@ with conda:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tox</span>
 </pre></div>
 </div>
+</section>
+<section id="contributing">
+<h3>Contributing<a class="headerlink" href="#contributing" title="Link to this heading">#</a></h3>
+<p>We welcome contributions! Please see our <a class="reference external" href="docs/contribute.rst">Contributing Guide</a> for details on how to follow our development guidelines and submit pull requests.</p>
 <p class="rubric">References</p>
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="sidles1995jan" role="doc-footnote">
@@ -502,7 +508,7 @@ SPAM stands for Springiness Preservation by Aligning Magnetization.</p>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim overview</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="overview.html#examples">examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#examples">Examples</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tests.html">Tests</a><ul>
@@ -515,10 +521,20 @@ SPAM stands for Springiness Preservation by Aligning Magnetization.</p>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id1">[0.3.0] - 2025-02-25</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id2">[0.2.0]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id6">[0.1.1] - 2023-06-23</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id9">[0.1.0] - 2020-04-17</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id1">[0.4.0] - 2025-10-31</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id2">[0.3.0] - 2025-02-25</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id5">[0.2.0]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id9">[0.1.1] - 2023-06-23</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id12">[0.1.0] - 2020-04-17</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">Contribute</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contribute.html#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribute.html#development-guidelines">Development Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribute.html#building-documentation">Building Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribute.html#submitting-a-pull-request">Submitting a Pull Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribute.html#reporting-issues">Reporting Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribute.html#questions">Questions?</a></li>
 </ul>
 </li>
 </ul>
@@ -540,7 +556,7 @@ SPAM stands for Springiness Preservation by Aligning Magnetization.</p>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="basic/plugin.html">Plugins</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="basic/plugin.html#mrfmsim-ymal-yaml-configuration-plugin">mrfmsim-ymal: YAML configuration plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic/plugin.html#mrfmsim-yaml-yaml-configuration-plugin">mrfmsim-yaml: YAML configuration plugin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="basic/plugin.html#mrfmsim-cli-command-line-interface-plugin">mrfmsim-cli: command line interface plugin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="basic/plugin.html#mrfmsim-unit-unit-plugin">mrfmsim-unit: unit plugin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="basic/plugin.html#mrfmsim-plot-plot-plugin">mrfmsim-plot: plot plugin</a></li>
@@ -582,6 +598,7 @@ SPAM stands for Springiness Preservation by Aligning Magnetization.</p>
 <li class="toctree-l1"><a class="reference internal" href="setup/magnet.html">Magnet</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="setup/magnet.html#example-usage">Example Usage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="setup/magnet.html#module-mrfmsim.component.magnet"><code class="xref py py-mod docutils literal notranslate"><span class="pre">magnet</span></code> module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup/magnet.html#module-mrfmsim.component.cylindermagnet"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cylindermagnet</span></code> module</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="setup/cantilever.html">Cantilever</a><ul>
@@ -702,6 +719,7 @@ SPAM stands for Springiness Preservation by Aligning Magnetization.</p>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests">Tests</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contributing">Contributing</a></li>
 </ul>
 </li>
 </ul>

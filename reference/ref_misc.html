@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Miscellaneous &#8212; mrfmsim 0.3.0 documentation</title>
+    <title>Miscellaneous &#8212; mrfmsim 0.4.0 documentation</title>
   
   
   
@@ -39,7 +39,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=83a61292"></script>
+    <script src="../_static/documentation_options.js?v=183391d5"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
@@ -125,7 +125,7 @@
   
   
   
-    <p class="title logo__title">mrfmsim 0.3.0 documentation</p>
+    <p class="title logo__title">mrfmsim 0.4.0 documentation</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -142,6 +142,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tests.html">Tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim basics</span></p>
 <ul class="nav bd-sidenav">
@@ -353,7 +354,16 @@
 <dd><p>Convert distance to ext points.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>distance</strong> (<em>int</em>) – distance in the x direction.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>distance</strong> (<em>float</em>) – distance in the <span class="math notranslate nohighlight">\(x\)</span> direction [nm]</p></li>
+<li><p><strong>grid_step</strong> (<em>list</em><em>[</em><em>float</em><em>]</em>) – grid step size [nm]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>number of grid points</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
@@ -420,18 +430,22 @@ can be solved exactly in terms of Elliptic integrals:</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>Gamma</strong> (<em>float</em>) – the gyromagnetic ratio</p></li>
+<li><p><strong>Gamma</strong> (<em>float</em>) – the gyromagnetic ratio [rad/s.mT]</p></li>
+<li><p><strong>geometry</strong> (<em>str</em>) – experiment geometry (‘spam’ or ‘hangdown’)</p></li>
 <li><p><strong>J</strong> (<em>float</em>) – the spin angular momentum</p></li>
-<li><p><strong>magnet_origin</strong> (<em>array</em>) – the origin of the magnet</p></li>
-<li><p><strong>magnet_radius</strong> (<em>float</em>) – the radius of the magnet</p></li>
-<li><p><strong>mu0_Ms</strong> (<em>float</em>) – the saturation magnetization of the magnet</p></li>
-<li><p><strong>mu_z</strong> (<em>float</em>) – the spin magnetic moment</p></li>
-<li><p><strong>magnet_spin_distance</strong> (<em>float</em>) – magnet-spin distance</p></li>
+<li><p><strong>magnet_spin_dist</strong> (<em>float</em>) – magnet-spin distance [nm]</p></li>
+<li><p><strong>magnet_origin</strong> (<em>list</em>) – the origin of the magnet [nm]</p></li>
+<li><p><strong>magnet_radius</strong> (<em>float</em>) – the radius of the magnet [nm]</p></li>
+<li><p><strong>mu0_Ms</strong> (<em>float</em>) – the saturation magnetization of the magnet [mT]</p></li>
+<li><p><strong>x_0p</strong> (<em>float</em>) – zero-to-peak amplitude of the cantilever [nm]</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The analytical solution for a single spin (effective force).
+<dd class="field-even"><p>The analytical solution for a single spin (effective force) [aN].
 The spin constant shift is the effective force divided by the 0 to peak amplitude.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
 </dd>
 </dl>
 </dd></dl>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Cantilever &#8212; mrfmsim 0.3.0 documentation</title>
+    <title>Cantilever &#8212; mrfmsim 0.4.0 documentation</title>
   
   
   
@@ -39,7 +39,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=83a61292"></script>
+    <script src="../_static/documentation_options.js?v=183391d5"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
@@ -125,7 +125,7 @@
   
   
   
-    <p class="title logo__title">mrfmsim 0.3.0 documentation</p>
+    <p class="title logo__title">mrfmsim 0.4.0 documentation</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -142,6 +142,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tests.html">Tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim basics</span></p>
 <ul class="nav bd-sidenav">
@@ -351,8 +352,8 @@ shift, based on the experiment. The available coefficients are for the DC signal
 <section id="example-usage">
 <h2>Example Usage<a class="headerlink" href="#example-usage" title="Link to this heading">#</a></h2>
 <p>Create a cantilever object with a spring constant of 780 aN/nm and
-frequency of 4795 Hz:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cantilever</span> <span class="o">=</span> <span class="n">Cantilever</span><span class="p">(</span><span class="n">k_c</span><span class="o">=</span><span class="mi">780</span><span class="p">,</span> <span class="n">f_c</span><span class="o">=</span><span class="mi">4795</span><span class="p">)</span>
+frequency of 4975 Hz:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cantilever</span> <span class="o">=</span> <span class="n">Cantilever</span><span class="p">(</span><span class="n">k_c</span><span class="o">=</span><span class="mi">780</span><span class="p">,</span> <span class="n">f_c</span><span class="o">=</span><span class="mi">4975</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To print out the cantilever summary:</p>
@@ -374,8 +375,16 @@ frequency of 4795 Hz:</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>k</strong> (<em>float</em>) – spring constant [aN/nm]</p></li>
-<li><p><strong>f</strong> (<em>float</em>) – mechanical resonance frequency [Hz]</p></li>
+<li><p><strong>k_c</strong> (<em>float</em>) – spring constant [aN/nm]</p></li>
+<li><p><strong>f_c</strong> (<em>float</em>) – mechanical resonance frequency [Hz]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>k2f_modulated</strong> (<em>float</em>) – spring constant to frequency ratio for modulated
+cantilever (lockin) [Hz.nm/aN]</p></li>
+<li><p><strong>k2f</strong> (<em>float</em>) – spring constant to frequency ratio for non-modulated
+cantilever [Hz.nm/aN]</p></li>
 </ul>
 </dd>
 </dl>

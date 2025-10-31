@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mrfmsim.component.cantilever &#8212; mrfmsim 0.3.0 documentation</title>
+    <title>mrfmsim.component.cantilever &#8212; mrfmsim 0.4.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../_static/documentation_options.js?v=83a61292"></script>
+    <script src="../../../_static/documentation_options.js?v=183391d5"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
@@ -124,7 +124,7 @@
   
   
   
-    <p class="title logo__title">mrfmsim 0.3.0 documentation</p>
+    <p class="title logo__title">mrfmsim 0.4.0 documentation</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -141,6 +141,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../tests.html">Tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute.html">Contribute</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim basics</span></p>
 <ul class="nav bd-sidenav">
@@ -293,8 +294,13 @@
 <span class="k">class</span><span class="w"> </span><span class="nc">Cantilever</span><span class="p">(</span><span class="n">ComponentBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Cantilever object.</span>
 
-<span class="sd">    :param float k: spring constant [aN/nm]</span>
-<span class="sd">    :param float f: mechanical resonance frequency [Hz]</span>
+<span class="sd">    :param float k_c: spring constant [aN/nm]</span>
+<span class="sd">    :param float f_c: mechanical resonance frequency [Hz]</span>
+
+<span class="sd">    :ivar float k2f_modulated: spring constant to frequency ratio for modulated</span>
+<span class="sd">        cantilever (lockin) [Hz.nm/aN]</span>
+<span class="sd">    :ivar float k2f: spring constant to frequency ratio for non-modulated</span>
+<span class="sd">        cantilever [Hz.nm/aN]</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">k_c</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">metadata</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;aN/nm&quot;</span><span class="p">,</span> <span class="s2">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;.3e&quot;</span><span class="p">})</span>

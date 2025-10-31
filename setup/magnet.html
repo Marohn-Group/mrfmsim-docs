@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Magnet &#8212; mrfmsim 0.3.0 documentation</title>
+    <title>Magnet &#8212; mrfmsim 0.4.0 documentation</title>
   
   
   
@@ -39,7 +39,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=83a61292"></script>
+    <script src="../_static/documentation_options.js?v=183391d5"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
@@ -126,7 +126,7 @@
   
   
   
-    <p class="title logo__title">mrfmsim 0.3.0 documentation</p>
+    <p class="title logo__title">mrfmsim 0.4.0 documentation</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -143,6 +143,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tests.html">Tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim basics</span></p>
 <ul class="nav bd-sidenav">
@@ -348,6 +349,19 @@
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-mrfmsim.component.cylindermagnet"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cylindermagnet</span></code> module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.cylindermagnet.CylinderMagnetApprox"><code class="docutils literal notranslate"><span class="pre">CylinderMagnetApprox</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.Bz_method"><code class="docutils literal notranslate"><span class="pre">CylinderMagnetApprox.Bz_method()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.Bzx_method"><code class="docutils literal notranslate"><span class="pre">CylinderMagnetApprox.Bzx_method()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.Bzxx_method"><code class="docutils literal notranslate"><span class="pre">CylinderMagnetApprox.Bzxx_method()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.magnet_length"><code class="docutils literal notranslate"><span class="pre">CylinderMagnetApprox.magnet_length</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.magnet_origin"><code class="docutils literal notranslate"><span class="pre">CylinderMagnetApprox.magnet_origin</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.magnet_radius"><code class="docutils literal notranslate"><span class="pre">CylinderMagnetApprox.magnet_radius</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.mu0_Ms"><code class="docutils literal notranslate"><span class="pre">CylinderMagnetApprox.mu0_Ms</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -374,6 +388,9 @@
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#mrfmsim.component.magnet.RectangularMagnet" title="mrfmsim.component.magnet.RectangularMagnet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mrfmsim.component.magnet.RectangularMagnet</span></code></a>(...)</p></td>
 <td><p>Rectangular magnet object with the bz, bzx, bzxx calculations.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mrfmsim.component.cylindermagnet.CylinderMagnetApprox" title="mrfmsim.component.cylindermagnet.CylinderMagnetApprox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mrfmsim.component.cylindermagnet.CylinderMagnetApprox</span></code></a>(...)</p></td>
+<td><p>Cylinder magnet object approximated by Rectangular Magnets.</p></td>
 </tr>
 </tbody>
 </table>
@@ -405,55 +422,55 @@ with a radius of <span class="math notranslate nohighlight">\(r = 50 \: \mathrm{
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>length</strong> (<em>list</em>) – length of rectangular magnet in (x, y, z) direction [nm]</p></li>
-<li><p><strong>origin</strong> (<em>list</em>) – the position of the magnet origin (x, y, z)</p></li>
+<li><p><strong>magnet_length</strong> (<em>list</em>) – length of rectangular magnet in
+<span class="math notranslate nohighlight">\((x, y, z)\)</span> direction [nm]</p></li>
+<li><p><strong>magnet_origin</strong> (<em>list</em>) – the position of the magnet origin
+<span class="math notranslate nohighlight">\((x, y, z)\)</span> [nm]</p></li>
 <li><p><strong>mu0_Ms</strong> (<em>float</em>) – saturation magnetization [mT]</p></li>
 </ul>
-</dd>
-<dt class="field-even">Variables<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>_range</strong> (<em>np.array</em>) – [-xrange, +xrange, -yrange, +yrange, -zrange, zrange]
-range in the x, y and z direction after the center point to the origin.</p>
 </dd>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="mrfmsim.component.magnet.RectangularMagnet.Bz_method">
 <span class="sig-name descname"><span class="pre">Bz_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mrfmsim/component/magnet.html#RectangularMagnet.Bz_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.component.magnet.RectangularMagnet.Bz_method" title="Link to this definition">#</a></dt>
 <dd><p>Calculate magnetic field <span class="math notranslate nohighlight">\(B_z\)</span> [mT].</p>
-<p>The magnetic field is calculated following Ravaud2009.
-Using the Coulombian model, assuming a uniform magnetization throughout
+<p>The magnetic field is calculated following Ravaud2009 <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p>
+<p>The magnet is set up so that the
+<span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>  dimensions are centered about the zero point.
+The translation in <span class="math notranslate nohighlight">\(z\)</span> shifts the tip of the magnet in the
+<span class="math notranslate nohighlight">\(z\)</span>-direction to be the given distance from the surface.</p>
+<p>Using the Coulombian model, assuming a uniform magnetization throughout
 the volume of the magnet and modeling each face of the magnet as a
 layer of continuous current density. The total field is found by
-summing over the faces.
-The magnetic field is given by:</p>
+summing over the faces.</p>
+<p>The magnetic field is given by:</p>
 <div class="math notranslate nohighlight">
 \[B_z = \dfrac{\mu_0 M_s}{4\pi} \sum_{i=1}^{2}
     \sum_{j=1}^2 \sum_{k=1}^2(-1)^{i+j+k}
     arctan \left( \dfrac{(x - x_i)(y - y_i))}{(z - z_k)R} \right)\]</div>
 <p>Here <span class="math notranslate nohighlight">\((x,y,z)\)</span> are the coordinates for the location at which we
 want to know the field;
-The magnet spans from x1 to x2 in the <code class="docutils literal notranslate"><span class="pre">x</span></code>-direction,
-y1 to y2 in the <code class="docutils literal notranslate"><span class="pre">y</span></code>-direction, and z1 to z2 in
-the <code class="docutils literal notranslate"><span class="pre">z</span></code>-direction;</p>
+The magnet spans from x1 to x2 in the <span class="math notranslate nohighlight">\(x\)</span>-direction,
+y1 to y2 in the <span class="math notranslate nohighlight">\(y\)</span>-direction, and z1 to z2 in
+the <span class="math notranslate nohighlight">\(z\)</span>-direction;</p>
 <div class="math notranslate nohighlight">
 \[R = \sqrt{(x - x_i)^2 + (y - y_j)^2 + (z - z_k)^2}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\mu_0 M_s\)</span> is the magnet’s saturation magnetization in mT.</p>
-<p><strong>Reference</strong>:
-Ravaud, R. and Lemarquand, G. “Magnetic field produced by a
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Ravaud, R. and Lemarquand, G. “Magnetic field produced by a
 parallelepipedic magnet of various and uniform polarization” ,
 <em>PIER</em>, <strong>2009</strong>, <em>98</em>, 207-219
 [<a class="reference external" href="http://dx.doi.org/10.2528/PIER09091704">10.2528/PIER09091704</a>].</p>
-<ul class="simple">
-<li><p>set the magnet up so that the x and y dimensions are centered about
-the zero point.</p></li>
-<li><p>The translation in z should shift the tip of the magnet in the
-z-direction to be the given distance from the surface.</p></li>
-</ul>
+</aside>
+</aside>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> (<em>float</em>) – x coordinate of sample grid [nm]</p></li>
-<li><p><strong>y</strong> (<em>float</em>) – y coordinate of sample grid [nm]</p></li>
-<li><p><strong>z</strong> (<em>float</em>) – z coordinate of sample grid [nm]</p></li>
+<li><p><strong>x</strong> (<em>float</em>) – <span class="math notranslate nohighlight">\(x\)</span> coordinate of sample grid [nm]</p></li>
+<li><p><strong>y</strong> (<em>float</em>) – <span class="math notranslate nohighlight">\(y\)</span> coordinate of sample grid [nm]</p></li>
+<li><p><strong>z</strong> (<em>float</em>) – <span class="math notranslate nohighlight">\(z\)</span> coordinate of sample grid [nm]</p></li>
 </ul>
 </dd>
 </dl>
@@ -478,14 +495,14 @@ at which we want to know the field gradient; the magnet spans from
 x1 to x2 in the <code class="docutils literal notranslate"><span class="pre">x</span></code>-direction, y1 to y2 in the <code class="docutils literal notranslate"><span class="pre">y</span></code>-direction, and
 from z1 to z2 in the <code class="docutils literal notranslate"><span class="pre">z</span></code>-direction;</p>
 <div class="math notranslate nohighlight">
-\[R = \sqrt{(x - x_i) + (y - y_j) + (z - z_k)}\]</div>
+\[R = \sqrt{(x - x_i)^2 + (y - y_j)^2 + (z - z_k)^2}\]</div>
 <p><span class="math notranslate nohighlight">\(\mu_0 M_s\)</span> is the magnet’s saturation magnetization in mT.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> (<em>float</em>) – <code class="docutils literal notranslate"><span class="pre">x</span></code> coordinate [nm]</p></li>
-<li><p><strong>y</strong> (<em>float</em>) – <code class="docutils literal notranslate"><span class="pre">y</span></code> coordinate [nm]</p></li>
-<li><p><strong>z</strong> (<em>float</em>) – <code class="docutils literal notranslate"><span class="pre">z</span></code> coordinate [nm]</p></li>
+<li><p><strong>x</strong> (<em>float</em>) – <span class="math notranslate nohighlight">\(x\)</span> coordinate [nm]</p></li>
+<li><p><strong>y</strong> (<em>float</em>) – <span class="math notranslate nohighlight">\(y\)</span> coordinate [nm]</p></li>
+<li><p><strong>z</strong> (<em>float</em>) – <span class="math notranslate nohighlight">\(z\)</span> coordinate [nm]</p></li>
 </ul>
 </dd>
 </dl>
@@ -494,22 +511,28 @@ from z1 to z2 in the <code class="docutils literal notranslate"><span class="pre
 <dl class="py method">
 <dt class="sig sig-object py" id="mrfmsim.component.magnet.RectangularMagnet.Bzxx_method">
 <span class="sig-name descname"><span class="pre">Bzxx_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mrfmsim/component/magnet.html#RectangularMagnet.Bzxx_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.component.magnet.RectangularMagnet.Bzxx_method" title="Link to this definition">#</a></dt>
-<dd><p>Calculate magnetic field second derivative <span class="math notranslate nohighlight">\(B_{zxx}\)</span>/</p>
+<dd><p>Calculate magnetic field second derivative <span class="math notranslate nohighlight">\(B_{zxx}\)</span>.</p>
 <p><span class="math notranslate nohighlight">\(B_{zxx} \equiv \partial^2 B_z / \partial x^2\)</span>
 [ <span class="math notranslate nohighlight">\(\mathrm{mT} \; \mathrm{nm}^{-2}\)</span>]
 The magnetic field’s second derivative is given by the following:</p>
 <div class="math notranslate nohighlight">
-\[B_{zxx} = \dfrac{\partial B_z}{\partial z}
+\[B_{zxx} = \dfrac{\partial^2 B_z}{\partial x^2}
     = \dfrac{\mu_0 M_s}{4 \pi} \sum_{i=1}^2
         \sum_{j=1}^2 \sum_{k=1}^2(-1)^{i+j+k}
         \left( \dfrac{-(x-x_i)(y-y_j)(z-z_k)
         (3(x-x_i)^2 +2(y-y_j)^2 + 3(z-z_k)^2)}
         {((x-x_i)^2 + (y-y_j)^2 + (z-z_k)^2)^{3/2}
         ((x-x_i)^2 + (z-z_k)^2)^2} \right)\]</div>
-<p>with the variables defined above.
-:param float x: <code class="docutils literal notranslate"><span class="pre">x</span></code> coordinate [nm]
-:param float y: <code class="docutils literal notranslate"><span class="pre">y</span></code> coordinate [nm]
-:param float z: <code class="docutils literal notranslate"><span class="pre">z</span></code> coordinate [nm]</p>
+<p>with the variables defined above.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>) – <span class="math notranslate nohighlight">\(x\)</span> coordinate [nm]</p></li>
+<li><p><strong>y</strong> (<em>float</em>) – <span class="math notranslate nohighlight">\(y\)</span> coordinate [nm]</p></li>
+<li><p><strong>z</strong> (<em>float</em>) – <span class="math notranslate nohighlight">\(z\)</span> coordinate [nm]</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py attribute">
@@ -537,8 +560,9 @@ The magnetic field’s second derivative is given by the following:</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>radius</strong> (<em>float</em>) – sphere magnet radius [nm]</p></li>
-<li><p><strong>origin</strong> (<em>list</em>) – the position of the magnet origin (x, y, z)</p></li>
+<li><p><strong>magnet_radius</strong> (<em>float</em>) – sphere magnet radius [nm]</p></li>
+<li><p><strong>magnet_origin</strong> (<em>list</em>) – the position of the magnet origin
+<span class="math notranslate nohighlight">\((x, y, z)\)</span> [nm]</p></li>
 <li><p><strong>mu0_Ms</strong> (<em>float</em>) – saturation magnetization [mT]</p></li>
 </ul>
 </dd>
@@ -550,9 +574,9 @@ The magnetic field’s second derivative is given by the following:</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> (<em>float</em>) – x coordinate of sample grid [nm]</p></li>
-<li><p><strong>y</strong> (<em>float</em>) – y coordinate of sample grid [nm]</p></li>
-<li><p><strong>z</strong> (<em>float</em>) – z coordinate of sample grid [nm]</p></li>
+<li><p><strong>x</strong> (<em>float</em>) – <span class="math notranslate nohighlight">\(x\)</span> coordinate of sample grid [nm]</p></li>
+<li><p><strong>y</strong> (<em>float</em>) – <span class="math notranslate nohighlight">\(y\)</span> coordinate of sample grid [nm]</p></li>
+<li><p><strong>z</strong> (<em>float</em>) – <span class="math notranslate nohighlight">\(z\)</span> coordinate of sample grid [nm]</p></li>
 </ul>
 </dd>
 </dl>
@@ -580,16 +604,16 @@ With <span class="math notranslate nohighlight">\(X\)</span>, <span class="math 
 <span class="math notranslate nohighlight">\(\mu_0 M_s\)</span> defined in Bz(x, y, z), the magnetic field
 gradient is calculated as</p>
 <div class="math notranslate nohighlight">
-\[B_{zx} = \dfrac{\partial B_z}{\partial z}
+\[B_{zx} = \dfrac{\partial B_z}{\partial x}
 = \dfrac{\mu_0 M_s}{r} X \:
 \left( \dfrac{1}{R^5} - 5 \dfrac{Z^2}{R^7} \right)
 R = \sqrt{X^2+Y^2+Z^2}\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> (<em>float</em>) – x coordinate of sample grid [nm]</p></li>
-<li><p><strong>y</strong> (<em>float</em>) – y coordinate of sample grid [nm]</p></li>
-<li><p><strong>z</strong> (<em>float</em>) – z coordinate of sample grid [nm]</p></li>
+<li><p><strong>x</strong> (<em>float</em>) – <span class="math notranslate nohighlight">\(x\)</span> coordinate of sample grid [nm]</p></li>
+<li><p><strong>y</strong> (<em>float</em>) – <span class="math notranslate nohighlight">\(y\)</span> coordinate of sample grid [nm]</p></li>
+<li><p><strong>z</strong> (<em>float</em>) – <span class="math notranslate nohighlight">\(z\)</span> coordinate of sample grid [nm]</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -611,7 +635,7 @@ With <span class="math notranslate nohighlight">\(X\)</span>, <span class="math 
 <span class="math notranslate nohighlight">\(\mu_0 M_s\)</span> defined as above, the magnetic field
 second derivative is calculated as</p>
 <div class="math notranslate nohighlight">
-\[B_{zxx} = \dfrac{\partial B_z}{\partial z}
+\[B_{zxx} = \dfrac{\partial^2 B_z}{\partial x^2}
 = \dfrac{\mu_0 M_s}{r^2} \:
 \left( \dfrac{1}{R^5} - 5 \dfrac{X^2}{R^7}
 - 5 \dfrac{Z^2}{R^7} + 35 \dfrac{X^2 Z^2}{R^9} \right)
@@ -619,9 +643,9 @@ R = \sqrt{X^2+Y^2+Z^2}\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> (<em>float</em>) – x coordinate of sample grid [nm]</p></li>
-<li><p><strong>y</strong> (<em>float</em>) – y coordinate of sample grid [nm]</p></li>
-<li><p><strong>z</strong> (<em>float</em>) – z coordinate of sample grid [nm]</p></li>
+<li><p><strong>x</strong> (<em>float</em>) – <span class="math notranslate nohighlight">\(x\)</span> coordinate of sample grid [nm]</p></li>
+<li><p><strong>y</strong> (<em>float</em>) – <span class="math notranslate nohighlight">\(y\)</span> coordinate of sample grid [nm]</p></li>
+<li><p><strong>z</strong> (<em>float</em>) – <span class="math notranslate nohighlight">\(z\)</span> coordinate of sample grid [nm]</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -646,6 +670,160 @@ R = \sqrt{X^2+Y^2+Z^2}\]</div>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mrfmsim.component.magnet.SphereMagnet.mu0_Ms">
 <span class="sig-name descname"><span class="pre">mu0_Ms</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#mrfmsim.component.magnet.SphereMagnet.mu0_Ms" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-mrfmsim.component.cylindermagnet">
+<span id="cylindermagnet-module"></span><h2><code class="xref py py-mod docutils literal notranslate"><span class="pre">cylindermagnet</span></code> module<a class="headerlink" href="#module-mrfmsim.component.cylindermagnet" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="mrfmsim.component.cylindermagnet.CylinderMagnetApprox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mrfmsim.component.cylindermagnet.</span></span><span class="sig-name descname"><span class="pre">CylinderMagnetApprox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">magnet_radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">magnet_length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">magnet_origin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu0_Ms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mrfmsim/component/cylindermagnet.html#CylinderMagnetApprox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.component.cylindermagnet.CylinderMagnetApprox" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ComponentBase</span></code></p>
+<p>Cylinder magnet object approximated by Rectangular Magnets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>magnet_radius</strong> (<em>float</em>) – cylinder magnet radius [nm]</p></li>
+<li><p><strong>magnet_length</strong> (<em>float</em>) – cylinder magnet length [nm]</p></li>
+<li><p><strong>magnet_origin</strong> (<em>tuple</em>) – the position of the magnet origin
+<span class="math notranslate nohighlight">\((x, y, z)\)</span> [nm]</p></li>
+<li><p><strong>mu0_Ms</strong> (<em>float</em>) – saturation magnetization [mT]</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="mrfmsim.component.cylindermagnet.CylinderMagnetApprox.Bz_method">
+<span class="sig-name descname"><span class="pre">Bz_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mrfmsim/component/cylindermagnet.html#CylinderMagnetApprox.Bz_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.Bz_method" title="Link to this definition">#</a></dt>
+<dd><p>Calculate magnetic field <span class="math notranslate nohighlight">\(B_z\)</span> [mT].</p>
+<p>Approximating Cylinder Magnet by 11 Rectangular Magnets. When viewed from the
+vertical direction, we are using a row of rectangles to approximate a circle,
+these rectangular blocks are arranged side by side.</p>
+<p>The magnetic field of each rectangular magnet is calculated following the
+method described in Ravaud2009 <a class="footnote-reference brackets" href="#id4" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.  The magnet is set up so that the
+<span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>  dimensions are centered about the zero point. 
+The translation in <span class="math notranslate nohighlight">\(z\)</span> shifts the tip of the magnet in the 
+<span class="math notranslate nohighlight">\(z\)</span>-direction to be the given distance from the surface.
+Using the Coulombian model, assuming a uniform magnetization throughout
+the volume of the magnet and modeling each face of the magnet as a
+layer of continuous current density. The total field is found by
+summing over the faces.
+The magnetic field is given by:</p>
+<div class="math notranslate nohighlight">
+\[B_z = \dfrac{\mu_0 M_s}{4\pi} \sum_{i=1}^{2}
+    \sum_{j=1}^2 \sum_{k=1}^2(-1)^{i+j+k}
+    \arctan \left( \dfrac{(x - x_i)(y - y_i))}{(z - z_k)R} \right)\]</div>
+<p>Here <span class="math notranslate nohighlight">\((x,y,z)\)</span> are the coordinates for the location at which we
+want to know the field;
+The magnet spans from <span class="math notranslate nohighlight">\(x_1\)</span> to <span class="math notranslate nohighlight">\(x_2\)</span> in the <span class="math notranslate nohighlight">\(x\)</span>-direction,
+<span class="math notranslate nohighlight">\(y_1\)</span> to <span class="math notranslate nohighlight">\(y_2\)</span> in the <span class="math notranslate nohighlight">\(y\)</span>-direction, and <span class="math notranslate nohighlight">\(z_1\)</span> to 
+<span class="math notranslate nohighlight">\(z_2\)</span> in the <span class="math notranslate nohighlight">\(z\)</span>-direction;</p>
+<div class="math notranslate nohighlight">
+\[R = \sqrt{(x - x_i)^2 + (y - y_j)^2 + (z - z_k)^2}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mu_0 M_s\)</span> is the magnet’s saturation magnetization in mT.</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id4" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
+<p>Ravaud, R. and Lemarquand, G. “Magnetic field produced by a
+parallelepipedic magnet of various and uniform polarization” ,
+<em>PIER</em>, <strong>2009</strong>, <em>98</em>, 207-219
+[<a class="reference external" href="http://dx.doi.org/10.2528/PIER09091704">10.2528/PIER09091704</a>].</p>
+</aside>
+</aside>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>) – <span class="math notranslate nohighlight">\(x\)</span> coordinate of sample grid [nm]</p></li>
+<li><p><strong>y</strong> (<em>float</em>) – <span class="math notranslate nohighlight">\(y\)</span> coordinate of sample grid [nm]</p></li>
+<li><p><strong>z</strong> (<em>float</em>) – <span class="math notranslate nohighlight">\(z\)</span> coordinate of sample grid [nm]</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mrfmsim.component.cylindermagnet.CylinderMagnetApprox.Bzx_method">
+<span class="sig-name descname"><span class="pre">Bzx_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mrfmsim/component/cylindermagnet.html#CylinderMagnetApprox.Bzx_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.Bzx_method" title="Link to this definition">#</a></dt>
+<dd><p>Calculate magnetic field gradient <span class="math notranslate nohighlight">\(B_{zx}\)</span>.</p>
+<p>Approximating Cylinder Magnet by 11 Rectangular Magnets. When viewed from the
+vertical direction, we are using a row of rectangles to approximate a circle,
+these rectangular blocks are arranged side by side.</p>
+<p>The magnetic field gradient for RectangularMagnet is:
+<span class="math notranslate nohighlight">\(B_{zx} = \dfrac{\partial{B_z}}{\partial x}\)</span> is
+given by the following:</p>
+<div class="math notranslate nohighlight">
+\[B_{zx} = \dfrac{\mu_0 M_s}{4 \pi} \sum_{i=1}^2 \sum_{j=1}^2
+    \sum_{k=1}^2(-1)^{i+j+k}
+    \left( \dfrac{(y-y_j)(z-z_k)}{ R((x-x_i)^2 + (z-z_k)^2))}
+    \right)\]</div>
+<p>As described above, <span class="math notranslate nohighlight">\((x,y,z)\)</span> are coordinates for the location
+at which we want to know the field gradient; the magnet spans from
+x1 to x2 in the <span class="math notranslate nohighlight">\(x\)</span>-direction, y1 to y2 in the <span class="math notranslate nohighlight">\(y\)</span>-direction, and
+from z1 to z2 in the <span class="math notranslate nohighlight">\(z\)</span>-direction;</p>
+<div class="math notranslate nohighlight">
+\[R = \sqrt{(x - x_i)^2 + (y - y_j)^2 + (z - z_k)^2}\]</div>
+<p><span class="math notranslate nohighlight">\(\mu_0 M_s\)</span> is the magnet’s saturation magnetization in mT.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>) – <span class="math notranslate nohighlight">\(x\)</span> coordinate [nm]</p></li>
+<li><p><strong>y</strong> (<em>float</em>) – <span class="math notranslate nohighlight">\(y\)</span> coordinate [nm]</p></li>
+<li><p><strong>z</strong> (<em>float</em>) – <span class="math notranslate nohighlight">\(z\)</span> coordinate [nm]</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mrfmsim.component.cylindermagnet.CylinderMagnetApprox.Bzxx_method">
+<span class="sig-name descname"><span class="pre">Bzxx_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mrfmsim/component/cylindermagnet.html#CylinderMagnetApprox.Bzxx_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.Bzxx_method" title="Link to this definition">#</a></dt>
+<dd><p>Calculate magnetic field second derivative <span class="math notranslate nohighlight">\(B_{zxx}\)</span>.</p>
+<p>Approximating Cylinder Magnet by 11 Rectangular Magnets. When viewed from the
+vertical direction, we are using a row of rectangles to approximate a circle,
+these rectangular blocks are arranged side by side.</p>
+<p>The magnetic field second derivative for RectangularMagnet is:
+<span class="math notranslate nohighlight">\(B_{zxx} \equiv \partial^2 B_z / \partial x^2\)</span>
+[ <span class="math notranslate nohighlight">\(\mathrm{mT} \; \mathrm{nm}^{-2}\)</span>]
+The magnetic field’s second derivative is given by the following:</p>
+<div class="math notranslate nohighlight">
+\[B_{zxx} = \dfrac{\partial^2 B_z}{\partial x^2}
+    = \dfrac{\mu_0 M_s}{4 \pi} \sum_{i=1}^2
+        \sum_{j=1}^2 \sum_{k=1}^2(-1)^{i+j+k}
+        \left( \dfrac{-(x-x_i)(y-y_j)(z-z_k)
+        (3(x-x_i)^2 +2(y-y_j)^2 + 3(z-z_k)^2)}
+        {((x-x_i)^2 + (y-y_j)^2 + (z-z_k)^2)^{3/2}
+        ((x-x_i)^2 + (z-z_k)^2)^2} \right)\]</div>
+<p>with the variables defined above.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>) – <span class="math notranslate nohighlight">\(x\)</span> coordinate [nm]</p></li>
+<li><p><strong>y</strong> (<em>float</em>) – <span class="math notranslate nohighlight">\(y\)</span> coordinate [nm]</p></li>
+<li><p><strong>z</strong> (<em>float</em>) – <span class="math notranslate nohighlight">\(z\)</span> coordinate [nm]</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mrfmsim.component.cylindermagnet.CylinderMagnetApprox.magnet_length">
+<span class="sig-name descname"><span class="pre">magnet_length</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.magnet_length" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mrfmsim.component.cylindermagnet.CylinderMagnetApprox.magnet_origin">
+<span class="sig-name descname"><span class="pre">magnet_origin</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.magnet_origin" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mrfmsim.component.cylindermagnet.CylinderMagnetApprox.magnet_radius">
+<span class="sig-name descname"><span class="pre">magnet_radius</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.magnet_radius" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mrfmsim.component.cylindermagnet.CylinderMagnetApprox.mu0_Ms">
+<span class="sig-name descname"><span class="pre">mu0_Ms</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.mu0_Ms" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -717,6 +895,19 @@ R = \sqrt{X^2+Y^2+Z^2}\]</div>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.SphereMagnet.magnet_origin"><code class="docutils literal notranslate"><span class="pre">SphereMagnet.magnet_origin</span></code></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.SphereMagnet.magnet_radius"><code class="docutils literal notranslate"><span class="pre">SphereMagnet.magnet_radius</span></code></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.magnet.SphereMagnet.mu0_Ms"><code class="docutils literal notranslate"><span class="pre">SphereMagnet.mu0_Ms</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-mrfmsim.component.cylindermagnet"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cylindermagnet</span></code> module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.cylindermagnet.CylinderMagnetApprox"><code class="docutils literal notranslate"><span class="pre">CylinderMagnetApprox</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.Bz_method"><code class="docutils literal notranslate"><span class="pre">CylinderMagnetApprox.Bz_method()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.Bzx_method"><code class="docutils literal notranslate"><span class="pre">CylinderMagnetApprox.Bzx_method()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.Bzxx_method"><code class="docutils literal notranslate"><span class="pre">CylinderMagnetApprox.Bzxx_method()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.magnet_length"><code class="docutils literal notranslate"><span class="pre">CylinderMagnetApprox.magnet_length</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.magnet_origin"><code class="docutils literal notranslate"><span class="pre">CylinderMagnetApprox.magnet_origin</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.magnet_radius"><code class="docutils literal notranslate"><span class="pre">CylinderMagnetApprox.magnet_radius</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim.component.cylindermagnet.CylinderMagnetApprox.mu0_Ms"><code class="docutils literal notranslate"><span class="pre">CylinderMagnetApprox.mu0_Ms</span></code></a></li>
 </ul>
 </li>
 </ul>

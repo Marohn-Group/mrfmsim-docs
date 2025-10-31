@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Polarization &#8212; mrfmsim 0.3.0 documentation</title>
+    <title>Polarization &#8212; mrfmsim 0.4.0 documentation</title>
   
   
   
@@ -39,7 +39,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=83a61292"></script>
+    <script src="../_static/documentation_options.js?v=183391d5"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
@@ -126,7 +126,7 @@
   
   
   
-    <p class="title logo__title">mrfmsim 0.3.0 documentation</p>
+    <p class="title logo__title">mrfmsim 0.4.0 documentation</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -143,6 +143,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tests.html">Tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim basics</span></p>
 <ul class="nav bd-sidenav">
@@ -557,7 +558,11 @@ polarization. As given by the Bloch equations,</p>
 <dt class="sig sig-object py" id="mrfmsim.formula.polarization.rel_dpol_sat_td">
 <span class="sig-prename descclassname"><span class="pre">mrfmsim.formula.polarization.</span></span><span class="sig-name descname"><span class="pre">rel_dpol_sat_td</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Bzx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ext_B_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ext_pts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tip_v</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mrfmsim/formula/polarization.html#rel_dpol_sat_td"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mrfmsim.formula.polarization.rel_dpol_sat_td" title="Link to this definition">#</a></dt>
 <dd><p>Relative change in polarization for time-dependent saturation.</p>
-<p>The result is not a steady-state solution because it ignores T1 relaxation.</p>
+<p>The result is not a steady-state solution because it ignores T1 relaxation.
+In the case where Bzx is 0, and B_offset is symmetric, the division will be nan.
+Here we try to adjust the nan values to the average of the surrounding values.
+However, if the resulting value is still nan or there are nan values at the boundary,
+an ValueError is raised.</p>
 </dd></dl>
 
 <dl class="py function">

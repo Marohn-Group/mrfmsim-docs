@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Tests &#8212; mrfmsim 0.3.0 documentation</title>
+    <title>Tests &#8212; mrfmsim 0.4.0 documentation</title>
   
   
   
@@ -39,7 +39,7 @@
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/documentation_options.js?v=83a61292"></script>
+    <script src="_static/documentation_options.js?v=183391d5"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
@@ -126,7 +126,7 @@
   
   
   
-    <p class="title logo__title">mrfmsim 0.3.0 documentation</p>
+    <p class="title logo__title">mrfmsim 0.4.0 documentation</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -143,6 +143,7 @@
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">Contribute</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim basics</span></p>
 <ul class="nav bd-sidenav">
@@ -406,6 +407,9 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_periodic_irrad_off_res"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_periodic_irrad_off_res()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_steadystate"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_steadystate()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_nan"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td_nan()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_nan_boundary"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td_nan_boundary()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_nan_division"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td_nan_division()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_symmetry"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td_symmetry()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_without_td"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td_without_td()</span></code></a></li>
 </ul>
@@ -456,8 +460,8 @@ that the spin lies along the <span class="math notranslate nohighlight">\(y = 0\
 <p>The RectMagnet is tested through its symmetry factors: it is symmetric in the <span class="math notranslate nohighlight">\(z\)</span> direction
 when x and y are 0. The gradient functions are tested against a numerical derivative calculation
 from the field. <span class="math notranslate nohighlight">\(B_z\)</span> is an even function in the <span class="math notranslate nohighlight">\(x\)</span> direction,
-<span class="math notranslate nohighlight">\(B_{zx}\)</span> is an odd function in the x-direction and
-:math: <cite>B_{zxx}</cite> is an even function in the <span class="math notranslate nohighlight">\(x\)</span> direction.</p>
+<span class="math notranslate nohighlight">\(B_{zx}\)</span> is an odd function in the <span class="math notranslate nohighlight">\(x\)</span> direction, and
+<span class="math notranslate nohighlight">\(B_{zxx}\)</span> is an even function in the <span class="math notranslate nohighlight">\(x\)</span> direction.</p>
 </section>
 <section id="polarization-test">
 <h2>Polarization Test<a class="headerlink" href="#polarization-test" title="Link to this heading">#</a></h2>
@@ -483,7 +487,7 @@ one is when the amplitude is small, they should be the same, and when tip_sep is
 the effect of amplitude is also small
 (There is a comparison in “test-micrometertip_smallampapprox_vs_exactsol.ipynb”
 on small amplitude, however, the result is unchecked).</p></li>
-<li><p>CmeritSingleSpinESR_Approx is compared with CermitARP_SmallTip.</p></li>
+<li><p>CermitSingleSpinESR_Approx is compared with CermitARP_SmallTip.</p></li>
 <li><dl class="simple">
 <dt>SingleSpinESR</dt><dd><ul>
 <li><p>The approximation is tested against both SPAM and hangdown geometry of the analytical solution</p></li>
@@ -1004,6 +1008,25 @@ extended grid size of 5</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="tests.test_formula.test_polarization.test_rel_dpol_sat_td_nan">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_polarization.</span></span><span class="sig-name descname"><span class="pre">test_rel_dpol_sat_td_nan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample_e</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_polarization.html#test_rel_dpol_sat_td_nan"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_nan" title="Link to this definition">#</a></dt>
+<dd><p>Test rel_dpol_sat_td does not return nan.</p>
+<p>When Bzx is 0 and B_offset is symmetric, the result should not be nan.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_formula.test_polarization.test_rel_dpol_sat_td_nan_boundary">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_polarization.</span></span><span class="sig-name descname"><span class="pre">test_rel_dpol_sat_td_nan_boundary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample_e</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_polarization.html#test_rel_dpol_sat_td_nan_boundary"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_nan_boundary" title="Link to this definition">#</a></dt>
+<dd><p>Test rel_dpol_sat_td raises an error if nan values are at the boundary.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_formula.test_polarization.test_rel_dpol_sat_td_nan_division">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_polarization.</span></span><span class="sig-name descname"><span class="pre">test_rel_dpol_sat_td_nan_division</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample_e</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_polarization.html#test_rel_dpol_sat_td_nan_division"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_nan_division" title="Link to this definition">#</a></dt>
+<dd><p>Test rel_dpol_sat_td raises an error if nan values are from division.</p>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="tests.test_formula.test_polarization.test_rel_dpol_sat_td_symmetry">
 <span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_polarization.</span></span><span class="sig-name descname"><span class="pre">test_rel_dpol_sat_td_symmetry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample_e</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_polarization.html#test_rel_dpol_sat_td_symmetry"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_symmetry" title="Link to this definition">#</a></dt>
 <dd><p>Test rel_dpol_sat_td is symmetric around the initial and final offset.</p>
@@ -1146,6 +1169,9 @@ extended grid size of 5</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_periodic_irrad_off_res"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_periodic_irrad_off_res()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_steadystate"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_steadystate()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_nan"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td_nan()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_nan_boundary"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td_nan_boundary()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_nan_division"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td_nan_division()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_symmetry"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td_symmetry()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_without_td"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td_without_td()</span></code></a></li>
 </ul>

@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mrfmsim.component.grid &#8212; mrfmsim 0.3.0 documentation</title>
+    <title>mrfmsim.component.grid &#8212; mrfmsim 0.4.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../_static/documentation_options.js?v=83a61292"></script>
+    <script src="../../../_static/documentation_options.js?v=183391d5"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
@@ -124,7 +124,7 @@
   
   
   
-    <p class="title logo__title">mrfmsim 0.3.0 documentation</p>
+    <p class="title logo__title">mrfmsim 0.4.0 documentation</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -141,6 +141,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../tests.html">Tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute.html">Contribute</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim basics</span></p>
 <ul class="nav bd-sidenav">
@@ -297,18 +298,18 @@
 <span class="sd">    The grid array uses numpy&#39;s open mesh-grid, which has speed and storage</span>
 <span class="sd">    benefits.</span>
 
-<span class="sd">    :param np.array length: array of lengths along (x, y, z)</span>
-<span class="sd">    :param np.array step: a list of step sizes</span>
-<span class="sd">    :param np.array origin: the grid origin</span>
-
-<span class="sd">    :param tuple[int] shape: grid dimension</span>
+<span class="sd">    :param tuple[int, int, int] grid_shape: grid dimension</span>
 <span class="sd">        (number of points in x, y, z direction)</span>
-<span class="sd">    :param list step: grid setup size in x, y, z direction</span>
-<span class="sd">    :param list origin: grid origin</span>
-<span class="sd">    :param float voxel: the volume of each grid voxel</span>
-<span class="sd">    :param np.array range: range in (x, y, z direction), shape (3, 2)</span>
-<span class="sd">    :param np.array length: actual lengths of the grid. This is recalculated</span>
+<span class="sd">    :param list[float] grid_step: grid step size in x, y, z direction [nm]</span>
+<span class="sd">    :param list[float] grid_origin: the grid origin [nm]</span>
+
+<span class="sd">    :ivar ndarray grid_length: array of lengths along (x, y, z)</span>
+<span class="sd">    :ivar float grid_voxel: the volume of each grid voxel</span>
+<span class="sd">    :ivar ndarray grid_range: range in (x, y, z direction), shape (3, 2)</span>
+<span class="sd">    :ivar ndarray grid_length: actual lengths of the grid. This is recalculated</span>
 <span class="sd">        based on the rounded value of grid shape and step size.</span>
+<span class="sd">    :ivar ndarray grid_extents: the grid extents in (x, y, z direction), shape (3, 2)</span>
+<span class="sd">    :ivar ndarray grid_array: the grid array in (x, y, z direction), shape (3, n)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">grid_shape</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span>
@@ -382,7 +383,7 @@
 <span class="sd">        This is used to extend the grid by the cantilever motion.</span>
 <span class="sd">        The length needs to be more than the step size to count.</span>
 
-<span class="sd">        :param int ext_pts: distance (one side) to extend along x direction</span>
+<span class="sd">        :param int ext_length: distance (one side) to extend along x direction</span>
 <span class="sd">            (cantilever motion direction). The length should be a list of</span>
 <span class="sd">            three dimensions.</span>
 <span class="sd">        &quot;&quot;&quot;</span>

@@ -17,7 +17,7 @@ definition and fast modification to existing models.
 *mrfmsim* extends the *mmodel* framework by adding physical models and calculations
 specific to MRFM experiments.
 
-examples
+Examples
 --------
 
 Here, we use a Cornell-style CERMIT ESR experiment as an example
@@ -67,7 +67,7 @@ We can view the summary of the Sample object.
       dB_sat = 0.000 mT
 
 
-graph representation and metadata
+Graph representation and metadata
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The graph representation of the experiment allows us to visualize the steps of the 
@@ -93,12 +93,12 @@ To access an experiment model from a experiment group:
 
 .. code:: python
 
-    # print c summary
+    # print a summary
     print(CermitESRGroup)
     # list experiments
     print(list(CermitESRGroup.experiments.keys()))
 
-    CermitESR = CermitESRGroup['CermitESR']
+    CermitESR = CermitESRGroup.experiments["CermitESR"]
 
 To printout the metadata of the model:
 
@@ -108,7 +108,7 @@ To printout the metadata of the model:
 
     CermitESR(B0, B1, cantilever, f_rf, grid, h, magnet, mw_x_0p, sample)
     returns: df_spin
-    group: CermitESR
+    group: CermitESRGroup
     graph: CermitESR_graph
     handler: MemHandler
 
@@ -184,7 +184,7 @@ can be very computationally intensive.
 
 If we want to simulate the change of the signal over a wide range of 
 external field (:math:`B_0`) and microwave frequency 
-(:math:`f_\mathrm{rf}``), we would want to avoid repeated
+(:math:`f_\mathrm{rf}`), we would want to avoid repeated
 calculations of unnecessary components that are independent of the
 two parameters.
 
@@ -207,7 +207,9 @@ to print out the intermediate values):
     :align: center
 
 |br|
-To loop the "B0" parameter on top of "f_rf"::
+To loop the "B0" parameter on top of "f_rf":
+
+.. code:: python
 
     CermitESR_B0_frf_loop = loop_shortcut(
         CermitESR_frf_loop, "B0", name="CermitESR_B0frf_Loop"
@@ -261,7 +263,7 @@ This is equivalent to the result from the following loops:
 
 .. note::
 
-    Note that for individual parameters, the loop shortcut can achieve
+    For individual parameters, the loop shortcut can achieve
     optimal looping. However, for multiple parameters, users must decide
     which parameter to loop first. Since all nodes that are
     dependent on "f_rf" also depend on "B_0", we loop "f_rf" first. 

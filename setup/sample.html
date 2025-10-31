@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Sample &#8212; mrfmsim 0.3.0 documentation</title>
+    <title>Sample &#8212; mrfmsim 0.4.0 documentation</title>
   
   
   
@@ -39,7 +39,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=83a61292"></script>
+    <script src="../_static/documentation_options.js?v=183391d5"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
@@ -126,7 +126,7 @@
   
   
   
-    <p class="title logo__title">mrfmsim 0.3.0 documentation</p>
+    <p class="title logo__title">mrfmsim 0.4.0 documentation</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -143,6 +143,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tests.html">Tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">mrfmsim basics</span></p>
 <ul class="nav bd-sidenav">
@@ -407,9 +408,9 @@ For other spins, input the name, Gamma and J directly.</p>
 <li><p><strong>temperature</strong> (<em>float</em>) – the sample temperature [K]</p></li>
 <li><p><strong>spin_density</strong> (<em>float</em>) – the sample spin density <span class="math notranslate nohighlight">\(\rho\)</span> [1/nm^3]</p></li>
 <li><p><strong>Gamma</strong> (<em>float</em>) – spin gyromagnetic ratio [rad/s.mT]
-defaults to None if spin_type is one of the preset</p></li>
-<li><p><strong>L</strong> (<em>float</em>) – spin angular momentum [unitless]
-default to None if spin_type is one of the preset</p></li>
+defaults to None if spin is one of the preset types</p></li>
+<li><p><strong>J</strong> (<em>float</em>) – spin angular momentum [unitless]
+defaults to None if spin is one of the preset types</p></li>
 <li><p><strong>dB_hom</strong> (<em>float</em>) – homogeneous linewidth [mT]</p></li>
 <li><p><strong>dB_sat</strong> (<em>float</em>) – saturation linewidth [mT]</p></li>
 </ul>
