@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Tests &#8212; mrfmsim 0.4.0 documentation</title>
+    <title>Tests &#8212; mrfmsim 0.4.1 documentation</title>
   
   
   
@@ -39,7 +39,7 @@
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/documentation_options.js?v=183391d5"></script>
+    <script src="_static/documentation_options.js?v=a3cf13c8"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
@@ -126,7 +126,7 @@
   
   
   
-    <p class="title logo__title">mrfmsim 0.4.0 documentation</p>
+    <p class="title logo__title">mrfmsim 0.4.1 documentation</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -410,6 +410,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_nan"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td_nan()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_nan_boundary"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td_nan_boundary()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_nan_division"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td_nan_division()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_nan_division_array"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td_nan_division_array()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_symmetry"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td_symmetry()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_without_td"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td_without_td()</span></code></a></li>
 </ul>
@@ -1027,6 +1028,13 @@ extended grid size of 5</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="tests.test_formula.test_polarization.test_rel_dpol_sat_td_nan_division_array">
+<span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_polarization.</span></span><span class="sig-name descname"><span class="pre">test_rel_dpol_sat_td_nan_division_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample_e</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_polarization.html#test_rel_dpol_sat_td_nan_division_array"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_nan_division_array" title="Link to this definition">#</a></dt>
+<dd><p>Test rel_dpol_sat_td raises an error if nan values are from division with array.</p>
+<p>The test may fail based on the numeric precision of the division.</p>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="tests.test_formula.test_polarization.test_rel_dpol_sat_td_symmetry">
 <span class="sig-prename descclassname"><span class="pre">tests.test_formula.test_polarization.</span></span><span class="sig-name descname"><span class="pre">test_rel_dpol_sat_td_symmetry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample_e</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_formula/test_polarization.html#test_rel_dpol_sat_td_symmetry"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_symmetry" title="Link to this definition">#</a></dt>
 <dd><p>Test rel_dpol_sat_td is symmetric around the initial and final offset.</p>
@@ -1172,6 +1180,7 @@ extended grid size of 5</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_nan"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td_nan()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_nan_boundary"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td_nan_boundary()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_nan_division"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td_nan_division()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_nan_division_array"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td_nan_division_array()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_symmetry"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td_symmetry()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests.test_formula.test_polarization.test_rel_dpol_sat_td_without_td"><code class="docutils literal notranslate"><span class="pre">test_rel_dpol_sat_td_without_td()</span></code></a></li>
 </ul>

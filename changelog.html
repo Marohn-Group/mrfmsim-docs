@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Changelog &#8212; mrfmsim 0.4.0 documentation</title>
+    <title>Changelog &#8212; mrfmsim 0.4.1 documentation</title>
   
   
   
@@ -39,7 +39,7 @@
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/documentation_options.js?v=183391d5"></script>
+    <script src="_static/documentation_options.js?v=a3cf13c8"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
@@ -125,7 +125,7 @@
   
   
   
-    <p class="title logo__title">mrfmsim 0.4.0 documentation</p>
+    <p class="title logo__title">mrfmsim 0.4.1 documentation</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -326,31 +326,35 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">[0.4.0] - 2025-10-31</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">[0.4.1] - 2025-11-03</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fixed">Fixed</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">[0.4.0] - 2025-10-31</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changed">Changed</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#added">Added</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">[0.3.0] - 2025-02-25</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">[0.3.0] - 2025-02-25</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#removed">Removed</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Added</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Changed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Changed</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">[0.2.0]</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Changed</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fixed">Fixed</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Added</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Removed</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">[0.2.0]</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Changed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Fixed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Removed</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">[0.1.1] - 2023-06-23</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Added</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Fixed</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">[0.1.1] - 2023-06-23</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Fixed</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">[0.1.0] - 2020-04-17</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Added</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">[0.1.0] - 2020-04-17</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Added</a></li>
 </ul>
 </li>
 </ul>
@@ -372,7 +376,16 @@
 and this project adheres to
 <a class="reference external" href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a></p>
 <section id="id1">
-<h2>[0.4.0] - 2025-10-31<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<h2>[0.4.1] - 2025-11-03<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<section id="fixed">
+<h3>Fixed<a class="headerlink" href="#fixed" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Fix the issue that the <code class="docutils literal notranslate"><span class="pre">rel_dpol_sat_td</span></code> checks nan fails when the input is an array.</p></li>
+</ul>
+</section>
+</section>
+<section id="id2">
+<h2>[0.4.0] - 2025-10-31<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <p>Added Cylinder Magnet and minor fixes to docstrings and documentation.</p>
 <section id="changed">
 <h3>Changed<a class="headerlink" href="#changed" title="Link to this heading">#</a></h3>
@@ -391,8 +404,8 @@ and this project adheres to
 </ul>
 </section>
 </section>
-<section id="id2">
-<h2>[0.3.0] - 2025-02-25<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<section id="id3">
+<h2>[0.3.0] - 2025-02-25<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <p>Update the API to use the latest version of the mmodel package (0.8.0+).</p>
 <section id="removed">
 <h3>Removed<a class="headerlink" href="#removed" title="Link to this heading">#</a></h3>
@@ -402,14 +415,14 @@ and this project adheres to
 <li><p>Remove the collection module. The functionalities are moved to the group module.</p></li>
 </ul>
 </section>
-<section id="id3">
-<h3>Added<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<section id="id4">
+<h3>Added<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Add Marohn group experiments. (From the previous <em>mrfmsim-marohn</em> package)</p></li>
 </ul>
 </section>
-<section id="id4">
-<h3>Changed<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<section id="id5">
+<h3>Changed<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Change the attribute names for <code class="docutils literal notranslate"><span class="pre">Grid</span></code> and <code class="docutils literal notranslate"><span class="pre">Magnet</span></code> to avoid conflicts.</p></li>
 <li><p>Change the component replacement behavior that requires the replacement attribute
@@ -418,10 +431,10 @@ name is the same as the object attribute name.</p></li>
 </ul>
 </section>
 </section>
-<section id="id5">
-<h2>[0.2.0]<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
 <section id="id6">
-<h3>Changed<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<h2>[0.2.0]<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<section id="id7">
+<h3>Changed<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Change python requirement to 3.10.</p></li>
 <li><p>Change the plugin system using package entry points. Automatically load
@@ -431,22 +444,22 @@ plugins at import time.</p></li>
 nodes.</p></li>
 </ul>
 </section>
-<section id="fixed">
-<h3>Fixed<a class="headerlink" href="#fixed" title="Link to this heading">#</a></h3>
+<section id="id8">
+<h3>Fixed<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Fix the issue that <code class="docutils literal notranslate"><span class="pre">loop_shortcut</span></code> failed to update the model “returns”.</p></li>
 </ul>
 </section>
-<section id="id7">
-<h3>Added<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<section id="id9">
+<h3>Added<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Add grid, magnet, sample, and cantilever component objects.</p></li>
 <li><p>Add custom node and model string representation.</p></li>
 <li><p>Add the collection class for creating a group of experiments.</p></li>
 </ul>
 </section>
-<section id="id8">
-<h3>Removed<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<section id="id10">
+<h3>Removed<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Remove the <code class="docutils literal notranslate"><span class="pre">cli</span></code> module to <code class="docutils literal notranslate"><span class="pre">mrfmsim-cli</span></code> plugin for separate
 development.</p></li>
@@ -455,26 +468,26 @@ development.</p></li>
 </ul>
 </section>
 </section>
-<section id="id9">
-<h2>[0.1.1] - 2023-06-23<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
-<section id="id10">
-<h3>Added<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<section id="id11">
+<h2>[0.1.1] - 2023-06-23<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<section id="id12">
+<h3>Added<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Allow experiment configuration file to add additional node keyword arguments.</p></li>
 </ul>
 </section>
-<section id="id11">
-<h3>Fixed<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<section id="id13">
+<h3>Fixed<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Change the <code class="docutils literal notranslate"><span class="pre">print_shortcut</span></code> algorithm to modify nodes instead of the model.</p></li>
 </ul>
 </section>
 </section>
-<section id="id12">
-<h2>[0.1.0] - 2020-04-17<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<section id="id14">
+<h2>[0.1.0] - 2020-04-17<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
 <p>The initial release of the mrfmsim framework.</p>
-<section id="id13">
-<h3>Added<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<section id="id15">
+<h3>Added<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Add the <code class="docutils literal notranslate"><span class="pre">Experiment</span></code> class designed for MRFM experiments.</p></li>
 <li><p>Add the <code class="docutils literal notranslate"><span class="pre">Job</span></code> class designed for MRFM execution jobs.</p></li>
@@ -535,31 +548,35 @@ development.</p></li>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">[0.4.0] - 2025-10-31</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">[0.4.1] - 2025-11-03</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fixed">Fixed</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">[0.4.0] - 2025-10-31</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changed">Changed</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#added">Added</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">[0.3.0] - 2025-02-25</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">[0.3.0] - 2025-02-25</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#removed">Removed</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Added</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Changed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Changed</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">[0.2.0]</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Changed</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fixed">Fixed</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Added</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Removed</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">[0.2.0]</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Changed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Fixed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Removed</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">[0.1.1] - 2023-06-23</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Added</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Fixed</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">[0.1.1] - 2023-06-23</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Fixed</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">[0.1.0] - 2020-04-17</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Added</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">[0.1.0] - 2020-04-17</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Added</a></li>
 </ul>
 </li>
 </ul>
