@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>MrfmSim &#8212; mrfmsim 0.4.1 documentation</title>
+    <title>MrfmSim &#8212; mrfmsim 0.4.2 documentation</title>
   
   
   
@@ -39,7 +39,7 @@
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/documentation_options.js?v=a3cf13c8"></script>
+    <script src="_static/documentation_options.js?v=b4bb93ae"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
@@ -127,7 +127,7 @@
   
   
   
-    <p class="title logo__title">mrfmsim 0.4.1 documentation</p>
+    <p class="title logo__title">mrfmsim 0.4.2 documentation</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -331,10 +331,11 @@
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">MrfmSim</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quickstart">Quickstart</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#graphviz-installation"><em>Graphviz</em> installation</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim-installation"><em>mrfmsim</em> installation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#graphviz-installation"><em>Graphviz</em> installation</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-and-documentation">Examples and documentation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests">Tests</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contributing">Contributing</a></li>
 </ul>
@@ -359,7 +360,7 @@
                   
   <section id="mrfmsim">
 <h1>MrfmSim<a class="headerlink" href="#mrfmsim" title="Link to this heading">#</a></h1>
-<p><a class="reference external" href="https://github.com/Marohn-Group/mrfmsim"><img alt="GitHub version" src="https://badge.fury.io/gh/Marohn-Group%2Fmrfmsim.svg" /></a> <a class="reference external" href="https://github.com/Marohn-Group/mrfmsim/actions"><img alt="Unit tests" src="https://github.com/Marohn-Group/mrfmsim/actions/workflows/tox.yml/badge.svg" /></a> <a class="reference external" href="https://zenodo.org/badge/latestdoi/534295792"><img alt="DOI" src="https://zenodo.org/badge/534295792.svg" /></a></p>
+<p><a class="reference external" href="https://github.com/Marohn-Group/mrfmsim"><img alt="GitHub version" src="https://badge.fury.io/gh/Marohn-Group%2Fmrfmsim.svg" /></a> <a class="reference external" href="https://github.com/Marohn-Group/mrfmsim/actions"><img alt="Unit tests" src="https://github.com/Marohn-Group/mrfmsim/actions/workflows/tox.yml/badge.svg" /></a></p>
 <p><em>mrfmsim</em> is a Python framework for simulating magnetic resonance force microscopy (MRFM)
 experiments. The package is based on the
 <a class="reference external" href="https://marohn-group.github.io/mmodel-docs/">mmodel</a> framework, which provides
@@ -381,9 +382,20 @@ and field-aligned in both the <strong>hangdown</strong> <a class="footnote-refer
 <h2>Quickstart<a class="headerlink" href="#quickstart" title="Link to this heading">#</a></h2>
 <section id="installation">
 <h3>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h3>
+<section id="mrfmsim-installation">
+<h4><em>mrfmsim</em> installation<a class="headerlink" href="#mrfmsim-installation" title="Link to this heading">#</a></h4>
+<p>To install the package, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">mrfmsim</span>
+</pre></div>
+</div>
+<p>For development from a cloned repository, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">.</span>
+</pre></div>
+</div>
+</section>
 <section id="graphviz-installation">
 <h4><em>Graphviz</em> installation<a class="headerlink" href="#graphviz-installation" title="Link to this heading">#</a></h4>
-<p>To view the graph, Graphviz needs to be installed:
+<p>Graphviz is required only for graph visualization:
 <a class="reference external" href="https://graphviz.org/download/">Graphviz Installation</a>
 For Windows installation, please choose “add Graphviz to the
 system PATH for all users/current users” during the setup.</p>
@@ -394,13 +406,14 @@ with conda:</p>
 </pre></div>
 </div>
 </section>
-<section id="mrfmsim-installation">
-<h4><em>mrfmsim</em> installation<a class="headerlink" href="#mrfmsim-installation" title="Link to this heading">#</a></h4>
-<p>To install the package, run:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">.</span>
-</pre></div>
-</div>
 </section>
+<section id="examples-and-documentation">
+<h3>Examples and documentation<a class="headerlink" href="#examples-and-documentation" title="Link to this heading">#</a></h3>
+<p>The full documentation is available at
+<a class="reference external" href="https://marohn-group.github.io/mrfmsim-docs/">mrfmsim documentation</a>.
+Step-by-step examples are available in the <a class="reference external" href="docs/overview.rst">overview documentation</a>,
+including a downloadable <a class="reference external" href="docs/_downloads/mrfmsim_overview.ipynb">overview notebook</a>.
+Detailed experiment examples are documented in the <a class="reference external" href="docs/experiment/">experiment pages</a>.</p>
 </section>
 <section id="tests">
 <h3>Tests<a class="headerlink" href="#tests" title="Link to this heading">#</a></h3>
@@ -521,12 +534,13 @@ SPAM stands for Springiness Preservation by Aligning Magnetization.</p>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id1">[0.4.1] - 2025-11-03</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id2">[0.4.0] - 2025-10-31</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id3">[0.3.0] - 2025-02-25</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id6">[0.2.0]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id11">[0.1.1] - 2023-06-23</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id14">[0.1.0] - 2020-04-17</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id1">[0.4.2] - 2026-05-12</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id2">[0.4.1] - 2025-11-03</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id3">[0.4.0] - 2025-10-31</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id5">[0.3.0] - 2025-02-25</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id8">[0.2.0]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id13">[0.1.1] - 2023-06-23</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id16">[0.1.0] - 2020-04-17</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="contribute.html">Contribute</a><ul>
@@ -715,10 +729,11 @@ SPAM stands for Springiness Preservation by Aligning Magnetization.</p>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">MrfmSim</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quickstart">Quickstart</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#graphviz-installation"><em>Graphviz</em> installation</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mrfmsim-installation"><em>mrfmsim</em> installation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#graphviz-installation"><em>Graphviz</em> installation</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-and-documentation">Examples and documentation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests">Tests</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contributing">Contributing</a></li>
 </ul>
